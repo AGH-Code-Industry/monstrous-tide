@@ -64,3 +64,5 @@ sprite_frames = SubResource("SpriteFrames_0kk1c")
 animation = &"Walk"
 frame = 1
 frame_progress = 0.985002
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
