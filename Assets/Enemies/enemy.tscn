@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgjjl2mj65qgu"]
+
+[ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_iqk56"]
+[ext_resource type="Texture2D" uid="uid://beqs3tbas1lo8" path="res://Assets/Tutorial/Enemy/kolbold_weak.png" id="2_pf2vg"]
+
+[node name="Enemy_kobold_weak" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_iqk56")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pf2vg")
+hframes = 2
