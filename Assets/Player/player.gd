@@ -27,3 +27,10 @@ func movement():
 		animation_sprite.play("Idle")
 	velocity = mov.normalized() * movement_speed
 	move_and_slide()
+
+func die():
+	print("Player died")
+
+
+func _on_hit_box_on_death() -> void:
+	die()

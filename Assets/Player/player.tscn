@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=15 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
+[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
@@ -57,6 +58,9 @@ height = 24.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yr38n"]
 size = Vector2(18, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_743r1"]
+size = Vector2(29, 33)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_jqw0g")
@@ -78,9 +82,22 @@ position = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." instance=ExtResource("3_vkkdj")]
+collision_layer = 2
+collision_mask = 4
+health = 100.0
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_yr38n")
 
+[node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
+damage = 3.0
+
+[node name="CollisionShape2D" parent="DamageBox" index="0"]
+position = Vector2(2.5, 0.5)
+shape = SubResource("RectangleShape2D_743r1")
+
+[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
+
 [editable path="HitBox"]
+[editable path="DamageBox"]

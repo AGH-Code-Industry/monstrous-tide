@@ -7,10 +7,12 @@ extends Area2D
 
 @export var health: float = 10
 
+signal on_death()
+
 func take_damage(dmg: Damage) -> void:
 	# Use stats like defense/dodge to reduce/mitigate damage taken
 	health -= dmg.damage
-	print(health)
+	print(get_parent().get_name(), ": ", health)
 	if(not dmg.bypass_invulnerability):
 		collision.call_deferred("set", "disabled", true)
 		disableTimer.start()
@@ -18,7 +20,7 @@ func take_damage(dmg: Damage) -> void:
 		die()
 		
 func die() -> void:
-	print("Died")
+	on_death.emit()
 
 func _on_disable_timer_timeout() -> void:
 	collision.call_deferred("set", "disabled", false)

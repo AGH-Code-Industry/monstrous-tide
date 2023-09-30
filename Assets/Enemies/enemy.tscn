@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgjjl2mj65qgu"]
+[gd_scene load_steps=11 format=3 uid="uid://bgjjl2mj65qgu"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_iqk56"]
 [ext_resource type="Texture2D" uid="uid://beqs3tbas1lo8" path="res://Assets/Tutorial/Enemy/kolbold_weak.png" id="2_pf2vg"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_s0i0u"]
+[ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="4_ogpyu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sri3"]
 radius = 7.0
@@ -49,6 +50,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08bso"]
 size = Vector2(16, 23)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8njqq"]
+size = Vector2(25, 28)
+
 [node name="Enemy" type="CharacterBody2D"]
 texture_filter = 1
 motion_mode = 1
@@ -68,9 +72,20 @@ libraries = {
 }
 
 [node name="DamageBox" parent="." instance=ExtResource("3_s0i0u")]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_08bso")
 
+[node name="HitBox" parent="." instance=ExtResource("4_ogpyu")]
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(1.5, 2)
+shape = SubResource("RectangleShape2D_8njqq")
+
+[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
+
 [editable path="DamageBox"]
+[editable path="HitBox"]
