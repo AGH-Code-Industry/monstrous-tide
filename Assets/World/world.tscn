@@ -17,5 +17,5 @@ region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="Player" parent="." instance=ExtResource("2_j8yv2")]
 
-[node name="Enemy_kobold_weak" parent="." instance=ExtResource("3_8y7lh")]
+[node name="Enemy" parent="." instance=ExtResource("3_8y7lh")]
 position = Vector2(62, -68)
