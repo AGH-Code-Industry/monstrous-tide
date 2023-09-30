@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
-[ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/enemy_spawner.tscn" id="3_qgeh4"]
+[ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/Spawner/enemy_spawner.tscn" id="3_qgeh4"]
 
 [node name="World" type="Node2D"]
 

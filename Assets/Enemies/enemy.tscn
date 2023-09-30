@@ -1,11 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgjjl2mj65qgu"]
+[gd_scene load_steps=9 format=3 uid="uid://bgjjl2mj65qgu"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_iqk56"]
 [ext_resource type="Texture2D" uid="uid://beqs3tbas1lo8" path="res://Assets/Tutorial/Enemy/kolbold_weak.png" id="2_pf2vg"]
+[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_s0i0u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sri3"]
 radius = 7.0
 height = 24.0
+
+[sub_resource type="Animation" id="Animation_bap8a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_ys5e6"]
 resource_name = "walk"
@@ -24,28 +40,17 @@ tracks/0/keys = {
 "values": [0, 1, 0]
 }
 
-[sub_resource type="Animation" id="Animation_bap8a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0h3t3"]
 _data = {
 "RESET": SubResource("Animation_bap8a"),
 "walk": SubResource("Animation_ys5e6")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08bso"]
+size = Vector2(16, 23)
+
 [node name="Enemy" type="CharacterBody2D"]
+texture_filter = 1
 motion_mode = 1
 script = ExtResource("1_iqk56")
 
@@ -61,3 +66,11 @@ shape = SubResource("CapsuleShape2D_7sri3")
 libraries = {
 "": SubResource("AnimationLibrary_0h3t3")
 }
+
+[node name="DamageBox" parent="." instance=ExtResource("3_s0i0u")]
+
+[node name="CollisionShape2D" parent="DamageBox" index="0"]
+position = Vector2(2, 2.5)
+shape = SubResource("RectangleShape2D_08bso")
+
+[editable path="DamageBox"]
