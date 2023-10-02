@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2a5f3brc0phv"]
 
-[ext_resource type="Script" path="res://Assets/Utility/enemy_spawner.gd" id="1_p45cp"]
+[ext_resource type="Script" path="res://Assets/Utility/Spawner/enemy_spawner.gd" id="1_p45cp"]
 [ext_resource type="PackedScene" uid="uid://bgjjl2mj65qgu" path="res://Assets/Enemies/enemy.tscn" id="2_dgpvt"]
-[ext_resource type="Script" path="res://Assets/Utility/spawn_info.gd" id="3_tb2te"]
+[ext_resource type="Script" path="res://Assets/Utility/Spawner/spawn_info.gd" id="3_tb2te"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
 script = ExtResource("3_tb2te")

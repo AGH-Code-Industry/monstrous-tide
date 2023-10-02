@@ -19,3 +19,9 @@ func _physics_process(_delta):
 		sprite.flip_h = true
 	elif direction.x < 0.1:
 		sprite.flip_h = false
+
+
+func _on_hit_box_on_death() -> void:
+	# Loot and xp drop functions should be added here
+	print("Enemy died")
+	queue_free()
