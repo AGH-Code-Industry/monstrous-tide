@@ -80,6 +80,8 @@ position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_08bso")
 
 [node name="HitBox" parent="." instance=ExtResource("4_ogpyu")]
+collision_layer = 2
+collision_mask = 5
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(1.5, 2)

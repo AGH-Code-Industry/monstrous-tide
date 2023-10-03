@@ -34,7 +34,7 @@ func _on_destroy_timer_timeout():
 
 func _on_area_entered(area):
 	if area.has_method("take_damage"):
-		enemy_hit(area, 4)
+		enemy_hit(area)
 		
 		
 func deal_damage(area: Area2D) -> void:
