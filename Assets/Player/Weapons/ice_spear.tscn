@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf7unlcnoi8tk"]
+
+[ext_resource type="Script" path="res://Assets/Player/Weapons/ice_spear.gd" id="1_te7jt"]
+[ext_resource type="Texture2D" uid="uid://b0dquvtrhdxsg" path="res://Assets/Tutorial/Items/Weapons/ice_spear.png" id="1_twr3j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl172"]
+size = Vector2(7.77818, 35.3553)
+
+[node name="IceSpear" type="Area2D" groups=["attack"]]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_te7jt")
+damage = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_twr3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.750001, -0.749999)
+rotation = -0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pl172")
+
+[node name="DestroyTimer" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]
