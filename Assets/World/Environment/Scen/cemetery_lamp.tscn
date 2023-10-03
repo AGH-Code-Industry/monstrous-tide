@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://rd2hgmivn7i3"]
+
+[ext_resource type="Texture2D" uid="uid://cne4ljlnk8n1h" path="res://Assets/World/Environment/Texture/Lamp_0.1.png" id="1_ada04"]
+
+[node name="Cemetery_lamp" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_ada04")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+polygon = PackedVector2Array(-340, 800, 340, 800, 300, 620, 200, 360, 160, 180, 80, 0, -120, 0, -200, 260, -240, 480)
