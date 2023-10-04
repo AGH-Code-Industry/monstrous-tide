@@ -8,7 +8,7 @@ size = Vector2(7.77818, 35.3553)
 
 [node name="IceSpear" type="Area2D" groups=["attack"]]
 collision_layer = 2
-collision_mask = 5
+collision_mask = 4
 script = ExtResource("1_te7jt")
 damage = 15
 
@@ -19,7 +19,6 @@ texture = ExtResource("1_twr3j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.750001, -0.749999)
 rotation = -0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pl172")
 
 [node name="DestroyTimer" type="Timer" parent="."]

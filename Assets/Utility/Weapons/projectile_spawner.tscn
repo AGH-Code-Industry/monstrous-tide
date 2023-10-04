@@ -10,6 +10,7 @@ script = ExtResource("1_gnime")
 timeBetweenAttacks = 3.0
 
 [node name="IceSpearTimer" type="Timer" parent="."]
+autostart = true
 
 [node name="TargetLocation" type="Marker2D" parent="."]
 position = Vector2(279, 184)

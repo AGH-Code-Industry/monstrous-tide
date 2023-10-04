@@ -84,7 +84,7 @@ shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." instance=ExtResource("3_vkkdj")]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 0
 health = 100.0
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
@@ -92,6 +92,8 @@ position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
+collision_layer = 2
+collision_mask = 4
 damage = 3.0
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
