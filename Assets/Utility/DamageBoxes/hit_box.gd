@@ -9,7 +9,7 @@ extends Area2D
 
 signal on_death()
 
-signal on_take_damage(dmg: float, hp_left: float)
+signal on_take_damage(dmg: float, hp_left: float, is_hit_critical: bool)
 
 func take_damage(dmg: Damage) -> void:
 	# Use stats like defense/dodge to reduce/mitigate damage taken
@@ -17,7 +17,7 @@ func take_damage(dmg: Damage) -> void:
 
 	health -= calculated_damage
 
-	on_take_damage.emit(calculated_damage, health)
+	on_take_damage.emit(calculated_damage, health, dmg.is_critical_hit)
 
 	print(get_parent().get_name(), ": ", health)
 	if(not dmg.bypass_invulnerability):
