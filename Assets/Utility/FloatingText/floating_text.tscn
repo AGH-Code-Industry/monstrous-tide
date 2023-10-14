@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctpdc0ia6n2ap"]
 
-[ext_resource type="Script" path="res://Assets/GameManager/FloatingText/floating_text.gd" id="1_aqdrf"]
+[ext_resource type="Script" path="res://Assets/Utility/FloatingText/floating_text.gd" id="1_2aqi6"]
 
 [node name="FloatingText" type="Marker2D"]
 scale = Vector2(0.7, 0.7)
-script = ExtResource("1_aqdrf")
+script = ExtResource("1_2aqi6")
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(100, 25)

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0envufxswa03"]
-
-[ext_resource type="Script" path="res://Assets/GameManager/FloatingText/floating_text_spawner.gd" id="1_okvhd"]
-
-[node name="FloatingTextSpawner" type="Node2D"]
-script = ExtResource("1_okvhd")

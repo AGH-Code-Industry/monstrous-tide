@@ -6,7 +6,7 @@ enum text_types {
 	HEALING
 }
 
-static var floating_text = preload("res://Assets/GameManager/FloatingText/floating_text.tscn")
+static var floating_text = preload("res://Assets/Utility/FloatingText/floating_text.tscn")
 
 
 static func create_floating_text(parent: Node, text, type: text_types) -> void:
