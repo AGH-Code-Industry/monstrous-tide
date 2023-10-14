@@ -9,9 +9,16 @@ extends Area2D
 
 signal on_death()
 
+signal on_take_damage(dmg: float, hp_left: float)
+
 func take_damage(dmg: Damage) -> void:
 	# Use stats like defense/dodge to reduce/mitigate damage taken
-	health -= dmg.damage
+	var calculated_damage = dmg.damage
+
+	health -= calculated_damage
+
+	on_take_damage.emit(calculated_damage, health)
+
 	print(get_parent().get_name(), ": ", health)
 	if(not dmg.bypass_invulnerability):
 		collision.call_deferred("set", "disabled", true)

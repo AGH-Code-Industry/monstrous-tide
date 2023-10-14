@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=5 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
 [ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/Spawner/enemy_spawner.tscn" id="3_qgeh4"]
+[ext_resource type="PackedScene" uid="uid://bcjkq3tv1sy2i" path="res://Assets/GameManager/game_manager.tscn" id="4_rpye8"]
 
 [node name="World" type="Node2D"]
 
@@ -19,3 +20,7 @@ region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_qgeh4")]
 position = Vector2(-12, -1)
+
+[node name="GameManager" parent="." instance=ExtResource("4_rpye8")]
+
+[editable path="GameManager"]

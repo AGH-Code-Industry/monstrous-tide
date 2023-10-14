@@ -86,6 +86,7 @@ position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
+[connection signal="on_take_damage" from="HitBox" to="." method="_on_hit_box_on_take_damage"]
 
 [editable path="DamageBox"]
 [editable path="HitBox"]

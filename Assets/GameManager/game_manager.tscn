@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcjkq3tv1sy2i"]
+
+[ext_resource type="PackedScene" uid="uid://d0envufxswa03" path="res://Assets/GameManager/FloatingText/floating_text_spawner.tscn" id="1_cy73p"]
+
+[node name="GameManager" type="Node2D"]
+
+[node name="FloatingTextSpawner" parent="." instance=ExtResource("1_cy73p")]
