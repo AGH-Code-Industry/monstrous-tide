@@ -20,11 +20,6 @@ func _physics_process(_delta):
 	elif direction.x < 0.1:
 		sprite.flip_h = false
 		
-		
-func _on_hit_box_on_take_damage(dmg, hp_left, is_crit) -> void:
-	var text_type = FloatingTextSpawner.text_types.CRITICAL if is_crit else FloatingTextSpawner.text_types.DAMAGE
-	FloatingTextSpawner.create_floating_text(self, str(dmg), text_type)
-
 
 func _on_hit_box_on_death() -> void:
 	# Loot and xp drop functions should be added here

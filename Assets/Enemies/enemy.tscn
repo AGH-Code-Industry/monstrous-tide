@@ -80,13 +80,14 @@ position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_08bso")
 
 [node name="HitBox" parent="." instance=ExtResource("4_ogpyu")]
+health = 10.0
+show_damage_taken_numbers = true
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
-[connection signal="on_take_damage" from="HitBox" to="." method="_on_hit_box_on_take_damage"]
 
 [editable path="DamageBox"]
 [editable path="HitBox"]

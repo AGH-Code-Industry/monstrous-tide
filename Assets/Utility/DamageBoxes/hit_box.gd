@@ -6,10 +6,9 @@ extends Area2D
 @onready var disableTimer: Timer = $DisableTimer
 
 @export var health: float = 10
+@export var show_damage_taken_numbers: bool = false
 
 signal on_death()
-
-signal on_take_damage(dmg: float, hp_left: float, is_hit_critical: bool)
 
 func take_damage(dmg: Damage) -> void:
 	# Use stats like defense/dodge to reduce/mitigate damage taken
@@ -17,7 +16,9 @@ func take_damage(dmg: Damage) -> void:
 
 	health -= calculated_damage
 
-	on_take_damage.emit(calculated_damage, health, dmg.is_critical_hit)
+	if(show_damage_taken_numbers):
+		var text_type = FloatingTextSpawner.text_types.CRITICAL if dmg.is_critical_hit else FloatingTextSpawner.text_types.DAMAGE
+		FloatingTextSpawner.create_floating_text(self, str(calculated_damage), text_type)
 
 	print(get_parent().get_name(), ": ", health)
 	if(not dmg.bypass_invulnerability):
@@ -25,7 +26,8 @@ func take_damage(dmg: Damage) -> void:
 		disableTimer.start()
 	if health <= 0:
 		die()
-		
+
+
 func die() -> void:
 	on_death.emit()
 
