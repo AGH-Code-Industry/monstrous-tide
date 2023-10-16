@@ -23,4 +23,5 @@ static func create_floating_text(parent: Node, text, type: text_types) -> void:
 			color = ColorConstants.healing_color
 	
 	text_instance.font_color = color 
-	parent.add_child(text_instance)
+	text_instance.global_position = parent.global_position
+	parent.get_tree().root.get_child(0).add_child(text_instance)
