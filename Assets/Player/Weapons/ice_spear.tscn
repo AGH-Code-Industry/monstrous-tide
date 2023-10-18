@@ -1,29 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://cf7unlcnoi8tk"]
+[gd_scene load_steps=4 format=3 uid="uid://e8jv4qm4pl42"]
 
-[ext_resource type="Script" path="res://Assets/Player/Weapons/ice_spear.gd" id="1_te7jt"]
-[ext_resource type="Texture2D" uid="uid://b0dquvtrhdxsg" path="res://Assets/Tutorial/Items/Weapons/ice_spear.png" id="1_twr3j"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/ice_spear.gd" id="1_atg8l"]
+[ext_resource type="PackedScene" uid="uid://c64vcfy75htnr" path="res://Assets/Utility/Weapons/projectile_spawner.tscn" id="1_nipl3"]
+[ext_resource type="PackedScene" uid="uid://bgjjl2mj65qgu" path="res://Assets/Enemies/enemy.tscn" id="3_5x0yd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl172"]
-size = Vector2(7.77818, 35.3553)
+[node name="IceSpear" type="Node2D"]
+script = ExtResource("1_atg8l")
 
-[node name="IceSpear" type="Area2D" groups=["attack"]]
-collision_layer = 2
-collision_mask = 4
-script = ExtResource("1_te7jt")
-damage = 15
+[node name="ProjectileSpawner" parent="." instance=ExtResource("1_nipl3")]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("1_twr3j")
+[node name="AttackTimer" type="Timer" parent="."]
+autostart = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.750001, -0.749999)
-rotation = -0.785398
-shape = SubResource("RectangleShape2D_pl172")
+[node name="Enemies" type="Node" parent="."]
 
-[node name="DestroyTimer" type="Timer" parent="."]
-wait_time = 7.0
-one_shot = true
+[node name="Enemy2" parent="Enemies" instance=ExtResource("3_5x0yd")]
+position = Vector2(98, -47)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]
+[node name="Enemy" parent="Enemies" instance=ExtResource("3_5x0yd")]
+position = Vector2(-69, 48)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("3_5x0yd")]
+position = Vector2(58, 52)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("3_5x0yd")]
+position = Vector2(-72, -59)
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

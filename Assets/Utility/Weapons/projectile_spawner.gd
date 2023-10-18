@@ -1,40 +1,33 @@
 extends Node2D
 
-@export var timeBetweenAttacks = 1.0
-var IceSpear = preload("res://Assets/Player/Weapons/ice_spear.tscn")
-var Tornado = preload("res://Assets/Player/Weapons/tornado.tscn")
+@export var damage = 2
+@export var speed = 100
 
-var enemiesClose = []
-@onready var player = get_tree().get_first_node_in_group("player")
-
-
-func _on_ice_spear_timer_timeout():
-	var newSpear = IceSpear.instantiate()
-	newSpear.position = position
-	newSpear.target = get_random_target()
-	add_child(newSpear) # TODO change this, now projectiles use local space of player
-
-func _on_tornado_timer_timeout():
-	var newTornado = Tornado.instantiate()
-	newTornado.position = position
-	newTornado.last_movement = player.last_movement
-	add_child(newTornado)
-
-
-
-func _on_detection_circle_body_entered(body):
-	if not enemiesClose.has(body):
-		enemiesClose.append(body)
-
-
-func _on_detection_circle_body_exited(body):
-	if enemiesClose.has(body):
-		enemiesClose.erase(body)
-		
-func get_random_target():
-	if enemiesClose.size() > 0:
-		return enemiesClose.pick_random().global_position
-	else:
-		return Vector2.UP
+func get_targets(): # Returns array of Area2Ds on the 3rd collision layer or null(!) if none are present
+	# PS I hate nulls, if anyone knows of a better way to do this please tell me
+	# - Mlodko
+	if not $DetectionCircle.has_overlapping_areas():
+		return null
+	return $DetectionCircle.get_overlapping_areas()
+	
+func set_detection_radius(r : float): # r is radius of circle in [px]
+	$DetectionCircle/CollisionShape2D.shape.radius = r
+	
+func spawn_projectile(projectileScene: Projectile):
+	# projectile has to inherit the class, it ensures that there are setters for damage and speed
+	# TODO should probably put collisionShape in there too
+	var targets = get_targets()
+	if targets == null: return
+	
+	var target = targets[randi() % len(targets)] # Select random target
+	
+	# Prepare projectile for spawn
+	var projectile = projectileScene.instantiate()
+	projectile.set_damage(damage)
+	projectile.set_speed(speed)
+	projectile.collisionShape.transform.look_at(target.transform.position)
+	
+	#Spawn
+	$ProjectileHolder.add_child(projectile)
 
 
