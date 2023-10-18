@@ -18,9 +18,6 @@ func spawn_projectile(projectileScene : PackedScene) -> Node:
 	var projectile = projectileScene.instantiate()
 	projectile.global_position = global_position
 	
-	#Spawn
-	$ProjectileHolder.add_child(projectile)
-	
 	# Return
 	return projectile
 

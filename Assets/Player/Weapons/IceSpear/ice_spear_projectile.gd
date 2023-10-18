@@ -11,7 +11,7 @@ var pierce_amount : int = 1
 
 func _ready():
 	$DestroyTimer.start()
-	rotation = direction.dire()
+	rotation = direction.angle()
 
 
 func _physics_process(delta):
