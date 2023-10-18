@@ -13,13 +13,17 @@ func set_detection_radius(r : float):
 func get_detection_radius():
 	return $DetectionCircle/CollisionShape2D.shape.radius
 	
-func spawn_projectile(projectileScene):
+func spawn_projectile(projectileScene : PackedScene) -> Node:
 	# Prepare projectile for spawn
 	var projectile = projectileScene.instantiate()
 	projectile.global_position = global_position
+	
 	#Spawn
 	$ProjectileHolder.add_child(projectile)
 	
+	# Return
+	return projectile
+
 func distance_weighted_random_choice(array : Array[Area2D], max_distance : float):
 	# Basically the closer the target is the higher the chance it will get targeted
 	if len(array) == 1:
