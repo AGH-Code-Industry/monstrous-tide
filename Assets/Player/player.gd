@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
-var last_movement = Vector2.UP
+var last_movement := Vector2.UP
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")

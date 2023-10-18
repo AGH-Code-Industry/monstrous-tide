@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
-[ext_resource type="PackedScene" uid="uid://e8jv4qm4pl42" path="res://Assets/Player/Weapons/ice_spear.tscn" id="5_gkjf5"]
+[ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="5_ut88u"]
 
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
@@ -100,7 +100,7 @@ damage = 3.0
 position = Vector2(2.5, 0.5)
 shape = SubResource("RectangleShape2D_743r1")
 
-[node name="IceSpear" parent="." instance=ExtResource("5_gkjf5")]
+[node name="Tornado" parent="." instance=ExtResource("5_ut88u")]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2xi3w8srrklv"]
+
+[ext_resource type="Script" path="res://Assets/Player/Weapons/Tornado/tornado.gd" id="1_nj5nm"]
+[ext_resource type="PackedScene" uid="uid://c64vcfy75htnr" path="res://Assets/Utility/Weapons/projectile_spawner.tscn" id="2_cxnf4"]
+
+[node name="Tornado" type="Node2D"]
+script = ExtResource("1_nj5nm")
+
+[node name="ProjectileSpawner" parent="." instance=ExtResource("2_cxnf4")]
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
