@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
-[ext_resource type="PackedScene" uid="uid://e8jv4qm4pl42" path="res://Assets/Player/Weapons/IceSpear/ice_spear.tscn" id="2_2plba"]
+[ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 
@@ -66,7 +66,7 @@ size = Vector2(29, 33)
 motion_mode = 1
 script = ExtResource("1_jqw0g")
 
-[node name="IceSpear" parent="." instance=ExtResource("2_2plba")]
+[node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
