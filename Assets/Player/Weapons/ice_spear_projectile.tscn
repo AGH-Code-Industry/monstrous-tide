@@ -4,22 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://b0dquvtrhdxsg" path="res://Assets/Tutorial/Items/Weapons/ice_spear.png" id="2_byrlv"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_gh3xt"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl172"]
-size = Vector2(7.77818, 35.3553)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52gi8"]
+size = Vector2(35, 8)
 
 [node name="IceSpearProjectile" type="Area2D" groups=["attack"]]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_o8o3l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.750001, -0.749999)
-shape = SubResource("RectangleShape2D_pl172")
-
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-1.06066, -1.2517e-06)
-rotation = 0.785398
+position = Vector2(0.750002, -1.81066)
+rotation = 2.35619
 texture = ExtResource("2_byrlv")
 
 [node name="DestroyTimer" type="Timer" parent="."]
@@ -28,6 +24,14 @@ one_shot = true
 autostart = true
 
 [node name="DamageBox" parent="." instance=ExtResource("3_gh3xt")]
+collision_layer = 0
+collision_mask = 4
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[node name="CollisionShape2D" parent="DamageBox" index="0"]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_52gi8")
+
 [connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]
+[connection signal="area_entered" from="DamageBox" to="." method="_on_damage_box_area_entered"]
+
+[editable path="DamageBox"]

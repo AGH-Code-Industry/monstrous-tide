@@ -72,7 +72,7 @@ libraries = {
 }
 
 [node name="DamageBox" parent="." instance=ExtResource("3_s0i0u")]
-collision_layer = 4
+collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]

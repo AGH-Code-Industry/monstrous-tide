@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=16 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
+[ext_resource type="PackedScene" uid="uid://e8jv4qm4pl42" path="res://Assets/Player/Weapons/ice_spear.tscn" id="5_gkjf5"]
 
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
@@ -98,6 +99,8 @@ damage = 3.0
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
 position = Vector2(2.5, 0.5)
 shape = SubResource("RectangleShape2D_743r1")
+
+[node name="IceSpear" parent="." instance=ExtResource("5_gkjf5")]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 

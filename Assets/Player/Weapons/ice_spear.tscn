@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://e8jv4qm4pl42"]
+[gd_scene load_steps=3 format=3 uid="uid://e8jv4qm4pl42"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/ice_spear.gd" id="1_atg8l"]
 [ext_resource type="PackedScene" uid="uid://c64vcfy75htnr" path="res://Assets/Utility/Weapons/projectile_spawner.tscn" id="1_nipl3"]
-[ext_resource type="PackedScene" uid="uid://bgjjl2mj65qgu" path="res://Assets/Enemies/enemy.tscn" id="3_5x0yd"]
 
 [node name="IceSpear" type="Node2D"]
 script = ExtResource("1_atg8l")
@@ -11,19 +10,5 @@ script = ExtResource("1_atg8l")
 
 [node name="AttackTimer" type="Timer" parent="."]
 autostart = true
-
-[node name="Enemies" type="Node" parent="."]
-
-[node name="Enemy2" parent="Enemies" instance=ExtResource("3_5x0yd")]
-position = Vector2(98, -47)
-
-[node name="Enemy" parent="Enemies" instance=ExtResource("3_5x0yd")]
-position = Vector2(-69, 48)
-
-[node name="Enemy3" parent="Enemies" instance=ExtResource("3_5x0yd")]
-position = Vector2(58, 52)
-
-[node name="Enemy4" parent="Enemies" instance=ExtResource("3_5x0yd")]
-position = Vector2(-72, -59)
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
