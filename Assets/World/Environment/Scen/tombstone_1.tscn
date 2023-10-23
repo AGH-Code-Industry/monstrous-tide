@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bacoytneoofs4"]
+
+[ext_resource type="Texture2D" uid="uid://ei542g15lgjs" path="res://Assets/World/Environment/Texture/Tombstone_0.1.png" id="1_02ucj"]
+
+[node name="Tombstone_1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("1_02ucj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+polygon = PackedVector2Array(-342.857, 828.571, 371.429, 828.571, 342.857, 542.857, 200, 514.286, 171.429, 0, 371.429, -28.5714, 428.571, -257.143, -428.571, -257.143, -400, -57.1429, -142.857, -28.5714, -171.429, 514.286, -314.286, 542.857)

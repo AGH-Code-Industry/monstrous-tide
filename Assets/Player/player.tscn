@@ -102,7 +102,7 @@ damage = 3.0
 position = Vector2(2.5, 0.5)
 shape = SubResource("RectangleShape2D_743r1")
 
-[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
+[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 
 [editable path="HitBox"]
 [editable path="DamageBox"]
