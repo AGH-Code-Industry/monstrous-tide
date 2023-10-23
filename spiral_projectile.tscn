@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://baip31hbde13m"]
+
+[ext_resource type="Script" path="res://SpiralProjectile.gd" id="1_heolv"]
+[ext_resource type="Script" path="res://Control.gd" id="2_mnyif"]
+
+[node name="SpiralProjectile" type="Node2D"]
+position = Vector2(320, 173)
+script = ExtResource("1_heolv")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_mnyif")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
