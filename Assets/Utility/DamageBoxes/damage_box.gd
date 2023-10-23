@@ -2,6 +2,7 @@ extends Area2D
 
 # For dealing damage
 
+
 # Preferably to be moved in the future to some sort of stats node
 @export var damage: float = 1
 # Number of attacks per second

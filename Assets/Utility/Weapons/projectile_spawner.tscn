@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c64vcfy75htnr"]
+
+[ext_resource type="Script" path="res://Assets/Utility/Weapons/projectile_spawner.gd" id="1_gnime"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tj7gw"]
+radius = 137.33
+
+[node name="ProjectileSpawner" type="Node2D"]
+script = ExtResource("1_gnime")
+
+[node name="TargetLocation" type="Marker2D" parent="."]
+position = Vector2(279, 184)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="TargetLocation"]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+color = Color(1, 0, 0, 1)
+
+[node name="DetectionCircle" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionCircle"]
+shape = SubResource("CircleShape2D_tj7gw")
+
+[node name="ProjectileHolder" type="Node" parent="."]
+
+[connection signal="body_entered" from="DetectionCircle" to="." method="_on_detection_circle_body_entered"]
+[connection signal="body_exited" from="DetectionCircle" to="." method="_on_detection_circle_body_exited"]
