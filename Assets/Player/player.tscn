@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=16 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
+[ext_resource type="PackedScene" uid="uid://cpjoq4pdukqog" path="res://Assets/Utility/HealthBar/health_bar.tscn" id="2_c8up0"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 
@@ -70,6 +71,9 @@ libraries = {
 "": SubResource("AnimationLibrary_qa4wg")
 }
 
+[node name="HealthBar" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_c8up0")]
+hit_box_component = NodePath("../HitBox")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_0kk1c")
@@ -82,15 +86,17 @@ position = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." instance=ExtResource("3_vkkdj")]
+visible = false
 collision_layer = 2
 collision_mask = 4
-health = 100.0
+health = 200.0
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
+visible = false
 damage = 3.0
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]

@@ -8,6 +8,8 @@ extends Area2D
 @export var health: float = 10
 @export var show_damage_taken_numbers: bool = false
 
+signal update_health
+
 signal on_death()
 
 func take_damage(dmg: Damage) -> void:
@@ -26,6 +28,7 @@ func take_damage(dmg: Damage) -> void:
 		disableTimer.start()
 	if health <= 0:
 		die()
+	update_health.emit()
 
 
 func die() -> void:
