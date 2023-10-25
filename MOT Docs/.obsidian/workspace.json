@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project Wiki/__General__/Members.md",
-                "mode": "preview",
+                "file": "Project Wiki/__General__/Project description.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Project Wiki/__General__/Members.md",
+                "file": "Project Wiki/__General__/Project description.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Project Wiki/__General__/Members.md",
+                "file": "Project Wiki/__General__/Project description.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Project Wiki/__General__/Members.md"
+                "file": "Project Wiki/__General__/Project description.md"
               }
             }
           }
@@ -148,13 +148,13 @@
   },
   "active": "3ca74474fc0e1c8a",
   "lastOpenFiles": [
-    "Project Wiki/Story/Plot sketch.md",
-    "Project Wiki/__General__/Do's and Don'ts.md",
-    "Project Wiki/Story/Untitled.md",
+    "Docs/1. Code docs template.md",
     "Project Wiki/__General__/Project description.md",
     "Project Wiki/__General__/Members.md",
     "Project Wiki/__General__/Links.md",
-    "Docs/1. Code docs template.md",
+    "Project Wiki/Story/Plot sketch.md",
+    "Project Wiki/__General__/Do's and Don'ts.md",
+    "Project Wiki/Story/Untitled.md",
     "Project Wiki/__General__",
     "Project Wiki/Machanics",
     "Project Wiki/Characters/Non-playable",
