@@ -33,9 +33,10 @@ Day*Planners/*
 .obsidian-git-data
 
 # Exclude Untitled Notes
-Untitled*
+# Untitled*
+
 # Exclude "bad" names
-null*
+# null*
 
 # Add below lines to exclude OS settings and caches
 .trash/
