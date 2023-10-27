@@ -30,7 +30,8 @@ func movement():
 	move_and_slide()
 
 func die():
-	print("Player died")
+	pass
+	#print("Player died")
 	
 
 func _on_hit_box_on_death() -> void:

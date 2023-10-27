@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=26 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cctao6a7cpn7i" path="res://Assets/World/Environment/Scen/stone_2d.tscn" id="17_tff1i"]
 [ext_resource type="PackedScene" uid="uid://c23nv1wariral" path="res://Assets/World/Environment/Scen/stone_2e.tscn" id="18_gh0ig"]
 [ext_resource type="PackedScene" uid="uid://bvawrv4cvkx6q" path="res://Assets/Utility/Managers/experience_manager.tscn" id="22_c4rh6"]
+[ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
 script = ExtResource("4_f0yyc")
@@ -179,5 +180,7 @@ position = Vector2(222, 117)
 position = Vector2(-553, -100)
 
 [node name="ItemsLayer" type="Node" parent="." groups=["items"]]
+
+[node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
 
 [node name="ExperienceManager" parent="." instance=ExtResource("22_c4rh6")]
