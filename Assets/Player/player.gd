@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
+var last_movement := Vector2.UP
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
@@ -19,6 +20,7 @@ func movement():
 	var mov = Vector2(x_mov, y_mov)
 	
 	if mov != Vector2.ZERO:
+		last_movement = mov
 		animation_sprite.play("Walk")
 		if mov[0] > 0:
 			animation_sprite.flip_h = true

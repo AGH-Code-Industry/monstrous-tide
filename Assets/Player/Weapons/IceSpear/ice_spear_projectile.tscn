@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh17b8rnm1yoa"]
+
+[ext_resource type="Script" path="res://Assets/Player/Weapons/IceSpear/ice_spear_projectile.gd" id="1_2kba0"]
+[ext_resource type="Texture2D" uid="uid://b0dquvtrhdxsg" path="res://Assets/Tutorial/Items/Weapons/ice_spear.png" id="2_vqhdn"]
+[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_32bnk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52gi8"]
+size = Vector2(35, 8)
+
+[node name="IceSpearProjectile" type="Area2D" groups=["attack"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_2kba0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.750002, -1.81066)
+rotation = 2.35619
+texture = ExtResource("2_vqhdn")
+
+[node name="DestroyTimer" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+autostart = true
+
+[node name="DamageBox" parent="." instance=ExtResource("3_32bnk")]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="DamageBox" index="0"]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_52gi8")
+
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]
+[connection signal="area_entered" from="DamageBox" to="." method="_on_damage_box_area_entered"]
+
+[editable path="DamageBox"]

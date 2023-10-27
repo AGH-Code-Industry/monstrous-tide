@@ -79,7 +79,7 @@ libraries = {
 }
 
 [node name="DamageBox" parent="." instance=ExtResource("3_s0i0u")]
-collision_layer = 4
+collision_layer = 0
 collision_mask = 2
 damage = 10.0
 
@@ -88,8 +88,11 @@ position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_08bso")
 
 [node name="HitBox" parent="." instance=ExtResource("4_ogpyu")]
+collision_layer = 4
+collision_mask = 0
 health = 10.0
 show_damage_taken_numbers = true
+
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(1.5, 2)
