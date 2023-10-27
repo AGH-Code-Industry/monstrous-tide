@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Assets/Utility/UI/Progressbar/progress_bar.gd" id="1_op6f3"]
 
 [node name="progress_bar" type="CanvasLayer"]
+layer = 0
 script = ExtResource("1_op6f3")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
