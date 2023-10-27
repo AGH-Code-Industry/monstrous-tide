@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://30vfjie78f7k"]
+[gd_scene load_steps=13 format=3 uid="uid://30vfjie78f7k"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_cbduv"]
-[ext_resource type="PackedScene" uid="uid://cpjoq4pdukqog" path="res://Assets/Utility/HealthBar/health_bar.tscn" id="2_6x6fq"]
+[ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="2_p7oga"]
 [ext_resource type="Texture2D" uid="uid://bsga074sfx0dn" path="res://Assets/Tutorial/Enemy/kolbold_strong.png" id="2_siudx"]
+[ext_resource type="PackedScene" uid="uid://jxwdyvkhthww" path="res://Assets/Utility/DropItems/ExperienceCrystal.tscn" id="3_facml"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_l4oab"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="4_oxwy8"]
 
@@ -60,7 +61,9 @@ motion_mode = 1
 script = ExtResource("1_cbduv")
 movement_speed = 18.0
 
-[node name="HealthBar" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_6x6fq")]
+[node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_p7oga")]
+drop_percent = 1.0
+item_scene = ExtResource("3_facml")
 hit_box_component = NodePath("../HitBox")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

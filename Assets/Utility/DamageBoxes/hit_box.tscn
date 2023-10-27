@@ -1,15 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://baj5k0y7p3ndk"]
+[gd_scene load_steps=4 format=3 uid="uid://baj5k0y7p3ndk"]
 
 [ext_resource type="Script" path="res://Assets/Utility/DamageBoxes/hit_box.gd" id="1_1r20i"]
+[ext_resource type="PackedScene" uid="uid://cpjoq4pdukqog" path="res://Assets/Utility/HealthBar/health_bar.tscn" id="2_lbru2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cd87r"]
+radius = 14.0
 
 [node name="HitBox" type="Area2D"]
 script = ExtResource("1_1r20i")
 health = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cd87r")
 
 [node name="DisableTimer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="HealthBar" parent="." instance=ExtResource("2_lbru2")]
 
 [connection signal="timeout" from="DisableTimer" to="." method="_on_disable_timer_timeout"]

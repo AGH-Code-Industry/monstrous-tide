@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var health_bar = $HealthBar
+#@onready var health_bar = $HealthBar
 
 var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
