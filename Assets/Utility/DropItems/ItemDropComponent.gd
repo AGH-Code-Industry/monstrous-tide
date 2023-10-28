@@ -36,7 +36,7 @@ func pick_random_item():
 		overall_chance += item.drop_chance
 	
 	var random_number = randf_range(0, overall_chance)
-	var offset: int = 0
+	var offset: float = 0
 	for item in items_to_drop:
 		if random_number < item.drop_chance + offset:
 			create_item(item.item_scene)

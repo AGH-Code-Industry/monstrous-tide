@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="2_p7oga"]
 [ext_resource type="Texture2D" uid="uid://bsga074sfx0dn" path="res://Assets/Tutorial/Enemy/kolbold_strong.png" id="2_siudx"]
 [ext_resource type="PackedScene" uid="uid://c5mxh0oc3b0de" path="res://Assets/Utility/DropItems/ExperienceCrystalRed.tscn" id="3_d2olm"]
-[ext_resource type="PackedScene" uid="uid://jxwdyvkhthww" path="res://Assets/Utility/DropItems/ExperienceCrystal.tscn" id="3_facml"]
+[ext_resource type="PackedScene" uid="uid://jxwdyvkhthww" path="res://Assets/Utility/DropItems/ExperienceCrystalBlue.tscn" id="3_facml"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_l4oab"]
 [ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="4_76o6c"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="4_oxwy8"]
