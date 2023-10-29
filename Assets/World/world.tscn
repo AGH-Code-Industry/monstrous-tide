@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=29 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
@@ -21,6 +21,11 @@
 [ext_resource type="PackedScene" uid="uid://cj3l1cpah21so" path="res://Assets/World/Environment/Scen/stone_2c.tscn" id="15_s4wxv"]
 [ext_resource type="PackedScene" uid="uid://cctao6a7cpn7i" path="res://Assets/World/Environment/Scen/stone_2d.tscn" id="17_tff1i"]
 [ext_resource type="PackedScene" uid="uid://c23nv1wariral" path="res://Assets/World/Environment/Scen/stone_2e.tscn" id="18_gh0ig"]
+[ext_resource type="PackedScene" uid="uid://bvawrv4cvkx6q" path="res://Assets/Utility/Managers/experience_manager.tscn" id="22_c4rh6"]
+[ext_resource type="PackedScene" uid="uid://jxwdyvkhthww" path="res://Assets/Utility/DropItems/ExperienceCrystalBlue.tscn" id="22_vh4o2"]
+[ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
+[ext_resource type="PackedScene" uid="uid://c5mxh0oc3b0de" path="res://Assets/Utility/DropItems/ExperienceCrystalRed.tscn" id="24_aho84"]
+[ext_resource type="PackedScene" uid="uid://3oi6ye0awot6" path="res://Assets/Utility/DropItems/ExperienceCrystalGreen.tscn" id="25_mxuft"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
 script = ExtResource("4_f0yyc")
@@ -176,3 +181,18 @@ position = Vector2(222, 117)
 
 [node name="Cande_9" parent="Environment" instance=ExtResource("10_wltt3")]
 position = Vector2(-553, -100)
+
+[node name="ItemsLayer" type="Node" parent="." groups=["items"]]
+
+[node name="ExperienceCrystal" parent="ItemsLayer" instance=ExtResource("22_vh4o2")]
+position = Vector2(-137, -5)
+
+[node name="ExperienceCrystal2" parent="ItemsLayer" instance=ExtResource("25_mxuft")]
+position = Vector2(-138, 32)
+
+[node name="ExperienceCrystal3" parent="ItemsLayer" instance=ExtResource("24_aho84")]
+position = Vector2(-137, 71)
+
+[node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
+
+[node name="ExperienceManager" parent="." instance=ExtResource("22_c4rh6")]

@@ -23,7 +23,7 @@ func _physics_process(_delta):
 
 func _on_hit_box_on_death() -> void:
 	# Loot and xp drop functions should be added here
-	print("Enemy died")
+	#print("Enemy died")
 	queue_free()
 
 

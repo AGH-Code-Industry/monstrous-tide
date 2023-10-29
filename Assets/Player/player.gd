@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+#@onready var health_bar = $HealthBar
 
 var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
@@ -31,8 +32,9 @@ func movement():
 	move_and_slide()
 
 func die():
-	print("Player died")
-
+	pass
+	#print("Player died")
+	
 
 func _on_hit_box_on_death() -> void:
 	die()
