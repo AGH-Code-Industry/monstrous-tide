@@ -17,7 +17,7 @@ texture_filter = 1
 texture = ExtResource("2_fficl")
 
 [node name="DestroyTimer" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 4.0
 
 [node name="DamageBox" parent="." instance=ExtResource("3_ot113")]
 collision_layer = 2

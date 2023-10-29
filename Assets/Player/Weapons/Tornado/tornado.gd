@@ -3,7 +3,7 @@ static var tornadoProjectile := load(
 	"res://Assets/Player/Weapons/Tornado/tornado_projectile.tscn")
 @onready var player = get_node("/root/World/Player")
 
-@export var attack_speed = 4 # In attacks / s
+@export var attack_speed: float = 4 # In attacks / s
 @export var damage = 5
 @export var speed = 30
 @export var projectilesPerAttack = 3

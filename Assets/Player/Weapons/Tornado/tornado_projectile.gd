@@ -15,6 +15,7 @@ func _ready():
 	# and I won't event try to understand it as long as it works.
 	var move_to_less = Vector2.ZERO
 	var move_to_more = Vector2.ZERO
+	$DestroyTimer.start()
 
 	match last_movement:
 		Vector2.UP, Vector2.DOWN:
