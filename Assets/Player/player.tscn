@@ -63,13 +63,14 @@ size = Vector2(18, 28)
 size = Vector2(29, 33)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2vf40"]
-radius = 14.0
+radius = 50.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_jqw0g")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -97,7 +98,6 @@ position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
-visible = false
 collision_layer = 2
 collision_mask = 4
 damage = 3.0

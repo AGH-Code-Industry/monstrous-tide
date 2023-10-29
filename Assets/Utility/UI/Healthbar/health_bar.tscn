@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://Assets/Utility/UI/Healthbar/health_bar.gd" id="3_82f0w"]
 
 [node name="HealthBar" type="TextureProgressBar"]
+z_index = 1
 offset_left = -16.0
 offset_top = -25.0
 offset_right = 16.0
