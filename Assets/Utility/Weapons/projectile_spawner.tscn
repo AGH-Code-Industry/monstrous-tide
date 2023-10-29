@@ -3,14 +3,10 @@
 [ext_resource type="Script" path="res://Assets/Utility/Weapons/projectile_spawner.gd" id="1_gnime"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tj7gw"]
-radius = 180.003
+radius = 137.33
 
 [node name="ProjectileSpawner" type="Node2D"]
 script = ExtResource("1_gnime")
-timeBetweenAttacks = 3.0
-
-[node name="IceSpearTimer" type="Timer" parent="."]
-autostart = true
 
 [node name="TargetLocation" type="Marker2D" parent="."]
 position = Vector2(279, 184)
@@ -30,11 +26,7 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionCircle"]
 shape = SubResource("CircleShape2D_tj7gw")
 
-[node name="TornadoTimer" type="Timer" parent="."]
-wait_time = 3.5
-autostart = true
+[node name="ProjectileHolder" type="Node" parent="."]
 
-[connection signal="timeout" from="IceSpearTimer" to="." method="_on_ice_spear_timer_timeout"]
 [connection signal="body_entered" from="DetectionCircle" to="." method="_on_detection_circle_body_entered"]
 [connection signal="body_exited" from="DetectionCircle" to="." method="_on_detection_circle_body_exited"]
-[connection signal="timeout" from="TornadoTimer" to="." method="_on_tornado_timer_timeout"]
