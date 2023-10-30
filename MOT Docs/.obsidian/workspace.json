@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docs/1. Code docs template.md",
-                "mode": "source",
+                "file": "Project Wiki/__General__/Links.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docs/1. Code docs template.md",
+                "file": "Project Wiki/__General__/Links.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docs/1. Code docs template.md",
+                "file": "Project Wiki/__General__/Links.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docs/1. Code docs template.md"
+                "file": "Project Wiki/__General__/Links.md"
               }
             }
           }
@@ -148,22 +148,26 @@
   },
   "active": "3ca74474fc0e1c8a",
   "lastOpenFiles": [
-    "Project Wiki/__General__/Project description.md",
-    "Docs/1. Code docs template.md",
     "Project Wiki/__General__/Members.md",
-    "Project Wiki/__General__/Links.md",
+    "Project Wiki/__General__/Project description.md",
+    "Project Wiki/Items/Currencies, points, etc/Ideas.md",
+    "Project Wiki/Stages and Maps/Biomes/Examples.md",
+    "Project Wiki/Stages and Maps/Enemies/Concept list.md",
+    "Project Wiki/Stages and Maps/General draft.md",
     "Project Wiki/Story/Plot sketch.md",
-    "Project Wiki/__General__/Do's and Don'ts.md",
-    "Project Wiki/Story/Untitled.md",
-    "Project Wiki/__General__",
-    "Project Wiki/Machanics",
-    "Project Wiki/Characters/Non-playable",
-    "Project Wiki/Characters/Playable",
-    "Project/Items/Other",
-    "Project/Items/Weapons",
+    "Project Wiki/__General__/Links.md",
+    "Docs/1. Code docs template.md",
+    "Project Wiki/Stages and Maps/Enemies",
+    "Project Wiki/Stages and Maps/Biomes",
+    "Project Wiki/Stages and Maps/Shops",
+    "Project Wiki/Items/Currencies, points, etc",
+    "Project Wiki/Items/Weapon materials",
+    "Project Wiki/Items/Weapons",
+    "Project Wiki/Items",
+    "Project Wiki/Stages and Maps/Maps",
+    "Project Wiki/Stages and Maps",
     "Project Wiki/Characters",
-    "Project/Items",
-    "Project Wiki/Stages",
-    "Project Wiki/Story"
+    "Project Wiki/__General__/Do's and Don'ts.md",
+    "Project Wiki/Story/Untitled.md"
   ]
 }
