@@ -61,7 +61,7 @@ where A, B, C... indicate different *[[Examples|biomes]]*, which player may sele
 
 # Shops
 
-After each aforementioned Map (node on fig. 2) there will be a specific shop available in which player will be able to buy specified items, upgrades, abilities, bonuses and/or weapons with a specified [[Ideas|currency]].
+After each aforementioned Map (node on fig. 2) there will be a specific shop available in which player will be able to buy specified items, upgrades, abilities, bonuses and/or weapons with a specified [[__Currencies ideas__|currency]].
 
 # Story relations
 

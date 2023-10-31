@@ -19,4 +19,4 @@ ___
 | | | | - **Prices**: ??? |
 
 > [!info] *Regarding the "Scale" column*
-> Not the best name, but to explain: these are the measures describing real value of said currency, how much is much and how much is little of it.
+> Not the best name, so it needs an explanation: these are the measures describing real value of said currency, how much is much and how much is little of it.

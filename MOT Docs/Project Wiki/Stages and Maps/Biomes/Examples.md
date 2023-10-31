@@ -13,6 +13,13 @@ ___
 - Basic items and weapons drops[^1];
 - Maybe for an intro?
 
+### 2. Under-city dungeons
+
+- Wet ground/puddles on the ground, withered soil;
+- Maybe limited visibility mechanic?
+- Specific enemies, like weird big insects???
+- *tbc*
+
 
 [^1]: Due to further change, especially when introducing full weapon and item system.
 

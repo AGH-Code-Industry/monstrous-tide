@@ -11,8 +11,13 @@
             "id": "3ca74474fc0e1c8a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Project Wiki/Stages and Maps/Biomes/Examples.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Project Wiki/Stages and Maps/Biomes/Examples.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Project Wiki/Stages and Maps/Biomes/Examples.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Project Wiki/Stages and Maps/Biomes/Examples.md"
+              }
             }
           }
         ]
@@ -140,25 +149,36 @@
   },
   "active": "3ca74474fc0e1c8a",
   "lastOpenFiles": [
-    "Project Wiki/__General__/Project description.md",
+    "Project Wiki/Items/Currencies, points, etc/__Currencies ideas__.md",
+    "Project Wiki/Stages and Maps/Biomes/Examples.md",
+    "Project Wiki/Items/Weapons/Weapon types.md",
+    "Project Wiki/Items/Weapons/Weapon tags.md",
+    "Project Wiki/Items/Weapons/Weapon stats.md",
+    "Project Wiki/Items/Weapons/Weapon sets.md",
+    "Project Wiki/Items/Weapons/__General weapons draft__.md",
+    "Project Wiki/Items/Rarity and drop-rate system/__Rarity system sketch__.md",
+    "Project Wiki/Items/Rarity and drop-rate system",
+    "Project Wiki/Combat system/Statistics/__Statistics outline__.md",
+    "Project Wiki/Combat system/Statistics/Damage calculations.md",
+    "Project Wiki/Combat system/Statistics/Health fluctuations.md",
+    "Project Wiki/Stages and Maps/__General structure draft__.md",
+    "Project Wiki/Characters/__Character outline__.md",
+    "Project Wiki/Story/__Plot sketch__.md",
+    "Project Wiki/Characters/Outline.md",
+    "Project Wiki/Characters",
+    "Project Wiki/Combat system/Untitled",
     "Project Wiki/__General__/Members.md",
     "Project Wiki/__General__/Links.md",
-    "Project Wiki/__General__",
-    "Project Wiki/Story/Plot sketch.md",
-    "Project Wiki/Story",
-    "Project Wiki/Stages and Maps/General draft.md",
-    "Project Wiki/Stages and Maps/Enemies/Concept list.md",
-    "Project Wiki/Stages and Maps/Enemies",
-    "Project Wiki/Stages and Maps/Biomes/Examples.md",
-    "Project Wiki/Stages and Maps/Biomes",
-    "Project Wiki/Items/Currencies, points, etc/Ideas.md",
-    "Project Wiki/Items/Currencies, points, etc",
     "Docs/1. Code docs template.md",
-    "Docs",
-    "Project Wiki/Stages and Maps/Shops",
-    "Project Wiki/Items/Weapon materials",
-    "Project Wiki/Items/Weapons",
-    "Project Wiki/Items",
+    "Project Wiki/__Attachments",
+    "Project Wiki/Stages and Maps/Enemies/Concept list.md",
+    "Project Wiki/__General__/Project description.md",
+    "Project Wiki/Character and weapon progression",
+    "Project Wiki/Combat system/Statistics",
+    "Project Wiki/Combat system",
+    "Project Wiki/__General__",
+    "Project Wiki/Story",
+    "Project Wiki/Stages and Maps/Enemies",
     "Project Wiki/__General__/Do's and Don'ts.md",
     "Project Wiki/Story/Untitled.md"
   ]
