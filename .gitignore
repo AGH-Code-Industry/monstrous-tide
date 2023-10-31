@@ -14,6 +14,10 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
+# to exclude .obsidian folder
+
+MOT Docs/.obsidian
+
 # to exclude Obsidian workspace settings (including plugin and hotkey configurations)
 .obsidian/*
 
