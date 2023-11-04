@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bgjjl2mj65qgu"]
+[gd_scene load_steps=19 format=3 uid="uid://bgjjl2mj65qgu"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_iqk56"]
 [ext_resource type="Texture2D" uid="uid://beqs3tbas1lo8" path="res://Assets/Tutorial/Enemy/kolbold_weak.png" id="2_pf2vg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="3_v5od0"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="4_ogpyu"]
 [ext_resource type="PackedScene" uid="uid://3oi6ye0awot6" path="res://Assets/Utility/DropItems/ExperienceCrystalGreen.tscn" id="5_fspra"]
+[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup.tscn" id="6_x2ky4"]
 
 [sub_resource type="Resource" id="Resource_vx4b0"]
 script = ExtResource("3_v5od0")
@@ -18,6 +19,11 @@ drop_chance = 75.0
 script = ExtResource("3_v5od0")
 item_scene = ExtResource("5_fspra")
 drop_chance = 25.0
+
+[sub_resource type="Resource" id="Resource_euwyn"]
+script = ExtResource("3_v5od0")
+item_scene = ExtResource("6_x2ky4")
+drop_chance = 10.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sri3"]
 radius = 7.0
@@ -74,7 +80,7 @@ script = ExtResource("1_iqk56")
 
 [node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_vxrrt")]
 hit_box_component = NodePath("../HitBox")
-items_to_drop = Array[ExtResource("3_v5od0")]([SubResource("Resource_vx4b0"), SubResource("Resource_1ov3q")])
+items_to_drop = Array[ExtResource("3_v5od0")]([SubResource("Resource_vx4b0"), SubResource("Resource_1ov3q"), SubResource("Resource_euwyn")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_pf2vg")
