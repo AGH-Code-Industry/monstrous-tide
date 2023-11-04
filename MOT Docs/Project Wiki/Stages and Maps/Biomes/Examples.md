@@ -20,6 +20,13 @@ ___
 - Specific enemies, like weird big insects???
 - *tbc*
 
+### 3. Ice caves
+
+![[swjfo_crystal-caves.jpg]]
+- Concept screenshot I took inspiration from (Star Wars Jedi - Fallen Order: Ilum, Crystal Caves);
+- ^ This but darker, for whole project concept's purpose;
+- Home to Ice Golems, Soil Golems, Stone Golems, maybe also to Bart? ([[Concept list#Pool two - Golems|see here]])
+
 
 [^1]: Due to further change, especially when introducing full weapon and item system.
 
