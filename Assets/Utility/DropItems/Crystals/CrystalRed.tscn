@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dign3j2sdr85j"]
+
+[ext_resource type="PackedScene" uid="uid://belgkl4t1s14r" path="res://Assets/Utility/DropItems/Crystals/ExperienceCrystal.tscn" id="1_pu3jv"]
+[ext_resource type="Texture2D" uid="uid://c8x11cu4v5ygl" path="res://Assets/Tutorial/Items/Gems/Gem_red.png" id="2_8rksi"]
+
+[node name="ExperienceCrystal" instance=ExtResource("1_pu3jv")]
+experience_points = 100
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_8rksi")
