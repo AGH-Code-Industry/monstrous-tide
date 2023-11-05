@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 signal update_player_stats(stats: Dictionary)
 
