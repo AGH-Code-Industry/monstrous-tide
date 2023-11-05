@@ -10,11 +10,13 @@ func set_radius(radius: float):
 	
 
 func _on_pickup_radius_area_entered(area: Area2D) -> void:
-	if area.has_method("pickUp"):
-		area.pickUp(position)
+	var parent = area.get_parent()
+	if parent.has_method("pickUp"):
+		parent.pickUp(self)
 
 
 
 func _on_reaction_radius_area_entered(area: Area2D) -> void:
-	if area.has_method("collect"):
-		area.collect()
+	var parent = area.get_parent()
+	if parent.has_method("collect"):
+		parent.collect()

@@ -12,11 +12,15 @@ radius = 11.0
 script = ExtResource("1_xt2h3")
 
 [node name="pickupRadius" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pickupRadius"]
 shape = SubResource("CircleShape2D_7ar3r")
 
 [node name="reactionRadius" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="reactionRadius"]
 shape = SubResource("CircleShape2D_3hhm4")
