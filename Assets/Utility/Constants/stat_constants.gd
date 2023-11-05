@@ -1,5 +1,7 @@
 class_name StatConstants
 
 enum PlayerStats {
-	PICKUPRADIUS
+	PICKUPRADIUS,
+	DODGE,
+	MOVEMENTSPEED,
 }
