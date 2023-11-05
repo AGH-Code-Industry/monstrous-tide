@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=18 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
 [ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
+[ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
@@ -85,10 +86,12 @@ animation = &"Walk"
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." instance=ExtResource("3_vkkdj")]
+visible = false
 collision_layer = 2
 collision_mask = 4
 health = 200.0
@@ -98,6 +101,7 @@ position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
+visible = false
 collision_layer = 2
 collision_mask = 4
 damage = 3.0
@@ -107,13 +111,17 @@ position = Vector2(2.5, 0.5)
 shape = SubResource("RectangleShape2D_743r1")
 
 [node name="PickUpArea" type="Area2D" parent="."]
+visible = false
 collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
 shape = SubResource("CircleShape2D_2vf40")
 
+[node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
+
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 
 [editable path="HitBox"]
 [editable path="DamageBox"]
+[editable path="PickupComponent"]

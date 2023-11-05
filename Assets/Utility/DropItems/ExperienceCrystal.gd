@@ -39,4 +39,3 @@ func on_area_entered(_other_area: Area2D):
 	tween.chain()
 	
 	tween.tween_callback(tween_anim_colplete)
-	

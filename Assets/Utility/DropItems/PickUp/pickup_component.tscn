@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg6gnjj6opuhq"]
+
+[ext_resource type="Script" path="res://Assets/Utility/DropItems/PickUp/pickup_component.gd" id="1_xt2h3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ar3r"]
+radius = 53.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3hhm4"]
+radius = 11.0
+
+[node name="PickupComponent" type="Node2D"]
+script = ExtResource("1_xt2h3")
+
+[node name="pickupRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickupRadius"]
+shape = SubResource("CircleShape2D_7ar3r")
+
+[node name="reactionRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reactionRadius"]
+shape = SubResource("CircleShape2D_3hhm4")
+
+[connection signal="area_entered" from="pickupRadius" to="." method="_on_pickup_radius_area_entered"]
+[connection signal="area_entered" from="reactionRadius" to="." method="_on_reaction_radius_area_entered"]
