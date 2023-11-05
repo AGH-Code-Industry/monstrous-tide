@@ -69,6 +69,9 @@ radius = 50.0
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_jqw0g")
+stats = {
+2: 100
+}
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
 visible = false

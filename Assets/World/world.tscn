@@ -187,4 +187,4 @@ position = Vector2(-553, -100)
 [node name="ExperienceManager" parent="." instance=ExtResource("22_c4rh6")]
 
 [node name="ExperienceCollectPickup" parent="." instance=ExtResource("27_nkgxi")]
-position = Vector2(-116, -53)
+position = Vector2(-26, -9)

@@ -7,15 +7,8 @@ var player_pickup_area_origin_size
 
 	
 func collect():
-#	timer.connect("timeout", on_timer_end)
-#	timer.start()
-#	player_pickup_area = other_area.get_child(0)
-#	player_pickup_area_origin_size = player_pickup_area.shape.radius
-#	player_pickup_area.shape.radius = 300
+
 	print("PowerUp")
+	StatManager.emit_player_stats_update({StatConstants.PlayerStats.PICKUPRADIUS: 10000}, 5)
 	queue_free()
 	
-	
-#func on_timer_end():
-#	player_pickup_area.shape.radius = player_pickup_area_origin_size
-#	queue_free()
