@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameEvents="*res://Assets/World/game_events.tscn"
+StatManager="*res://Assets/Utility/Managers/stat_manager.gd"
 
 [display]
 
