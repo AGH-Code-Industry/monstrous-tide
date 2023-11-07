@@ -7,6 +7,13 @@ ___
 >
 >To do so, go to *Settings*, then *Community plug-ins*, turn on the plugins, download *Table extended* plugin by AidenLX, turn it on in plugins tab and **also turn it on in *Table extended* settings** below (*Extended Native Table Syntax*). You may need to re-open this vault to force Obsidian to read the plug-in.
 
+# From Miro
+
+- Provided zombie-like enemies (styled like in Corpse Bride), *to be further covered*;
+- Provided enemies styled like in Darkest Dungeon, *to be further covered*;
+- Everything shall be cartoon/comics-like, especially bosses being Lovecraft-like;
+- A few fish-based enemies, a concept of some watery scene? *to be further covered*
+- 
 # Pool one - Vampires
 
 First, expected to be the most important ones, up to further changes. Described as follows:
