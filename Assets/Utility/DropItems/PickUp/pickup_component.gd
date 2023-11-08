@@ -6,7 +6,6 @@ extends Node2D
 
 
 func _ready():
-#	StatManager.update_player_stats.connect(func(receivedStats): stats = StatManager.add_relevant_stats(stats, receivedStats))
 	StatManager.update_player_stats.connect(on_pickupradius_update)
 	pickup_circle.shape.radius = stats[StatConstants.PlayerStats.PICKUPRADIUS]
 

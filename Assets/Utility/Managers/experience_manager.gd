@@ -14,10 +14,6 @@ func level_up():
 	current_points -= points_to_levelup
 	current_level += 1
 	points_to_levelup += 5
-#	print("Level: " + str(current_level))
-#	print("Current points: " + str(current_points))
-#	print("Points to next level: " + str(points_to_levelup))
-#	print("--------------------------")
 
 	
 func on_experience_collected(number_of_experience: int):
