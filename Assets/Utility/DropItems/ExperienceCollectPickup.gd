@@ -1,10 +1,5 @@
 extends DropItemClass
 
-@onready var timer = $Timer
-
-var player_pickup_area
-var player_pickup_area_origin_size
-
 	
 func collect():
 

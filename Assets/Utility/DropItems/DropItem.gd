@@ -10,17 +10,8 @@ class_name DropItemClass
 func tween_move_to_player(percent: float, start_position: Vector2, target: Node):
 	global_position = start_position.lerp(target.global_position, percent)
 	
-	
-func collect():
-	queue_free()
-	
-
-func disable_collision():
-	collision_shape_2d.disabled = true
-	
 
 func pickUp(target):
-	Callable(disable_collision).call_deferred()
 	var tween = create_tween()
 	tween.set_parallel()
 	tween.tween_method(tween_move_to_player\
@@ -30,4 +21,5 @@ func pickUp(target):
 	tween.tween_property(sprite_2d, "scale", Vector2.ZERO, 0.25).set_delay(0.35)
 	tween.chain()
 	
-	tween.tween_callback(collect)
+	# TODO Temporary soltion. In the future check if there is a better one
+	area_2d.collision_layer = 16
