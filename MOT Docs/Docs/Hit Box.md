@@ -1,42 +1,34 @@
 ---
-aliases:
-  - hitbox
-  - hitboxa
-  - Hitbox
-  - Hitboxa
-  - HitBoxa
-  - Hit Boxa
 extends: Area2D
 ---
-#code/utility/hitbox
+#code/utility
 
-# Opis
-Węzeł zajmujący się wykrywaniem i zarządzaniem *otrzymywaniem* obrażeń i leczenia. Silnie związany z [[Damage Box]]
-
-# Parametry
-Typ|Nazwa|Opis
+# Description
+A node which handles detection and managing of *receiving* damage and healing. Heavily connected to [[Damage Box]]
+# Fields
+Field type|Field name|Description
 -|-|-
-`CollisionShape2D`|`collision`|Węzeł określający kształt [[Hit Box\|hitboxa]]
-`Timer`|`disableTimer`|Węzeł dający "i-frames"
-`float`|`max_health`|Maksymalna ilość zdrowia
-`float`|`health`|Obecna ilość zdrowia
-`bool`|`show_damage_taken_numbers`|Flaga określająca, czy renderować [[Floating Text\|numerki]] dla otrzymywania obrażeń
-`bool`|`show_heal_numbers`|Flaga określająca, czy renderować [[Floating Text\|numerki]] dla otrzymywania leczenia
+`CollisionShape2D`|`collision`|Node which defines the [[Hit Box]]'s shape
+`Timer`|`disableTimer`|Node handling *i-frames*
+`float`|`max_health`|Maximum health value
+`float`|`health`|Current health value
+`bool`|`show_damage_taken_numbers`|If `true` - render [[Floating Text]] for receiving [[Damage]]
+`bool`|`show_heal_numbers`|If `true` - render [[Floating Text]] for receiving healing
 
-# Publiczne metody
-Typ zwracanej zmiennej|Nazwa metody i argumenty|Opis
+# Public Methods
+Return value's type|Name and arguments|Description
 -|-|-
-`void`|[[#take_damage]](dmg : [[Damage]])|Wywołaj tę metodę, żeby dany [[Hit Box\|hitbox]] otrzymał obrażenia
-`void`|[[#heal]](heal_amount : float)|Wywołaj tę metodę, żeby wyleczyć danego [[Hit Box\|hitboxa]]
+`void`|[[#take_damage]](dmg : [[Damage]])|Call this method to make the [[Hit Box]] take [[Damage]]
+`void`|[[#heal]](heal_amount : float)|Call this method to heal the [[Hit Box]]
 
 ## take_damage
-Ta metoda zajmuje się faktycznym odejmowaniem otrzymanych obrażeń od zdrowia, umieraniem, zarządzaniem *i-frames* i [[Floating Text Spawner|spawnowaniem numerków]]. Emituje sygnały `update_health`.
+This method handles lowering health due to [[Damage]], dying, managing *i-frames* and [[Floating Text Spawner|spawning floating text]]. Emits the `update_health` signal.
 
 ## heal
-Zajmuje się dodawaniem leczenia do zdrowia, [[Floating Text Spawner|spawnuje numerki]]. Emituje sygnał `update_health`.
+This method handles increasing health due to healing, [[Floating Text Spawner|spawns floating text]]. Emits the `update_health` signal.
 
-# Sygnały
-Nazwa sygnału|Opis
+# Signals
+Name|Description
 -|-
 update_health|==TODO==
 on_death()|==TODO==

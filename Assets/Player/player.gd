@@ -11,7 +11,7 @@ func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
 	animation_sprite.play("Idle")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	movement()
 	
 # FOR DEBUG PURPOSES
