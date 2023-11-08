@@ -2,7 +2,7 @@
 extends: Node2D
 ---
 #code/utility/spawners
-# Methods
+# Public Methods
 
 Return type(s)|Method|Description
 -|-|-
