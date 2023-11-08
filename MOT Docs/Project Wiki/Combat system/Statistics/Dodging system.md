@@ -15,4 +15,4 @@ Only stat used here is *Dodge*[^2]. So far, a chance of dodging an attack is val
 
 
 [^1]: Meaning it's up to be discussed and accepted.
-[^2]: May it me influenced by *Luck* stat?
+[^2]: May it be influenced by *Luck* stat?
