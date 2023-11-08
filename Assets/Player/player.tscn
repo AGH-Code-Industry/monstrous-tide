@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=17 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -62,11 +62,15 @@ size = Vector2(18, 28)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_743r1"]
 size = Vector2(29, 33)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2vf40"]
+radius = 50.0
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_jqw0g")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -86,8 +90,8 @@ shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." instance=ExtResource("3_vkkdj")]
 collision_layer = 2
-collision_mask = 0
-health = 100.0
+collision_mask = 4
+health = 200.0
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(2, 1)
@@ -101,6 +105,13 @@ damage = 3.0
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
 position = Vector2(2.5, 0.5)
 shape = SubResource("RectangleShape2D_743r1")
+
+[node name="PickUpArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
+shape = SubResource("CircleShape2D_2vf40")
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 

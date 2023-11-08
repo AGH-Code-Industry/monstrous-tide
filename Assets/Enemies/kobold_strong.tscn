@@ -1,9 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://30vfjie78f7k"]
+[gd_scene load_steps=19 format=3 uid="uid://30vfjie78f7k"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_cbduv"]
+[ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="2_p7oga"]
 [ext_resource type="Texture2D" uid="uid://bsga074sfx0dn" path="res://Assets/Tutorial/Enemy/kolbold_strong.png" id="2_siudx"]
+[ext_resource type="PackedScene" uid="uid://c5mxh0oc3b0de" path="res://Assets/Utility/DropItems/ExperienceCrystalRed.tscn" id="3_d2olm"]
+[ext_resource type="PackedScene" uid="uid://jxwdyvkhthww" path="res://Assets/Utility/DropItems/ExperienceCrystalBlue.tscn" id="3_facml"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_l4oab"]
+[ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="4_76o6c"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="4_oxwy8"]
+[ext_resource type="PackedScene" uid="uid://3oi6ye0awot6" path="res://Assets/Utility/DropItems/ExperienceCrystalGreen.tscn" id="5_kl8ge"]
+
+[sub_resource type="Resource" id="Resource_puohk"]
+script = ExtResource("4_76o6c")
+item_scene = ExtResource("3_d2olm")
+drop_chance = 10.0
+
+[sub_resource type="Resource" id="Resource_4140n"]
+script = ExtResource("4_76o6c")
+item_scene = ExtResource("5_kl8ge")
+drop_chance = 50.0
+
+[sub_resource type="Resource" id="Resource_0vv4v"]
+script = ExtResource("4_76o6c")
+item_scene = ExtResource("3_facml")
+drop_chance = 40.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sri3"]
 radius = 7.0
@@ -59,6 +79,10 @@ motion_mode = 1
 script = ExtResource("1_cbduv")
 movement_speed = 18.0
 
+[node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_p7oga")]
+hit_box_component = NodePath("../HitBox")
+items_to_drop = Array[ExtResource("4_76o6c")]([SubResource("Resource_puohk"), SubResource("Resource_4140n"), SubResource("Resource_0vv4v")])
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_siudx")
 hframes = 2
@@ -82,6 +106,8 @@ position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_08bso")
 
 [node name="HitBox" parent="." instance=ExtResource("4_oxwy8")]
+collision_layer = 4
+collision_mask = 0
 health = 20.0
 show_damage_taken_numbers = true
 
