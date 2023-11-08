@@ -37,7 +37,7 @@ func take_damage(dmg: Damage) -> void:
 
 func heal(heal_amount : float) -> void:
 	var calculated_healing = heal_amount # Modifiers here
-	health = max_health if health + calculated_healing >= max_health else health + calculated_healing
+	health = min(health + calculated_healing, max_health) 
 	if show_heal_numbers:
 		FloatingTextSpawner.create_floating_text(self, str(heal_amount), FloatingTextSpawner.text_types.HEALING)
 	
