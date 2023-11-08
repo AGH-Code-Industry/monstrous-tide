@@ -21,5 +21,9 @@ func pickUp(target):
 	tween.tween_property(sprite_2d, "scale", Vector2.ZERO, 0.25).set_delay(0.35)
 	tween.chain()
 	
-	# TODO Temporary soltion. In the future check if there is a better one
-	area_2d.collision_layer = 16
+	# layers are saved in bit format so bitwise operation is used to remove 
+	#layer 4 responsible for pickup
+	area_2d.collision_layer &= ~(1 << 3)
+	
+func collect():
+	queue_free()
