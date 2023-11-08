@@ -6,7 +6,7 @@ ___
 >[!attention]- Obsidian Community plug-in
 >This document uses *Table Extended* community plug-in. Please, install it in order to properly see below contents. It's absolutely safe and will apply only to this vault. 
 >
->To do so, go to *Settings*, then *Community plug-ins*, enable them, find mentioned one and **also turn it on in plug-in settings**. You may need to re-open this vault to force Obsidian to read the plug-in.
+>To do so, go to *Settings*, then *Community plug-ins*, turn on the plugins, download *Table extended* plugin by AidenLX, turn it on in plugins tab and **also turn it on in *Table extended* settings** below. You may need to re-open this vault to force Obsidian to read the plug-in.
 
 # In-game currencies
 
@@ -20,3 +20,4 @@ ___
 
 > [!info] *Regarding the "Scale" column*
 > Not the best name, so it needs an explanation: these are the measures describing real value of said currency, how much is much and how much is little of it.
+

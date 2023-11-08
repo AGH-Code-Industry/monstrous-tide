@@ -6,7 +6,7 @@ ___
 - weapon's damage;
 - wielder's luck;
 - attacked character's armour and health.
-# Formula
+# Base formula
 
 This is ***suggested*** general formula for calculating incoming damage:
 $$DMG_{incoming} = (DMG_{weapon})^{1-\frac{ARM}{5 \times DMG_{weapon}}}$$
