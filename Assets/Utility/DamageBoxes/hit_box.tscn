@@ -8,7 +8,6 @@ radius = 14.0
 
 [node name="HitBox" type="Area2D"]
 script = ExtResource("1_1r20i")
-health = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cd87r")

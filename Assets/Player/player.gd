@@ -5,6 +5,7 @@ extends CharacterBody2D
 var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
 var last_movement := Vector2.UP
+@export var DEBUG_heal_value : float = 1
 
 @export var stats = {StatConstants.PlayerStats.MOVEMENTSPEED: 5}
 
@@ -13,8 +14,14 @@ func _ready():
 	animation_sprite.play("Idle")
 	StatManager.update_player_stats.connect(func(receivedStats): stats = StatManager.add_relevant_stats(stats, receivedStats))
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	movement()
+	
+# FOR DEBUG PURPOSES
+func _process(_delta):
+	if Input.is_action_just_pressed("DEBUG_manual_heal"): 
+		$HitBox.heal(DEBUG_heal_value)
+		print("Manual heal (+" + str(DEBUG_heal_value) + "), current health " + str($HitBox.health) + " / " + str($HitBox.max_health))
 
 func movement():
 	var x_mov = Input.get_action_strength("right") - Input.get_action_strength("left")

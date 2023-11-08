@@ -91,7 +91,7 @@ shape = SubResource("CapsuleShape2D_siame")
 [node name="HitBox" parent="." instance=ExtResource("3_vkkdj")]
 collision_layer = 2
 collision_mask = 4
-health = 200.0
+show_heal_numbers = true
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(2, 1)

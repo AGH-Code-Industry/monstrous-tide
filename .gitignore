@@ -16,17 +16,19 @@ mono_crash.*.json
 
 # to exclude .obsidian folder
 
-MOT Docs/.obsidian
+#MOT Docs/.obsidian
 
 # to exclude Obsidian workspace settings (including plugin and hotkey configurations)
-.obsidian/*
+MOT Docs/.obsidian/*
 
 # OR only to exclude workspace cache
-.obsidian/workspace/*
+#.obsidian/workspace/*
 
-# Exclude plugins
-.obsidian/plugins/*
-
+# Include plugins
+!MOT Docs/.obsidian/plugins/
+!MOT Docs/.obsidian/core-plugins.json
+!MOT Docs/.obsidian/core-plugins-migration.json
+!MOT Docs/.obsidian/community-plugins.json
 # Exclude consultant specific files "personal"
 05*-*Personal/
 
