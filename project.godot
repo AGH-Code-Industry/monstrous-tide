@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameEvents="*res://Assets/World/game_events.tscn"
 StatManager="*res://Assets/Utility/Managers/stat_manager.gd"
+ExperienceManager="*res://Assets/Utility/Managers/experience_manager.tscn"
 
 [display]
 
@@ -65,7 +66,8 @@ DEBUG_manual_heal={
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Enemy"
-2d_physics/layer_4="Loot"
+2d_physics/layer_4="LootPickUp"
+2d_physics/layer_5="LootReact"
 
 [rendering]
 
