@@ -1,6 +1,5 @@
 extends TextureProgressBar
 
-#@export var hit_box_component: Node
 @export var show_health_bar: bool = true
 var hit_box_component: Node
 

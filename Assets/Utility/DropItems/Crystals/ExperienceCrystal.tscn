@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://belgkl4t1s14r"]
+
+[ext_resource type="Script" path="res://Assets/Utility/DropItems/Crystals/ExperienceCrystal.gd" id="1_x1f0p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ojyw2"]
+radius = 12.0
+
+[node name="ExperienceCrystal" type="Node2D"]
+script = ExtResource("1_x1f0p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 24
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ojyw2")

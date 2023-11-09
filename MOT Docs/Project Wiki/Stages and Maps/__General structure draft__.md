@@ -54,7 +54,7 @@ flowchart LR
 	C2--->D2
 ```
 
-where A, B, C... indicate different *[[Examples|biomes]]*, which player may select, at equal tiers of said sector[^1]. Multiple instances at the same tier (f.e. B1, B2, ...) will have different features, such as: 
+where A, B, C... indicate different *[[Biomes concept list|biomes]]*, which player may select, at equal tiers of said sector[^1]. Multiple instances at the same tier (f.e. B1, B2, ...) will have different features, such as: 
 - varied level difficulties,
 - different items and/or their drop-rates,
 - different sets of enemies and/or their spawn-rates.
