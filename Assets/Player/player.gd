@@ -10,7 +10,7 @@ var last_movement := Vector2.UP
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
 	animation_sprite.play("Idle")
-	StatManager.update_player_stats.connect(func(receivedStats): stats = StatManager.add_relevant_stats(stats, receivedStats))
+	StatManager.update_player_stats_misc.connect(func(receivedStats): stats = StatManager.add_relevant_stats(stats, receivedStats))
 
 func _physics_process(_delta):
 	movement()
