@@ -28,3 +28,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Level: 1"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
