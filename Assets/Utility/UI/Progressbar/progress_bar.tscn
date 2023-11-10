@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b12g08nqirib2"]
+[gd_scene load_steps=4 format=3 uid="uid://b12g08nqirib2"]
 
 [ext_resource type="Script" path="res://Assets/Utility/UI/Progressbar/progress_bar.gd" id="1_op6f3"]
+[ext_resource type="Texture2D" uid="uid://bulmfy8sbhlox" path="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-back.png" id="2_g88h2"]
+[ext_resource type="Texture2D" uid="uid://byxf6q3t3snpw" path="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-fill.png" id="3_o0lia"]
 
 [node name="progress_bar" type="CanvasLayer"]
 layer = 0
@@ -16,18 +18,13 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 14)
+[node name="ExperienceBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-max_value = 1.0
-value = 0.5
-show_percentage = false
+texture_under = ExtResource("2_g88h2")
+texture_progress = ExtResource("3_o0lia")
 
 [node name="LevelInfo" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Level: 1"
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
