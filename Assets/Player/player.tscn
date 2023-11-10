@@ -1,11 +1,25 @@
-[gd_scene load_steps=17 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=22 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
 [ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="2_m2ol7"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
+[ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="8_1p3gh"]
+
+[sub_resource type="Resource" id="Resource_h2ch8"]
+script = ExtResource("2_m2ol7")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([])
+
+[sub_resource type="Resource" id="Resource_yncox"]
+script = ExtResource("2_m2ol7")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([])
+
+[sub_resource type="Resource" id="Resource_wbpcx"]
+script = ExtResource("2_m2ol7")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([])
 
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
@@ -69,6 +83,7 @@ script = ExtResource("1_jqw0g")
 stats = {
 2: 100
 }
+weaponUpgrades = Array[ExtResource("2_m2ol7")]([SubResource("Resource_h2ch8"), SubResource("Resource_yncox"), SubResource("Resource_wbpcx")])
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
 visible = false
@@ -111,6 +126,10 @@ position = Vector2(2.5, 0.5)
 shape = SubResource("RectangleShape2D_743r1")
 
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
+
+[node name="Weapons" type="Node2D" parent="."]
+
+[node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 

@@ -7,6 +7,8 @@ var last_movement := Vector2.UP
 
 @export var stats = {StatConstants.PlayerStats.MOVEMENTSPEED: 5}
 
+@export var weaponUpgrades : Array[UpgradeTier] = []
+
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
 	animation_sprite.play("Idle")
