@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var experience_bar = $MarginContainer/VBoxContainer/ExperienceBar
-@onready var level_info = $MarginContainer/VBoxContainer/LevelInfo
+@onready var level_info = $MarginContainer/VBoxContainer/MarginContainer/LevelInfo
 
 
 func _ready():
@@ -14,4 +14,4 @@ func _ready():
 func on_update_experience_bar(current_points: int, points_to_level_up: int, current_level: int):
 	experience_bar.value = current_points
 	experience_bar.max_value = points_to_level_up
-	level_info.text = "Level: " + str(current_level)
+	level_info.text = "LEVEL: " + str(current_level)

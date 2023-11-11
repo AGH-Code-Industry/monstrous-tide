@@ -23,8 +23,12 @@ layout_mode = 2
 texture_under = ExtResource("2_g88h2")
 texture_progress = ExtResource("3_o0lia")
 
-[node name="LevelInfo" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 8
-text = "Level: 1"
+theme_override_constants/margin_right = 5
+
+[node name="LevelInfo" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "LEVEL: 1"
+horizontal_alignment = 1
