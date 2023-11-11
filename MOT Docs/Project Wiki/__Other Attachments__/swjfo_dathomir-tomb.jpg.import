@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dthf5tn5yjt7e"
+=======
+uid="uid://c5cy7cucnkxw"
+>>>>>>> master
 path="res://.godot/imported/swjfo_dathomir-tomb.jpg-c34e9386c133370ac771720d93f5d8c6.ctex"
 metadata={
 "vram_texture": false

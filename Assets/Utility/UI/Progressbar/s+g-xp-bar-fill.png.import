@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://ba1ewr5jwvhay"
-=======
-uid="uid://b35xgkiya0wr"
->>>>>>> master
-path="res://.godot/imported/swjfo_crystal-caves.jpg-2965d40e7c0bf7ac0d0dd4aebb77683e.ctex"
+uid="uid://byxf6q3t3snpw"
+path="res://.godot/imported/s+g-xp-bar-fill.png-a47b612d883847718245b6d6f3f15cb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MOT Docs/Project Wiki/__Other Attachments__/swjfo_crystal-caves.jpg"
-dest_files=["res://.godot/imported/swjfo_crystal-caves.jpg-2965d40e7c0bf7ac0d0dd4aebb77683e.ctex"]
+source_file="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-fill.png"
+dest_files=["res://.godot/imported/s+g-xp-bar-fill.png-a47b612d883847718245b6d6f3f15cb8.ctex"]
 
 [params]
 
