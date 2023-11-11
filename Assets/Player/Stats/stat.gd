@@ -1,9 +1,5 @@
 class_name Stat extends Resource
 
-#func _init(inc_type: Type, inc_value: int) -> void:
-#	type = inc_type
-#	value = inc_value
-
 enum Type{
 	#Offensive
 	
