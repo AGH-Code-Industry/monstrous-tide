@@ -1,3 +1,4 @@
+@tool
 extends CharacterBody2D
 
 var animation_sprite: AnimatedSprite2D
@@ -6,11 +7,13 @@ var last_movement := Vector2.UP
 @export var DEBUG_heal_value : float = 1
 
 @export var stats = {StatConstants.PlayerStats.MOVEMENTSPEED: 5}
+@export var stat_set : StatSet = null
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
 	animation_sprite.play("Idle")
 	StatManager.update_player_stats_misc.connect(func(receivedStats): stats = StatManager.add_relevant_stats(stats, receivedStats))
+	print(stat_set.get_stat(Stat.Type.MOVEMENTSPEED))
 
 func _physics_process(_delta):
 	movement()
