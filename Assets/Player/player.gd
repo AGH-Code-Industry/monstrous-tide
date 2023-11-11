@@ -1,4 +1,3 @@
-@tool
 extends CharacterBody2D
 
 var animation_sprite: AnimatedSprite2D
