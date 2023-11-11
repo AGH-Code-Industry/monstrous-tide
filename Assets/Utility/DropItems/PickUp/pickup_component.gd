@@ -2,12 +2,12 @@ extends Node2D
 
 
 @onready var pickup_circle = $pickupRadius/CollisionShape2D
-@export var stats = {StatConstants.PlayerStats.PICKUPRADIUS : 53}
+@export var stat_set: StatSet
 
 
 func _ready():
 	StatManager.update_player_stats_misc.connect(on_pickupradius_update)
-	pickup_circle.shape.radius = stats[StatConstants.PlayerStats.PICKUPRADIUS]
+	pickup_circle.shape.radius = stat_set.get_stat_value(Stat.Type.PICKUPRADIUS)
 
 func set_radius(radius: float):
 	pickup_circle.shape.radius = radius
@@ -26,7 +26,7 @@ func _on_reaction_radius_area_entered(area: Area2D) -> void:
 		parent.collect()
 
 
-func on_pickupradius_update(new_stats):
-	stats = StatManager.add_relevant_stats(stats, new_stats)
-	pickup_circle.shape.radius = stats[StatConstants.PlayerStats.PICKUPRADIUS]
+func on_pickupradius_update(new_stats: Array[Stat]):
+	stat_set.add_stat_array(new_stats)
+	pickup_circle.shape.radius = stat_set.get_stat_value(Stat.Type.PICKUPRADIUS)
 	

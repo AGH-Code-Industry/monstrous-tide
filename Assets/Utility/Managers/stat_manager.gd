@@ -1,21 +1,21 @@
 extends Node
 
-signal update_player_stats_misc(stats: Dictionary)
-signal update_player_stats_offensive(stats: Dictionary)
-signal update_player_stats_defensive(stats: Dictionary)
+signal update_player_stats_misc(stats: Array[Stat])
+signal update_player_stats_offensive(stats: Array[Stat])
+signal update_player_stats_defensive(stats: Array[Stat])
 
-func emit_player_stats_misc_update(stats: Dictionary, time: float = -1) -> void:
+func emit_player_stats_misc_update(stats: Array[Stat], time: float = -1) -> void:
 	emit_stats_with_delay(update_player_stats_misc, stats, time)
 	
-func emit_player_stats_offensive_update(stats: Dictionary, time: float = -1) -> void:
+func emit_player_stats_offensive_update(stats: Array[Stat], time: float = -1) -> void:
 	emit_stats_with_delay(update_player_stats_offensive, stats, time)
 	
-func emit_player_stats_defensive_update(stats: Dictionary, time: float = -1) -> void:
+func emit_player_stats_defensive_update(stats: Array[Stat], time: float = -1) -> void:
 	emit_stats_with_delay(update_player_stats_defensive, stats, time)
 
 
 # abstract way of emitting proper signal with specified stats
-func emit_stats_with_delay(target_signal: Signal, stats: Dictionary, time: float) -> void:
+func emit_stats_with_delay(target_signal: Signal, stats: Array[Stat], time: float) -> void:
 	target_signal.emit(stats)
 
 	if time > 0:
@@ -24,13 +24,12 @@ func emit_stats_with_delay(target_signal: Signal, stats: Dictionary, time: float
 		
 # needed for adding negative stats to create short term buffs:
 # first add stats, after some delay subtract them
-func negate_stats(stats: Dictionary) -> Dictionary:
-	var negated_stats = {}
+func negate_stats(stats: Array[Stat]) -> Array[Stat]:
+		
+	for stat in stats:
+		stat.value = -stat.value
 	
-	for key in stats.keys():
-		negated_stats[key] = -stats[key]
-	
-	return negated_stats
+	return stats
 	
 
 # adds only stats that the object is interested in

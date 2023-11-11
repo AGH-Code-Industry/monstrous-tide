@@ -1,11 +1,22 @@
-[gd_scene load_steps=17 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=21 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_5ofgj"]
 [ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_it506"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
+
+[sub_resource type="Resource" id="Resource_dkkqc"]
+script = ExtResource("2_5ofgj")
+type = 2
+value = 200
+
+[sub_resource type="Resource" id="Resource_adahq"]
+script = ExtResource("3_it506")
+data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_dkkqc")])
 
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
@@ -66,9 +77,7 @@ size = Vector2(29, 33)
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_jqw0g")
-stats = {
-2: 100
-}
+stat_set = SubResource("Resource_adahq")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
 visible = false
