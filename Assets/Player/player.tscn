@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=23 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -9,15 +9,16 @@
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="8_1p3gh"]
+[ext_resource type="PackedScene" uid="uid://b3ak5hh8jtrh8" path="res://Assets/Utility/Managers/weapon_manager.tscn" id="8_wqo5a"]
 
-[sub_resource type="Resource" id="Resource_dkkqc"]
+[sub_resource type="Resource" id="Resource_lyosv"]
 script = ExtResource("2_5ofgj")
 type = 3
-value = 200
+value = 150
 
-[sub_resource type="Resource" id="Resource_adahq"]
+[sub_resource type="Resource" id="Resource_acek7"]
 script = ExtResource("3_it506")
-data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_dkkqc")])
+data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_lyosv")])
 
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
@@ -78,7 +79,7 @@ size = Vector2(29, 33)
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_jqw0g")
-stat_set = SubResource("Resource_adahq")
+stat_set = SubResource("Resource_acek7")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
 visible = false
@@ -126,6 +127,8 @@ shape = SubResource("RectangleShape2D_743r1")
 [node name="Weapons" type="Node2D" parent="."]
 
 [node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
+
+[node name="WeaponManager" parent="." instance=ExtResource("8_wqo5a")]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 
