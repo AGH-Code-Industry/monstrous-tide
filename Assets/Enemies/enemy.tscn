@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="3_v5od0"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="4_ogpyu"]
 [ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="5_8xx4u"]
-[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup.tscn" id="6_x2ky4"]
+[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="6_x2ky4"]
 
 [sub_resource type="Resource" id="Resource_coo45"]
 script = ExtResource("3_v5od0")
