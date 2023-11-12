@@ -17,3 +17,7 @@ func add_stats(incoming_stats: Array[Stat]) -> void:
 # returns all upgrades that can be apllied to this weapon
 func get_available_upgrades():
 	pass
+
+# returns specified amount of upgrades chosen randomly 
+func get_randomly_chosen_upgrades(amount: int):
+	pass
