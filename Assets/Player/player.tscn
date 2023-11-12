@@ -77,6 +77,8 @@ size = Vector2(29, 33)
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_jqw0g")
+flash_timeout = 0.25
+flash_color = Color(1, 0, 0, 1)
 stat_set = SubResource("Resource_adahq")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
@@ -123,6 +125,7 @@ shape = SubResource("RectangleShape2D_743r1")
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
+[connection signal="update_health" from="HitBox" to="." method="_on_hit_box_update_health"]
 
 [editable path="HitBox"]
 [editable path="DamageBox"]

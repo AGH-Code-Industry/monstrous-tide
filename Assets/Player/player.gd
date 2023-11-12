@@ -4,7 +4,8 @@ var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
 var last_movement := Vector2.UP
 @export var DEBUG_heal_value : float = 1
-
+@export var flash_timeout : float
+@export var flash_color : Color
 @export var stat_set: StatSet
 
 func _ready():
@@ -45,3 +46,9 @@ func die():
 
 func _on_hit_box_on_death() -> void:
 	die()
+
+
+func _on_hit_box_update_health():
+	animation_sprite.modulate = flash_color
+	await get_tree().create_timer(flash_timeout).timeout
+	animation_sprite.modulate = Color(1,1,1)
