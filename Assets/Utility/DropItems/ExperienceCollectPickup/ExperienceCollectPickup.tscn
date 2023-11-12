@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnul08gmjwq6"]
 
-[ext_resource type="Script" path="res://Assets/Utility/DropItems/ExperienceCollectPickup.gd" id="1_1f3yy"]
-[ext_resource type="Texture2D" uid="uid://jyyu4dsqmktp" path="res://Assets/Tutorial/Items/Upgrades/urand_mage.png" id="2_ouojw"]
+[ext_resource type="Script" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.gd" id="1_whkln"]
+[ext_resource type="Texture2D" uid="uid://jyyu4dsqmktp" path="res://Assets/Tutorial/Items/Upgrades/urand_mage.png" id="2_1dxfj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p12ko"]
 radius = 12.0
 
 [node name="ExperienceCollectPickup" type="Node2D"]
-script = ExtResource("1_1f3yy")
+script = ExtResource("1_whkln")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_ouojw")
+texture = ExtResource("2_1dxfj")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 16

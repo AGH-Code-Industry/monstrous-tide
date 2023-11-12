@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1vnmivn4nux8"
-path="res://.godot/imported/swjfo_dathomir-tomb.jpg-c34e9386c133370ac771720d93f5d8c6.ctex"
+uid="uid://bulmfy8sbhlox"
+path="res://.godot/imported/s+g-xp-bar-back.png-cf077772475ed5af0a6e574a0971ad4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MOT Docs/Project Wiki/__Other Attachments__/swjfo_dathomir-tomb.jpg"
-dest_files=["res://.godot/imported/swjfo_dathomir-tomb.jpg-c34e9386c133370ac771720d93f5d8c6.ctex"]
+source_file="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-back.png"
+dest_files=["res://.godot/imported/s+g-xp-bar-back.png-cf077772475ed5af0a6e574a0971ad4b.ctex"]
 
 [params]
 
