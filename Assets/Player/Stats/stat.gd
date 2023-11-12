@@ -2,14 +2,15 @@ class_name Stat extends Resource
 
 enum Type{
 	#Offensive
-	
+	DAMAGE = 0,
+	ATTACKSPEED = 5,
 	#Defensive
-	DODGE,
-	ARMOR,
+	DODGE = 1,
+	ARMOR = 2,
 	
 	#Misc
-	MOVEMENTSPEED,
-	PICKUPRADIUS,
+	MOVEMENTSPEED = 3,
+	PICKUPRADIUS = 4,
 }
 
 func add_value(val: int):

@@ -1,20 +1,13 @@
 class_name Weapon extends Node2D
 
-@export var stats: Dictionary = {}
+@export var stat_set : StatSet
 @export var possible_upgrades : Array[UpgradeTier] = []
 var upgrades : Array[UpgradeTier] = []
 
 func _ready() -> void:
-	for tier in possible_upgrades:
+	for tier in possible_upgrades: 
 		for upgrade in tier.upgrades:
 			upgrade.weapon_ref = self
-			print(upgrade.weapon_ref)
 
-
-
-func add_stats(incoming_stats: Dictionary) -> void:
-	for key in incoming_stats:
-		if key not in stats:
-			print("You tried adding stat that isn't used: ", key, " to: ", self.name)
-			stats[key] = 0
-		stats[key] += incoming_stats[key]
+func add_stats(incoming_stats: Array[Stat]) -> void:
+	stat_set.add_stat_array(incoming_stats)
