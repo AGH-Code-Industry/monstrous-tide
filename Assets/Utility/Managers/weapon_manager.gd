@@ -12,3 +12,6 @@ func _ready() -> void:
 			weapons.append(node)
 
 
+# returns specified amount of upgrades chosen randomly 
+func get_randomly_chosen_upgrades(amount: int):
+	pass

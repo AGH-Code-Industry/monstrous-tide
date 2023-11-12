@@ -18,6 +18,4 @@ func add_stats(incoming_stats: Array[Stat]) -> void:
 func get_available_upgrades():
 	pass
 
-# returns specified amount of upgrades chosen randomly 
-func get_randomly_chosen_upgrades(amount: int):
-	pass
+
