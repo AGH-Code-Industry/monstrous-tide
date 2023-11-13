@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=25 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -190,6 +190,42 @@ tracks/14/keys = {
 "update": 0,
 "values": [Vector2(0, 69)]
 }
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../Character/Skeleton2D/Hip/Chest:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-9, -27)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../Character/Skeleton2D/Hip/Chest/RightArm:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-68, -138)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../Character/Skeleton2D/Hip/Chest/LeftArm:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(46, -125)]
+}
 
 [sub_resource type="Animation" id="Animation_t58qq"]
 resource_name = "Walk"
@@ -376,8 +412,86 @@ tracks/14/keys = {
 "values": [Vector2(0, 69), Vector2(6.17206, 77.2854), Vector2(10.0157, 83.3315), Vector2(6.17206, 77.2854), Vector2(0, 69)]
 }
 
+[sub_resource type="Animation" id="Animation_2f0x6"]
+resource_name = "Idle"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Character/Skeleton2D/Hip/Chest:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-9, -27), Vector2(-9.66681, -13.6667), Vector2(-9, -27)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Character/Skeleton2D/Hip/Chest/RightArm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-68, -138), Vector2(-67.0001, -143.333), Vector2(-68, -138), Vector2(-67.0001, -143.333), Vector2(-68, -138)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Character/Skeleton2D/Hip/Chest/RightArm/RightHand:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.100651, -0.100651, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Character/Skeleton2D/Hip/Chest/LeftArm:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(46, -125), Vector2(46.3334, -130), Vector2(46.3334, -130), Vector2(46, -125)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Character/Skeleton2D/Hip/Chest/LeftArm/LeftHand:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0683626, 0.0683626, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Character/Skeleton2D/Hip/RightLeg/RightFoot:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15.3334, 72.3333), Vector2(-15.3334, 65.6666), Vector2(-15.3334, 72.3333), Vector2(-15.3334, 65.6666), Vector2(-15.3334, 72.3333)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qa4wg"]
 _data = {
+"Idle": SubResource("Animation_2f0x6"),
 "RESET": SubResource("Animation_xwp2e"),
 "Walk": SubResource("Animation_t58qq")
 }
@@ -426,16 +540,31 @@ size = Vector2(18, 28)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_743r1"]
 size = Vector2(29, 33)
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sl3rf"]
+animation = &"Idle"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3cmpc"]
 animation = &"Walk"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_koqyx"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8ivck"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fpgxa"]
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ces3c"]
+advance_mode = 2
+advance_condition = &"idle"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8k8oc"]
+states/Idle/node = SubResource("AnimationNodeAnimation_sl3rf")
+states/Idle/position = Vector2(402, 100)
+states/Start/position = Vector2(197, 100)
 states/Walk/node = SubResource("AnimationNodeAnimation_3cmpc")
-states/Walk/position = Vector2(347, 100)
-transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_koqyx")]
+states/Walk/position = Vector2(626, 100)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8ivck"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_fpgxa"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_ces3c")]
+graph_offset = Vector2(-107.468, 18)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
@@ -489,16 +618,17 @@ shape = SubResource("RectangleShape2D_743r1")
 [node name="Character" type="Node2D" parent="."]
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Character"]
-visible = false
 position = Vector2(123, -18)
 scale = Vector2(0.3, 0.3)
 
 [node name="Hip" type="Bone2D" parent="Character/Skeleton2D"]
+visible = false
 position = Vector2(503, 127)
 rest = Transform2D(1, 0, 0, 1, 503, 127)
 
 [node name="Chest" type="Bone2D" parent="Character/Skeleton2D/Hip"]
 position = Vector2(-9, -27)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -9, -27)
 
 [node name="Head" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest"]
@@ -510,10 +640,12 @@ bone_angle = -64.057
 
 [node name="RightArm" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest"]
 position = Vector2(-68, -138)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -521,10 +653,12 @@ bone_angle = 66.59
 
 [node name="LeftArm" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest"]
 position = Vector2(46, -125)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 46, -125)
 
 [node name="LeftHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/LeftArm"]
 position = Vector2(14, 73)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 14, 73)
 auto_calculate_length_and_angle = false
 length = 89.6
@@ -532,7 +666,6 @@ bone_angle = 85.063
 
 [node name="RightLeg" type="Bone2D" parent="Character/Skeleton2D/Hip"]
 position = Vector2(-41, 24)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -41, 24)
 
 [node name="RightFoot" type="Bone2D" parent="Character/Skeleton2D/Hip/RightLeg"]
@@ -624,7 +757,7 @@ polygons = [PackedInt32Array(22, 29, 19, 20, 21), PackedInt32Array(25, 24, 23, 2
 bones = ["Hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Hip/Chest", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0), "Hip/Chest/Head", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Hip/Chest/RightArm", PackedFloat32Array(1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1), "Hip/Chest/RightArm/RightHand", PackedFloat32Array(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0), "Hip/Chest/LeftArm", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Hip/Chest/LeftArm/LeftHand", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Hip/RightLeg", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Hip/RightLeg/RightFoot", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Hip/LeftLeg", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Hip/LeftLeg/LeftFoot", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 internal_vertex_count = 5
 
-[node name="Walk" type="AnimationPlayer" parent="."]
+[node name="Animation" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimationPlayer")
 libraries = {
 "": SubResource("AnimationLibrary_qa4wg")
@@ -632,8 +765,10 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_8k8oc")
-anim_player = NodePath("../Walk")
+anim_player = NodePath("../Animation")
 active = true
+parameters/conditions/idle = false
+parameters/conditions/is_moving = false
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 
