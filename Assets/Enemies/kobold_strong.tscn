@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://30vfjie78f7k"]
+[gd_scene load_steps=22 format=3 uid="uid://30vfjie78f7k"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_cbduv"]
 [ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="2_p7oga"]
@@ -73,11 +73,35 @@ size = Vector2(16, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8njqq"]
 size = Vector2(25, 28)
 
+[sub_resource type="Curve" id="Curve_wjmdv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.710843, 0.8), -0.93609, -0.93609, 0, 0, Vector2(1, 0.536842), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_w2fog"]
+curve = SubResource("Curve_wjmdv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_n5r2c"]
+lifetime_randomness = 0.13
+emission_shape = 1
+emission_sphere_radius = 1.0
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 63.16
+initial_velocity_max = 63.16
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 1.5
+scale_max = 2.5
+scale_curve = SubResource("CurveTexture_w2fog")
+
 [node name="Enemy" type="CharacterBody2D"]
 texture_filter = 1
 motion_mode = 1
 script = ExtResource("1_cbduv")
 movement_speed = 18.0
+flash_timeout = 0.1
+flash_color = Color(1, 1, 1, 1)
 
 [node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_p7oga")]
 hit_box_component = NodePath("../HitBox")
@@ -114,6 +138,12 @@ show_damage_taken_numbers = true
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_n5r2c")
+lifetime = 0.2
+explosiveness = 0.47
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 

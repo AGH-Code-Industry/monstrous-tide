@@ -3,15 +3,16 @@ extends CharacterBody2D
 var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
 var last_movement := Vector2.UP
-var bleed_particles: GPUParticles2D
 @export var DEBUG_heal_value : float = 1
+@export var stat_set: StatSet
+
+# Hit indicators
+@onready var bleed_particles = $BleedParticles
 @export var flash_timeout : float
 @export var flash_color : Color
-@export var stat_set: StatSet
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
-	bleed_particles = get_node("BleedParticles")
 	animation_sprite.play("Idle")
 	StatManager.update_player_stats_misc.connect(func(receivedStats): stat_set.add_stat_array(receivedStats))
 
@@ -54,5 +55,5 @@ func _on_hit_box_update_health():
 	animation_sprite.modulate = flash_color
 	bleed_particles.emitting = true
 	await get_tree().create_timer(flash_timeout).timeout
-	animation_sprite.modulate = Color(1,1,1)
 	bleed_particles.emitting = false
+	animation_sprite.modulate = Color(1,1,1)

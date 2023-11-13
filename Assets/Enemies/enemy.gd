@@ -7,6 +7,11 @@ extends CharacterBody2D
 @onready var sprite = $Sprite2D
 @onready var animator = $AnimationPlayer
 
+# Hit Indicators
+@onready var bleed_particles = $BleedParticles
+@export var flash_timeout : float
+@export var flash_color : Color
+
 func _ready():
 	animator.play("walk")
 
@@ -26,8 +31,9 @@ func _on_hit_box_on_death() -> void:
 	#print("Enemy died")
 	queue_free()
 
-
-
-
-
-
+func _on_hit_box_update_health():
+	sprite.modulate = flash_color
+	bleed_particles.emitting = true
+	await get_tree().create_timer(flash_timeout).timeout
+	bleed_particles.emitting = false
+	sprite.modulate = Color(1,1,1)
