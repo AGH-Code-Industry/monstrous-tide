@@ -32,6 +32,7 @@ func _on_hit_box_on_death() -> void:
 	queue_free()
 
 func _on_hit_box_update_health():
+	print("got hit")
 	sprite.modulate = flash_color
 	bleed_particles.emitting = true
 	await get_tree().create_timer(flash_timeout).timeout
