@@ -11,7 +11,7 @@ Levels, *EXP* drops, thresholds are to be introduced yet.
 
 # Level up situation
 
-When player meets level up requirements, their level is increased by one, they receive specified prizes[^1], and encounter *Weapon level-up cards*
+When player meets level up requirements, their level is increased by one, they receive specified prizes[^1], and encounter *Weapon level-up cards*, as introduced [[Weapon progression outline|here]].
 
 
 [^1]: To be introduced. Can they be affected by current biome?

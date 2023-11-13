@@ -21,6 +21,14 @@ On the other hand, weapons are made of [[Weapon stats|stats]] that may be increa
 - mentioned upgrades will be distributed as follows:
 *\[a table of exemplary upgrades grouped by rarities]*
 
+>[!attention] ***Suggestions***
+>With provided rarities, I suggest:
+>- *Basic* being flat/low percentage random stat bonuses;
+>- *Classic* and *Advanced* being higher percentage stat bonuses;
+>- *Exotic* and *Legendary* being very high stat bonuses or/and additional weapons mechanics;
+>- *Mythic* being evolution to a different weapon.
+>
+>When levelling up, the player may choose one of upgrades, where: *Basic* and *Classic* drop always; *Advanced* drops almost always; *Exotic*, *Legendary* and *Mythic* drop rarely, except the situation, when described upgrades are only upgrades left to be held by the weapon (then they also drop rarely, but they are only ones available for this weapon).
 # Considering evolving weapons
 
 As mentioned above, those upgrades should transform our weapon into a new, special one. 
