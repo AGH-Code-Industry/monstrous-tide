@@ -100,8 +100,6 @@ texture_filter = 1
 motion_mode = 1
 script = ExtResource("1_cbduv")
 movement_speed = 18.0
-flash_timeout = 0.1
-flash_color = Color(100, 100, 100, 1)
 
 [node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_p7oga")]
 hit_box_component = NodePath("../HitBox")
@@ -129,17 +127,21 @@ damage = 2.0
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_08bso")
 
-[node name="HitBox" parent="." instance=ExtResource("4_oxwy8")]
+[node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_oxwy8")]
 collision_layer = 4
 collision_mask = 0
 health = 20.0
 show_damage_taken_numbers = true
+flash_on_hit = true
+sprite = NodePath("../Sprite2D")
+flash_timeout = 0.1
+flash_color = Color(100, 100, 100, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
 
-[node name="BleedParticles" type="GPUParticles2D" parent="."]
+[node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
 emitting = false
 amount = 12
 process_material = SubResource("ParticleProcessMaterial_e8drl")

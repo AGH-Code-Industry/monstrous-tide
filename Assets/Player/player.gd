@@ -6,10 +6,6 @@ var last_movement := Vector2.UP
 @export var DEBUG_heal_value : float = 1
 @export var stat_set: StatSet
 
-# Hit indicators
-@onready var bleed_particles = $BleedParticles
-@export var flash_timeout : float
-@export var flash_color : Color
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
@@ -50,10 +46,3 @@ func die():
 func _on_hit_box_on_death() -> void:
 	die()
 
-
-func _on_hit_box_update_health():
-	animation_sprite.modulate = flash_color
-	bleed_particles.emitting = true
-	await get_tree().create_timer(flash_timeout).timeout
-	bleed_particles.emitting = false
-	animation_sprite.modulate = Color(1,1,1)
