@@ -41,7 +41,7 @@ $$DMG_{weapon} := DMG_{weapon} + DMGBonus$$
 This $DMG_{weapon}$ value will be then put into basic [[Damage calculations#Formula|damage formula]].
 # Health decrease
 
-Health decreased as a result of receiving damage will be equal to $DMG_{incoming}$ or $DMG_{critical}$ in critical hit situation.
+Health decreased as a result of receiving damage will be equal to $DMG_{incoming}$ or $DMG_{critical}$ in critical hit situation. For more, see [[Health fluctuations]] file.
 
 [^1]: Do we consider absolutely blocking attacks, something like "attack evasion" mechanics?
 [^2]: Requires further discussion - do we add some kind of "Critical Damage" stat, or do we calculate critical hits some other way?
