@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5aa2lo7cjdnp"
-path="res://.godot/imported/hp-bar-red-light-back.png-8d2dfe926ebb538ac6c7a1a981721bdd.ctex"
+uid="uid://dcjta7dpxborn"
+path="res://.godot/imported/hp-bar-golden-frame-fill.png-2e9b7487a1873d87f8aeef4f9d848957.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Utility/UI/Healthbar/hp-bar-red-light-back.png"
-dest_files=["res://.godot/imported/hp-bar-red-light-back.png-8d2dfe926ebb538ac6c7a1a981721bdd.ctex"]
+source_file="res://Assets/Utility/UI/Healthbar/hp-bar-golden-frame-fill.png"
+dest_files=["res://.godot/imported/hp-bar-golden-frame-fill.png-2e9b7487a1873d87f8aeef4f9d848957.ctex"]
 
 [params]
 

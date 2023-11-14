@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://30vfjie78f7k"]
+[gd_scene load_steps=19 format=3 uid="uid://30vfjie78f7k"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_cbduv"]
 [ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="2_p7oga"]
@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="4_oxwy8"]
 [ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="5_am8u5"]
 [ext_resource type="PackedScene" uid="uid://dign3j2sdr85j" path="res://Assets/Utility/DropItems/Crystals/CrystalRed.tscn" id="6_8ibla"]
-[ext_resource type="Texture2D" uid="uid://bu2sljb4f5jec" path="res://Assets/Tutorial/GUI/hp-bar-short-red-light-back.png" id="10_qq73p"]
-[ext_resource type="Texture2D" uid="uid://qerijc5rdggk" path="res://Assets/Tutorial/GUI/hp-bar-short-red-light-fill.png" id="11_r2ib8"]
 
 [sub_resource type="Resource" id="Resource_abo1e"]
 script = ExtResource("4_76o6c")
@@ -116,11 +114,6 @@ show_damage_taken_numbers = true
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
-
-[node name="HealthBar" parent="HitBox" index="2"]
-texture_under = ExtResource("10_qq73p")
-texture_over = null
-texture_progress = ExtResource("11_r2ib8")
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 

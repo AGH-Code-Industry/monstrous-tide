@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bgjjl2mj65qgu"]
+[gd_scene load_steps=19 format=3 uid="uid://bgjjl2mj65qgu"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_iqk56"]
 [ext_resource type="Texture2D" uid="uid://beqs3tbas1lo8" path="res://Assets/Tutorial/Enemy/kolbold_weak.png" id="2_pf2vg"]
@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="4_ogpyu"]
 [ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="5_8xx4u"]
 [ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="6_x2ky4"]
-[ext_resource type="Texture2D" uid="uid://bu2sljb4f5jec" path="res://Assets/Tutorial/GUI/hp-bar-short-red-light-back.png" id="10_17yym"]
-[ext_resource type="Texture2D" uid="uid://qerijc5rdggk" path="res://Assets/Tutorial/GUI/hp-bar-short-red-light-fill.png" id="11_gfidi"]
 
 [sub_resource type="Resource" id="Resource_coo45"]
 script = ExtResource("3_v5od0")
@@ -116,9 +114,7 @@ position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
 
 [node name="HealthBar" parent="HitBox" index="2"]
-texture_under = ExtResource("10_17yym")
-texture_over = null
-texture_progress = ExtResource("11_gfidi")
+visible = false
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 

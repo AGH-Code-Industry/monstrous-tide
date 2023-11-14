@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
-[ext_resource type="Texture2D" uid="uid://5aa2lo7cjdnp" path="res://Assets/Utility/UI/Healthbar/hp-bar-red-light-back.png" id="7_71isn"]
-[ext_resource type="Texture2D" uid="uid://c2i26o6y3kkht" path="res://Assets/Utility/UI/Healthbar/hp-bar-red-light-fill.png" id="8_kagbu"]
+[ext_resource type="Texture2D" uid="uid://d1cn130aiejis" path="res://Assets/Utility/UI/Healthbar/hp-bar-golden-frame-back.png" id="7_aofh2"]
+[ext_resource type="Texture2D" uid="uid://dcjta7dpxborn" path="res://Assets/Utility/UI/Healthbar/hp-bar-golden-frame-fill.png" id="8_vl7mj"]
 
 [sub_resource type="Resource" id="Resource_dkkqc"]
 script = ExtResource("2_5ofgj")
@@ -112,12 +112,12 @@ position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
-offset_left = -20.0
-offset_top = -23.0
-offset_right = 20.0
-texture_under = ExtResource("7_71isn")
+offset_left = -23.0
+offset_right = 23.0
+offset_bottom = -18.0
+texture_under = ExtResource("7_aofh2")
 texture_over = null
-texture_progress = ExtResource("8_kagbu")
+texture_progress = ExtResource("8_vl7mj")
 
 [node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
 visible = false

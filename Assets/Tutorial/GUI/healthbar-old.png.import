@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qerijc5rdggk"
-path="res://.godot/imported/hp-bar-short-red-light-fill.png-507a8b071772038c15c9687387126ff2.ctex"
+uid="uid://b4wqjq6qic6gp"
+path="res://.godot/imported/healthbar-old.png-d58e22339f82b226f2a53cc98f9144f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tutorial/GUI/hp-bar-short-red-light-fill.png"
-dest_files=["res://.godot/imported/hp-bar-short-red-light-fill.png-507a8b071772038c15c9687387126ff2.ctex"]
+source_file="res://Assets/Tutorial/GUI/healthbar-old.png"
+dest_files=["res://.godot/imported/healthbar-old.png-d58e22339f82b226f2a53cc98f9144f6.ctex"]
 
 [params]
 
