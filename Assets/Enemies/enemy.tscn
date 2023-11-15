@@ -139,6 +139,9 @@ flash_color = Color(100, 100, 100, 1)
 position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
 
+[node name="HealthBar" parent="HitBox" index="2"]
+visible = false
+
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
 emitting = false
 amount = 12

@@ -124,7 +124,6 @@ position = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_vkkdj")]
-visible = false
 collision_layer = 2
 collision_mask = 4
 show_heal_numbers = true
@@ -136,6 +135,9 @@ flash_color = Color(1, 0, 0, 1)
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_yr38n")
+
+[node name="HealthBar" parent="HitBox" index="2"]
+offset_bottom = -18.0
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
 emitting = false
