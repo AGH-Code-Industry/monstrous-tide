@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bgjjl2mj65qgu"]
+[gd_scene load_steps=22 format=3 uid="uid://bgjjl2mj65qgu"]
 
 [ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_iqk56"]
 [ext_resource type="Texture2D" uid="uid://beqs3tbas1lo8" path="res://Assets/Tutorial/Enemy/kolbold_weak.png" id="2_pf2vg"]
@@ -73,6 +73,28 @@ size = Vector2(16, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8njqq"]
 size = Vector2(25, 28)
 
+[sub_resource type="Curve" id="Curve_cvuod"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.722892, 0.821053), -0.689751, -0.689751, 0, 0, Vector2(0.981928, 0.589474), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_tw5kp"]
+curve = SubResource("Curve_cvuod")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rdpba"]
+emission_shape = 1
+emission_sphere_radius = 10.43
+particle_flag_disable_z = true
+direction = Vector3(0.5, 0, 0)
+spread = 180.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 1.5
+scale_max = 2.5
+scale_curve = SubResource("CurveTexture_tw5kp")
+
 [node name="Enemy" type="CharacterBody2D"]
 texture_filter = 1
 motion_mode = 1
@@ -104,10 +126,14 @@ damage = 2.0
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_08bso")
 
-[node name="HitBox" parent="." instance=ExtResource("4_ogpyu")]
+[node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_ogpyu")]
 collision_layer = 4
 collision_mask = 0
 show_damage_taken_numbers = true
+flash_on_hit = true
+sprite = NodePath("../Sprite2D")
+flash_timeout = 0.1
+flash_color = Color(100, 100, 100, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(1.5, 2)
@@ -116,7 +142,15 @@ shape = SubResource("RectangleShape2D_8njqq")
 [node name="HealthBar" parent="HitBox" index="2"]
 visible = false
 
+[node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
+emitting = false
+amount = 12
+process_material = SubResource("ParticleProcessMaterial_rdpba")
+lifetime = 0.3
+explosiveness = 1.0
+
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
+[connection signal="update_health" from="HitBox" to="." method="_on_hit_box_update_health"]
 
 [editable path="DamageBox"]
 [editable path="HitBox"]

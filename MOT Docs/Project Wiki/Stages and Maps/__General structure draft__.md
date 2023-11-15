@@ -2,7 +2,7 @@ ___
 
 *Based on our Miro, as of 30th Oct 2023*
 
->This is an outline of how stages and maps will work in Monstrous Tide - regarding game structure, enemy spawns, drops and their probabilities and much more.
+>This is an outline of how stages and maps work in Monstrous Tide - regarding game structure, enemy spawns, drops and their probabilities and much more.
 
 
 # Structure
@@ -64,6 +64,9 @@ where A, B, C... indicate different *[[Biomes concept list|biomes]]*, which play
 After each aforementioned Map (node on fig. 2) there will be a specific shop available in which player will be able to buy specified items, upgrades, abilities, bonuses and/or weapons with a specified [[__Currencies ideas__|currency]].
 
 # Story relations
+
+>[!attention] ***Suggestion:***
+>Every single chapter/sector is other, different playable character, not to be chosen by the player. After completing said chapter/sector with given character, they will show up in some kind of [[Journal]], among other related entries.
 
 All the Chapters will be in the same world, of the same history and events and will provide players with different items which will unveil the story to them. Understanding that story is a minor part of the project, it will be rather in the background of the work.
 
