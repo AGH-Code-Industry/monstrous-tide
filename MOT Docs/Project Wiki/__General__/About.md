@@ -1,7 +1,7 @@
 ___
 > Hello, this is Monstrous Tide project's Obsidian vault, this file is a basic introduction to contents of this directory.
 
-
+*Please, keep this documentation - and everything, actually - in English.*
 # Files database and tagging
 
 This feature will be provided with *Dataview* plugin, which will allow easier file exploration and faster searching for desired information.
