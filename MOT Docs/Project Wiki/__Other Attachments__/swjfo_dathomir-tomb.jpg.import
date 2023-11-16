@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4wqjq6qic6gp"
-path="res://.godot/imported/healthbar.png-1e06980438a651986d0c32e22e0daa07.ctex"
+uid="uid://c1vnmivn4nux8"
+path="res://.godot/imported/swjfo_dathomir-tomb.jpg-c34e9386c133370ac771720d93f5d8c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tutorial/GUI/healthbar.png"
-dest_files=["res://.godot/imported/healthbar.png-1e06980438a651986d0c32e22e0daa07.ctex"]
+source_file="res://MOT Docs/Project Wiki/__Other Attachments__/swjfo_dathomir-tomb.jpg"
+dest_files=["res://.godot/imported/swjfo_dathomir-tomb.jpg-c34e9386c133370ac771720d93f5d8c6.ctex"]
 
 [params]
 
