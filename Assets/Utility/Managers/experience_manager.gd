@@ -4,6 +4,7 @@ extends Node
 var current_points = 0
 var current_level = 1
 
+var level_up_panel = preload("res://Assets/Utility/UI/LevelUPScreen/LevelUpScreen.tscn")
 
 func _ready():
 	GameEvents.experience_collected.connect(on_experience_collected)
@@ -14,6 +15,8 @@ func level_up():
 	current_points -= points_to_levelup
 	current_level += 1
 	points_to_levelup += 5
+	var level_up_panel_instance = level_up_panel.instantiate()
+	get_tree().get_first_node_in_group("items").add_child(level_up_panel_instance)
 
 	
 func on_experience_collected(number_of_experience: int):
