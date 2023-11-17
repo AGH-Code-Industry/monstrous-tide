@@ -14,3 +14,5 @@ ___
 | *Mythic* | Indigo | 1.1% | 
 
 Where associated colour may be used for graphic type design or something like that.
+
+*General drop-rate principle* is here for a reference only, as there is no drop-rate dependant mechanic described so far.

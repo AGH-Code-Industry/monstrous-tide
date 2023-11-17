@@ -4,8 +4,8 @@ var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
 var last_movement := Vector2.UP
 @export var DEBUG_heal_value : float = 1
-
 @export var stat_set: StatSet
+
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
@@ -45,3 +45,4 @@ func die():
 
 func _on_hit_box_on_death() -> void:
 	die()
+
