@@ -16,7 +16,9 @@ func level_up():
 	current_level += 1
 	points_to_levelup += 5
 	var level_up_panel_instance = level_up_panel.instantiate()
-	get_tree().get_first_node_in_group("items").add_child(level_up_panel_instance)
+	add_child(level_up_panel_instance)
+	print("Stworzono karty")
+	GameEvents.emit_update_experience_bar(current_points, points_to_levelup, current_level)
 
 	
 func on_experience_collected(number_of_experience: int):
@@ -24,3 +26,5 @@ func on_experience_collected(number_of_experience: int):
 	while current_points >= points_to_levelup:
 		level_up()
 	GameEvents.emit_update_experience_bar(current_points, points_to_levelup, current_level)
+	print("current level: " + str(current_level))
+	print("current points: " + str(current_points))

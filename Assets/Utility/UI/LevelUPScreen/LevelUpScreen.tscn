@@ -13,6 +13,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CardContainer" type="HBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

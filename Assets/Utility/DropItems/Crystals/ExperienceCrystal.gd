@@ -4,5 +4,5 @@ extends DropItemClass
 
 	
 func collect():
-	GameEvents.emit_experience_collected(experience_points)
+#	GameEvents.emit_experience_collected(experience_points)
 	queue_free()
