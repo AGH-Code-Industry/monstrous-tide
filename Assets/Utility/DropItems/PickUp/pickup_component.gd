@@ -19,7 +19,6 @@ func _on_pickup_radius_area_entered(area: Area2D) -> void:
 		parent.pickUp(self)
 
 
-
 func _on_reaction_radius_area_entered(area: Area2D) -> void:
 	var parent = area.get_parent()
 	if parent.has_method("collect"):

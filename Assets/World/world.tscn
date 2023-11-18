@@ -185,51 +185,51 @@ position = Vector2(-553, -100)
 
 [node name="ItemsLayer" type="Node" parent="." groups=["items"]]
 
+[node name="ExperienceCollectPickup" parent="ItemsLayer" instance=ExtResource("27_nkgxi")]
+position = Vector2(-26, -9)
+
+[node name="ExperienceCrystal" parent="ItemsLayer" instance=ExtResource("25_mpb60")]
+position = Vector2(-79, 13)
+
+[node name="ExperienceCrystal2" parent="ItemsLayer" instance=ExtResource("26_m3wn7")]
+position = Vector2(-85, 45)
+
+[node name="ExperienceCrystal3" parent="ItemsLayer" instance=ExtResource("25_mpb60")]
+position = Vector2(-95, -35)
+
+[node name="ExperienceCrystal4" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(-55, -85)
+
+[node name="ExperienceCrystal5" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(-21, -79)
+
+[node name="ExperienceCrystal6" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(9, -74)
+
+[node name="ExperienceCrystal7" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(43, -65)
+
+[node name="ExperienceCrystal8" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(63, -58)
+
+[node name="ExperienceCrystal9" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(94, -42)
+
+[node name="ExperienceCrystal10" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(94, -42)
+
+[node name="ExperienceCrystal11" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(112, -24)
+
+[node name="ExperienceCrystal12" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(134, 13)
+
+[node name="ExperienceCrystal13" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(135, 49)
+
+[node name="ExperienceCrystal14" parent="ItemsLayer" instance=ExtResource("27_q7ps6")]
+position = Vector2(126, 75)
+
 [node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
 
 [node name="ExperienceManager" parent="." instance=ExtResource("22_c4rh6")]
-
-[node name="ExperienceCollectPickup" parent="." instance=ExtResource("27_nkgxi")]
-position = Vector2(-26, -9)
-
-[node name="ExperienceCrystal" parent="." instance=ExtResource("25_mpb60")]
-position = Vector2(-79, 13)
-
-[node name="ExperienceCrystal2" parent="." instance=ExtResource("26_m3wn7")]
-position = Vector2(-85, 45)
-
-[node name="ExperienceCrystal3" parent="." instance=ExtResource("25_mpb60")]
-position = Vector2(-95, -35)
-
-[node name="ExperienceCrystal4" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(-55, -85)
-
-[node name="ExperienceCrystal5" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(-21, -79)
-
-[node name="ExperienceCrystal6" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(9, -74)
-
-[node name="ExperienceCrystal7" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(43, -65)
-
-[node name="ExperienceCrystal8" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(63, -58)
-
-[node name="ExperienceCrystal9" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(94, -42)
-
-[node name="ExperienceCrystal10" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(94, -42)
-
-[node name="ExperienceCrystal11" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(112, -24)
-
-[node name="ExperienceCrystal12" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(134, 13)
-
-[node name="ExperienceCrystal13" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(135, 49)
-
-[node name="ExperienceCrystal14" parent="." instance=ExtResource("27_q7ps6")]
-position = Vector2(126, 75)
