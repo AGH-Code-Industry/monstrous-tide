@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://f6cuy2xyni3d"]
+
+[ext_resource type="Texture2D" uid="uid://cg1s502whbkdd" path="res://Assets/Utility/UI/LvlUps/Uncommon/Lvl-up-uncommon-frame-hover.png" id="1_4w4vw"]
+[ext_resource type="Texture2D" uid="uid://bohp5co365dr" path="res://Assets/Utility/UI/LvlUps/Uncommon/Lvl-up-uncommon-frame.png" id="2_shjyn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0ox0"]
+texture = ExtResource("1_4w4vw")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tslh3"]
+texture = ExtResource("2_shjyn")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k4jrr"]
+texture = ExtResource("2_shjyn")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_p0ox0")
+Button/styles/normal = SubResource("StyleBoxTexture_tslh3")
+Button/styles/pressed = SubResource("StyleBoxTexture_k4jrr")

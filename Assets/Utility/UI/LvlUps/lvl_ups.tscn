@@ -1,0 +1,225 @@
+[gd_scene load_steps=7 format=3 uid="uid://jbk4o4vuchg8"]
+
+[ext_resource type="Theme" uid="uid://co2p0ie6sxnsf" path="res://Assets/Utility/UI/LvlUps/LvlUpTheme.tres" id="2_121q1"]
+[ext_resource type="Theme" uid="uid://co2p0ie6sxnsf" path="res://Assets/Utility/UI/LvlUps/Epic/EpicTheme.tres" id="2_btvxc"]
+[ext_resource type="Theme" uid="uid://c6xv4df3xwt2y" path="res://Assets/Utility/UI/LvlUps/Legendary/LegendaryTheme.tres" id="3_g4hkc"]
+[ext_resource type="Texture2D" uid="uid://df4ljqr0wxkc3" path="res://Assets/Utility/UI/LvlUps/sample-item-image.png" id="3_hgyag"]
+[ext_resource type="Theme" uid="uid://dimi54aem2myl" path="res://Assets/Utility/UI/LvlUps/Rare/RareTheme.tres" id="5_kpb3a"]
+[ext_resource type="Theme" uid="uid://f6cuy2xyni3d" path="res://Assets/Utility/UI/LvlUps/Uncommon/UncommonTheme.tres" id="6_h61fq"]
+
+[node name="LvlUps" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("2_121q1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 45.0
+offset_right = 594.0
+offset_bottom = 315.0
+theme = ExtResource("2_121q1")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="EpicCard" type="Button" parent="HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme = ExtResource("2_btvxc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/EpicCard"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 18.0
+offset_right = 160.0
+offset_bottom = 258.0
+
+[node name="Item image" type="TextureRect" parent="HBoxContainer/MarginContainer/EpicCard/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_hgyag")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/EpicCard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 2
+
+[node name="Item Name" type="Label" parent="HBoxContainer/MarginContainer/EpicCard/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Item name
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer/EpicCard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="ItemDescription" type="Label" parent="HBoxContainer/MarginContainer/EpicCard/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "This upgrade gives:
++5% lifesteal
++1dmg"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="LegendaryCard" type="Button" parent="HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme = ExtResource("3_g4hkc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer2/LegendaryCard"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 18.0
+offset_right = 160.0
+offset_bottom = 258.0
+
+[node name="Item image" type="TextureRect" parent="HBoxContainer/MarginContainer2/LegendaryCard/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_hgyag")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer2/LegendaryCard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 2
+
+[node name="Item Name" type="Label" parent="HBoxContainer/MarginContainer2/LegendaryCard/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Item name
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer2/LegendaryCard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="ItemDescription" type="Label" parent="HBoxContainer/MarginContainer2/LegendaryCard/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "This upgrade gives:
++5% lifesteal
++1dmg"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="RareCard" type="Button" parent="HBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme = ExtResource("5_kpb3a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer3/RareCard"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 18.0
+offset_right = 160.0
+offset_bottom = 258.0
+
+[node name="Item image" type="TextureRect" parent="HBoxContainer/MarginContainer3/RareCard/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_hgyag")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer3/RareCard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 2
+
+[node name="Item Name" type="Label" parent="HBoxContainer/MarginContainer3/RareCard/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Item name
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer3/RareCard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="ItemDescription" type="Label" parent="HBoxContainer/MarginContainer3/RareCard/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "This upgrade gives:
++5% lifesteal
++1dmg"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="UncommonCard" type="Button" parent="HBoxContainer/MarginContainer4"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme = ExtResource("6_h61fq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer4/UncommonCard"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 18.0
+offset_right = 160.0
+offset_bottom = 258.0
+
+[node name="Item image" type="TextureRect" parent="HBoxContainer/MarginContainer4/UncommonCard/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_hgyag")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer4/UncommonCard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 2
+
+[node name="Item Name" type="Label" parent="HBoxContainer/MarginContainer4/UncommonCard/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Item name
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/MarginContainer4/UncommonCard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="ItemDescription" type="Label" parent="HBoxContainer/MarginContainer4/UncommonCard/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "This upgrade gives:
++5% lifesteal
++1dmg"
+horizontal_alignment = 1
+vertical_alignment = 1

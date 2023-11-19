@@ -1,0 +1,38 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c6xv4df3xwt2y"]
+
+[ext_resource type="Texture2D" uid="uid://du6ax6dfsf5dt" path="res://Assets/Utility/UI/LvlUps/Legendary/Lvl-up-legendary-frame.png" id="1_4h4w3"]
+[ext_resource type="Texture2D" uid="uid://bnbuluu33gluq" path="res://Assets/Utility/UI/LvlUps/Legendary/Lvl-up-legendary-frame-hover.png" id="1_i6wf7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_du5bm"]
+texture = ExtResource("1_i6wf7")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d8l2u"]
+texture = ExtResource("1_4h4w3")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxrng"]
+texture = ExtResource("1_4h4w3")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_piffw"]
+texture = ExtResource("1_4h4w3")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_du5bm")
+Button/styles/normal = SubResource("StyleBoxTexture_d8l2u")
+Button/styles/pressed = SubResource("StyleBoxTexture_uxrng")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_piffw")

@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://co2p0ie6sxnsf"]
+
+[ext_resource type="Texture2D" uid="uid://0fg5jy6em8v" path="res://Assets/Utility/UI/LvlUps/label-frame.png" id="1_k4thb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fx81u"]
+texture = ExtResource("1_k4thb")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[resource]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.690196)
+Label/font_sizes/font_size = 12
+Label/styles/normal = SubResource("StyleBoxTexture_fx81u")
+MarginContainer/constants/margin_bottom = 5
+MarginContainer/constants/margin_left = 5
+MarginContainer/constants/margin_right = 5
+MarginContainer/constants/margin_top = 5
