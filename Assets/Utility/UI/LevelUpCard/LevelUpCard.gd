@@ -2,18 +2,14 @@ extends PanelContainer
 
 var parent_panel
 
-signal upgrade_selected
-
-
 func _ready():
 	gui_input.connect(on_input_gui)
 	mouse_entered.connect(on_mouse_entered)
 	
 	
 func select_card():
-	print("Wybtano kartę")
 	get_tree().paused = false
-	print(parent_panel)
+	GameEvents.emit_upgrade_selected()
 	parent_panel.queue_free()
 	
 
