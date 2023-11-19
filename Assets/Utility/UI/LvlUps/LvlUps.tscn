@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://jbk4o4vuchg8"]
+
+[ext_resource type="Theme" uid="uid://co2p0ie6sxnsf" path="res://Assets/Utility/UI/LvlUps/LvlUpTheme.tres" id="2_btvxc"]
+[ext_resource type="PackedScene" uid="uid://0lki8syiju0y" path="res://Assets/Utility/UI/LvlUps/LvlUpCard.tscn" id="2_qorty"]
+[ext_resource type="Theme" uid="uid://c6xv4df3xwt2y" path="res://Assets/Utility/UI/LvlUps/Legendary/LegendaryTheme.tres" id="3_g4hkc"]
+[ext_resource type="Theme" uid="uid://co2p0ie6sxnsf" path="res://Assets/Utility/UI/LvlUps/Epic/EpicTheme.tres" id="3_pc7p5"]
+[ext_resource type="Theme" uid="uid://dimi54aem2myl" path="res://Assets/Utility/UI/LvlUps/Rare/RareTheme.tres" id="5_kpb3a"]
+[ext_resource type="Theme" uid="uid://f6cuy2xyni3d" path="res://Assets/Utility/UI/LvlUps/Uncommon/UncommonTheme.tres" id="6_h61fq"]
+
+[node name="LvlUps" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("2_btvxc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 45.0
+offset_right = 594.0
+offset_bottom = 315.0
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="EpicCard" parent="HBoxContainer/MarginContainer" instance=ExtResource("2_qorty")]
+layout_mode = 2
+theme = ExtResource("3_pc7p5")
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="LegendaryCard" parent="HBoxContainer/MarginContainer2" instance=ExtResource("2_qorty")]
+layout_mode = 2
+theme = ExtResource("3_g4hkc")
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="RareCard" parent="HBoxContainer/MarginContainer3" instance=ExtResource("2_qorty")]
+layout_mode = 2
+theme = ExtResource("5_kpb3a")
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="UncommonCard" parent="HBoxContainer/MarginContainer4" instance=ExtResource("2_qorty")]
+layout_mode = 2
+theme = ExtResource("6_h61fq")

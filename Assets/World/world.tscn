@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bvawrv4cvkx6q" path="res://Assets/Utility/Managers/experience_manager.tscn" id="22_c4rh6"]
 [ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
 [ext_resource type="PackedScene" uid="uid://ctx7i4wkn20wl" path="res://Assets/Utility/DropItems/MovementSpeedPickup/MovementSpeedPickup.tscn" id="25_3o6nv"]
-[ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/lvl_ups.tscn" id="26_ntv7e"]
+[ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/LvlUps.tscn" id="26_ntv7e"]
 [ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="27_nkgxi"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
