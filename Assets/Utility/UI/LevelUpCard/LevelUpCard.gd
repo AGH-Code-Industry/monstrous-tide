@@ -1,5 +1,7 @@
 extends PanelContainer
 
+var parent_panel
+
 signal upgrade_selected
 
 
@@ -11,7 +13,8 @@ func _ready():
 func select_card():
 	print("Wybtano kartę")
 	get_tree().paused = false
-	get_parent().queue_free()
+	print(parent_panel)
+	parent_panel.queue_free()
 	
 
 func on_input_gui(event: InputEvent):

@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Assets/Utility/UI/LevelUPScreen/LevelUpScreen.gd" id="1_vyt2v"]
 
 [node name="LevelUpScreen" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_vyt2v")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
