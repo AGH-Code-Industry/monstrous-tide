@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bohp5co365dr"
-path="res://.godot/imported/Lvl-up-uncommon-frame.png-c6707292818858168d6a834bd1ab81e1.ctex"
+uid="uid://bnic1icsl1vfk"
+path="res://.godot/imported/Lvl-up-rare-frame.png-b069824357480e482c120df40951c35b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Utility/UI/LvlUps/Uncommon/Lvl-up-uncommon-frame.png"
-dest_files=["res://.godot/imported/Lvl-up-uncommon-frame.png-c6707292818858168d6a834bd1ab81e1.ctex"]
+source_file="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-rare-frame.png"
+dest_files=["res://.godot/imported/Lvl-up-rare-frame.png-b069824357480e482c120df40951c35b.ctex"]
 
 [params]
 

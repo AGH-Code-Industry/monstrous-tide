@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn0li6ft5gxpp"
-path="res://.godot/imported/Lvl-up-epic-frame-hover.png-aff2f03986d76173f570ea8d451924a7.ctex"
+uid="uid://du6ax6dfsf5dt"
+path="res://.godot/imported/Lvl-up-legendary-frame.png-76ef3ab891a8f06766c707e57ba69261.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Utility/UI/LvlUps/Epic/Lvl-up-epic-frame-hover.png"
-dest_files=["res://.godot/imported/Lvl-up-epic-frame-hover.png-aff2f03986d76173f570ea8d451924a7.ctex"]
+source_file="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-legendary-frame.png"
+dest_files=["res://.godot/imported/Lvl-up-legendary-frame.png-76ef3ab891a8f06766c707e57ba69261.ctex"]
 
 [params]
 
