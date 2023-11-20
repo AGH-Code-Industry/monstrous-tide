@@ -138,6 +138,7 @@ shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
 offset_bottom = -18.0
+theme_type_variation = &"HealthBar"
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
 emitting = false
