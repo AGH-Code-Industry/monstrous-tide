@@ -8,6 +8,83 @@
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
 
+[sub_resource type="Animation" id="Animation_2f0x6"]
+resource_name = "Idle"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Character/Skeleton2D/Hip/Chest:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-9, -27), Vector2(-9.66681, -13.6667), Vector2(-9, -27)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Character/Skeleton2D/Hip/Chest/RightArm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-68, -138), Vector2(-67.0001, -143.333), Vector2(-68, -138), Vector2(-67.0001, -143.333), Vector2(-68, -138)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Character/Skeleton2D/Hip/Chest/RightArm/RightHand:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.100651, -0.100651, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Character/Skeleton2D/Hip/Chest/LeftArm:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(46, -125), Vector2(46.3334, -130), Vector2(46.3334, -130), Vector2(46, -125)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Character/Skeleton2D/Hip/Chest/LeftArm/LeftHand:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0683626, 0.0683626, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Character/Skeleton2D/Hip/RightLeg/RightFoot:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-15.3334, 72.3333), Vector2(-15.3334, 65.6666), Vector2(-15.3334, 72.3333), Vector2(-15.3334, 65.6666), Vector2(-15.3334, 72.3333)]
+}
+
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
 tracks/0/type = "value"
@@ -412,83 +489,6 @@ tracks/14/keys = {
 "values": [Vector2(0, 69), Vector2(6.17206, 77.2854), Vector2(10.0157, 83.3315), Vector2(6.17206, 77.2854), Vector2(0, 69)]
 }
 
-[sub_resource type="Animation" id="Animation_2f0x6"]
-resource_name = "Idle"
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Character/Skeleton2D/Hip/Chest:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-9, -27), Vector2(-9.66681, -13.6667), Vector2(-9, -27)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Character/Skeleton2D/Hip/Chest/RightArm:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.85, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-68, -138), Vector2(-67.0001, -143.333), Vector2(-68, -138), Vector2(-67.0001, -143.333), Vector2(-68, -138)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Character/Skeleton2D/Hip/Chest/RightArm/RightHand:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.100651, -0.100651, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Character/Skeleton2D/Hip/Chest/LeftArm:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(46, -125), Vector2(46.3334, -130), Vector2(46.3334, -130), Vector2(46, -125)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Character/Skeleton2D/Hip/Chest/LeftArm/LeftHand:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0683626, 0.0683626, 0.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Character/Skeleton2D/Hip/RightLeg/RightFoot:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-15.3334, 72.3333), Vector2(-15.3334, 65.6666), Vector2(-15.3334, 72.3333), Vector2(-15.3334, 65.6666), Vector2(-15.3334, 72.3333)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qa4wg"]
 _data = {
 "Idle": SubResource("Animation_2f0x6"),
@@ -616,19 +616,18 @@ shape = SubResource("RectangleShape2D_743r1")
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
 
 [node name="Character" type="Node2D" parent="."]
+position = Vector2(-11, 5)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Character"]
-position = Vector2(123, -18)
+position = Vector2(122, -18)
 scale = Vector2(0.3, 0.3)
 
 [node name="Hip" type="Bone2D" parent="Character/Skeleton2D"]
-visible = false
 position = Vector2(503, 127)
 rest = Transform2D(1, 0, 0, 1, 503, 127)
 
 [node name="Chest" type="Bone2D" parent="Character/Skeleton2D/Hip"]
 position = Vector2(-9, -27)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -9, -27)
 
 [node name="Head" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest"]
@@ -640,12 +639,10 @@ bone_angle = -64.057
 
 [node name="RightArm" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest"]
 position = Vector2(-68, -138)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -653,12 +650,10 @@ bone_angle = 66.59
 
 [node name="LeftArm" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest"]
 position = Vector2(46, -125)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 46, -125)
 
 [node name="LeftHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/LeftArm"]
 position = Vector2(14, 73)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 14, 73)
 auto_calculate_length_and_angle = false
 length = 89.6
@@ -766,7 +761,6 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_8k8oc")
 anim_player = NodePath("../Animation")
-active = true
 parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 
