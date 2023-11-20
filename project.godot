@@ -33,6 +33,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Monstrous-tide-game"
 
+[gui]
+
+theme/custom="res://Assets/Resources/Theme.tres"
+
 [input]
 
 up={
