@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://0lki8syiju0y"]
+[gd_scene load_steps=14 format=3 uid="uid://0lki8syiju0y"]
 
 [ext_resource type="Texture2D" uid="uid://0fg5jy6em8v" path="res://Assets/Utility/UI/LvlUps/Textures/label-frame.png" id="1_x7dl0"]
 [ext_resource type="Texture2D" uid="uid://bohp5co365dr" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-uncommon-frame.png" id="2_jaheu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dj7k70hfr0n2m" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-epic-frame.png" id="3_qd0t6"]
 [ext_resource type="Texture2D" uid="uid://du6ax6dfsf5dt" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-legendary-frame.png" id="4_n3wkc"]
 [ext_resource type="Texture2D" uid="uid://bnic1icsl1vfk" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-rare-frame.png" id="5_ijf2t"]
+[ext_resource type="Script" path="res://Assets/Utility/UI/LvlUps/LvlUpCard.gd" id="6_fomnb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fx81u"]
 texture = ExtResource("1_x7dl0")
@@ -63,6 +64,7 @@ PanelContainerRare/styles/panel = SubResource("StyleBoxTexture_y0455")
 [node name="Card" type="PanelContainer"]
 custom_minimum_size = Vector2(170, 260)
 theme = SubResource("Theme_4g5up")
+script = ExtResource("6_fomnb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2

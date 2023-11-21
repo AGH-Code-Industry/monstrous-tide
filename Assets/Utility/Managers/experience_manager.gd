@@ -4,6 +4,7 @@ extends Node
 var current_points = 0
 var current_level = 1
 
+signal level_up_signal
 
 func _ready():
 	GameEvents.experience_collected.connect(on_experience_collected)
@@ -14,6 +15,7 @@ func level_up():
 	current_points -= points_to_levelup
 	current_level += 1
 	points_to_levelup += 5
+	level_up_signal.emit()
 
 	
 func on_experience_collected(number_of_experience: int):
