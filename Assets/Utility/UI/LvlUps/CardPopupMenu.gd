@@ -5,6 +5,7 @@ var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard.tscn")
 
 
 func _ready():
+	
 	get_tree().paused = true
 	for i in range(3):
 		var level_up_card_instance = level_up_card.instantiate()

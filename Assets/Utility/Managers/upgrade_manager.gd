@@ -11,5 +11,5 @@ func _ready():
 func on_level_up_signal():
 	var level_up_menu_instance = level_up_menu.instantiate()
 	add_child(level_up_menu_instance)
-	print("Stworzono karty")
+	
 

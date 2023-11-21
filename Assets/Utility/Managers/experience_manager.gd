@@ -22,4 +22,5 @@ func on_experience_collected(number_of_experience: int):
 	current_points += number_of_experience
 	while current_points >= points_to_levelup:
 		level_up()
+		await GameEvents.upgrade_selected
 	GameEvents.emit_update_experience_bar(current_points, points_to_levelup, current_level)
