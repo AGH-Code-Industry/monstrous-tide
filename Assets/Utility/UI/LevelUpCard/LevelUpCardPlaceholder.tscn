@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cil2u2cyxiga2"]
 
-[ext_resource type="Script" path="res://Assets/Utility/UI/LevelUpCard/LevelUpCard.gd" id="1_h5kgn"]
-[ext_resource type="Texture2D" uid="uid://g8druvmf75mx" path="res://Assets/Tutorial/Items/Upgrades/helmet_1.png" id="1_wrtuu"]
+[ext_resource type="Script" path="res://Assets/Utility/UI/LevelUpCard/LevelUpCardPlaceholder.gd" id="1_0gap1"]
+[ext_resource type="Texture2D" uid="uid://g8druvmf75mx" path="res://Assets/Tutorial/Items/Upgrades/helmet_1.png" id="2_yibg0"]
 
 [node name="LevelUpCard" type="PanelContainer"]
 process_mode = 3
-script = ExtResource("1_h5kgn")
+script = ExtResource("1_0gap1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -27,5 +27,5 @@ text = "Lorem ipsum"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_wrtuu")
+texture = ExtResource("2_yibg0")
 expand_mode = 4

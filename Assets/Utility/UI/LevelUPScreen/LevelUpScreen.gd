@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var level_up_card = preload("res://Assets/Utility/UI/LevelUpCard/LevelUpCard.tscn")
+var level_up_card = preload("res://Assets/Utility/UI/LevelUpCard/LevelUpCardPlaceHolder.tscn")
 @onready var card_container = $%CardContainer
 
 # Called when the node enters the scene tree for the first time.
