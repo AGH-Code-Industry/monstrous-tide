@@ -10,14 +10,14 @@ Well, there is [*Trello* website](https://trello.com) with everything we need. T
 # At the very beginning
 
 1. You should create your account, yes.
-2. After you create it, contact team leaders (esp. Paweł Młodkowski) and send them your email - they will add you to our workspace.
-3. There you are - you should be able to see *Monstrous Tide* workspace with our *Sprint* tables.
+2. After you create it, contact team leaders (esp. Paweł Młodkowski) and send them your email - they should add you to our workspace.
+3. And there you are - you should be able to see *Monstrous Tide* workspace with our *Sprint* tables.
 # A few terms
 
-- A **sprint**[^1] is a time period for work over a decided set of tasks/works. In our project, it is usually 1-2 weeks.
-- A **board** usually contains tasks of one *sprint*:
+- A **sprint**[^1] is a time period when a team works over a decided set of tasks/works. In our project, it is usually 1-2 weeks.
+- Our **board** usually contains tasks of one *sprint*:
 	- It is made of named **lists** which group our **task cards** by their current state, for example *not assigned*, *PR waiting* or *done*;
-	- A named *card* contains *task*-related info, such as who is assigned to it or what category does it match (those are specified by coloured tags);
+	- A named *card* contains *task*-related info, such as who is assigned to it or what category does it match (those are specified by coloured tags).
 
 # Actual work
 
@@ -28,8 +28,10 @@ It is simple, very simple:
 		- Name it properly;
 		- Add a description, brief but comprehensive and precise;
 		- Add proper tags;
-	- You add yourself to the *card* by clicking *+* on its top or through *Members*;
+	- You add yourself to the *card* by clicking '+' on its top or through *Members*;
 	- You move the *card* to a proper *list* (click and drag).
 2. While doing your job - and especially after finishing it - remember to move your done *task-card* to a proper *list*.
 
 ***Note:*** we do not usually keep informing about everything through *Trello* in *Activity* section of a card.
+
+[^1]: It is related to Scrum methodology, I believe. You may teach yourself [here](https://www.atlassian.com/agile/scrum) and [here](https://www.scrum.org/resources/what-scrum-module).

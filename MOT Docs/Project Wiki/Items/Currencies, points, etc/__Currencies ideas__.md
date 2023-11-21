@@ -4,7 +4,7 @@ ___
 
 
 >[!attention]- Obsidian Community plug-in
->This document uses *Table Extended* community plug-in. Please, install it in order to properly see below contents. It's absolutely safe and will apply only to this vault. 
+>This document uses *Table Extended* community plug-in. Please, install it in order to properly see below contents, if it is incomprehensive/bugged. It's absolutely safe and will apply only to this vault. 
 >
 >To do so, go to *Settings*, then *Community plug-ins*, turn on the plugins, download *Table extended* plugin by AidenLX, turn it on in plugins tab and **also turn it on in *Table extended* settings** below. You may need to re-open this vault to force Obsidian to read the plug-in.
 

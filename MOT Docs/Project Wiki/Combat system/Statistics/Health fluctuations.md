@@ -19,9 +19,12 @@ The $HP_{regenerated}$ value will be then added to the current health of the cha
 
 # Healthsteal
 
-*Healthsteal* is a mechanic providing a weapon with an ability to regenerate additional health points for its wielder, alongside their own [[Health fluctuations#Health regeneration|health regeneration]] mechanic[^2]. It is calculated in a way described below:
-$$HP_{stealed} = DMG_{dealt} \times \frac{HPSteal}{100\%}$$
-**Important to note:** $HPSteal$ stat is already a percentage value.
+*Healthsteal* is a mechanic providing a weapon with an ability to regenerate additional health points for its wielder, alongside their own [[Health fluctuations#Health regeneration|health regeneration]] mechanic[^2].  
+
+However, the *Healthsteal* stat specifies *a chance* of an additional healing, while attacking enemies. It is a percentage value, which means the higher the stat, the higher possibility of additional healing income. 
+
+If the *Healthsteal* happens to deliver additional healing, it is statically set as *+1 health point*.
+
 
 [^1]: Do we consider it a separate stat, or set *one-for-all* health regeneration cooldown?
 [^2]: I assume it should be fully *independent* of character's personal health regeneration.

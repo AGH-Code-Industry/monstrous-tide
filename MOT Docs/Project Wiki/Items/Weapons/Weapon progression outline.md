@@ -21,28 +21,10 @@ On the other hand, weapons are made of [[Weapon stats|stats]] that may be increa
 - mentioned upgrades will be distributed as follows:
 *\[a table of exemplary upgrades grouped by rarities]*
 
->[!attention] ***Suggestions***
->With provided rarities, I suggest:
->- *Basic* being flat/low percentage random stat bonuses;
->- *Classic* and *Advanced* being higher percentage stat bonuses;
->- *Exotic* and *Legendary* being very high stat bonuses or/and additional weapons mechanics;
->- *Mythic* being evolution to a different weapon.
->
->When levelling up, the player may choose one of upgrades, where: *Basic* and *Classic* drop always; *Advanced* drops almost always; *Exotic*, *Legendary* and *Mythic* drop rarely, except the situation, when described upgrades are only upgrades left to be held by the weapon (then they also drop rarely, but they are only ones available for this weapon).
 # Considering evolving weapons
 
 As mentioned above, those upgrades should transform our weapon into a new, special one. 
 
->[!question] ***Suggestion*** 
->Regarding weapon [[Weapon types|types]] and [[Weapon sets|sets]], these should be the only keys to transformations.
->
->What I mean is weapon after the transformation should be chosen randomly, but of the same type and set as the basic one. 
->
->*Example*:
->There is a set of weapons called *A* - within the *A* set there are a few weapons, some of them are *Advanced* and there are a few *Mythic* weapons. If player rolls a *Mythic* upgrade for a *Advanced* weapon they have from *A* set, this will upgrade this weapon into a *Mythic* weapon from the same *A* set **and** it will be of the same [[Weapon types|type]][^2].
 
-
-
-
-[^1]: An issue to discuss - how many, considering suggested [[__Rarity system sketch__|rarity system sketch]]?
+[^1]: To be introduced after deciding which rarity system we are going to use (see: [[__Rarity system sketch__|here]]).
 [^2]: Weapon types are to be introduced.
