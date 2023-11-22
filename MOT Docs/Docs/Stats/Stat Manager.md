@@ -1,5 +1,10 @@
+---
+extends: Node
+---
+
+#code/utility/stats
 # Description
-Component responsible for handling player and enemies stats updates using signals. Loaded automatically to each scene.
+Component responsible for handling [[Player]]'s and [[Enemy|enemies']] [[__Statistics outline__|stats]] updates using [[#Signals|signals]]. Loaded automatically to each scene.
 
 # How to use
 ## Creating new signal
@@ -31,7 +36,7 @@ Return value's type|Name and arguments|Description
 In all the emit_ methods time is an optional parameter. 
 
 ## add_relevant_stats
-This method is used to calculate all the relevant stats for current component and add them to your current stats. Call this method in your component as a reaction to receiving signal eg: 
+This method is used to calculate all the relevant [[__Statistics outline__|stats]] for current component and add them to your current stats. Call this method in your component as a reaction to receiving signal eg: 
 ```
 func on_pickupradius_update(new_stats):
 	stats = StatManager.add_relevant_stats(stats, new_stats)
