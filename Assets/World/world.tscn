@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=30 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
 [ext_resource type="PackedScene" uid="uid://ctx7i4wkn20wl" path="res://Assets/Utility/DropItems/MovementSpeedPickup/MovementSpeedPickup.tscn" id="25_3o6nv"]
 [ext_resource type="PackedScene" uid="uid://dp5lugnkwinpb" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.tscn" id="26_mvhq3"]
+[ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/LvlUps.tscn" id="26_ntv7e"]
 [ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="27_nkgxi"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
@@ -203,3 +204,6 @@ position = Vector2(-20, -176)
 
 [node name="HealingPickup3" parent="." instance=ExtResource("26_mvhq3")]
 position = Vector2(150, -176)
+
+[node name="LvlUps" parent="." instance=ExtResource("26_ntv7e")]
+visible = false
