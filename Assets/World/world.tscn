@@ -188,7 +188,7 @@ position = Vector2(-553, -100)
 [node name="ItemsLayer" type="Node" parent="." groups=["items"]]
 
 [node name="ExperienceCollectPickup" parent="ItemsLayer" instance=ExtResource("27_nkgxi")]
-position = Vector2(-26, -9)
+position = Vector2(-155, -32)
 
 [node name="MovementSpeedpickup" parent="ItemsLayer" instance=ExtResource("25_3o6nv")]
 position = Vector2(-31, 51)
