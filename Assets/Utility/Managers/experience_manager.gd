@@ -15,6 +15,7 @@ func level_up():
 	current_points -= points_to_levelup
 	current_level += 1
 	points_to_levelup += 5
+	get_tree().paused = true
 	level_up_signal.emit()
 
 	
