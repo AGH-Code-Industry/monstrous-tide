@@ -1,42 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp5lugnkwinpb"]
+[gd_scene load_steps=4 format=3 uid="uid://dp5lugnkwinpb"]
 
 [ext_resource type="Script" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.gd" id="1_38jnv"]
+[ext_resource type="Texture2D" uid="uid://ch52fynwk4s4m" path="res://Assets/Tutorial/Items/Pickups/HealingPickup.png" id="2_ix1hw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra4p0"]
-size = Vector2(44, 44)
+size = Vector2(24, 24)
 
 [node name="HealingPickup" type="Node2D"]
 script = ExtResource("1_38jnv")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -5.0
-offset_top = -20.0
-offset_right = 5.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -5.0
-offset_top = -20.0
-offset_right = 5.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5708
-pivot_offset = Vector2(5, 20)
-color = Color(1, 0, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 24
@@ -46,3 +17,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_ra4p0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.375, 1.5)
+texture = ExtResource("2_ix1hw")
