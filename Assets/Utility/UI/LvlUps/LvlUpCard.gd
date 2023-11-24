@@ -21,9 +21,9 @@ func select_card():
 			continue
 		card.disabled = true
 		card.animation_player.play("out")
+	get_tree().paused = false
 	animation_player.play("out")
 	await animation_player.animation_finished
-	get_tree().paused = false
 	GameEvents.emit_upgrade_selected()
 	
 
