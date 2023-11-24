@@ -19,6 +19,7 @@ func select_card():
 	for card in get_parent().get_children():
 		if card == self:
 			continue
+		card.disabled = true
 		card.animation_player.play("out")
 	animation_player.play("out")
 	await animation_player.animation_finished
@@ -28,9 +29,10 @@ func select_card():
 
 func on_input_gui(event: InputEvent):
 	modulate = Color.WHITE
+	if disabled:
+		return
 	if event.is_action_pressed("left_click"):
 		select_card()
-
 	
 	
 func on_mouse_entered():
