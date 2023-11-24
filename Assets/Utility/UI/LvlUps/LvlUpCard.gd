@@ -2,7 +2,6 @@ extends PanelContainer
 
 @onready var animation_player = $AnimationPlayer
 
-var parent_panel
 var disabled = true
 
 func _ready():
@@ -25,7 +24,6 @@ func select_card():
 	await animation_player.animation_finished
 	get_tree().paused = false
 	GameEvents.emit_upgrade_selected()
-	parent_panel.queue_free()
 	
 
 func on_input_gui(event: InputEvent):

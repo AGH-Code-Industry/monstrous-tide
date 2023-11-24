@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 GameEvents="*res://Assets/World/game_events.tscn"
 StatManager="*res://Assets/Utility/Managers/stat_manager.gd"
-ExperienceManager="*res://Assets/Utility/Managers/experience_manager.tscn"
 
 [display]
 
