@@ -194,31 +194,25 @@ position = Vector2(-84, 37)
 position = Vector2(-57, 95)
 
 [node name="ExperienceCrystal" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(26, -73)
+position = Vector2(6, -74)
 
 [node name="ExperienceCrystal2" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(62, -53)
+position = Vector2(42, -73)
 
 [node name="ExperienceCrystal3" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(87, -28)
+position = Vector2(81, -71)
 
 [node name="ExperienceCrystal4" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(-14, -75)
+position = Vector2(-30, -74)
 
 [node name="ExperienceCrystal5" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(-53, -65)
+position = Vector2(-64, -75)
 
 [node name="ExperienceCrystal6" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(-90, -42)
+position = Vector2(-99, -75)
 
 [node name="ExperienceCrystal7" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(100, 61)
-
-[node name="ExperienceCrystal8" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(46, 89)
-
-[node name="ExperienceCrystal9" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(3, 110)
+position = Vector2(84, 99)
 
 [node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
 
