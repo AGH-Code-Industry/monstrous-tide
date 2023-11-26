@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://0lki8syiju0y"]
+[gd_scene load_steps=19 format=3 uid="uid://0lki8syiju0y"]
 
 [ext_resource type="Texture2D" uid="uid://0fg5jy6em8v" path="res://Assets/Utility/UI/LvlUps/Textures/label-frame.png" id="1_x7dl0"]
 [ext_resource type="Texture2D" uid="uid://bohp5co365dr" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-uncommon-frame.png" id="2_jaheu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dj7k70hfr0n2m" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-epic-frame.png" id="3_qd0t6"]
 [ext_resource type="Texture2D" uid="uid://du6ax6dfsf5dt" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-legendary-frame.png" id="4_n3wkc"]
 [ext_resource type="Texture2D" uid="uid://bnic1icsl1vfk" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-rare-frame.png" id="5_ijf2t"]
+[ext_resource type="Script" path="res://Assets/Utility/UI/LvlUps/LvlUpCard.gd" id="6_fomnb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fx81u"]
 texture = ExtResource("1_x7dl0")
@@ -60,15 +61,132 @@ PanelContainerLegendary/styles/panel = SubResource("StyleBoxTexture_iamk3")
 PanelContainerRare/base_type = &"PanelContainer"
 PanelContainerRare/styles/panel = SubResource("StyleBoxTexture_y0455")
 
-[node name="Card" type="PanelContainer"]
+[sub_resource type="Animation" id="Animation_q04jn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xrfty"]
+resource_name = "hover"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 2.54912),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="Animation" id="Animation_w5orx"]
+resource_name = "in"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 2.92817),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2jhur"]
+resource_name = "out"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0exjo"]
+_data = {
+"RESET": SubResource("Animation_q04jn"),
+"hover": SubResource("Animation_xrfty"),
+"in": SubResource("Animation_w5orx"),
+"out": SubResource("Animation_2jhur")
+}
+
+[node name="Card" type="PanelContainer" groups=["upgrade_card"]]
 custom_minimum_size = Vector2(170, 260)
+pivot_offset = Vector2(85, 130)
 theme = SubResource("Theme_4g5up")
+script = ExtResource("6_fomnb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0exjo")
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_type_variation = &"LvlUpMarginContainer"
 theme_override_constants/margin_top = 10
 
@@ -76,10 +194,12 @@ theme_override_constants/margin_top = 10
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 2
 texture = ExtResource("2_xfo3i")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_type_variation = &"LvlUpMarginContainer"
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 2
@@ -98,6 +218,7 @@ vertical_alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_type_variation = &"LvlUpMarginContainer"
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
