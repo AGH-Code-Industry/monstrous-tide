@@ -16,7 +16,3 @@ func emit_update_experience_bar(current_points: int, points_to_level_up: int, cu
 
 func emit_upgrade_selected():
 	upgrade_selected.emit()
-
-
-func emit_level_up_signal(levels_to_lvlup: int):
-	level_up_signal.emit(levels_to_lvlup)
