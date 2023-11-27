@@ -26,8 +26,3 @@ func _on_hit_box_on_death() -> void:
 	#print("Enemy died")
 	queue_free()
 
-
-
-
-
-

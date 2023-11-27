@@ -10,6 +10,13 @@ extends Area2D
 @export var show_damage_taken_numbers: bool = false
 @export var show_heal_numbers: bool = false
 
+# Hit indicators
+@onready var bleed_particles = $BleedParticles
+@export var flash_on_hit : bool
+@export var sprite : CanvasItem
+@export var flash_timeout : float
+@export var flash_color : Color
+
 signal update_health
 
 signal on_death()
@@ -27,13 +34,19 @@ func take_damage(dmg: Damage) -> void:
 		var text_type = FloatingTextSpawner.text_types.CRITICAL if dmg.is_critical_hit else FloatingTextSpawner.text_types.DAMAGE
 		FloatingTextSpawner.create_floating_text(self, str(calculated_damage), text_type)
 
-	#print(get_parent().get_name(), ": ", health)
 	if(not dmg.bypass_invulnerability):
 		collision.call_deferred("set", "disabled", true)
 		disableTimer.start()
 	if health <= 0:
 		die()
 	update_health.emit()
+	
+	if(flash_on_hit):
+		sprite.modulate = flash_color
+		bleed_particles.emitting = true
+		await get_tree().create_timer(flash_timeout).timeout
+		bleed_particles.emitting = false
+		sprite.modulate = Color(1,1,1)
 
 func heal(heal_amount : float) -> void:
 	var calculated_healing = heal_amount # Modifiers here
