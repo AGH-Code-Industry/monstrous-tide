@@ -34,7 +34,6 @@ func take_damage(dmg: Damage) -> void:
 		var text_type = FloatingTextSpawner.text_types.CRITICAL if dmg.is_critical_hit else FloatingTextSpawner.text_types.DAMAGE
 		FloatingTextSpawner.create_floating_text(self, str(calculated_damage), text_type)
 
-	#print(get_parent().get_name(), ": ", health)
 	if(not dmg.bypass_invulnerability):
 		collision.call_deferred("set", "disabled", true)
 		disableTimer.start()
