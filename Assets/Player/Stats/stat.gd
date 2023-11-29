@@ -14,7 +14,6 @@ enum Type{
 }
 
 func add_value(val: int):
-	print("Value added")
 	value += val
 
 @export var type : Type
