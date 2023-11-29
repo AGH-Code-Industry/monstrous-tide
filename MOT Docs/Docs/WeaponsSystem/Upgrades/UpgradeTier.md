@@ -1,3 +1,7 @@
+---
+extends: Resource
+---
+
 This is a resource that holds all the upgrades for given tier.
 ## fields/variables/etc.:
 

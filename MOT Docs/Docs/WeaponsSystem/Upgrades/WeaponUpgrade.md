@@ -1,11 +1,12 @@
-
+---
+extends: Resource
+---
 This is a parent class to all other upgrades
 ## functions/methods/etc.:
 
 Return Value Type|Name and arguments|Description
 -|-|-
-`void`|apply_upgrade()|Used to apply this upgrade to a weapon. Here it's empty method to be overriden by inheriting scripts
-
+`void`|apply_upgrade()|Abstract method ssed to apply this upgrade to a weapon. Here it's empty method
 ## fields/variables/etc.:
 
 Name|type|Description

@@ -1,10 +1,12 @@
-
-This is a child of [[WeaponUpgrade]]. It's used for upgrades that adds stats to a weapon
+---
+extends: WeaponUpgrade
+---
+This class is used for upgrades that adds [[__Statistics outline__|stats]] to a weapon
 ## functions/methods/etc.:
 
 Return Value Type|Name and arguments|Description
 -|-|-
-`void`|apply_upgrade()|Used to apply this upgrade to a weapon. Here it's empty method to be overriden by inheriting scripts
+`void`|apply_upgrade()|Used to apply specified stats to a weapon
 
 ## fields/variables/etc.:
 
