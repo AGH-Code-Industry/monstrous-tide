@@ -4,16 +4,15 @@ var animation_sprite: AnimatedSprite2D
 var movement_speed: float = 40.0
 var last_movement := Vector2.UP
 @export var DEBUG_heal_value : float = 1
+@export var stat_set: StatSet
 
 @onready var animation_tree: AnimationTree = $AnimationTree
-
-@export var stats = {StatConstants.PlayerStats.MOVEMENTSPEED: 5}
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
 	animation_sprite.play("Idle")
 	animation_tree.active = true
-	StatManager.update_player_stats.connect(func(receivedStats): stats = StatManager.add_relevant_stats(stats, receivedStats))
+	StatManager.update_player_stats_misc.connect(func(receivedStats): stat_set.add_stat_array(receivedStats))
 
 func _physics_process(_delta):
 	movement()
@@ -42,7 +41,7 @@ func movement():
 		animation_tree["parameters/conditions/idle"] = true
 		animation_tree["parameters/conditions/is_moving"] = false
 		animation_sprite.play("Idle")
-	velocity = mov.normalized() * stats[StatConstants.PlayerStats.MOVEMENTSPEED]
+	velocity = mov.normalized() * stat_set.get_stat_value(Stat.Type.MOVEMENTSPEED)
 	move_and_slide()
 
 func die():

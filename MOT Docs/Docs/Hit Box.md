@@ -14,6 +14,11 @@ Field type|Field name|Description
 `float`|`health`|Current health value
 `bool`|`show_damage_taken_numbers`|If `true` - render [[Floating Text]] for receiving [[Damage]]
 `bool`|`show_heal_numbers`|If `true` - render [[Floating Text]] for receiving healing
+`bool`|`flash_on_hit`|If `true` - flash sprite in specified color when receiving damage
+`CanvasItem`|`sprite`|Node which holds sprite that should flash when hit
+`float`|`flash_timeout`|Time of color change
+`Color`|`flash_color`|Color which sprite changes to during flash
+`GPUParticles2D`|`bleed_particles`|Node that emits particles during flash
 
 # Public Methods
 Return value's type|Name and arguments|Description
@@ -22,7 +27,7 @@ Return value's type|Name and arguments|Description
 `void`|[[#heal]](heal_amount : float)|Call this method to heal the [[Hit Box]]
 
 ## take_damage
-This method handles lowering health due to [[Damage]], dying, managing *i-frames* and [[Floating Text Spawner|spawning floating text]]. Emits the `update_health` signal.
+This method handles lowering health due to [[Damage]], dying, managing *i-frames*, [[Floating Text Spawner|spawning floating text]] and indicating hits via changing color and emiting particles. Emits the `update_health` signal. 
 
 ## heal
 This method handles increasing health due to healing, [[Floating Text Spawner|spawns floating text]]. Emits the `update_health` signal.

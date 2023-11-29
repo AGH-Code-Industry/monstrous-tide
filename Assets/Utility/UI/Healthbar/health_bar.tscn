@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpjoq4pdukqog"]
 
-[ext_resource type="Texture2D" uid="uid://b4wqjq6qic6gp" path="res://Assets/Tutorial/GUI/healthbar.png" id="1_cfb3t"]
-[ext_resource type="Texture2D" uid="uid://d4d31h5v4eprl" path="res://Assets/Tutorial/GUI/health.png" id="2_v4yf4"]
+[ext_resource type="Texture2D" uid="uid://d1cn130aiejis" path="res://Assets/Utility/UI/Healthbar/hp-bar-golden-frame-back.png" id="1_0b6wq"]
+[ext_resource type="Texture2D" uid="uid://dcjta7dpxborn" path="res://Assets/Utility/UI/Healthbar/hp-bar-golden-frame-fill.png" id="2_phx5k"]
 [ext_resource type="Script" path="res://Assets/Utility/UI/Healthbar/health_bar.gd" id="3_82f0w"]
 
 [node name="HealthBar" type="TextureProgressBar"]
 z_index = 1
-offset_left = -16.0
+texture_filter = 1
+offset_left = -23.0
 offset_top = -25.0
-offset_right = 16.0
+offset_right = 23.0
 offset_bottom = -17.0
 pivot_offset = Vector2(16, 4)
 value = 50.0
-texture_over = ExtResource("1_cfb3t")
-texture_progress = ExtResource("2_v4yf4")
+texture_under = ExtResource("1_0b6wq")
+texture_progress = ExtResource("2_phx5k")
 script = ExtResource("3_82f0w")
