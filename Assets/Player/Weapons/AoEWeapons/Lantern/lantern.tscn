@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://5wxdkk0ryim2"]
+[gd_scene load_steps=14 format=3 uid="uid://5wxdkk0ryim2"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_hh3o4"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="2_m3afd"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_f5pyf"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="3_i1fay"]
+[ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Ray.gdshader" id="6_enrqv"]
 
 [sub_resource type="Resource" id="Resource_pxm0x"]
 script = ExtResource("2_hh3o4")
@@ -33,8 +34,28 @@ stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_di2vx")])
 script = ExtResource("2_m3afd")
 upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_ufov4")])
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pjx2e"]
+resource_local_to_scene = true
+shader = ExtResource("6_enrqv")
+
 [node name="Lantern" type="Node2D"]
+z_index = 20
 script = ExtResource("1_7j11k")
 starting_stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_pxm0x")])
 stat_set = SubResource("Resource_t8x3d")
 possible_upgrades = Array[ExtResource("2_m3afd")]([SubResource("Resource_b84lf")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Rays" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_pjx2e")
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
+
+[node name="Circle" type="ColorRect" parent="CanvasLayer"]
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
