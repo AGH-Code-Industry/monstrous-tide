@@ -49,6 +49,7 @@ enemy_spawn_delay = 5
 [node name="World" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -1
 texture_filter = 2
 texture_repeat = 2
 position = Vector2(115, -27)
