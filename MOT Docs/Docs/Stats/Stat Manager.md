@@ -1,9 +1,13 @@
+---
+extends: Node
+---
+
 # Description
 Component responsible for handling player and enemies stats updates using signals. Loaded automatically to each scene.
 
 ## How to use
 1. Create new signal
-2. Add the method to call from other scrips that emits given signal 
+2. Add the method to call from other scripts that emits given signal 
 3. In script that uses stats subscribe to specified signal, eg. `StatManager.update_player_stats_misc.connect(on_pickupradius_update)`
 4. Call the method from script to trigger signal, eg. `StatManager.emit_player_stats_misc_update([stat_to_add], 5)` here we will add array which consists of only one stat, for 5 seconds (time is an optional parameter, not using it will result in stat being pernament)
 
@@ -11,9 +15,9 @@ Component responsible for handling player and enemies stats updates using signal
 
 Name|Arguments and type|Description
 -|-|-
-`update_player_stats_misc`|stats: Array[Stat]|Used for misc stats like movement speed or pickup radius
-`update_player_stats_offensive`|stats: Array[Stat]|Used for offensive stats like attack speed or AOE
-`update_player_stats_defensive`|stats: Array[Stat]|Used for defensive stats like armor or dodge
+`update_player_stats_misc`|stats: Array\[[[Stat]]\]|Used for misc stats like movement speed or pickup radius
+`update_player_stats_offensive`|stats: Array\[[[Stat]]\]|Used for offensive stats like attack speed or AOE
+`update_player_stats_defensive`|stats: Array\[[[Stat]]\]|Used for defensive stats like armor or dodge
 
 Each signal has to have corresponding method to emit it
 

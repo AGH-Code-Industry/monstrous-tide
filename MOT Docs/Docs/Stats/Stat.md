@@ -1,4 +1,7 @@
-___
+---
+extends: Resource
+---
+
 
 *This is an object that holds data about single stat*
 
@@ -19,4 +22,4 @@ Field type|Field name|Description
 
 ## Links/relations:
 
-- Used in StatSet as in an array to represent all stats for given component
+- Used in [[StatSet]] as in an array to represent all stats for given component
