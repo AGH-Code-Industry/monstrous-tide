@@ -7,6 +7,7 @@ var last_movement := Vector2.UP
 @export var stat_set: StatSet
 
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var player_skeleton = $Character
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
@@ -35,8 +36,10 @@ func movement():
 		animation_tree["parameters/conditions/is_moving"] = true
 		if mov[0] > 0:
 			animation_sprite.flip_h = true
+			player_skeleton.set_scale(Vector2(1,1))
 		elif mov[0] < 0:
 			animation_sprite.flip_h = false
+			player_skeleton.set_scale(Vector2(-1,1))
 	else:
 		animation_tree["parameters/conditions/idle"] = true
 		animation_tree["parameters/conditions/is_moving"] = false
