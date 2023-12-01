@@ -30,16 +30,3 @@ func negate_stats(stats: Array[Stat]) -> Array[Stat]:
 		stat.value = -stat.value
 	
 	return stats
-	
-
-# adds only stats that the object is interested in
-# eg. hitbox will receive dodge and hp updates but won't register
-# pickup radius increase
-static func add_relevant_stats(current_stats: Dictionary, incoming_stats: Dictionary) -> Dictionary:
-	var updatedStats = current_stats.duplicate()
-
-	for key in incoming_stats.keys():
-		if updatedStats.has(key):
-			updatedStats[key] += incoming_stats[key]
-
-	return updatedStats

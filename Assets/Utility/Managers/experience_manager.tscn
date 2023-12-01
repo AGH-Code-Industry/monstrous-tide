@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvawrv4cvkx6q"]
+[gd_scene load_steps=3 format=3 uid="uid://bvawrv4cvkx6q"]
 
 [ext_resource type="Script" path="res://Assets/Utility/Managers/experience_manager.gd" id="1_10kjd"]
+[ext_resource type="PackedScene" uid="uid://cmcckr2drb51t" path="res://Assets/Utility/UI/LvlUps/CardPopupMenu.tscn" id="2_64ee7"]
 
 [node name="ExperienceManager" type="Node"]
 script = ExtResource("1_10kjd")
+
+[node name="CardPopupMenu" parent="." instance=ExtResource("2_64ee7")]
