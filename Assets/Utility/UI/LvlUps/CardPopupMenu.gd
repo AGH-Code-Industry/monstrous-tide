@@ -2,9 +2,13 @@ extends CanvasLayer
 
 @onready var h_box_container = $MarginContainer/HBoxContainer
 var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard.tscn")
+var WeaponManager: Node
 
 
 func create_cards():
+	if WeaponManager == null:
+		return
+	WeaponManager.get_randomly_chosen_upgrades(3)
 	for i in range(3):
 		var level_up_card_instance = level_up_card.instantiate()
 		h_box_container.add_child(level_up_card_instance)
