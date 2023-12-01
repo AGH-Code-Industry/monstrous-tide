@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
 [ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="24_al4of"]
 [ext_resource type="PackedScene" uid="uid://ctx7i4wkn20wl" path="res://Assets/Utility/DropItems/MovementSpeedPickup/MovementSpeedPickup.tscn" id="25_3o6nv"]
+[ext_resource type="PackedScene" uid="uid://dp5lugnkwinpb" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.tscn" id="26_mvhq3"]
 [ext_resource type="PackedScene" uid="uid://dign3j2sdr85j" path="res://Assets/Utility/DropItems/Crystals/CrystalRed.tscn" id="25_te5lv"]
 [ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/LvlUps.tscn" id="26_ntv7e"]
 [ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="26_sy4rw"]
@@ -62,6 +63,7 @@ position = Vector2(-12, -1)
 spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResource("Resource_f8ksw")])
 
 [node name="Player" parent="." instance=ExtResource("2_j8yv2")]
+unique_name_in_owner = true
 
 [node name="Environment" type="Node" parent="."]
 
@@ -250,6 +252,21 @@ position = Vector2(146, 95)
 [node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
 
 [node name="ExperienceManager" parent="." instance=ExtResource("22_c4rh6")]
+
+[node name="ExperienceCollectPickup" parent="." instance=ExtResource("27_nkgxi")]
+position = Vector2(-26, -9)
+
+[node name="MovementSpeedpickup" parent="." instance=ExtResource("25_3o6nv")]
+position = Vector2(-31, 51)
+
+[node name="HealingPickup" parent="." instance=ExtResource("26_mvhq3")]
+position = Vector2(-150, -178)
+
+[node name="HealingPickup2" parent="." instance=ExtResource("26_mvhq3")]
+position = Vector2(-20, -176)
+
+[node name="HealingPickup3" parent="." instance=ExtResource("26_mvhq3")]
+position = Vector2(150, -176)
 
 [node name="LvlUps" parent="." instance=ExtResource("26_ntv7e")]
 visible = false
