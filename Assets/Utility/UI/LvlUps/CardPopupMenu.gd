@@ -8,7 +8,8 @@ var WeaponManager: Node
 func create_cards():
 	if WeaponManager == null:
 		return
-	WeaponManager.get_randomly_chosen_upgrades(3)
+	var all_upgrades = WeaponManager.get_randomly_chosen_upgrades(3)
+	print(all_upgrades)
 	for i in range(3):
 		var level_up_card_instance = level_up_card.instantiate()
 		h_box_container.add_child(level_up_card_instance)

@@ -18,6 +18,26 @@ func _ready() -> void:
 func get_randomly_chosen_upgrades(amount: int):
 	var all_upgrades = []
 	for weapon in weapons:
-		all_upgrades.append(weapon.get_available_upgrades())
-	print(all_upgrades)
-	return all_upgrades
+		for upgrade in weapon.get_available_upgrades():
+			all_upgrades.append(upgrade)
+			
+	if all_upgrades.size() == 0:
+		return	
+	var drawn_upgrades = []
+	
+	for i in amount:
+		var overall_chance = 0
+		for upgrade in all_upgrades:
+			overall_chance += upgrade.weight
+		
+		var random_number = randf_range(0, overall_chance)
+		var offset: float = 0
+		for upgrade in all_upgrades:
+			if random_number < upgrade.weight + offset:
+				print("test")
+				drawn_upgrades.append(upgrade)
+				break
+			else:
+				offset += upgrade.weight
+				
+	return drawn_upgrades
