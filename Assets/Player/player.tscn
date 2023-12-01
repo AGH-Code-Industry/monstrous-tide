@@ -115,7 +115,6 @@ libraries = {
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_0kk1c")
 animation = &"Idle"
-frame_progress = 0.25541
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 

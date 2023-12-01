@@ -35,6 +35,6 @@ This method handles increasing health due to healing, [[Floating Text Spawner|sp
 # Signals
 Name|Description
 -|-
-update_health|==TODO==
+update_health|Signal emitted by [[#take_damage]] ==and [[#heal]]== methods, name is self-explanitory
 on_death()|==TODO==
 

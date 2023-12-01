@@ -49,11 +49,18 @@ func take_damage(dmg: Damage) -> void:
 		sprite.modulate = Color(1,1,1)
 
 func heal(heal_amount : float) -> void:
+	if health >= max_health:
+		return
+
 	var calculated_healing = heal_amount # Modifiers here
-	health = min(health + calculated_healing, max_health) 
-	if show_heal_numbers:
-		FloatingTextSpawner.create_floating_text(self, str(heal_amount), FloatingTextSpawner.text_types.HEALING)
 	
+	if health + calculated_healing > max_health:
+		calculated_healing = max_health - health
+	health += calculated_healing
+
+	if show_heal_numbers:
+		FloatingTextSpawner.create_floating_text(self, str(calculated_healing), FloatingTextSpawner.text_types.HEALING)
+
 	update_health.emit()
 
 func die() -> void:
