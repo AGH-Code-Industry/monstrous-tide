@@ -207,6 +207,7 @@ theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 2
 
 [node name="Item Name" type="Label" parent="VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
 size_flags_stretch_ratio = 2.0
