@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://5wxdkk0ryim2"]
+
+[ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="2_m3afd"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="3_i1fay"]
+
+[sub_resource type="Resource" id="Resource_ufov4"]
+script = ExtResource("3_i1fay")
+stats = {
+0: 5
+}
+
+[sub_resource type="Resource" id="Resource_b84lf"]
+script = ExtResource("2_m3afd")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_ufov4")])
+
+[node name="Lantern" type="Node2D"]
+script = ExtResource("1_7j11k")
+possible_upgrades = Array[ExtResource("2_m3afd")]([SubResource("Resource_b84lf")])
