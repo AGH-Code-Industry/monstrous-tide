@@ -16,7 +16,8 @@ func _ready() -> void:
 
 # returns specified amount of upgrades chosen randomly 
 func get_randomly_chosen_upgrades(amount: int):
-	var player = get_tree().get_first_node_in_group("player")
-	var upgrades = []
-	for weapon in player.get_node("Weapons").get_children():
-		print(weapon)
+	var all_upgrades = []
+	for weapon in weapons:
+		all_upgrades.append(weapon.get_available_upgrades())
+	print(all_upgrades)
+	return all_upgrades
