@@ -5,10 +5,14 @@ extends Area2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var disableTimer: Timer = $DisableTimer
 
+# Health, regenaration, etc
 @export var max_health : float = 10
 @export var health: float = 10
 @export var show_damage_taken_numbers: bool = false
 @export var show_heal_numbers: bool = false
+@export var regenaration_rate : float = 2 ## How much health to regenerate [health / sec]
+@export var regeneration_enabled : bool ## Whether or not to regenerate health. ***DO NOT TOGGLE MANUALLY DURING PLAY*** To toggle use `toggle_regenaration()` method!
+@onready var tick_timer : Timer = $RegenarationTickTimer
 
 # Hit indicators
 @onready var bleed_particles = $BleedParticles
@@ -17,12 +21,18 @@ extends Area2D
 @export var flash_timeout : float
 @export var flash_color : Color
 
+
 signal update_health
+signal regeneration_update ## Emitted when value of `regeneration_enabled` is changed via `toggle_regenaration()` or when `regenaration_rate` is changed
 
 signal on_death()
 
 func _ready():
 	health = max_health
+	set_regeneretion_rate(regenaration_rate)
+	if regeneration_enabled:
+		tick_timer.start()
+	
 
 func take_damage(dmg: Damage) -> void:
 	# Use stats like defense/dodge to reduce/mitigate damage taken
@@ -68,3 +78,17 @@ func die() -> void:
 
 func _on_disable_timer_timeout() -> void:
 	collision.call_deferred("set", "disabled", false)
+
+func set_regeneretion_rate(new_value : float):
+	regenaration_rate = new_value
+	tick_timer.set_wait_time(1.0 / regenaration_rate)
+	regeneration_update.emit()
+
+func toggle_regenaration():
+	regeneration_enabled = not regeneration_enabled
+	tick_timer.set_paused(not regeneration_enabled)
+	regeneration_update.emit()
+	
+
+func _on_regeneration_tick_timer_timeout():
+	heal(1)
