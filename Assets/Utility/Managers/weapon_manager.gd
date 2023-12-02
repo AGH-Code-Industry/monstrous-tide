@@ -23,6 +23,8 @@ func get_randomly_chosen_upgrades(amount: int):
 			
 	if all_upgrades.size() == 0:
 		return	
+#	for up in all_upgrades:
+#		print(up.name)
 	var drawn_upgrades = []
 	
 	for i in amount:

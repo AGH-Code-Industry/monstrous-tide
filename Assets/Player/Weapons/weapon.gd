@@ -26,6 +26,7 @@ func add_stats(incoming_stats: Array[Stat]) -> void:
 
 # returns all upgrades that can be apllied to this weapon
 func get_available_upgrades() -> Array[WeaponUpgrade]:
+	print(name)
 	var available_upgrades: Array[WeaponUpgrade] = []
 	for i in range(possible_upgrades.size()):
 		# if I already have max amount of upgrades from this tier skip to next
@@ -39,6 +40,8 @@ func get_available_upgrades() -> Array[WeaponUpgrade]:
 		for up in possible_upgrades[i].upgrades:
 			if !upgrades[i].upgrades.has(up):
 				available_upgrades.append(up)
+	for up in available_upgrades:
+		print(up.name)
 	return available_upgrades
 
 
