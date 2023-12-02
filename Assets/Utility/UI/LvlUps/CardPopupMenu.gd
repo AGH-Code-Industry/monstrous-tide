@@ -13,7 +13,6 @@ func create_cards():
 	for upgrade in all_upgrades:
 		var level_up_card_instance = level_up_card.instantiate()
 		level_up_card_instance.get_node("%Item Name").text = str(upgrade.name)
-		print(typeof(upgrade))
 		
 		
 		h_box_container.add_child(level_up_card_instance)

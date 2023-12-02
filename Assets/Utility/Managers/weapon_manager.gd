@@ -34,7 +34,6 @@ func get_randomly_chosen_upgrades(amount: int):
 		var offset: float = 0
 		for upgrade in all_upgrades:
 			if random_number < upgrade.weight + offset:
-				print("test")
 				drawn_upgrades.append(upgrade)
 				break
 			else:
