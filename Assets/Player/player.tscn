@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=37 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -95,9 +95,6 @@ scale_min = 2.0
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_tw5kp")
 color = Color(0.815686, 0, 0, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_743r1"]
-size = Vector2(29, 33)
 
 [sub_resource type="Resource" id="Resource_pshwl"]
 script = ExtResource("12_6vaps")
