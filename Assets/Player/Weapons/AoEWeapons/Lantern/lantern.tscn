@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://5wxdkk0ryim2"]
+[gd_scene load_steps=18 format=3 uid="uid://5wxdkk0ryim2"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_hh3o4"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="2_m3afd"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_f5pyf"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="3_i1fay"]
+[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="6_0ln8p"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Ray.gdshader" id="6_enrqv"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/circle.gdshader" id="7_a23nn"]
 
@@ -35,6 +36,9 @@ stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_di2vx")])
 script = ExtResource("2_m3afd")
 upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_ufov4")])
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5pem6"]
+radius = 58.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pjx2e"]
 resource_local_to_scene = true
 shader = ExtResource("6_enrqv")
@@ -55,30 +59,42 @@ starting_stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_pxm0x")])
 stat_set = SubResource("Resource_t8x3d")
 possible_upgrades = Array[ExtResource("2_m3afd")]([SubResource("Resource_b84lf")])
 
-[node name="Control" type="Control" parent="."]
+[node name="DamageBox" parent="." instance=ExtResource("6_0ln8p")]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="DamageBox" index="0"]
+shape = SubResource("CircleShape2D_5pem6")
+
+[node name="VFX" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(30, 30)
 
-[node name="Rays" type="ColorRect" parent="Control"]
+[node name="Rays" type="ColorRect" parent="VFX"]
 material = SubResource("ShaderMaterial_pjx2e")
+layout_mode = 0
 offset_left = -2.95
 offset_top = -2.95
 offset_right = 3.05
 offset_bottom = 3.05
 
-[node name="Circle" type="ColorRect" parent="Control"]
+[node name="Circle" type="ColorRect" parent="VFX"]
 material = SubResource("ShaderMaterial_7afyk")
+layout_mode = 0
 offset_left = -2.8
 offset_top = -2.7
 offset_right = 3.2
 offset_bottom = 3.3
 
-[node name="Circle2" type="ColorRect" parent="Control"]
+[node name="Circle2" type="ColorRect" parent="VFX"]
 material = SubResource("ShaderMaterial_7afyk")
+layout_mode = 0
 offset_left = -1.95
 offset_top = -1.95
 offset_right = 2.05
 offset_bottom = 2.05
+
+[editable path="DamageBox"]

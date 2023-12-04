@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=23 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_it506"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
-[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="8_1p3gh"]
 
@@ -95,9 +94,6 @@ scale_max = 3.0
 scale_curve = SubResource("CurveTexture_tw5kp")
 color = Color(0.815686, 0, 0, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_743r1"]
-size = Vector2(29, 33)
-
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_jqw0g")
@@ -105,6 +101,7 @@ stat_set = SubResource("Resource_acek7")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
 visible = false
+damage = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -148,16 +145,6 @@ amount = 12
 process_material = SubResource("ParticleProcessMaterial_ocaqh")
 lifetime = 0.3
 
-[node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
-visible = false
-collision_layer = 2
-collision_mask = 4
-damage = 3.0
-
-[node name="CollisionShape2D" parent="DamageBox" index="0"]
-position = Vector2(2.5, 0.5)
-shape = SubResource("RectangleShape2D_743r1")
-
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
 
 [node name="Weapons" type="Node2D" parent="."]
@@ -169,5 +156,4 @@ z_index = 0
 [connection signal="update_health" from="HitBox" to="." method="_on_hit_box_update_health"]
 
 [editable path="HitBox"]
-[editable path="DamageBox"]
 [editable path="PickupComponent"]
