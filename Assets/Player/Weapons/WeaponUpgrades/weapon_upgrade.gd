@@ -1,6 +1,10 @@
 class_name WeaponUpgrade extends Resource
 
 var weapon_ref : Weapon = null
+var weight: int
+var upgrade_tier: int
+
+@export var name: String
 
 func apply_upgrade():
-	pass
+	weapon_ref.upgrades[upgrade_tier].upgrades.append(self)
