@@ -9,8 +9,12 @@ func create_cards():
 	if WeaponManager == null:
 		return
 	var all_upgrades = WeaponManager.get_randomly_chosen_upgrades(3)
+	if all_upgrades == null:
+		get_tree().paused = false
+		return
 	for upgrade in all_upgrades:
 		var level_up_card_instance = level_up_card.instantiate()
+		level_up_card_instance.upgrade = upgrade
 		level_up_card_instance.get_node("%ItemName").text = str(upgrade.name)
 		level_up_card_instance.get_node("%ItemDescription").text = str(upgrade.description)
 		
