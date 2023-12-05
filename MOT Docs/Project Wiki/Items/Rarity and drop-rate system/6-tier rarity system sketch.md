@@ -53,9 +53,8 @@ In other words, the game should actually *force* the player to have set amount o
 
 ## Basic
 
-Little/low *ATKSpeed/CD*[^1], *Dur*, *HPSteal*, *AOE*, *ARM*, *HP*[^2] (generally kind of unimportant) stats upgrades, for example:
+Little/low *ATKSpeed/CD*[^1], *Dur*, *HPSteal*, *AOE* (generally kind of unimportant) stats upgrades, for example:
 - \+ 1 *ATKSpeed*;
-- \+ 1-1000 *HP* for[^3];
 - \+ 1-5 sec *Dur*[^4];
 - \+ 1-5% *HPSteal*;
 - \+ 1-20 *ARM*[^3];
@@ -70,6 +69,5 @@ Higher but not overly game-changing upgrades, may regard all the stats, for exam
 
 
 [^1]: Depends of unit and principle used, an example provided below if we use *ATKSpeed* as attacks per second;
-[^2]: I mean maximum character's health bar enhancement for a few seconds.
 [^3]: Dependant on stat scaling.
 [^4]: Did we trash *Dur* concept?

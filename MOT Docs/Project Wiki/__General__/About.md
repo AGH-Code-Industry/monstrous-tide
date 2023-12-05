@@ -4,7 +4,9 @@ ___
 *Please, keep this documentation - and everything, actually - in English.*
 # Files database and tagging
 
-This feature will be provided with *Dataview* plugin, which will allow easier file exploration and faster searching for desired information.
+This feature is provided by the *Dataview* plugin, which allows us to explore files easier and search faster through them.
+
+For everything related to tagging, please visit [[Tagging, properties and metadata|this file]].
 
 # About exploring the files
 

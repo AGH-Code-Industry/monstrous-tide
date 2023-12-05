@@ -19,8 +19,6 @@
 		{"id":"515c59ac8bba9039","type":"text","text":"# PROJECT WIKI AND GAME-DESIGN","x":1100,"y":-1707,"width":343,"height":87,"color":"2"},
 		{"id":"9a3c7175cbf1f968","type":"text","text":"# Basics","x":280,"y":-920,"width":250,"height":60},
 		{"id":"74f77791ce600ce3","type":"text","text":"# How to use canvas?\n___\n\n*Here is a basic guide*:\n\n1. Disable *read-only* mode by clicking on the lock at the top of right bar in this window - it should change to a settings icon.\n2. To add a *card* (which is a Markdown file seen only by this canvas) right click and select 'Add card' - syntax stays the same.\n3. To link a existing file from this vault right click and select 'Add note from vault' (the same way you can add images).\n4. To connect nodes with arrows find a dot on their frames, click, hold and drag an arrow to some other node.\n\n***At the end of work***, please, lock the canvas to *read-only* mode.","x":280,"y":-600,"width":358,"height":620,"color":"3"},
-		{"id":"5b7985aac09712eb","type":"file","file":"Project Wiki/__General__/Regarding Obsidian.md","x":-240,"y":-600,"width":400,"height":240},
-		{"id":"2a270c9d250d2cf3","type":"file","file":"Project Wiki/__General__/About.md","x":-240,"y":-272,"width":400,"height":180},
 		{"id":"0401b29b9da2b4c4","type":"file","file":"Docs/1. Code docs template.md","x":-560,"y":-1220,"width":400,"height":240,"color":"1"},
 		{"id":"f7b3feffa9b5a998","type":"text","text":"# CODE DOCUMENTATION","x":-560,"y":-1962,"width":405,"height":60,"color":"6"},
 		{"id":"2789b3975844441e","type":"text","text":"*tbc*","x":-801,"y":-2120,"width":250,"height":60},
@@ -30,10 +28,10 @@
 		{"id":"ffe6deb697083977","type":"text","text":"# Everything introduced here has its implementation","x":3376,"y":-1633,"width":442,"height":89},
 		{"id":"145db88303a16197","type":"file","file":"Project Wiki/Combat system/Statistics/Damage calculations.md","x":4016,"y":-1960,"width":400,"height":181},
 		{"id":"1a646edcab2419a9","type":"file","file":"Project Wiki/Combat system/Statistics/Dodging system.md","x":4016,"y":-1696,"width":400,"height":215},
-		{"id":"93665ed2173746ed","type":"file","file":"Project Wiki/Combat system/Statistics/Health fluctuations.md","x":4016,"y":-1419,"width":400,"height":246}
+		{"id":"93665ed2173746ed","type":"file","file":"Project Wiki/Combat system/Statistics/Health fluctuations.md","x":4016,"y":-1419,"width":400,"height":246},
+		{"id":"2a270c9d250d2cf3","type":"file","file":"Project Wiki/__General__/About.md","x":-240,"y":-600,"width":400,"height":180}
 	],
 	"edges":[
-		{"id":"b24025ea9cbf327a","fromNode":"9a3c7175cbf1f968","fromSide":"left","toNode":"5b7985aac09712eb","toSide":"top","label":"A few basic, starting words regarding Obsidian."},
 		{"id":"d92f015fdd289ba7","fromNode":"515c59ac8bba9039","fromSide":"right","toNode":"9d61171ec8190117","toSide":"left"},
 		{"id":"25dcfef95d043ab2","fromNode":"9d61171ec8190117","fromSide":"right","toNode":"4ec33adb38c291a0","toSide":"left"},
 		{"id":"a743602222e06dbf","fromNode":"9d61171ec8190117","fromSide":"right","toNode":"1d07cbcc92824fe1","toSide":"left"},
@@ -59,10 +57,10 @@
 		{"id":"22574859a51e4c84","fromNode":"5afba1e1ce08d5b4","fromSide":"right","toNode":"fcbc7afe56df4212","toSide":"left"},
 		{"id":"ba501af564ae97f5","fromNode":"5afba1e1ce08d5b4","fromSide":"right","toNode":"f73a4f148c4e971c","toSide":"left","label":"IMPORTANT\nContains first weapon examples"},
 		{"id":"3c446a277d2ee746","fromNode":"fcbc7afe56df4212","fromSide":"right","toNode":"60e3576dee58b4bc","toSide":"left","label":"IMPORTANT\nContains weapon progression\nsuggestions"},
-		{"id":"52a81f5c942844db","fromNode":"5b7985aac09712eb","fromSide":"bottom","toNode":"2a270c9d250d2cf3","toSide":"top"},
 		{"id":"a6140104d4d37b8e","fromNode":"18f280f7e1f931ab","fromSide":"right","toNode":"515c59ac8bba9039","toSide":"left"},
 		{"id":"ae1141508afbca79","fromNode":"18f280f7e1f931ab","fromSide":"left","toNode":"f7b3feffa9b5a998","toSide":"right"},
 		{"id":"ed7757374a0b7089","fromNode":"0401b29b9da2b4c4","fromSide":"top","toNode":"f7b3feffa9b5a998","toSide":"bottom"},
-		{"id":"adc2fdc80720c914","fromNode":"f7b3feffa9b5a998","fromSide":"top","toNode":"2789b3975844441e","toSide":"right"}
+		{"id":"adc2fdc80720c914","fromNode":"f7b3feffa9b5a998","fromSide":"top","toNode":"2789b3975844441e","toSide":"right"},
+		{"id":"77616f198b264232","fromNode":"9a3c7175cbf1f968","fromSide":"left","toNode":"2a270c9d250d2cf3","toSide":"top"}
 	]
 }

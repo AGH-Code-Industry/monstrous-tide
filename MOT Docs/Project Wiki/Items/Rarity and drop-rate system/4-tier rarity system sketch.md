@@ -1,2 +1,72 @@
 ___
 
+>This is a draft of 4-tier rarity system, which shall be discussed to choose it over [[6-tier rarity system sketch]].
+
+>[!attention]- Obsidian Community plug-in
+>This document uses *Table Extended* community plug-in. Please, install it in order to properly see below contents, if it is incomprehensive/bugged. It's absolutely safe and will apply only to this vault. 
+>
+>To do so, go to *Settings*, then *Community plug-ins*, turn on the plugins, download *Table extended* plugin by AidenLX, turn it on in plugins tab and **also turn it on in *Table extended* settings** below. You may need to re-open this vault to force Obsidian to read the plug-in.
+# General
+
+| Tier name | Associated colour | General drop-rate principle | Number of slots |
+| :---: | :---: | :---: | :---: |
+| *Basic* | Grey | 25.5% | 4 |
+| *Advanced* | Blue | 23.9% | 3 |
+| *Legendary* | Gold | 4.9% | 2 |
+| *Mythic* | Indigo | 1.1% | 1 |
+
+Where associated colour may be used for graphic type design or something like that.
+
+*General drop-rate principle* is here for a reference only, as there is no drop-rate dependant mechanic described so far.
+# A little foreword
+
+>[!tip] Current weapon progression design
+>Currently approved weapon progression design is described [[Weapon progression outline|here]]. It shall be followed in every other doc and aspect, until changed. It also shall follow current [[__Statistics outline__|stat system]].
+
+>[!question] ***Suggestions***
+>With provided rarities, I suggest:
+>- *Basic* being flat/low percentage random stat bonuses;
+>- *Advanced* being higher percentage stat bonuses;
+>- *Legendary* being very high stat bonuses or/and additional weapons mechanics;
+>- *Mythic* being evolution to a different weapon.
+>
+>When levelling up, the player may choose one of upgrades, where: *Basic* drops always; *Advanced* drops almost always; *Legendary* and *Mythic* drop rarely, except the situation, when described upgrades are only upgrades left to be held by the weapon (then they also drop rarely, but they are only ones available for this weapon).
+
+>[!question] ***Another suggestion*** 
+>Regarding weapon [[Weapon types|types]] and [[Weapon sets|sets]], these should be the only keys to transformations.
+>
+>What I mean is weapon after the transformation should be chosen randomly, but of the same type and set as the basic one. 
+>
+>*Example*:
+>There is a set of weapons called *A* - within the *A* set there are a few weapons, some of them are *Advanced* and there are a few *Mythic* weapons. If player rolls a *Mythic* upgrade for a *Advanced* weapon they have from *A* set, this will upgrade this weapon into a *Mythic* weapon from the same *A* set **and** it will be of the same [[Weapon types|type]] (which are yet to be introduced).
+# Upgrades
+
+Those will drop accordingly to their *General drop-rate principle*, unless a maximum number of stats of some rarity is reached or it is last upgrade chance and some stat is yet to be chosen.
+
+In other words, the game should actually *force* the player to have set amount of each stat upgrade.
+
+***Important to note:*** 
+- Those bonuses shall be applicable to the discussed weapon, i.e. weapon should make use of the provided stat bonus.
+
+
+## Basic
+
+Low/mid (generally flat) stats upgrades, for example:
+- \+ 1-1000 *DMG*[^3]
+- \+ 1-5 *ATKSpeed*
+
+
+## Advanced
+
+Higher but not overly game-changing upgrades, may regard all the stats, for example:
+- \+ 5-10% *Dodge*;
+- \+ *x* points *Pickup*;
+- \
+
+## Legendary
+
+
+[^1]: Depends of unit and principle used, an example provided below if we use *ATKSpeed* as attacks per second;
+[^2]: I mean maximum character's health bar enhancement for a few seconds.
+[^3]: Dependant on stat scaling.
+[^4]: Did we trash *Dur* concept?
