@@ -1,3 +1,11 @@
+---
+aliases:
+  - stats
+  - statistics
+  - stat
+  - statistic
+---
+
 ___
 
 >This document is a first outline of statistics system, what they are, what is their job and everything more needed at the moment.

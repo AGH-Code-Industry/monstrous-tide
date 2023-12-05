@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_t8t0o"]
 script = ExtResource("2_0rmmo")
-type = 3
+type = 4
 value = 53
 
 [sub_resource type="Resource" id="Resource_xbb7f"]
