@@ -22,10 +22,10 @@ Where associated colour may be used for graphic type design or something like th
 *General drop-rate principle* is here for a reference only, as there is no drop-rate dependant mechanic described so far.
 # A little foreword
 
->[!tip] Current weapon progression design
+>[!tip]- Current weapon progression design
 >Currently approved weapon progression design is described [[Weapon progression outline|here]]. It shall be followed in every other doc and aspect, until changed. It also shall follow current [[__Statistics outline__|stat system]].
 
->[!question] ***Suggestions***
+>[!question]- ***This rarity concept***
 >With provided rarities, I suggest:
 >- *Basic* being flat/low percentage random stat bonuses;
 >- *Classic* and *Advanced* being higher percentage stat bonuses;
@@ -33,8 +33,10 @@ Where associated colour may be used for graphic type design or something like th
 >- *Mythic* being evolution to a different weapon.
 >
 >When levelling up, the player may choose one of upgrades, where: *Basic* and *Classic* drop always; *Advanced* drops almost always; *Exotic*, *Legendary* and *Mythic* drop rarely, except the situation, when described upgrades are only upgrades left to be held by the weapon (then they also drop rarely, but they are only ones available for this weapon).
+>
+>**Important:** Main rule is all upgrades are not reversible. 
 
->[!question] ***Another suggestion*** 
+>[!question]- ***Types and sets suggestion*** 
 >Regarding weapon [[Weapon types|types]] and [[Weapon sets|sets]], these should be the only keys to transformations.
 >
 >What I mean is weapon after the transformation should be chosen randomly, but of the same type and set as the basic one. 
@@ -53,21 +55,39 @@ In other words, the game should actually *force* the player to have set amount o
 
 ## Basic
 
-Little/low *ATKSpeed/CD*[^1], *Dur*, *HPSteal*, *AOE* (generally kind of unimportant) stats upgrades, for example:
-- \+ 1 *ATKSpeed*;
-- \+ 1-5 sec *Dur*[^4];
-- \+ 1-5% *HPSteal*;
-- \+ 1-20 *ARM*[^3];
-- \+ 1-5% *AOE*;
+Little/low *ATKSpeed/CD*, *Dur*, *HPSteal*, *AOE* (generally kind of unimportant) stats upgrades, for example[^3]\:
+- \+1 *ATKSpeed*;
+- \+1-5 sec *Dur*;
+- \+1-5% *HPSteal*;
+- \+1-20 points or \+1-5% *AOE*;
+- \+1-10 *DMG*;
+- ...
 
 ## Classic 
 
-Higher but not overly game-changing upgrades, may regard all the stats, for example:
-- \+ 5-10% *Dodge*;
+Higher valued but not overly game-changing upgrades, may regard all the stats, for example:
+- \+ 0.5-9% *Dodge*;
 - \+ *x* points *Pickup*;
-- 
+- +0.2-5% *CritChance*;
+- +1-10% *CritDMG*;
+- \+2-10% *ATKSpeed*;
+
+## Advanced
 
 
-[^1]: Depends of unit and principle used, an example provided below if we use *ATKSpeed* as attacks per second;
+## Exotic
+
+
+## Legendary
+
+
+## Mythic
+
+As stated above, it is an upgrade into a new weapon - rules of the evolution are as follows:
+- upgraded weapon's stats stay the same, may be only enhanced;
+- upgraded weapon gains one additional *Legendary* and *Mythic* upgrade, ***which cannot be chosen - these are fully random***;
+- weapon gains new name/skin/animations/lore entry, etc.
+
+
+
 [^3]: Dependant on stat scaling.
-[^4]: Did we trash *Dur* concept?
