@@ -36,10 +36,10 @@ func movement():
 		animation_tree["parameters/conditions/is_moving"] = true
 		if mov[0] > 0:
 			animation_sprite.flip_h = true
-			player_skeleton.set_scale(Vector2(0.5,0.5))
+			player_skeleton.set_scale(Vector2(0.4,0.4))
 		elif mov[0] < 0:
 			animation_sprite.flip_h = false
-			player_skeleton.set_scale(Vector2(-0.5,0.5))
+			player_skeleton.set_scale(Vector2(-0.4,0.4))
 	else:
 		animation_tree["parameters/conditions/idle"] = true
 		animation_tree["parameters/conditions/is_moving"] = false
