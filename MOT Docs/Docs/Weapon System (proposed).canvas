@@ -1,0 +1,38 @@
+{
+	"nodes":[
+		{"id":"cfcb11879661567a","type":"group","x":-1230,"y":960,"width":2550,"height":1520,"color":"5","label":"Weapons"},
+		{"id":"cf083c79585e293a","type":"group","x":-150,"y":1580,"width":1450,"height":880,"color":"4","label":"Projectile Weapons"},
+		{"id":"2926c901bce697e8","type":"group","x":1600,"y":787,"width":1160,"height":1046,"color":"1","label":"Upgrades system"},
+		{"id":"5e39271c24a68eee","type":"group","x":-2720,"y":1040,"width":1175,"height":540,"color":"3","label":"Current weapon's stats"},
+		{"id":"e82ea6dea6f14488","type":"group","x":-1210,"y":1580,"width":765,"height":420,"color":"6","label":"Area of Effect Weapons"},
+		{"id":"333a60d28a5fa393","type":"text","text":"# [[Lantern]]","x":-1005,"y":1920,"width":250,"height":60},
+		{"id":"61437c3782446f45","type":"text","text":"# [[AoEWeapon]] - abstract class for, well, AoE weapons","x":-970,"y":1600,"width":291,"height":125,"color":"6"},
+		{"id":"7c54e1bdf633a518","type":"text","text":"# [[ProjectileWeapon]] - abstract class","x":432,"y":1600,"width":317,"height":86,"color":"4"},
+		{"id":"af83bd4e59a59cf2","type":"file","file":"Docs/Ice Spear.md","x":-130,"y":1840,"width":620,"height":400},
+		{"id":"d3cd42a8b196887c","type":"text","text":"# [[Tornado]]","x":955,"y":1840,"width":325,"height":60},
+		{"id":"fc1d9210d7bf00a0","type":"file","file":"Docs/Projectile Spawner.md","x":590,"y":2040,"width":400,"height":400},
+		{"id":"396f524f505c59e8","type":"file","file":"Docs/WeaponsSystem/Weapons/Weapon.md","x":-679,"y":1040,"width":640,"height":400,"color":"5"},
+		{"id":"8cc1ac9d8989ee2b","x":-948,"y":680,"width":388,"height":159,"type":"text","text":"# Base class (frequently an abstract one) for a section is color-coded with *the same color* as the section "},
+		{"id":"a2297f1db71a02b9","type":"file","file":"Docs/Stats/Stat.md","x":-2700,"y":1080,"width":400,"height":400,"color":"3"},
+		{"id":"e84794216a2a5a5a","type":"file","file":"Docs/Stats/StatSet.md","x":-2145,"y":1160,"width":580,"height":400},
+		{"id":"5d6ca7529cd3cda0","type":"file","file":"Docs/WeaponsSystem/Upgrades/WeaponUpgrade.md","x":2145,"y":847,"width":400,"height":400,"color":"1"},
+		{"id":"4181554fede5626a","type":"file","file":"Docs/WeaponsSystem/Upgrades/UpgradeTier.md","x":1620,"y":847,"width":400,"height":400},
+		{"id":"d842d67eee05ebdf","type":"text","text":"# Here go types of weapon upgrades, I guess other types would be legendary upgrades (those which change the weapon's fundemental behaviour)","x":1680,"y":1489,"width":405,"height":248},
+		{"id":"ac797754cfba2618","type":"file","file":"Docs/WeaponsSystem/Upgrades/WeaponStatUpgrade.md","x":2240,"y":1413,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"cf308748df8c7769","fromNode":"e84794216a2a5a5a","fromSide":"right","toNode":"396f524f505c59e8","toSide":"left","color":"3"},
+		{"id":"d8529f60d85d3d9a","fromNode":"a2297f1db71a02b9","fromSide":"right","toNode":"e84794216a2a5a5a","toSide":"left"},
+		{"id":"325f8996f71aa6f7","fromNode":"4181554fede5626a","fromSide":"left","toNode":"396f524f505c59e8","toSide":"right","color":"1"},
+		{"id":"be3046cd690581b2","fromNode":"5d6ca7529cd3cda0","fromSide":"left","toNode":"4181554fede5626a","toSide":"right"},
+		{"id":"12d6948d4403bd02","fromNode":"ac797754cfba2618","fromSide":"top","toNode":"5d6ca7529cd3cda0","toSide":"bottom"},
+		{"id":"16d98efcaf2192f3","fromNode":"af83bd4e59a59cf2","fromSide":"right","toNode":"fc1d9210d7bf00a0","toSide":"top"},
+		{"id":"d587f36dc1a26145","fromNode":"d3cd42a8b196887c","fromSide":"left","toNode":"fc1d9210d7bf00a0","toSide":"top"},
+		{"id":"9813496c870dd74e","fromNode":"cf083c79585e293a","fromSide":"top","toNode":"396f524f505c59e8","toSide":"bottom","color":"4"},
+		{"id":"7c764969e3c24295","fromNode":"af83bd4e59a59cf2","fromSide":"top","toNode":"7c54e1bdf633a518","toSide":"bottom"},
+		{"id":"ebc97517168805e6","fromNode":"d3cd42a8b196887c","fromSide":"top","toNode":"7c54e1bdf633a518","toSide":"bottom"},
+		{"id":"d835699f7ea16d74","fromNode":"d842d67eee05ebdf","fromSide":"top","toNode":"5d6ca7529cd3cda0","toSide":"bottom"},
+		{"id":"366c62bd44038a09","fromNode":"e82ea6dea6f14488","fromSide":"top","toNode":"396f524f505c59e8","toSide":"bottom","color":"6"},
+		{"id":"97c4e047c549f652","fromNode":"333a60d28a5fa393","fromSide":"top","toNode":"61437c3782446f45","toSide":"bottom"}
+	]
+}

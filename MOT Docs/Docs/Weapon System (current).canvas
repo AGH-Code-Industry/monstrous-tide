@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"396f524f505c59e8","type":"file","file":"Docs/WeaponsSystem/Weapons/Weapon.md","x":-320,"y":-400,"width":640,"height":400},
+		{"id":"61437c3782446f45","x":-465,"y":280,"width":291,"height":125,"type":"text","text":"# [[AoEWeapon]] - abstract class for, well, AoE weapons"},
+		{"id":"333a60d28a5fa393","x":-500,"y":600,"width":250,"height":60,"type":"text","text":"# [[Lantern]]"},
+		{"id":"af83bd4e59a59cf2","x":60,"y":600,"width":620,"height":400,"type":"file","file":"Docs/Ice Spear.md"},
+		{"id":"d3cd42a8b196887c","x":880,"y":600,"width":325,"height":60,"type":"text","text":"# [[Tornado]]"},
+		{"id":"fc1d9210d7bf00a0","x":805,"y":1000,"width":400,"height":400,"type":"file","file":"Docs/Projectile Spawner.md"},
+		{"id":"4181554fede5626a","type":"file","file":"Docs/WeaponsSystem/Upgrades/UpgradeTier.md","x":480,"y":-400,"width":400,"height":400},
+		{"id":"5d6ca7529cd3cda0","type":"file","file":"Docs/WeaponsSystem/Upgrades/WeaponUpgrade.md","x":1005,"y":-400,"width":400,"height":400},
+		{"id":"ac797754cfba2618","type":"file","file":"Docs/WeaponsSystem/Upgrades/WeaponStatUpgrade.md","x":1405,"y":230,"width":400,"height":400},
+		{"id":"e84794216a2a5a5a","type":"file","file":"Docs/Stats/StatSet.md","x":-1045,"y":-400,"width":580,"height":400},
+		{"id":"a2297f1db71a02b9","type":"file","file":"Docs/Stats/Stat.md","x":-1600,"y":80,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"cf308748df8c7769","fromNode":"e84794216a2a5a5a","fromSide":"right","toNode":"396f524f505c59e8","toSide":"left"},
+		{"id":"d8529f60d85d3d9a","fromNode":"a2297f1db71a02b9","fromSide":"right","toNode":"e84794216a2a5a5a","toSide":"left"},
+		{"id":"325f8996f71aa6f7","fromNode":"4181554fede5626a","fromSide":"left","toNode":"396f524f505c59e8","toSide":"right"},
+		{"id":"be3046cd690581b2","fromNode":"5d6ca7529cd3cda0","fromSide":"left","toNode":"4181554fede5626a","toSide":"right"},
+		{"id":"12d6948d4403bd02","fromNode":"ac797754cfba2618","fromSide":"top","toNode":"5d6ca7529cd3cda0","toSide":"bottom"},
+		{"id":"366c62bd44038a09","fromNode":"61437c3782446f45","fromSide":"top","toNode":"396f524f505c59e8","toSide":"bottom"},
+		{"id":"97c4e047c549f652","fromNode":"333a60d28a5fa393","fromSide":"top","toNode":"61437c3782446f45","toSide":"bottom"},
+		{"id":"16d98efcaf2192f3","fromNode":"af83bd4e59a59cf2","fromSide":"right","toNode":"fc1d9210d7bf00a0","toSide":"top"},
+		{"id":"d587f36dc1a26145","fromNode":"d3cd42a8b196887c","fromSide":"left","toNode":"fc1d9210d7bf00a0","toSide":"top"}
+	]
+}
