@@ -612,6 +612,7 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_0kk1c")
 animation = &"Idle"
@@ -659,9 +660,10 @@ shape = SubResource("RectangleShape2D_743r1")
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(100, -16)
+scale = Vector2(0.5, 0.5)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Character"]
+visible = false
 position = Vector2(-145, -10)
 scale = Vector2(0.3, 0.3)
 
@@ -763,7 +765,7 @@ bones = ["Hip", PackedFloat32Array(0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 
 internal_vertex_count = 6
 
 [node name="LeftArm" type="Polygon2D" parent="Character/Node2D"]
-position = Vector2(21, 7)
+position = Vector2(20, 6)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-156.667, -116.667)
 texture = ExtResource("7_jwu1d")
