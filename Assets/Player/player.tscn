@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=33 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -10,6 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
 [ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="8_1p3gh"]
+
+[sub_resource type="Resource" id="Resource_lyosv"]
+script = ExtResource("2_5ofgj")
+type = 3
+value = 150
+
+[sub_resource type="Resource" id="Resource_acek7"]
+script = ExtResource("3_it506")
+data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_lyosv")])
 
 [sub_resource type="Animation" id="Animation_2f0x6"]
 resource_name = "Idle"
@@ -87,15 +96,6 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(-15.3334, 72.3333), Vector2(-15.3334, 65.6666), Vector2(-15.3334, 72.3333), Vector2(-15.3334, 65.6666), Vector2(-15.3334, 72.3333)]
 }
-
-[sub_resource type="Resource" id="Resource_lyosv"]
-script = ExtResource("2_5ofgj")
-type = 3
-value = 150
-
-[sub_resource type="Resource" id="Resource_acek7"]
-script = ExtResource("3_it506")
-data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_lyosv")])
 
 [sub_resource type="Animation" id="Animation_xwp2e"]
 length = 0.001
@@ -557,16 +557,14 @@ point_count = 3
 curve = SubResource("Curve_7yhul")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ocaqh"]
+particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 10.43
-particle_flag_disable_z = true
 direction = Vector3(0.5, 0, 0)
 spread = 180.0
-gravity = Vector3(0, 98, 0)
 initial_velocity_min = 50.0
 initial_velocity_max = 50.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 98, 0)
 scale_min = 2.0
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_tw5kp")
@@ -607,7 +605,6 @@ script = ExtResource("1_jqw0g")
 stat_set = SubResource("Resource_acek7")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
-visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -623,7 +620,6 @@ frame_progress = 0.25541
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_siame")
 
@@ -663,10 +659,10 @@ shape = SubResource("RectangleShape2D_743r1")
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(-11, 5)
+position = Vector2(100, -16)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Character"]
-position = Vector2(122, -18)
+position = Vector2(-145, -10)
 scale = Vector2(0.3, 0.3)
 
 [node name="Hip" type="Bone2D" parent="Character/Skeleton2D"]
@@ -731,7 +727,7 @@ bone_angle = 81.705
 [node name="Node2D" type="Node2D" parent="Character"]
 
 [node name="Head" type="Polygon2D" parent="Character/Node2D"]
-position = Vector2(271, -48)
+position = Vector2(1, -40)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-252, -112)
 texture = ExtResource("7_jwu1d")
@@ -743,8 +739,9 @@ bones = ["Hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 internal_vertex_count = 2
 
 [node name="LefLeg" type="Polygon2D" parent="Character/Node2D"]
-position = Vector2(228, -47)
+position = Vector2(11, 65)
 scale = Vector2(0.3, 0.3)
+offset = Vector2(-173.333, -340)
 texture = ExtResource("7_jwu1d")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(128, 360, 128, 352, 128, 344, 128, 312, 128, 264, 136, 256, 160, 256, 176, 256, 176, 312, 176, 344, 176, 352, 176, 360, 176, 384, 184, 400, 208, 400, 224, 408, 232, 432, 232, 440, 128, 440, 120, 432, 128, 400, 128, 368, 184, 424, 152, 400, 152, 368, 152, 352, 152, 336, 152, 296)
@@ -754,8 +751,9 @@ bones = ["Hip", PackedFloat32Array(0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 
 internal_vertex_count = 6
 
 [node name="RightLeg" type="Polygon2D" parent="Character/Node2D"]
-position = Vector2(236, -47)
+position = Vector2(-10, 65)
 scale = Vector2(0.3, 0.3)
+offset = Vector2(-80, -340)
 texture = ExtResource("7_jwu1d")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(96, 352, 96, 344, 96, 336, 96, 328, 104, 304, 120, 256, 104, 248, 72, 248, 48, 264, 48, 304, 40, 320, 40, 336, 48, 344, 48, 368, 48, 384, 40, 408, 32, 432, 32, 440, 88, 440, 88, 424, 96, 416, 88, 376, 64, 408, 72, 376, 72, 352, 72, 336, 72, 320, 80, 288)
@@ -765,8 +763,9 @@ bones = ["Hip", PackedFloat32Array(0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 
 internal_vertex_count = 6
 
 [node name="LeftArm" type="Polygon2D" parent="Character/Node2D"]
-position = Vector2(244, -36)
+position = Vector2(21, 7)
 scale = Vector2(0.3, 0.3)
+offset = Vector2(-156.667, -116.667)
 texture = ExtResource("7_jwu1d")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(136, 120, 136, 112, 128, 104, 128, 72, 120, 48, 120, 24, 136, 24, 152, 32, 160, 48, 160, 88, 168, 96, 168, 104, 168, 120, 176, 128, 176, 160, 176, 192, 168, 216, 152, 240, 144, 240, 136, 224, 136, 200, 136, 184, 136, 152, 144, 96, 152, 112, 152, 128, 144, 64, 160, 176)
@@ -776,7 +775,6 @@ bones = ["Hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 internal_vertex_count = 5
 
 [node name="Chest" type="Polygon2D" parent="Character/Node2D"]
-position = Vector2(270, -8)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-323, -285)
 texture = ExtResource("7_jwu1d")
@@ -788,7 +786,7 @@ bones = ["Hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 
 internal_vertex_count = 6
 
 [node name="RightArm" type="Polygon2D" parent="Character/Node2D"]
-position = Vector2(246, -8)
+position = Vector2(-24, -1)
 scale = Vector2(0.3, 0.3)
 offset = Vector2(-49, -100)
 texture = ExtResource("7_jwu1d")
@@ -806,6 +804,11 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+root_node = NodePath("../AnimationPlayer")
+libraries = {
+"": SubResource("AnimationLibrary_qa4wg")
+}
 tree_root = SubResource("AnimationNodeStateMachine_8k8oc")
 anim_player = NodePath("../Animation")
 parameters/conditions/idle = false
@@ -815,7 +818,7 @@ parameters/conditions/is_moving = false
 
 [node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
 
-[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
+[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 [connection signal="update_health" from="HitBox" to="." method="_on_hit_box_update_health"]
 
 [editable path="HitBox"]
