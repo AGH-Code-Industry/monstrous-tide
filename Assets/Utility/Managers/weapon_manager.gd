@@ -19,12 +19,12 @@ func get_randomly_chosen_upgrades(amount: int):
 	# Geting upgrades from each weapon
 	var all_upgrades = []
 	for weapon in weapons:
-		for upgrade in weapon.get_available_upgrades():
-			all_upgrades.append(upgrade)
-	# Checking if array of upgrades is empty		
+		all_upgrades.append_array(weapon.get_available_upgrades())
+	# Checking if array of upgrades is empty
+	print(all_upgrades)		
 	if all_upgrades.size() == 0:
 		return	
-	# Array for drawned upgrades
+	# Array for drawn upgrades
 	var drawn_upgrades = []
 	# Drawing cards by their weight
 	for i in amount:
