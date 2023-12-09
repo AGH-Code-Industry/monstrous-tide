@@ -4,4 +4,4 @@ class_name Lantern extends AoEWeapon
 
 func _ready() -> void:
 	super()
-	possible_upgrades[0].upgrades[0].apply_upgrade()
+#	possible_upgrades[0].upgrades[0].apply_upgrade()
