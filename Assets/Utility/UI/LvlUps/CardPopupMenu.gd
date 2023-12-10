@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var h_box_container = $MarginContainer/HBoxContainer
-@export var cards_to_draw_count = 4
+@export var cards_to_draw_count = 3
 var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard.tscn")
 var WeaponManager: Node
 var current_upgrades
@@ -28,7 +28,7 @@ func remove_cards():
 	for card in h_box_container.get_children():
 		card.queue_free()
 	if len(WeaponManager.get_all_upgrades()) - len(current_upgrades) <= 0:
-		$MarginContainer/Button.disabled = true
+		%RerollButton.disabled = true
 	visible = false
 
 
@@ -45,7 +45,7 @@ func level_up(levels_to_lvlup: int):
 		get_tree().paused = false
 
 
-func _on_button_pressed():
+func _on_reroll_button_pressed():
 	var upgrades_left_count = len(WeaponManager.get_all_upgrades()) - len(current_upgrades)
 	if !(upgrades_left_count > len(current_upgrades)):
 		while (len(current_upgrades) - upgrades_left_count):
