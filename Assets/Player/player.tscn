@@ -98,12 +98,18 @@ color = Color(0.815686, 0, 0, 1)
 
 [sub_resource type="Resource" id="Resource_pshwl"]
 script = ExtResource("12_6vaps")
+name = "Tier 1; Upgrade 1"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_8uvwp"]
 script = ExtResource("12_6vaps")
+name = "Tier 1; Upgrade 2"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_skxob"]
 script = ExtResource("12_6vaps")
+name = "Tier 1; Upgrade 3"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_dakjw"]
 script = ExtResource("10_2jejm")
@@ -111,12 +117,18 @@ upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_pshwl"), SubRes
 
 [sub_resource type="Resource" id="Resource_pgp30"]
 script = ExtResource("12_6vaps")
+name = "Tier 2; Upgrade 1"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_he64p"]
 script = ExtResource("12_6vaps")
+name = "Tier 2; Upgrade 2"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_blm1k"]
 script = ExtResource("12_6vaps")
+name = "Tier 2; Upgrade 3"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_bscj2"]
 script = ExtResource("10_2jejm")
@@ -124,12 +136,18 @@ upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_pgp30"), SubRes
 
 [sub_resource type="Resource" id="Resource_auag7"]
 script = ExtResource("12_6vaps")
+name = "Tier 3; Upgrade 1"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_ydvv2"]
 script = ExtResource("12_6vaps")
+name = "Tier 3; Upgrade 2"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_0bvt4"]
 script = ExtResource("12_6vaps")
+name = "Tier 3; Upgrade 3"
+description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 [sub_resource type="Resource" id="Resource_h3u4x"]
 script = ExtResource("10_2jejm")

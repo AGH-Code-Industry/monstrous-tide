@@ -41,6 +41,8 @@ value = 5
 [sub_resource type="Resource" id="Resource_ufov4"]
 script = ExtResource("3_i1fay")
 stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_di2vx")])
+name = ""
+description = ""
 
 [sub_resource type="Resource" id="Resource_b84lf"]
 script = ExtResource("2_m3afd")
