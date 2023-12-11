@@ -19,12 +19,20 @@ Field type|Field name|Description
 `float`|`flash_timeout`|Time of color change
 `Color`|`flash_color`|Color which sprite changes to during flash
 `GPUParticles2D`|`bleed_particles`|Node that emits particles during flash
-
+`float`|`regeneration_rate`|How much health to passively regenerate [health / sec]
+`bool`|`regeneration_enabled`|Whether or not to regenerate health. ==DO NOT TOGGLE MANUALLY DURING PLAY== To toggle use [[#toggle_regeneration]] method.
+`Timer`|`tick_timer`|Reference to a timer that triggers regeneration ticks.
 # Public Methods
 Return value's type|Name and arguments|Description
 -|-|-
 `void`|[[#take_damage]](dmg : [[Damage]])|Call this method to make the [[Hit Box]] take [[Damage]]
 `void`|[[#heal]](heal_amount : float)|Call this method to heal the [[Hit Box]]
+`void`|set_regenaration_rate(heal_amount : float)|Call to change `regeneration_rate`. Emits the `regeneration_update` signal.
+`void`|[[#toggle_regeneration]]()|Call this to toggle regeneration on or off. Emits the `regeneration_update` signal.
+
+
+## toggle_regeneration
+Use this method to turn regeneration on or off during play. Emits the `regeneration_update` signal.
 
 ## take_damage
 This method handles lowering health due to [[Damage]], dying, managing *i-frames*, [[Floating Text Spawner|spawning floating text]] and indicating hits via changing color and emiting particles. Emits the `update_health` signal. 
@@ -35,6 +43,7 @@ This method handles increasing health due to healing, [[Floating Text Spawner|sp
 # Signals
 Name|Description
 -|-
-update_health|==TODO==
+regeneration_update|Emitted when value of `regeneration_enabled` is changed via [[#toggle_regeneration]]().
+update_health|Signal emitted by [[#take_damage]] ==and [[#heal]]== methods, name is self-explanitory
 on_death()|==TODO==
 

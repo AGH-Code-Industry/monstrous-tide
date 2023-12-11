@@ -3,7 +3,7 @@ extends: Node
 ---
 
 # Description
-Component responsible for handling player and enemies stats updates using signals. Loaded automatically to each scene.
+Component responsible for handling [[Player]]'s and [[Enemy|enemies']] [[__Statistics outline__|stats]] updates using [[#Signals|signals]]. Loaded automatically to each scene.
 
 ## How to use
 1. Create new signal
