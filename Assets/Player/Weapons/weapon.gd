@@ -25,6 +25,7 @@ func _ready() -> void:
 
 func add_stats(incoming_stats: Array[Stat]) -> void:
 	stat_set.add_stat_array(incoming_stats)
+	update_stats()
 	
 
 # returns all upgrades that can be apllied to this weapon
@@ -44,4 +45,6 @@ func get_available_upgrades() -> Array[WeaponUpgrade]:
 				available_upgrades.append(up)
 	return available_upgrades
 
-
+func update_stats():
+	print("Update stats not implemented")
+	pass

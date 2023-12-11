@@ -12,3 +12,7 @@ func _ready() -> void:
 	DamageBox.damage = stat_set.get_stat_value(Stat.Type.DAMAGE)
 	DamageBox.attack_speed = stat_set.get_stat_value(Stat.Type.ATTACKSPEED)
 
+func update_stats():
+	self.scale = Vector2(stat_set.get_stat_value(Stat.Type.PICKUPRADIUS), stat_set.get_stat_value(Stat.Type.PICKUPRADIUS))
+	DamageBox.damage = stat_set.get_stat_value(Stat.Type.DAMAGE)
+	DamageBox.attack_speed = stat_set.get_stat_value(Stat.Type.ATTACKSPEED)

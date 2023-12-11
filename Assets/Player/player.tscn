@@ -98,15 +98,12 @@ color = Color(0.815686, 0, 0, 1)
 
 [sub_resource type="Resource" id="Resource_pshwl"]
 script = ExtResource("12_6vaps")
-name = "11"
 
 [sub_resource type="Resource" id="Resource_8uvwp"]
 script = ExtResource("12_6vaps")
-name = "12"
 
 [sub_resource type="Resource" id="Resource_skxob"]
 script = ExtResource("12_6vaps")
-name = "13"
 
 [sub_resource type="Resource" id="Resource_dakjw"]
 script = ExtResource("10_2jejm")
@@ -114,15 +111,12 @@ upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_pshwl"), SubRes
 
 [sub_resource type="Resource" id="Resource_pgp30"]
 script = ExtResource("12_6vaps")
-name = "21"
 
 [sub_resource type="Resource" id="Resource_he64p"]
 script = ExtResource("12_6vaps")
-name = "22"
 
 [sub_resource type="Resource" id="Resource_blm1k"]
 script = ExtResource("12_6vaps")
-name = "23"
 
 [sub_resource type="Resource" id="Resource_bscj2"]
 script = ExtResource("10_2jejm")
@@ -130,15 +124,12 @@ upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_pgp30"), SubRes
 
 [sub_resource type="Resource" id="Resource_auag7"]
 script = ExtResource("12_6vaps")
-name = "31"
 
 [sub_resource type="Resource" id="Resource_ydvv2"]
 script = ExtResource("12_6vaps")
-name = "32"
 
 [sub_resource type="Resource" id="Resource_0bvt4"]
 script = ExtResource("12_6vaps")
-name = "33"
 
 [sub_resource type="Resource" id="Resource_h3u4x"]
 script = ExtResource("10_2jejm")
@@ -200,6 +191,7 @@ lifetime = 0.3
 [node name="Weapons" type="Node2D" parent="."]
 
 [node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
+z_index = 0
 possible_upgrades = Array[ExtResource("10_2jejm")]([SubResource("Resource_dakjw"), SubResource("Resource_bscj2"), SubResource("Resource_h3u4x")])
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
