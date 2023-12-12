@@ -18,6 +18,16 @@ Return type|Method name|Description
 `null`|`on_attack_timer_timeout()`|Spawns a new [[Ice Spear Projectile\|projectile]] when the attack timer timeouts
 
 # How it works
+>[!bug] Graph rendering bug
+>On my device this Mermaid graph only seems to render correctly in **edit mode**. If you're getting an error like this switching the view to edit mode may help.
+>```
+>Error parsing Mermaid diagram! 
+>Parse error on line 3:
+> ...quenceDiagram&nbsp; &nbsp; IceSpear->> 
+> ---------------------^
+>Expecting 'SOLID_OPEN_ARROW', 'DOTTED_OPEN_ARROW', 'SOLID_ARROW', 'DOTTED_ARROW', 'SOLID_CROSS', 'DOTTED_CROSS', 'SOLID_POINT', 'DOTTED_POINT', got 'NEWLINE'
+>```
+
 ```mermaid
 sequenceDiagram
 

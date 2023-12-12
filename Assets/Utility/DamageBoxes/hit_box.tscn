@@ -18,4 +18,7 @@ one_shot = true
 
 [node name="HealthBar" parent="." instance=ExtResource("2_lbru2")]
 
+[node name="RegenarationTickTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="DisableTimer" to="." method="_on_disable_timer_timeout"]
+[connection signal="timeout" from="RegenarationTickTimer" to="." method="_on_regenaration_tick_timer_timeout"]
