@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://5wxdkk0ryim2"]
+[gd_scene load_steps=21 format=3 uid="uid://5wxdkk0ryim2"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_hh3o4"]
@@ -24,14 +24,19 @@ script = ExtResource("2_hh3o4")
 type = 5
 value = 2
 
-[sub_resource type="Resource" id="Resource_0y2be"]
+[sub_resource type="Resource" id="Resource_xhifo"]
 script = ExtResource("2_hh3o4")
-type = 4
+type = 6
 value = 1
+
+[sub_resource type="Resource" id="Resource_pd5f7"]
+script = ExtResource("2_hh3o4")
+type = 7
+value = 0
 
 [sub_resource type="Resource" id="Resource_nqp7s"]
 script = ExtResource("3_f5pyf")
-data = Array[ExtResource("2_hh3o4")]([SubResource("Resource_6rtf7"), SubResource("Resource_x20xn"), SubResource("Resource_0y2be")])
+data = Array[ExtResource("2_hh3o4")]([SubResource("Resource_6rtf7"), SubResource("Resource_x20xn"), SubResource("Resource_xhifo"), SubResource("Resource_pd5f7")])
 
 [sub_resource type="Resource" id="Resource_di2vx"]
 script = ExtResource("2_hh3o4")
