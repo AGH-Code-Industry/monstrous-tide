@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvt5vax83stvf"]
 
-[ext_resource type="Script" path="res://Assets/Player/Weapons/Tornado/tornado_projectile.gd" id="1_k4e0g"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/ProjectileWeapons/Tornado/tornado_projectile.gd" id="1_k4e0g"]
 [ext_resource type="Texture2D" uid="uid://bxgcnksu7wx3n" path="res://Assets/Tutorial/Items/Weapons/tornado.png" id="2_fficl"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_ot113"]
 

@@ -1,6 +1,6 @@
-extends Node2D
+extends ProjectileWeapon
 static var tornadoProjectile := load(
-	"res://Assets/Player/Weapons/Tornado/tornado_projectile.tscn")
+	"res://Assets/Player/Weapons/ProjectileWeapons/Tornado/tornado_projectile.tscn")
 @onready var player = get_node("/root/World/Player")
 
 @export var attack_speed : float = 4 ## In attacks / s

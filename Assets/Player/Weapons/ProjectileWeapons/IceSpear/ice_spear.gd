@@ -1,7 +1,7 @@
 extends Node2D
 
 static var iceSpearProjectile : PackedScene = load(
-	"res://Assets/Player/Weapons/IceSpear/ice_spear_projectile.tscn")
+	"res://Assets/Player/Weapons/ProjectileWeapons/IceSpear/ice_spear_projectile.tscn")
 
 # Change these variables to affect projectiles
 @export var attack_speed : float = 2.0 # In attacks / sec

@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dh17b8rnm1yoa"]
+[gd_scene load_steps=5 format=3 uid="uid://c64h0k8btf36t"]
 
-[ext_resource type="Script" path="res://Assets/Player/Weapons/IceSpear/ice_spear_projectile.gd" id="1_2kba0"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/ProjectileWeapons/IceSpear/ice_spear_projectile.gd" id="1_wlyed"]
 [ext_resource type="Texture2D" uid="uid://b0dquvtrhdxsg" path="res://Assets/Tutorial/Items/Weapons/ice_spear.png" id="2_vqhdn"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="3_32bnk"]
 
@@ -10,7 +10,7 @@ size = Vector2(35, 8)
 [node name="IceSpearProjectile" type="Area2D" groups=["attack"]]
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_2kba0")
+script = ExtResource("1_wlyed")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

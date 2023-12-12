@@ -1,8 +1,8 @@
 class_name Projectile
-extends Area2D
+extends Node2D
 
-@export var damage : int
-@export var attack_speed : int
+var damage : int
+var attack_speed : int
 
 func set_damage(val):
 	damage = val

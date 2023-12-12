@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://e8jv4qm4pl42"]
+[gd_scene load_steps=3 format=3 uid="uid://beeph81tsqdu6"]
 
-[ext_resource type="Script" path="res://Assets/Player/Weapons/IceSpear/ice_spear.gd" id="1_fs2jy"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/ProjectileWeapons/IceSpear/ice_spear.gd" id="1_7v8wo"]
 [ext_resource type="PackedScene" uid="uid://c64vcfy75htnr" path="res://Assets/Utility/Weapons/projectile_spawner.tscn" id="2_u5fkj"]
 
 [node name="IceSpear" type="Node2D"]
-script = ExtResource("1_fs2jy")
+script = ExtResource("1_7v8wo")
 
 [node name="ProjectileSpawner" parent="." instance=ExtResource("2_u5fkj")]
 
