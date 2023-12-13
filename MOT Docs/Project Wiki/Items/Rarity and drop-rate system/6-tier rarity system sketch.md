@@ -36,13 +36,13 @@ Where associated colour may be used for graphic type design or something like th
 >
 >**Important:** Main rule is all upgrades are not reversible. 
 
->[!question]- ***Types and sets suggestion*** 
->Regarding weapon [[Weapon types|types]] and [[Weapon sets|sets]], these should be the only keys to transformations.
+>[!question]- ***Types and tags suggestion*** 
+>Regarding weapon [[Weapon types|types]] and [[Weapon tags|tags]], these should be the only keys to transformations.
 >
->What I mean is weapon after the transformation should be chosen randomly, but of the same type and set as the basic one. 
+>What I mean is weapon after the transformation should be chosen randomly, but of the same type and having at least all the same tags as the basic one (may have more). 
 >
 >*Example*:
->There is a set of weapons called *A* - within the *A* set there are a few weapons, some of them are *Advanced* and there are a few *Mythic* weapons. If player rolls a *Mythic* upgrade for a *Advanced* weapon they have from *A* set, this will upgrade this weapon into a *Mythic* weapon from the same *A* set **and** it will be of the same [[Weapon types|type]] (which are yet to be introduced).
+>There is a tag of weapons called *A* - among *A*-tagged weapons there are a few ones, some of them are *Advanced* and there are a few *Mythic* weapons. If player rolls a *Mythic* upgrade for a *Advanced* weapon they have *A*-tagged, this will upgrade this weapon into a *Mythic* weapon with the same *A* tag **and** it will be of the same [[Weapon types|type]] (which are yet to be introduced).
 # Upgrades
 
 Those will drop accordingly to their *General drop-rate principle*, unless a maximum number of stats of some rarity is reached or it is last upgrade chance and some stat is yet to be chosen.
@@ -74,12 +74,29 @@ Higher valued but not overly game-changing upgrades, may regard all the stats, f
 
 ## Advanced
 
-
+Decently-scaled stat bonuses, regarding all the stats, but usually those *more-wanted* ones, for example:
+- +10-15% *CritChance*
+- +20-60% *DMG*
+- +50-75% *ATKSpeed*
+- +25-50% *AOE*
+- and so on...
 ## Exotic
 
+Provides *really highly scaled* stat bonuses or simple additional mechanics for the weapon or current character, for example:
 
+- +150% *DMG*
+- +50% *Multi*
+- +25% *CritChance*
+- +65% *CritDMG*
+- "This weapon has additional +15% *CritChance* and +15% *HPSteal* against all Vampires/Golems/etc., but has -10% *Multi* against others"
+- "If this weapon scores a critical hit, player gains: +10% *Pickup*, +10% *HPRegen* and +10% *MovSpeed* for 10 seconds. May only occur every 10 seconds."
+- "This weapon has 45% chance to heal the player by 5% of their *MaxHP* every 5 seconds."
 ## Legendary
 
+Regarded a *powerful mechanic* tier - provides high QoL boost to current weapon, for example:
+- "Whenever an enemy is defeated with this weapon, player obtains incoming damage immunity for 10 seconds, +50% *HPSteal* and +50% *Multi*. May only occur every 60 seconds."
+- "If this weapon's AoE attack deals damage to at least 10 enemies at once, this weapon gains +25% *CritChance*, +100% *AOE*, +100% *ATKSpeed* and +20% *DMG* bonuses for 5 seconds. May only occur if the current character is above 50% their *MaxHP* and every 15 seconds."
+- and so on...
 
 ## Mythic
 

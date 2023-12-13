@@ -10,8 +10,6 @@ ___
 
 >This document is a first outline of statistics system, what they are, what is their job and everything more needed at the moment.
 
-*From Miro, as of 30th Oct 2023*
-
 >[!attention]- Obsidian Community plug-in
 >This document uses *Table Extended* community plug-in. Please, install it in order to properly see below contents, if it is incomprehensive/bugged. It's absolutely safe and will apply only to this vault. 
 >

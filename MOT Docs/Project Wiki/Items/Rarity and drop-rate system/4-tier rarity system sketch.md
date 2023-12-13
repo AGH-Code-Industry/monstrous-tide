@@ -34,13 +34,13 @@ Where associated colour may be used for graphic type design or something like th
 >
 >**Important:** Main rule is all upgrades are not reversible. 
 
->[!question]- ***Types and sets suggestion*** 
->Regarding weapon [[Weapon types|types]] and [[Weapon sets|sets]], these should be the only keys to transformations.
+>[!question]- ***Types and tags suggestion*** 
+>Regarding weapon [[Weapon types|types]] and [[Weapon tags|tags]], these should be the only keys to transformations.
 >
->What I mean is weapon after the transformation should be chosen randomly, but of the same type and set as the basic one. 
+>What I mean is weapon after the transformation should be chosen randomly, but of the same type and having at least all the same tags as the basic one (may have more). 
 >
 >*Example*:
->There is a set of weapons called *A* - within the *A* set there are a few weapons, some of them are *Advanced* and there are a few *Mythic* weapons. If player rolls a *Mythic* upgrade for a *Advanced* weapon they have from *A* set, this will upgrade this weapon into a *Mythic* weapon from the same *A* set **and** it will be of the same [[Weapon types|type]] (which are yet to be introduced).
+>There is a tag of weapons called *A* - among *A*-tagged weapons there are a few ones, some of them are *Advanced* and there are a few *Mythic* weapons. If player rolls a *Mythic* upgrade for a *Advanced* weapon they have *A*-tagged, this will upgrade this weapon into a *Mythic* weapon with the same *A* tag **and** it will be of the same [[Weapon types|type]] (which are yet to be introduced).
 # Upgrades
 
 Those will drop accordingly to their *General drop-rate principle*, unless a maximum number of stats of some rarity is reached or it is last upgrade chance and some stat is yet to be chosen.

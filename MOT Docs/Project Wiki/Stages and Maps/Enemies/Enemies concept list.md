@@ -13,8 +13,13 @@ ___
 - Provided enemies styled like in Darkest Dungeon, *to be further covered*;
 - Everything shall be cartoon/comics-like, especially bosses being Lovecraft-like;
 - A few fish-based enemies, a concept of some watery scene? *to be further covered*
-- 
-# Pool one - Vampires
+
+# "Fish-based" - name to be covered by lore
+
+| **Species** | **Type/Name** | **Overall description** |
+| :---: | :---: | :---: |
+|  | | |
+# Vampires
 
 First, expected to be the most important ones, up to further changes. Described as follows:
 
@@ -59,7 +64,7 @@ First, expected to be the most important ones, up to further changes. Described 
 | | | - usually fights in groups |\
 | | | - made for taking up space, tbh |
 
-# Pool two - Golems
+# Golems
 
 I'd say this should be a special-type enemy pool, but yeah, just an idea:
 
