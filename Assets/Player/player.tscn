@@ -6,11 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_it506"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
-[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
 [ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="8_1p3gh"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="10_2jejm"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="11_3tfrg"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd" id="12_6vaps"]
 
 [sub_resource type="Resource" id="Resource_lyosv"]
@@ -572,27 +572,36 @@ scale_max = 3.0
 scale_curve = SubResource("CurveTexture_tw5kp")
 color = Color(0.815686, 0, 0, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_743r1"]
-size = Vector2(29, 33)
-
 [sub_resource type="Resource" id="Resource_pshwl"]
 script = ExtResource("12_6vaps")
 name = "Tier 1; Upgrade 1"
 description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
-[sub_resource type="Resource" id="Resource_8uvwp"]
-script = ExtResource("12_6vaps")
-name = "Tier 1; Upgrade 2"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+[sub_resource type="Resource" id="Resource_exu6j"]
+script = ExtResource("2_5ofgj")
+type = 6
+value = 1
 
-[sub_resource type="Resource" id="Resource_skxob"]
-script = ExtResource("12_6vaps")
-name = "Tier 1; Upgrade 3"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+[sub_resource type="Resource" id="Resource_6nydr"]
+script = ExtResource("11_3tfrg")
+stats = Array[ExtResource("2_5ofgj")]([SubResource("Resource_exu6j")])
+name = "Lantern AoE"
+description = "Increases Lantern range"
+
+[sub_resource type="Resource" id="Resource_eavxq"]
+script = ExtResource("2_5ofgj")
+type = 7
+value = 300
+
+[sub_resource type="Resource" id="Resource_2ie1k"]
+script = ExtResource("11_3tfrg")
+stats = Array[ExtResource("2_5ofgj")]([SubResource("Resource_eavxq")])
+name = "Radius Percent"
+description = "Increases radius by 10%"
 
 [sub_resource type="Resource" id="Resource_dakjw"]
 script = ExtResource("10_2jejm")
-upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_pshwl"), SubResource("Resource_8uvwp"), SubResource("Resource_skxob")])
+upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_pshwl"), SubResource("Resource_6nydr"), SubResource("Resource_2ie1k")])
 
 [sub_resource type="Resource" id="Resource_pgp30"]
 script = ExtResource("12_6vaps")
@@ -666,6 +675,7 @@ stat_set = SubResource("Resource_acek7")
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
 visible = false
 attack_speed = 0.5
+damage = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -688,7 +698,6 @@ shape = SubResource("CapsuleShape2D_siame")
 collision_layer = 2
 collision_mask = 4
 show_heal_numbers = true
-regenaration_enabled = true
 flash_on_hit = true
 sprite = NodePath("../AnimatedSprite2D")
 flash_timeout = 0.2
@@ -707,16 +716,6 @@ emitting = false
 amount = 12
 process_material = SubResource("ParticleProcessMaterial_ocaqh")
 lifetime = 0.3
-
-[node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
-visible = false
-collision_layer = 2
-collision_mask = 4
-damage = 3.0
-
-[node name="CollisionShape2D" parent="DamageBox" index="0"]
-position = Vector2(2.5, 0.5)
-shape = SubResource("RectangleShape2D_743r1")
 
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
 
@@ -881,10 +880,10 @@ parameters/conditions/is_moving = false
 [node name="Weapons" type="Node2D" parent="."]
 
 [node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
+z_index = 0
 possible_upgrades = Array[ExtResource("10_2jejm")]([SubResource("Resource_dakjw"), SubResource("Resource_bscj2"), SubResource("Resource_h3u4x")])
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
 
 [editable path="HitBox"]
-[editable path="DamageBox"]
 [editable path="PickupComponent"]

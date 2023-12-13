@@ -7,6 +7,9 @@ var upgrades : Array[UpgradeTier] = []
 @export var poss: Array[WeaponUpgrade]
 
 func _ready() -> void:
+	# connect signal to function that takes stats and adds them to current stats
+	StatManager.update_player_stats_offensive.connect(add_stats)
+	
 	# set weapon ref, max upgrades amount and upgrade weights
 	for i in range(possible_upgrades.size()):
 		# fill all the needed information about upgrade tiers in possible_upgrades
@@ -22,6 +25,7 @@ func _ready() -> void:
 
 func add_stats(incoming_stats: Array[Stat]) -> void:
 	stat_set.add_stat_array(incoming_stats)
+	update_stats()
 	
 
 # returns all upgrades that can be apllied to this weapon
@@ -44,4 +48,6 @@ func get_available_upgrades() -> Array[WeaponUpgrade]:
 #		print(up.name)
 	return available_upgrades
 
-
+func update_stats():
+	print("Update stats not implemented")
+	pass
