@@ -13,16 +13,16 @@
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="11_3tfrg"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd" id="12_6vaps"]
 
-[sub_resource type="Resource" id="Resource_gcdwu"]
+[sub_resource type="Resource" id="Resource_lyosv"]
 script = ExtResource("2_5ofgj")
-type = 300
-flat = 200.0
+type = 3
+flat = 0.0
 increased = 0.0
-more = 0.0
+more = 1.0
 
 [sub_resource type="Resource" id="Resource_acek7"]
 script = ExtResource("3_it506")
-data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_gcdwu")])
+data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_lyosv")])
 
 [sub_resource type="Animation" id="Animation_2f0x6"]
 resource_name = "Idle"
@@ -561,16 +561,14 @@ point_count = 3
 curve = SubResource("Curve_7yhul")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ocaqh"]
+particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 10.43
-particle_flag_disable_z = true
 direction = Vector3(0.5, 0, 0)
 spread = 180.0
-gravity = Vector3(0, 98, 0)
 initial_velocity_min = 50.0
 initial_velocity_max = 50.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 98, 0)
 scale_min = 2.0
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_tw5kp")
@@ -609,10 +607,10 @@ description = "Lorem Ipsum is simply dummy text of the printing and typesetting 
 
 [sub_resource type="Resource" id="Resource_exu6j"]
 script = ExtResource("2_5ofgj")
-type = 110
-flat = 2.0
+type = 6
+flat = 0.0
 increased = 0.0
-more = 0.0
+more = 1.0
 
 [sub_resource type="Resource" id="Resource_6nydr"]
 script = ExtResource("11_3tfrg")
@@ -622,10 +620,10 @@ description = "Increases Lantern range"
 
 [sub_resource type="Resource" id="Resource_eavxq"]
 script = ExtResource("2_5ofgj")
-type = 110
+type = 7
 flat = 0.0
-increased = 200.0
-more = 0.0
+increased = 0.0
+more = 1.0
 
 [sub_resource type="Resource" id="Resource_2ie1k"]
 script = ExtResource("11_3tfrg")
@@ -875,6 +873,11 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+root_node = NodePath("../AnimationPlayer")
+libraries = {
+"": SubResource("AnimationLibrary_qa4wg")
+}
 tree_root = SubResource("AnimationNodeStateMachine_8k8oc")
 anim_player = NodePath("../Animation")
 parameters/conditions/idle = false

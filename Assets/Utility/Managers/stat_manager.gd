@@ -27,6 +27,6 @@ func emit_stats_with_delay(target_signal: Signal, stats: Array[Stat], time: floa
 func negate_stats(stats: Array[Stat]) -> Array[Stat]:
 		
 	for stat in stats:
-		stat.value = -stat.value
+		stat = stat.negate_stat()
 	
 	return stats

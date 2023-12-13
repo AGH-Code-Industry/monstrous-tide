@@ -4,14 +4,16 @@
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_0rmmo"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_qnqu1"]
 
-[sub_resource type="Resource" id="Resource_t8t0o"]
+[sub_resource type="Resource" id="Resource_w6quh"]
 script = ExtResource("2_0rmmo")
-type = 4
-value = 53
+type = 305
+flat = 5.0
+increased = 0.0
+more = 0.0
 
 [sub_resource type="Resource" id="Resource_xbb7f"]
 script = ExtResource("3_qnqu1")
-data = Array[ExtResource("2_0rmmo")]([SubResource("Resource_t8t0o")])
+data = Array[ExtResource("2_0rmmo")]([SubResource("Resource_w6quh")])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ar3r"]
 radius = 53.0
