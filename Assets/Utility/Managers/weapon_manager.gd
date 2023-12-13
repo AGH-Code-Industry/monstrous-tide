@@ -14,14 +14,20 @@ func _ready() -> void:
 			weapons.append(node)
 
 
-# returns specified amount of upgrades chosen randomly 
-func get_randomly_chosen_upgrades(amount: int):
-	# Geting upgrades from each weapon
+func get_all_upgrades():
 	var all_upgrades = []
 	for weapon in weapons:
 		all_upgrades.append_array(weapon.get_available_upgrades())
-	# Checking if array of upgrades is empty
-	print(all_upgrades)		
+	return all_upgrades
+
+# returns specified amount of upgrades chosen randomly 
+func get_randomly_chosen_upgrades(amount: int, avoided_upgrades = []):
+	# Geting upgrades from each weapon
+	var all_upgrades = get_all_upgrades()
+	for avoid_upgrade in avoided_upgrades:
+		if avoid_upgrade in all_upgrades:
+			all_upgrades.erase(avoid_upgrade)
+	# Checking if array of upgrades is empty	
 	if all_upgrades.size() == 0:
 		return	
 	# Array for drawn upgrades
