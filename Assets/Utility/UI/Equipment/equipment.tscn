@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cf114iew8wlfx"]
+[gd_scene load_steps=3 format=3 uid="uid://cf114iew8wlfx"]
 
 [ext_resource type="Texture2D" uid="uid://c71ofep7x4eix" path="res://Assets/Utility/UI/Equipment/EQBackground.png" id="1_23og6"]
+[ext_resource type="Script" path="res://Assets/Utility/UI/Equipment/Slot.gd" id="2_227sg"]
 
 [node name="Equipment" type="CanvasLayer"]
 
@@ -20,58 +21,70 @@ columns = 6
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot2" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot3" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot4" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot5" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot6" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot7" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot8" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot9" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot10" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot11" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
 
 [node name="Slot12" type="PanelContainer" parent="Background/GridContainer"]
 custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
 theme_type_variation = &"PanelContainerEQSlot"
+script = ExtResource("2_227sg")
