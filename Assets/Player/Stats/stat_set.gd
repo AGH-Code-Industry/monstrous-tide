@@ -2,6 +2,10 @@ class_name StatSet extends Resource
 
 @export var data: Array[Stat]
 
+func _ready():
+	for stat in data:
+		if stat.more == 0:
+			stat.more = 1
 
 func add_stat(incoming_stat : Stat) -> void:
 	for stat in data:

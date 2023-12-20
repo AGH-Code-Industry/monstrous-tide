@@ -25,8 +25,6 @@ func emit_stats_with_delay(target_signal: Signal, stats: Array[Stat], time: floa
 # needed for adding negative stats to create short term buffs:
 # first add stats, after some delay subtract them
 func negate_stats(stats: Array[Stat]) -> Array[Stat]:
-		
-	for stat in stats:
-		stat = stat.negate_stat()
-	
+	for i in range(stats.size()):
+		stats[i] = stats[i].negate_stat()
 	return stats

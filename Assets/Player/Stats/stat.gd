@@ -31,9 +31,14 @@ func add_stat(stat: Stat) -> void:
 	
 func negate_stat() -> Stat:
 	var stat_to_return: Stat = Stat.new()
+	stat_to_return.type = self.type
 	stat_to_return.flat = -self.flat
 	stat_to_return.increased = -self.increased*100
-	stat_to_return.more = 1 / self.more
+	if self.more == 0:
+		stat_to_return.more = 0
+	else:
+		stat_to_return.more = 1 / self.more
+	print("Negate_stat inside stat, ", stat_to_return.flat)
 	return stat_to_return
 	
 	
