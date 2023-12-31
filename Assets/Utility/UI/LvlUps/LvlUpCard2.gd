@@ -34,7 +34,6 @@ func select_card():
 	
 
 func on_input_gui(event: InputEvent):
-#	modulate = Color.WHITE
 	if disabled:
 		return
 	if event.is_action_pressed("left_click"):
@@ -42,14 +41,12 @@ func on_input_gui(event: InputEvent):
 	
 	
 func on_mouse_entered():
-#	modulate = Color.WHITE
 	if disabled:
 		return
 	animation_player.play("hover")
 
 
 func on_mouse_exited():
-#	modulate = Color.WHITE
 	if disabled:
 		return
 	animation_player.play_backwards("hover")

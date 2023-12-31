@@ -2,7 +2,6 @@ extends CanvasLayer
 
 @onready var h_box_container = $MarginContainer/HBoxContainer
 @export var cards_to_draw_count = 3
-#var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard.tscn")
 var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard2.tscn")
 var WeaponManager: Node
 var current_upgrades
