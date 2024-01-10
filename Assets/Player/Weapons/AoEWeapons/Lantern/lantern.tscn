@@ -49,7 +49,6 @@ shader_parameter/main_color = Color(0.890196, 0.87451, 0.466667, 1)
 shader_parameter/lerp_color = Color(1, 1, 1, 1)
 
 [node name="Lantern" type="Node2D"]
-z_index = 20
 script = ExtResource("1_7j11k")
 stat_set = SubResource("Resource_qonso")
 
