@@ -25,4 +25,3 @@ func get_stat_value(target: Stat.Type):
 		if stat.type == target:
 			return stat.get_final_value()
 	print("Couldn't find stat ", target)
-	assert(false, "StatNotFound")
