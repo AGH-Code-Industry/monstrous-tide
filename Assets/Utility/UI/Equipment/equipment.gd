@@ -28,7 +28,3 @@ func remove_item():
 		items_number -= 1
 		return true
 	return false
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
