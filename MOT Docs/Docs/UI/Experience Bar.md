@@ -24,7 +24,14 @@ The Experience Bar consists of the following four files:
 
 > `s+g-xp-bar-fill.png`: This is the texture file for the fill of the Experience Bar. It provides the green color that represents the player’s experience points.
 
+## Methods and fields
 
+| Field type | Field name | Description |
+| ---- | ---- | ---- |
+| `preloaded texture bar` | `experience_bar` | texture bar describing current experience state |
+| `preloaded label` | `level_info` | label containing current level number |
+Methods:
+- `on_update_experience_bar()` - method responsible for calculating filling proportions of experience bar based on current experience and experience needed to level up. It updates current player level if needed. It is called from GameEvents.
 ## Theme
 
 The experience bar is set as default progress bar in the [[__Main Theme__|Main Theme]].

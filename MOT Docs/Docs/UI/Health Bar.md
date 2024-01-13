@@ -30,3 +30,7 @@ The Health Bar consists of the following four files:
 To use the Health Bar, you need to add it to your game scene using the `health_bar.tscn` file. Then, you can control the bar’s progress by updating the health points in the `health_bar.gd` script. The Health Bar is displayed over the player and some enemies, providing a quick visual indicator of their health status.
 
 Please note that any changes to the bar’s appearance should be made in the corresponding texture files (`hp-golden-frame-back.png` and `hp-golden-frame-fill.png`).
+
+## Methods and fields
+
+TODO
