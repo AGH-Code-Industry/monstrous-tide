@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=33 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
@@ -25,8 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
 [ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="24_al4of"]
 [ext_resource type="PackedScene" uid="uid://ctx7i4wkn20wl" path="res://Assets/Utility/DropItems/MovementSpeedPickup/MovementSpeedPickup.tscn" id="25_3o6nv"]
-[ext_resource type="PackedScene" uid="uid://dp5lugnkwinpb" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.tscn" id="26_mvhq3"]
 [ext_resource type="PackedScene" uid="uid://dign3j2sdr85j" path="res://Assets/Utility/DropItems/Crystals/CrystalRed.tscn" id="25_te5lv"]
+[ext_resource type="PackedScene" uid="uid://dp5lugnkwinpb" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.tscn" id="26_mvhq3"]
 [ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/LvlUps.tscn" id="26_ntv7e"]
 [ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="26_sy4rw"]
 [ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="27_nkgxi"]
