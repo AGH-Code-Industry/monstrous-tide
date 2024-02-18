@@ -6,10 +6,13 @@ var last_movement := Vector2.UP
 @export var DEBUG_heal_value : float = 1
 @export var stat_set: StatSet
 
+@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var player_skeleton = $Character
 
 func _ready():
 	animation_sprite = get_node("AnimatedSprite2D")
 	animation_sprite.play("Idle")
+	animation_tree.active = true
 	StatManager.update_player_stats_misc.connect(func(receivedStats): stat_set.add_stat_array(receivedStats))
 
 func _physics_process(_delta):
@@ -29,11 +32,17 @@ func movement():
 	if mov != Vector2.ZERO:
 		last_movement = mov
 		animation_sprite.play("Walk")
+		animation_tree["parameters/conditions/idle"] = false
+		animation_tree["parameters/conditions/is_moving"] = true
 		if mov[0] > 0:
 			animation_sprite.flip_h = true
+			player_skeleton.set_scale(Vector2(0.4,0.4))
 		elif mov[0] < 0:
 			animation_sprite.flip_h = false
+			player_skeleton.set_scale(Vector2(-0.4,0.4))
 	else:
+		animation_tree["parameters/conditions/idle"] = true
+		animation_tree["parameters/conditions/is_moving"] = false
 		animation_sprite.play("Idle")
 	velocity = mov.normalized() * stat_set.get_stat_value(Stat.Type.MOVEMENTSPEED)
 	move_and_slide()
@@ -45,4 +54,5 @@ func die():
 
 func _on_hit_box_on_death() -> void:
 	die()
+	
 
