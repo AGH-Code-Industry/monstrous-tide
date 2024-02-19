@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=35 format=3 uid="uid://b11rms50550mc"]
 
+[ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
 [ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/Spawner/enemy_spawner.tscn" id="3_qgeh4"]
@@ -49,6 +50,7 @@ enemy_num = 1
 enemy_spawn_delay = 5
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_na82v")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -1
