@@ -1,10 +1,12 @@
 extends Node
+class_name ItemDropComponent
 
 @export var hit_box_component: Node
 @export var items_to_drop: Array[DropItem] = []
+@export var special_gem: PackedScene
 
 static var current_items_count = 0
-static var item_count_limit = 1
+static var item_count_limit = 5
 static var last_item
 
 func _ready():
@@ -17,7 +19,10 @@ func on_death_drop_crystal():
 	if current_items_count < item_count_limit:
 		create_item(pick_random_item())
 	else:
-		create_special_gem(pick_random_item())
+		if last_item == null:
+			create_special_gem(pick_random_item())
+		else:
+			update_specia_gem(pick_random_item())
 	
 
 func pick_random_item():
@@ -43,12 +48,18 @@ func create_item(item: PackedScene):
 	var items_layer = get_tree().get_first_node_in_group("items")
 	items_layer.call_deferred("add_child", item_instance)
 	item_instance.global_position = owner_position
+	return item_instance
 	
 	
 func create_special_gem(item: PackedScene):
 	var item_instance = item.instantiate()
 	if "experience_points" in item_instance:
-		print(item_instance.experience_points)
-	else:
-		print("NO POINTS")
+		last_item = create_item(special_gem)
+	item_instance.queue_free()
+	
+	
+func update_specia_gem(item: PackedScene):
+	var item_instance = item.instantiate()
+	if "experience_points" in item_instance:
+		last_item.experience_points += item_instance.experience_points
 	item_instance.queue_free()
