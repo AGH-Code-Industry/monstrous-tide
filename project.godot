@@ -12,21 +12,19 @@ config_version=5
 
 config/name="Monstrous-tide-game"
 run/main_scene="res://Assets/World/world.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameEvents="*res://Assets/World/game_events.tscn"
 StatManager="*res://Assets/Utility/Managers/stat_manager.gd"
-ExperienceManager="*res://Assets/Utility/Managers/experience_manager.tscn"
 WeaponManager="*res://Assets/Utility/Managers/weapon_manager.tscn"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/size/resizable=false
 window/size/window_width_override=1280
 window/size/window_height_override=720

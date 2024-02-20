@@ -557,14 +557,16 @@ point_count = 3
 curve = SubResource("Curve_7yhul")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ocaqh"]
-particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 10.43
+particle_flag_disable_z = true
 direction = Vector3(0.5, 0, 0)
 spread = 180.0
+gravity = Vector3(0, 98, 0)
 initial_velocity_min = 50.0
 initial_velocity_max = 50.0
-gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
 scale_min = 2.0
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_tw5kp")
@@ -629,7 +631,6 @@ shape = SubResource("CapsuleShape2D_siame")
 collision_layer = 2
 collision_mask = 4
 show_heal_numbers = true
-regenaration_enabled = true
 flash_on_hit = true
 sprite = NodePath("../AnimatedSprite2D")
 flash_timeout = 0.2
@@ -809,11 +810,6 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-active = false
-root_node = NodePath("../AnimationPlayer")
-libraries = {
-"": SubResource("AnimationLibrary_qa4wg")
-}
 tree_root = SubResource("AnimationNodeStateMachine_8k8oc")
 anim_player = NodePath("../Animation")
 parameters/conditions/idle = false
