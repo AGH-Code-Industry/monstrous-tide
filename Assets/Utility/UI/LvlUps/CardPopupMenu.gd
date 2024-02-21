@@ -2,10 +2,15 @@ extends CanvasLayer
 
 @onready var h_box_container = $MarginContainer/HBoxContainer
 @export var cards_to_draw_count = 3
-var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard.tscn")
+var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard2.tscn")
 var WeaponManager: Node
 var current_upgrades
-
+var colors = {
+	"green": "res://Assets/Utility/UI/LvlUps/Textures/card_green.png",
+	"blue": "res://Assets/Utility/UI/LvlUps/Textures/card_blue.png",
+	"purple": "res://Assets/Utility/UI/LvlUps/Textures/card_purple.png",
+	"yellow": "res://Assets/Utility/UI/LvlUps/Textures/card_yellow.png"
+}
 
 func create_cards(avoided_upgrades = []):
 	visible = true
@@ -20,6 +25,16 @@ func create_cards(avoided_upgrades = []):
 		level_up_card_instance.upgrade = upgrade
 		level_up_card_instance.get_node("%ItemName").text = str(upgrade.name)
 		level_up_card_instance.get_node("%ItemDescription").text = str(upgrade.description)
+
+		match upgrade.upgrade_tier:
+			0:
+				level_up_card_instance.texture = load(colors["green"])
+			1:
+				level_up_card_instance.texture = load(colors["blue"])
+			2:
+				level_up_card_instance.texture = load(colors["purple"])
+			3:
+				level_up_card_instance.texture = load(colors["yellow"])
 		
 		h_box_container.add_child(level_up_card_instance)
 		
