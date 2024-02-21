@@ -9,8 +9,13 @@ var upgrades : Array[UpgradeTier] = []
 func _ready() -> void:
 	# connect signal to function that takes stats and adds them to current stats
 	StatManager.update_player_stats_offensive.connect(add_stats)
+	fill_empty_upgrades()
 	
+	
+		
+func fill_empty_upgrades():
 	# set weapon ref, max upgrades amount and upgrade weights
+	upgrades.clear()
 	for i in range(possible_upgrades.size()):
 		# fill all the needed information about upgrade tiers in possible_upgrades
 		possible_upgrades[i].set_weapons_refs(self)
@@ -21,7 +26,7 @@ func _ready() -> void:
 		# make sure actually applied upgrades has the same parameters as possible_upgrades
 		upgrades.append(UpgradeTier.new())
 		upgrades[i].set_max_upgrades(WeaponConstants.upgrade_tier_amount[i])
-
+			
 
 func add_stats(incoming_stats: Array[Stat]) -> void:
 	stat_set.add_stat_array(incoming_stats)
@@ -60,10 +65,9 @@ func get_possible_upgrades() -> Array[UpgradeTier]:
 	
 func set_upgrades_after_swap(applied : Array[UpgradeTier], possible: Array[UpgradeTier]):
 	possible_upgrades = possible
+	fill_empty_upgrades()
 	#apply all upgrades from previous weapon to this one
-	print("Started applying")
 	for tier in applied:
-		print("cycled tier")
 		for upgrade in tier.upgrades:
 			upgrade.weapon_ref = self
 			if upgrade is WeaponSwapUpgrade:
@@ -71,5 +75,8 @@ func set_upgrades_after_swap(applied : Array[UpgradeTier], possible: Array[Upgra
 				upgrade.add_upgrade_without_applying()
 				print("skipped applying for swap")
 				continue
-			upgrade.apply_upgrade()
-			
+			else:
+				upgrade.apply_upgrade()
+
+func remove_weapon() -> void:
+	queue_free()
