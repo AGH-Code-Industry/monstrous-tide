@@ -3,6 +3,7 @@ class_name Weapon extends Node2D
 @export var stat_set : StatSet
 @export var possible_upgrades : Array[UpgradeTier] = []
 var upgrades : Array[UpgradeTier] = []
+var is_active : bool = true
 
 @export var poss: Array[WeaponUpgrade]
 

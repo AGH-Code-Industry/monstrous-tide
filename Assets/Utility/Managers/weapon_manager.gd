@@ -13,6 +13,7 @@ func _ready() -> void:
 
 
 func get_all_upgrades():
+	update_weapons()
 	var all_upgrades = []
 	for weapon in weapons:
 		if weapon != null:
@@ -52,4 +53,5 @@ func update_weapons():
 	weapons.clear()
 	for node in weapons_node.get_children():
 		if typeof(node) == typeof(Weapon):
-			weapons.append(node)
+			if node.is_active:
+				weapons.append(node)
