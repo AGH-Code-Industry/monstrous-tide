@@ -22,7 +22,7 @@ func on_death_drop_crystal():
 		if last_item == null:
 			create_special_gem(pick_random_item())
 		else:
-			update_specia_gem(pick_random_item())
+			update_special_gem(pick_random_item())
 	
 
 func pick_random_item():
@@ -58,7 +58,7 @@ func create_special_gem(item: PackedScene):
 	item_instance.queue_free()
 	
 	
-func update_specia_gem(item: PackedScene):
+func update_special_gem(item: PackedScene):
 	var item_instance = item.instantiate()
 	if "experience_points" in item_instance:
 		last_item.experience_points += item_instance.experience_points
