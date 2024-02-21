@@ -12,13 +12,14 @@ config_version=5
 
 config/name="Monstrous-tide-game"
 run/main_scene="res://Assets/World/world.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameEvents="*res://Assets/World/game_events.tscn"
 StatManager="*res://Assets/Utility/Managers/stat_manager.gd"
+WeaponManager="*res://Assets/Utility/Managers/weapon_manager.gd"
 
 [display]
 

@@ -8,16 +8,15 @@ var all_possible_weapons : Array[Weapon] = []
 @onready var weapons_node = get_tree().get_first_node_in_group("player").get_node("Weapons")
 
 func _ready() -> void:
-	# Get weapons player started with
-	for node in weapons_node.get_children():
-		if typeof(node) == typeof(Weapon):
-			weapons.append(node)
+	update_weapons()
+	
 
 
 func get_all_upgrades():
 	var all_upgrades = []
 	for weapon in weapons:
-		all_upgrades.append_array(weapon.get_available_upgrades())
+		if weapon != null:
+			all_upgrades.append_array(weapon.get_available_upgrades())
 	return all_upgrades
 
 # returns specified amount of upgrades chosen randomly 
@@ -48,3 +47,9 @@ func get_randomly_chosen_upgrades(amount: int, avoided_upgrades = []):
 				offset += upgrade.weight
 				
 	return drawn_upgrades
+	
+func update_weapons():
+	weapons.clear()
+	for node in weapons_node.get_children():
+		if typeof(node) == typeof(Weapon):
+			weapons.append(node)

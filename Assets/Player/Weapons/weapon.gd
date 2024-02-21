@@ -51,3 +51,25 @@ func get_available_upgrades() -> Array[WeaponUpgrade]:
 func update_stats():
 	print("Update stats not implemented")
 	pass
+
+func get_applied_upgrades() -> Array[UpgradeTier]:
+	return upgrades
+	
+func get_possible_upgrades() -> Array[UpgradeTier]:
+	return possible_upgrades
+	
+func set_upgrades_after_swap(applied : Array[UpgradeTier], possible: Array[UpgradeTier]):
+	possible_upgrades = possible
+	#apply all upgrades from previous weapon to this one
+	print("Started applying")
+	for tier in applied:
+		print("cycled tier")
+		for upgrade in tier.upgrades:
+			upgrade.weapon_ref = self
+			if upgrade is WeaponSwapUpgrade:
+				#applying WeaponSwapUpgrade triggers this code, this is done to avoid infinite loop
+				upgrade.add_upgrade_without_applying()
+				print("skipped applying for swap")
+				continue
+			upgrade.apply_upgrade()
+			
