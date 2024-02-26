@@ -9,7 +9,7 @@ size = Vector2(817.778, 640.278)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(15, 1)
-scale = Vector2(0.045, 0.045)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_htblb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]

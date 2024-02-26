@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv234"]
 size = Vector2(828.571, 257.143)
 
-[node name="Node2D" type="Node2D"]
+[node name="Stone_2f" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.07, 0.07)

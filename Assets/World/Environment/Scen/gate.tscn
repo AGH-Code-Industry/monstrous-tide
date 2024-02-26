@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx6ehnql65u7l"]
+
+[ext_resource type="Texture2D" uid="uid://boxdymcwuuovi" path="res://Assets/World/Environment/Texture/Gate.png" id="1_w0ejx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys8mg"]
+size = Vector2(552, 180)
+
+[node name="Gate" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_w0ejx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-4, 200)
+shape = SubResource("RectangleShape2D_ys8mg")

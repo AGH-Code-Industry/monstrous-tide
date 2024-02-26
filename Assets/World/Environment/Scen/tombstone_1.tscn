@@ -5,7 +5,7 @@
 [node name="Tombstone_1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.035, 0.035)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_02ucj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]

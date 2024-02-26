@@ -557,16 +557,14 @@ point_count = 3
 curve = SubResource("Curve_7yhul")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ocaqh"]
+particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 10.43
-particle_flag_disable_z = true
 direction = Vector3(0.5, 0, 0)
 spread = 180.0
-gravity = Vector3(0, 98, 0)
 initial_velocity_min = 50.0
 initial_velocity_max = 50.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 98, 0)
 scale_min = 2.0
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_tw5kp")
@@ -624,7 +622,8 @@ animation = &"Idle"
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 2)
+position = Vector2(0, 9)
+scale = Vector2(1.60005, 1.91077)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_vkkdj")]
@@ -641,7 +640,10 @@ position = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
-offset_bottom = -18.0
+offset_left = -24.0
+offset_top = -33.0
+offset_right = 22.0
+offset_bottom = -25.0
 theme_type_variation = &"HealthBar"
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
@@ -651,7 +653,6 @@ process_material = SubResource("ParticleProcessMaterial_ocaqh")
 lifetime = 0.3
 
 [node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
-visible = false
 collision_layer = 2
 collision_mask = 4
 damage = 3.0
@@ -663,7 +664,7 @@ shape = SubResource("RectangleShape2D_743r1")
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(1, 8)
+position = Vector2(-1.19209e-07, 1.69407e-21)
 scale = Vector2(0.4, 0.4)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Character"]
@@ -692,6 +693,7 @@ rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -703,6 +705,7 @@ rest = Transform2D(1, 0, 0, 1, 46, -125)
 
 [node name="LeftHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/LeftArm"]
 position = Vector2(14, 73)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 14, 73)
 auto_calculate_length_and_angle = false
 length = 89.6
@@ -731,6 +734,7 @@ length = 89.38
 bone_angle = 81.705
 
 [node name="Node2D" type="Node2D" parent="Character"]
+position = Vector2(9.53674e-07, -2.38419e-07)
 
 [node name="Head" type="Polygon2D" parent="Character/Node2D"]
 position = Vector2(1, -40)
@@ -810,6 +814,10 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../AnimationPlayer")
+libraries = {
+"": SubResource("AnimationLibrary_qa4wg")
+}
 tree_root = SubResource("AnimationNodeStateMachine_8k8oc")
 anim_player = NodePath("../Animation")
 parameters/conditions/idle = false
@@ -819,7 +827,7 @@ parameters/conditions/is_moving = false
 
 [node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
 
-[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
+[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
 [editable path="HitBox"]
 [editable path="DamageBox"]

@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2jh6xop6hwoj"]
 
 [ext_resource type="PackedScene" uid="uid://belgkl4t1s14r" path="res://Assets/Utility/DropItems/Crystals/ExperienceCrystal.tscn" id="1_e1ivy"]
-[ext_resource type="Texture2D" uid="uid://c7aajv88for5i" path="res://Assets/Tutorial/Items/Gems/Gem_blue.png" id="2_hquah"]
+[ext_resource type="Texture2D" uid="uid://bicvftw24ohs8" path="res://Assets/Utility/Texture/Gem_1.png" id="2_yrcuf"]
 
 [node name="ExperienceCrystal" instance=ExtResource("1_e1ivy")]
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_hquah")
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_yrcuf")
