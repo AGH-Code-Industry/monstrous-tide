@@ -1,36 +1,40 @@
-[gd_scene load_steps=14 format=3 uid="uid://5wxdkk0ryim2"]
+[gd_scene load_steps=18 format=3 uid="uid://5wxdkk0ryim2"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_hh3o4"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="2_m3afd"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_f5pyf"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="3_i1fay"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="6_0ln8p"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Ray.gdshader" id="6_enrqv"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/circle.gdshader" id="7_a23nn"]
 
-[sub_resource type="Resource" id="Resource_oa80p"]
+[sub_resource type="Resource" id="Resource_pxm0x"]
 script = ExtResource("2_hh3o4")
-type = 100
-flat = 2.0
-increased = 0.0
-more = 0.0
+type = 0
+value = 2
 
-[sub_resource type="Resource" id="Resource_eyked"]
+[sub_resource type="Resource" id="Resource_f0npl"]
 script = ExtResource("2_hh3o4")
-type = 110
-flat = 2.0
-increased = 0.0
-more = 0.0
+type = 0
+value = 5
 
-[sub_resource type="Resource" id="Resource_0h415"]
-script = ExtResource("2_hh3o4")
-type = 105
-flat = 1.0
-increased = 0.0
-more = 0.0
-
-[sub_resource type="Resource" id="Resource_qonso"]
+[sub_resource type="Resource" id="Resource_t8x3d"]
 script = ExtResource("3_f5pyf")
-data = Array[ExtResource("2_hh3o4")]([SubResource("Resource_oa80p"), SubResource("Resource_eyked"), SubResource("Resource_0h415")])
+data = Array[ExtResource("2_hh3o4")]([SubResource("Resource_f0npl")])
+
+[sub_resource type="Resource" id="Resource_di2vx"]
+script = ExtResource("2_hh3o4")
+type = 0
+value = 5
+
+[sub_resource type="Resource" id="Resource_ufov4"]
+script = ExtResource("3_i1fay")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_di2vx")])
+
+[sub_resource type="Resource" id="Resource_b84lf"]
+script = ExtResource("2_m3afd")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_ufov4")])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5pem6"]
 radius = 1.45
@@ -49,8 +53,12 @@ shader_parameter/main_color = Color(0.890196, 0.87451, 0.466667, 1)
 shader_parameter/lerp_color = Color(1, 1, 1, 1)
 
 [node name="Lantern" type="Node2D"]
+z_index = 20
 script = ExtResource("1_7j11k")
-stat_set = SubResource("Resource_qonso")
+starting_stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_pxm0x")])
+damage = 5.0
+stat_set = SubResource("Resource_t8x3d")
+possible_upgrades = Array[ExtResource("2_m3afd")]([SubResource("Resource_b84lf")])
 
 [node name="DamageBox" parent="." instance=ExtResource("6_0ln8p")]
 scale = Vector2(40, 40)

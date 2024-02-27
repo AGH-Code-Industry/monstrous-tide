@@ -3,6 +3,7 @@ extends PanelContainer
 @onready var animation_player = $AnimationPlayer
 
 var disabled = true
+var upgrade: WeaponUpgrade
 
 func _ready():
 	gui_input.connect(on_input_gui)
@@ -25,6 +26,7 @@ func disable_cards():
 
 	
 func select_card():
+	upgrade.apply_upgrade()
 	disable_cards()
 	play_out_animation()
 	await animation_player.animation_finished

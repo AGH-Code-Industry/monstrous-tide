@@ -51,6 +51,7 @@ enemy_spawn_delay = 5
 [node name="World" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -1
 texture_filter = 2
 texture_repeat = 2
 position = Vector2(115, -27)
@@ -252,6 +253,10 @@ position = Vector2(146, 95)
 
 [node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
 
+[node name="ExperienceManager" parent="." node_paths=PackedStringArray("WeaponManager") instance=ExtResource("22_c4rh6")]
+WeaponManager = NodePath("../WeaponManager")
+
+[node name="WeaponManager" parent="." instance=ExtResource("29_sylwc")]
 [node name="Equipment" parent="." instance=ExtResource("28_xexut")]
 offset = Vector2(0, 8)
 transform = Transform2D(1, 0, 0, 1, 0, 8)
