@@ -8,11 +8,9 @@ ___
 
 Each character has a name - if it is a playable one, it is their uniquely given name; if it is a NPC, they have names as provided in the [[Enemies concept list|enemies pool]]. Every one of them has their own appearance and animations.
 
-Each character has their own stats, as detailed in [[__Statistics outline__|this file]].
+Each character has their own stats, as detailed in [[__Statistics outline__|this file]]. - they are specific for any given character, whether it's a enemy or a playable one.
 
-Those are specific for any given character, whether it's a enemy or a playable one.
-
->[!attention] ***Important to note:*** every one of above statistics may be under buffs or debuffs. Those mechanics require holding original, maximum, minimum and current stats' levels.
+>[!attention] ***Important to note:*** every one of above statistics may be under buffs or debuffs. These mechanics require holding original, maximum, minimum and current stats' levels.
 
 Characters per se do not have *EXP* bar - experience points belong to the player themselves and are distributed regardless of the active character.
 # Equipment/Inventory
@@ -23,12 +21,12 @@ The inventory is divided into *Equipped* and *Unequipped* parts. The first one c
 
 ### Equipped items
 
-*Equipped* part is limited: it may only contain *maximum of 5 weapons and 5 other, combat related items* at any given time. Those items may be changed by the player anytime[^3] through items menu and in any way player desires. Note that *not every item is equippable*.
+*Equipped* part is limited: it may only contain *maximum of 5 weapons and 5 other, combat related items* at any given time. These items may be changed by the player anytime[^3] through items menu and in any way player desires. Note that *not every item is equippable*.
 
 ### Unequipped items
 
 *Unequipped* inventory part is limitless: player may hold within it everything that is collectible and everything they are able to use, view, open, etc.
 
-[^1]: How about the enemies? Especially considering code perspective.
+[^1]: What about the enemies? Especially considering code perspective.
 [^2]: On our Miro board there is a mention of some kind of "*shield-providing cloak*" - do we really consider it? And if so, how?
 [^3]: Maybe excluding some specific mechanics, that prevent the player from changing weapons for a certain time/stage?

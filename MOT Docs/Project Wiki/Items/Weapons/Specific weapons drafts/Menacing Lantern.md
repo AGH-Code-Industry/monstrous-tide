@@ -9,7 +9,7 @@ ___
 
 *Its first concept is introduced [[Weapons list|here]]*.
 
- ***Menacing Lantern***[^1] - one of first weapons player may consider good:
+ ***Menacing Lantern*** - one of first weapons player may consider good:
 	- a levitating lantern that follows player's position;
 	- periodically deals medium AOE damage to surrounding opponents;
 	- also, periodically heals player by a set percentage of their max health;
