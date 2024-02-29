@@ -1,9 +1,5 @@
 ---
-aliases:
-  - stats
-  - statistics
-  - stat
-  - statistic
+tags:
 ---
 
 ___

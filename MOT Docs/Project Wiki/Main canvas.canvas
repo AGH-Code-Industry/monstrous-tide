@@ -9,7 +9,7 @@
 		{"id":"8d297b36342a32c6","type":"file","file":"Project Wiki/Items/Currencies, points, etc/__Currencies ideas__.md","x":3304,"y":-938,"width":400,"height":185},
 		{"id":"d1eeaf0fba2d08c0","type":"file","file":"Project Wiki/Items/Weapons/__General weapons draft__.md","x":3400,"y":-533,"width":440,"height":220,"color":"1"},
 		{"id":"fcbc7afe56df4212","type":"file","file":"Project Wiki/Items/Weapons/Weapon stats.md","x":3400,"y":-277,"width":440,"height":184},
-		{"id":"f73a4f148c4e971c","type":"file","file":"Project Wiki/Items/Weapons/Weapons list.md","x":3400,"y":-53,"width":440,"height":180,"color":"1"},
+		{"id":"f73a4f148c4e971c","type":"file","file":"Project Wiki/Items/Weapons/Weapons concept list.md","x":3400,"y":-53,"width":440,"height":180,"color":"1"},
 		{"id":"60e3576dee58b4bc","type":"file","file":"Project Wiki/Items/Weapons/Weapon progression outline.md","x":4284,"y":-277,"width":400,"height":224,"color":"1"},
 		{"id":"9d61171ec8190117","type":"text","text":"# Stages and Maps","x":2000,"y":-2535,"width":313,"height":60,"color":"2"},
 		{"id":"1d07cbcc92824fe1","type":"file","file":"Project Wiki/Stages and Maps/Enemies/Enemies concept list.md","x":2633,"y":-2585,"width":400,"height":205},
@@ -29,7 +29,7 @@
 		{"id":"145db88303a16197","type":"file","file":"Project Wiki/Combat system/Statistics/Damage calculations.md","x":4016,"y":-1960,"width":400,"height":181},
 		{"id":"1a646edcab2419a9","type":"file","file":"Project Wiki/Combat system/Statistics/Dodging system.md","x":4016,"y":-1696,"width":400,"height":215},
 		{"id":"93665ed2173746ed","type":"file","file":"Project Wiki/Combat system/Statistics/Health fluctuations.md","x":4016,"y":-1419,"width":400,"height":246},
-		{"id":"2a270c9d250d2cf3","type":"file","file":"Project Wiki/__General__/About.md","x":-240,"y":-600,"width":400,"height":180}
+		{"id":"2a270c9d250d2cf3","type":"file","file":"Project Wiki/__General__/About this vault.md","x":-240,"y":-600,"width":400,"height":180}
 	],
 	"edges":[
 		{"id":"d92f015fdd289ba7","fromNode":"515c59ac8bba9039","fromSide":"right","toNode":"9d61171ec8190117","toSide":"left"},

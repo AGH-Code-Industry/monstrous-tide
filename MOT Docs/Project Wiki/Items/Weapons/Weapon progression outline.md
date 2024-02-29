@@ -5,7 +5,7 @@ ___
 
 # Obtaining weapons
 
-The way of obtaining weapons is specific to every one of them and shall be described [[Weapons list|in the first place]] - those ways include dropping from specific enemies or from breaking items over the map.
+The way of obtaining weapons is specific to every one of them and shall be described [[Weapons concept list|in the first place]] - those ways include dropping from specific enemies or from breaking items over the map.
 
 
 # Levelling up

@@ -1,7 +1,5 @@
 ___
 
->This is a draft of 4-tier rarity system, which shall be discussed to choose it over [[6-tier rarity system sketch]].
-
 >[!attention]- Obsidian Community plug-in
 >This document uses *Table Extended* community plug-in. Please, install it in order to properly see below contents, if it is incomprehensive/bugged. It's absolutely safe and will apply only to this vault. 
 >
@@ -23,34 +21,33 @@ Where associated colour may be used for graphic type design or something like th
 >[!tip]- Current weapon progression design
 >Currently approved weapon progression design is described [[Weapon progression outline|here]]. It shall be followed in every other doc and aspect, until changed. It also shall follow current [[__Statistics outline__|stat system]].
 
->[!question]- ***This rarity concept***
->With provided rarities, I suggest:
->- *Basic* being flat/low percentage random stat bonuses;
->- *Advanced* being higher percentage stat bonuses;
->- *Legendary* being very high stat bonuses or/and additional weapons mechanics;
->- *Mythic* being evolution to a different weapon.
->
->When levelling up, the player may choose one of upgrades, where: *Basic* drops always; *Advanced* drops almost always; *Legendary* and *Mythic* drop rarely, except the situation, when described upgrades are only upgrades left to be held by the weapon (then they also drop rarely, but they are only ones available for this weapon).
->
->**Important:** Main rule is all upgrades are not reversible. 
+ With provided rarities, they shall work as following:
+- *Basic* being flat/low percentage random stat bonuses;
+- *Advanced* being higher percentage stat bonuses;
+- *Legendary* being very high stat bonuses or/and additional weapons mechanics;
+- *Mythic* being evolution to a different weapon.
 
->[!question]- ***Types and tags suggestion*** 
->Regarding weapon [[Weapon types|types]] and [[Weapon tags|tags]], these should be the only keys to transformations.
->
->What I mean is weapon after the transformation should be chosen randomly, but of the same type and having at least all the same tags as the basic one (may have more). 
+***Important***: every upgrade is *irreversible*.
+
+>[!question]- ***About types and tags*** 
+>Regarding weapon [[Weapon types|types]] and [[Weapon tags|tags]], these should be the only keys to transformations - weapon after a transformation should be chosen randomly, but of the same type and having at least all the same tags as the basic one (may have more). 
 >
 >*Example*:
 >There is a tag of weapons called *A* - among *A*-tagged weapons there are a few ones, some of them are *Advanced* and there are a few *Mythic* weapons. If player rolls a *Mythic* upgrade for a *Advanced* weapon they have *A*-tagged, this will upgrade this weapon into a *Mythic* weapon with the same *A* tag **and** it will be of the same [[Weapon types|type]] (which are yet to be introduced).
 # Upgrades
 
-Those will drop accordingly to their *General drop-rate principle*, unless a maximum number of stats of some rarity is reached or it is last upgrade chance and some stat is yet to be chosen.
+Those will drop accordingly to their *General drop-rate principle*. When levelling up, the player may choose one of upgrades, where: 
+- *Basic* drops always; 
+- *Advanced* drops almost always; 
+- *Legendary* and *Mythic* drop rarely; 
+
+except the situation, when described upgrades are only upgrades left to be held by the weapon (then they also drop rarely, but they are only ones available for this weapon). 
 
 In other words, the game should actually *force* the player to have set amount of each stat upgrade.
 
-***Important to note:*** 
-- Those bonuses shall be applicable to the discussed weapon, i.e. weapon should make use of the provided stat bonus.
+***Important to note:*** those bonuses must be applicable to the discussed weapon, i.e. weapon should make use of the provided stat bonus.
 
-
+# Upgrades' specific forms
 ## Basic
 
 Low/mid (generally flat) stats upgrades, for example[^3]\:

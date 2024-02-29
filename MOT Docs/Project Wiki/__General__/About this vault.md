@@ -6,7 +6,7 @@ ___
 
 This feature is provided by the *Dataview* plugin, which allows us to explore files easier and search faster through them.
 
-For everything related to tagging, please visit [[Tagging, properties and metadata|this file]].
+For everything related to tagging, please visit [[Vault's tagging, properties and metadata|this file]].
 
 # About exploring the files
 

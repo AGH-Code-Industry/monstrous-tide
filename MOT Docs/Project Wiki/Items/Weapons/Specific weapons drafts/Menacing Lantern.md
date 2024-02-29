@@ -7,7 +7,7 @@ ___
 >[!tip]- Important notes
 >This weapon follows: introduced [[Damage calculations|damage calculations formulae]], introduced [[Health fluctuations|health changing schemes]], introduced current [[__Statistics outline__|stat system]] (which *may be* up to change) and other **important** things introduced in this documentation. Please, be wary of them.
 
-*Its first concept is introduced [[Weapons list|here]]*.
+*Its first concept is introduced [[Weapons concept list|here]]*.
 
  ***Menacing Lantern*** - one of first weapons player may consider good:
 	- a levitating lantern that follows player's position;
@@ -38,7 +38,7 @@ The *Lantern* is considered an AOE weapon - it periodically deals AOE damage to 
 ### Suggested progress line:
 
 >[!info]- Rarity systems clarification
->I suggest *two different rarity systems*, which need to be approved or denied by the team. Those include [[4-tier rarity system sketch]] and [[6-tier rarity system sketch]]. As for now, I will drop two suggestions regarding this weapon's progression.
+>I suggest *two different rarity systems*, which need to be approved or denied by the team. Those include [[Rarity and drop-rate systems]] and [[6-tier rarity system sketch]]. As for now, I will drop two suggestions regarding this weapon's progression.
 
 *Values in range, f.e. 1-10%, mean it is a single, randomly chosen value between 1 and 10%.*
 
@@ -54,7 +54,7 @@ Available upgrades for the *Menacing Lantern* , grouped by rarity systems and th
 		- "If this weapon scores a critical hit, player gains: +10% _Pickup_, +10% _HPRegen_ and +10% _MovSpeed_ for 10 seconds. May only occur every 10 seconds."; 
 		- "Whenever an enemy is defeated with this weapon, player obtains incoming damage immunity for 10 seconds, +50% _HPSteal_ and +50% _Multi_. May only occur every 60 seconds."
 		- "This weapon has 45% chance to heal the player by 5% of their _MaxHP_ every 5 seconds.";
-- ***Mythic:*** *follows rules mentioned [[4-tier rarity system sketch#Mythic|here]]!*
+- ***Mythic:*** *follows rules mentioned [[Rarity and drop-rate systems#Mythic|here]]!*
 	- **Light of Purification** *(tba)*
 	- **Blinding Guide** *(tba)*
 	- additional stats are taken from the same pool as the previous ones.
