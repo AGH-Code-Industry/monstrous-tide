@@ -3,7 +3,7 @@ ___
 >This document outlines how weapons shall be implemented, what they will contain, how they should progress and everything else needed at the start.
 # Weapon characteristic
 
-Weapon is a special item made for [[Damage calculations|dealing damage]] to opponents. It holds specified [[__Statistics outline__|statistics]] and may hold different types of [[Weapon progression outline|bonuses and upgrades]].
+Weapon is a special item made for [[Damage calculations|dealing damage]] to opponents. It holds specified [[General statistics outline|statistics]] and may hold different types of [[Weapon progression outline|bonuses and upgrades]].
 
 Weapons are distinguished by their: *Types*, *Tags* and *Rarities*. They have their own upgrade tree - those upgrades obey rules introduced [[Weapon progression outline|here]]. They may be even transformed into different weapons.
 

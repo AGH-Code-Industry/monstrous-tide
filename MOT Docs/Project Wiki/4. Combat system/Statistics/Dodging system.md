@@ -1,6 +1,6 @@
 ___
 
->This document provides insight on dodging system, description of this mechanic and more. As introduced in current [[__Statistics outline__|stats concept]], this is a suggestion, naturally[^1].
+>This document provides insight on dodging system, description of this mechanic and more. As introduced in current [[General statistics outline|stats concept]], this is a suggestion, naturally[^1].
 
 # Main principle
 

@@ -1,6 +1,6 @@
 ___
 
->This will regard health [[__Statistics outline__|stat]] changing mechanics, such as health regeneration, health steal, receiving damage and any other. At this moment, these are rather suggestions.
+>This will regard health [[General statistics outline|stat]] changing mechanics, such as health regeneration, health steal, receiving damage and any other. At this moment, these are rather suggestions.
 
 
 # Receiving damage

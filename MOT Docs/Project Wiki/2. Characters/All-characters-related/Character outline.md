@@ -15,7 +15,7 @@ ___
 
 Each character has a name - if it is a playable one, it is their uniquely given name; if it is a NPC, they have names as provided in the [[Enemies concept list|enemies pool]]. Every one of them has their own appearance and animations.
 
-Each character has their own stats, as detailed in [[__Statistics outline__|this file]]. - they are specific for any given character, whether it's a enemy or a playable one.
+Each character has their own stats, as detailed in [[General statistics outline|this file]]. - they are specific for any given character, whether it's a enemy or a playable one.
 
 >[!attention] ***Important to note:*** every one of above statistics may be under buffs or debuffs. These mechanics require holding original, maximum, minimum and current stats' levels.
 

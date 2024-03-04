@@ -2,7 +2,7 @@ ___
 
 >This document will describe the process of receiving damage in game. So far it is rather a suggestion of the calculation system.
 
-[[__Statistics outline__|Stats]] related to damage mechanisms are:
+[[General statistics outline|Stats]] related to damage mechanisms are:
 - weapon's damage;
 - wielder's luck;
 - attacked character's armour and health.

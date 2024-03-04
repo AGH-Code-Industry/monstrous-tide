@@ -24,7 +24,7 @@
 		{"id":"2789b3975844441e","type":"text","text":"*tbc*","x":-801,"y":-2120,"width":250,"height":60},
 		{"id":"229afc4500e093da","type":"file","file":"Project Wiki/6. Story and lore related things/Plot sketch.md","x":2570,"y":-3880,"width":400,"height":285},
 		{"id":"f5b310c2cdabe60e","type":"text","text":"# Story","x":2000,"y":-3767,"width":250,"height":60,"color":"3"},
-		{"id":"00f289137021338b","type":"file","file":"Project Wiki/4. Combat system/Statistics/__Statistics outline__.md","x":2829,"y":-1679,"width":400,"height":180},
+		{"id":"00f289137021338b","type":"file","file":"Project Wiki/4. Combat system/Statistics/General statistics outline.md","x":2829,"y":-1679,"width":400,"height":180},
 		{"id":"ffe6deb697083977","type":"text","text":"# Everything introduced here has its implementation","x":3376,"y":-1633,"width":442,"height":89},
 		{"id":"145db88303a16197","type":"file","file":"Project Wiki/4. Combat system/Statistics/Damage calculations.md","x":4016,"y":-1960,"width":400,"height":181},
 		{"id":"1a646edcab2419a9","type":"file","file":"Project Wiki/4. Combat system/Statistics/Dodging system.md","x":4016,"y":-1696,"width":400,"height":215},

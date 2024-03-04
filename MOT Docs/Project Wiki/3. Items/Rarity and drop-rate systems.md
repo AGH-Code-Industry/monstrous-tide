@@ -16,7 +16,7 @@ Where associated colour may be used for graphic type design or something like th
 # A little foreword
 
 >[!tip]- Current weapon progression design
->Currently approved weapon progression design is described [[Weapon progression outline|here]]. It shall be followed in every other doc and aspect, until changed. It also shall follow current [[__Statistics outline__|stat system]].
+>Currently approved weapon progression design is described [[Weapon progression outline|here]]. It shall be followed in every other doc and aspect, until changed. It also shall follow current [[General statistics outline|stat system]].
 
  With provided rarities, they shall work as following:
 - *Basic* being flat/low percentage random stat bonuses;

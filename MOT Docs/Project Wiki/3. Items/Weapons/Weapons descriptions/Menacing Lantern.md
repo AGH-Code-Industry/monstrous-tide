@@ -5,7 +5,7 @@ ___
 # Before reading
 
 >[!tip]- Important notes
->This weapon follows: introduced [[Damage calculations|damage calculations formulae]], introduced [[Health fluctuations|health changing schemes]], introduced current [[__Statistics outline__|stat system]] (which *may be* up to change) and other **important** things introduced in this documentation. Please, be wary of them.
+>This weapon follows: introduced [[Damage calculations|damage calculations formulae]], introduced [[Health fluctuations|health changing schemes]], introduced current [[General statistics outline|stat system]] (which *may be* up to change) and other **important** things introduced in this documentation. Please, be wary of them.
 
 *Its first concept is introduced [[Weapons concept list|here]]*.
 
