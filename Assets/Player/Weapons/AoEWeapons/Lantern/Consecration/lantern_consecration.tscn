@@ -1,16 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhm83vmdimo1k"]
+[gd_scene load_steps=11 format=3 uid="uid://bhm83vmdimo1k"]
 
 [ext_resource type="PackedScene" uid="uid://wtgjafbeo284" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/consecration_circle.tscn" id="1_0nj81"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lantern_consecration.gd" id="1_j5tdw"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_uf4se"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_hfvhh"]
-
-[sub_resource type="Resource" id="Resource_u1hpn"]
-script = ExtResource("2_uf4se")
-type = 0
-flat = 1.0
-increased = 0.0
-more = 0.0
 
 [sub_resource type="Resource" id="Resource_kix70"]
 script = ExtResource("2_uf4se")
@@ -22,13 +15,27 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_ttple"]
 script = ExtResource("2_uf4se")
 type = 110
+flat = 2.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_jv137"]
+script = ExtResource("2_uf4se")
+type = 115
+flat = 3.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_atsve"]
+script = ExtResource("2_uf4se")
+type = 100
 flat = 1.0
 increased = 0.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_nkv85"]
 script = ExtResource("3_hfvhh")
-data = Array[ExtResource("2_uf4se")]([SubResource("Resource_u1hpn"), SubResource("Resource_kix70"), SubResource("Resource_ttple")])
+data = Array[ExtResource("2_uf4se")]([SubResource("Resource_kix70"), SubResource("Resource_ttple"), SubResource("Resource_jv137"), SubResource("Resource_atsve")])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ukjts"]
 radius = 205.197

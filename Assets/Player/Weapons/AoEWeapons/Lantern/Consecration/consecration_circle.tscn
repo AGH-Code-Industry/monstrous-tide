@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://wtgjafbeo284"]
+[gd_scene load_steps=8 format=3 uid="uid://wtgjafbeo284"]
 
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="1_56j5e"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/consecration_circle.gd" id="1_iekd5"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Ray.gdshader" id="2_je840"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/circle.gdshader" id="3_cfgaj"]
 
@@ -21,6 +22,7 @@ shader_parameter/main_color = Color(0.890196, 0.87451, 0.466667, 1)
 shader_parameter/lerp_color = Color(1, 1, 1, 1)
 
 [node name="ConsecrationCircle" type="Node2D"]
+script = ExtResource("1_iekd5")
 
 [node name="DamageBox" parent="." instance=ExtResource("1_56j5e")]
 scale = Vector2(40, 40)
@@ -61,5 +63,9 @@ offset_left = -1.95
 offset_top = -1.95
 offset_right = 2.05
 offset_bottom = 2.05
+
+[node name="Duration" type="Timer" parent="."]
+
+[connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]
 
 [editable path="DamageBox"]
