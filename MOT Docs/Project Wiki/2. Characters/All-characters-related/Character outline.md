@@ -1,5 +1,12 @@
 ___
 
+>[!question] I don't know if it's relevant in any way
+>I don't think anyone has read this so far, so:
+>- Should the characters themselves have any stats (*beside their weapons*)?
+>- Do we even plan to introduce something more of a character system, or not?
+
+___
+
 *If you are searching for enemies ideas, look into [[Enemies concept list|this file]].*
 
 >This file outlines essentials of each character. So far, it is only a draft, which is up to any further changes.
@@ -21,7 +28,7 @@ The inventory is divided into *Equipped* and *Unequipped* parts. The first one c
 
 ### Equipped items
 
-*Equipped* part is limited: it may only contain *maximum of 5 weapons and 5 other, combat related items* at any given time. These items may be changed by the player anytime[^3] through items menu and in any way player desires. Note that *not every item is equippable*.
+*Equipped* part is limited: it may only contain *maximum of 5 weapons and 5 other, combat related items* at any given time. These items may be changed by the player anytime[^3] through items menu and in any way player desires. Note that *not every item is equipabble*.
 
 ### Unequipped items
 

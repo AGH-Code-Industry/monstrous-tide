@@ -1,21 +1,17 @@
 ___
+
 > Hello, this is Monstrous Tide project's Obsidian vault, this file is a basic introduction to contents of this directory.
 
 *Please, keep this documentation - and everything, actually - in English.*
-# Files database and tagging
-
-This feature is provided by the *Dataview* plugin, which allows us to explore files easier and search faster through them.
-
-For everything related to tagging, please visit [[Vault's tagging, properties and metadata|this file]].
 
 # About exploring the files
 
-In near future there will be added some metadata features, such as tags filtering and file collecting all other, via *Dataview* plugin. 
-
 We strongly recommend reading this documentation in reading mode (which you can enable in right top corner clicking on the book icon, which will then switch to pen icon). 
+
 # About plug-ins
 
-In this documentation vault, we use *Table extended* plugin. It is, so far, the only one. In every file there is proper callout mentioning used plugin.
+In this documentation vault, we use *Table extended* and *Dataview* plugins. They are, so far, the only ones.
+
 # Other
 
 1. As stated in [[1. Code docs template|this file]], person writing and submitting the code shall be the one responsible for providing this code's documentation. Those docs ***shall be committed through one's current working branch***, not through *Docs* or any other.

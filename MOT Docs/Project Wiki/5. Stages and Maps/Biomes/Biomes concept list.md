@@ -17,7 +17,7 @@ ___
 **Base principles:**
 1. Big maps - player should not see their borders;
 2. Must contain *a lot* of enemies;
-3. May be related to each other to emphasize the general game structure? (see [[__General structure draft__|there]]);
+3. May be related to each other to emphasize the general game structure? (see [[General gameplay structure draft|there]]);
 ### 1. Caves:
 
 - Shady places, with many various stone creations (f.e. stalactites, stalagmites, etc.);
