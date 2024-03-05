@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://p8r21jd54jvi"]
+
+[ext_resource type="PackedScene" uid="uid://belgkl4t1s14r" path="res://Assets/Utility/DropItems/Crystals/ExperienceCrystal.tscn" id="1_f56ew"]
+[ext_resource type="Script" path="res://Assets/Utility/DropItems/Crystals/SpecialCrystal.gd" id="2_0h0yq"]
+[ext_resource type="Texture2D" uid="uid://bm2timd73600p" path="res://Assets/Tutorial/Items/Gems/Gem_purple.png" id="2_x022d"]
+
+[node name="ExperienceCrystal" instance=ExtResource("1_f56ew")]
+script = ExtResource("2_0h0yq")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_x022d")
+
+[node name="Label" type="Label" parent="." index="2"]
+offset_left = -20.0
+offset_top = -12.0
+offset_right = 20.0
+offset_bottom = 11.0
+horizontal_alignment = 1
+vertical_alignment = 1

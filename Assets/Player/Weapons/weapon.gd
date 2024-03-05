@@ -13,8 +13,6 @@ func _ready() -> void:
 	fill_empty_upgrades()
 	# TODO add getting stats from global sources after they are implemented
 	
-	
-		
 func fill_empty_upgrades():
 	# set weapon ref, max upgrades amount and upgrade weights
 	upgrades.clear()
@@ -51,8 +49,6 @@ func get_available_upgrades() -> Array[WeaponUpgrade]:
 		for up in possible_upgrades[i].upgrades:
 			if !upgrades[i].upgrades.has(up):
 				available_upgrades.append(up)
-#	for up in available_upgrades:
-#		print(up.name)
 	return available_upgrades
 
 func update_stats():
