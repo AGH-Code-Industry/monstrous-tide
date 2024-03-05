@@ -250,7 +250,9 @@ position = Vector2(172, 57)
 [node name="ExperienceCrystal13" parent="ItemsLayer" instance=ExtResource("26_sy4rw")]
 position = Vector2(146, 95)
 
-[node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
+[node name="ExperienceBar" parent="." instance=ExtResource("23_gh6bk")]
+offset = Vector2(213.666, 0)
+transform = Transform2D(0.333, 0, 0, 0.333, 213.666, 0)
 
 [node name="Equipment" parent="." instance=ExtResource("28_xexut")]
 offset = Vector2(0, 8)

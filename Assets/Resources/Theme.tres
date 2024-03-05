@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://du6ax6dfsf5dt" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-legendary-frame.png" id="4_75fqq"]
 [ext_resource type="Texture2D" uid="uid://dsnxfey0omxg3" path="res://Assets/Utility/UI/Equipment/EQSlot.png" id="4_lflb8"]
 [ext_resource type="Texture2D" uid="uid://bnic1icsl1vfk" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-rare-frame.png" id="5_n4bdy"]
-[ext_resource type="Texture2D" uid="uid://bulmfy8sbhlox" path="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-back.png" id="8_mfe0o"]
-[ext_resource type="Texture2D" uid="uid://byxf6q3t3snpw" path="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-fill.png" id="9_dj352"]
+[ext_resource type="Texture2D" uid="uid://bfpydge4soy6x" path="res://Assets/Utility/UI/Progressbar/rune-xp-bar-back.png" id="9_t7yxh"]
+[ext_resource type="Texture2D" uid="uid://cqbd77n2sp8ks" path="res://Assets/Utility/UI/Progressbar/rune-xp-bar-fill.png" id="10_26gf5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htdvx"]
 texture = ExtResource("1_cryu0")
@@ -68,18 +68,18 @@ texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhtbs"]
-texture = ExtResource("8_mfe0o")
-texture_margin_left = 2.0
+texture = ExtResource("9_t7yxh")
+texture_margin_left = 46.0
 texture_margin_top = 4.0
-texture_margin_right = 2.0
-texture_margin_bottom = 3.0
+texture_margin_right = 46.0
+texture_margin_bottom = 7.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vk4yw"]
-texture = ExtResource("9_dj352")
-texture_margin_left = 2.0
-texture_margin_top = 3.0
-texture_margin_right = 2.0
-texture_margin_bottom = 3.0
+texture = ExtResource("10_26gf5")
+texture_margin_left = 46.0
+texture_margin_top = 4.0
+texture_margin_right = 46.0
+texture_margin_bottom = 5.0
 
 [resource]
 GridContainer/constants/h_separation = 2
