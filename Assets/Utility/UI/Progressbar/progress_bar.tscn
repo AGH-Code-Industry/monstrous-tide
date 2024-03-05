@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bfpydge4soy6x" path="res://Assets/Utility/UI/Progressbar/rune-xp-bar-back.png" id="2_lnjrr"]
 [ext_resource type="Texture2D" uid="uid://cqbd77n2sp8ks" path="res://Assets/Utility/UI/Progressbar/rune-xp-bar-fill.png" id="3_ula1a"]
 
-[node name="progress_bar" type="CanvasLayer"]
+[node name="ExperienceBar" type="CanvasLayer"]
 layer = 0
 offset = Vector2(220, 0)
 scale = Vector2(0.333, 0.333)
