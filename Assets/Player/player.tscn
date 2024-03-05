@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=31 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -8,10 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
-[ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="8_1p3gh"]
-[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="10_2jejm"]
-[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="11_3tfrg"]
-[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd" id="12_6vaps"]
 [ext_resource type="PackedScene" uid="uid://bhm83vmdimo1k" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lantern_consecration.tscn" id="13_0abte"]
 
 [sub_resource type="Resource" id="Resource_gcdwu"]
@@ -601,79 +597,6 @@ states/Walk/position = Vector2(626, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_8ivck"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_fpgxa"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_ces3c")]
 graph_offset = Vector2(-107.468, 18)
 
-[sub_resource type="Resource" id="Resource_pshwl"]
-script = ExtResource("12_6vaps")
-name = "Tier 1; Upgrade 1"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-
-[sub_resource type="Resource" id="Resource_exu6j"]
-script = ExtResource("2_5ofgj")
-type = 110
-flat = 2.0
-increased = 0.0
-more = 0.0
-
-[sub_resource type="Resource" id="Resource_6nydr"]
-script = ExtResource("11_3tfrg")
-stats = Array[ExtResource("2_5ofgj")]([SubResource("Resource_exu6j")])
-name = "Lantern AoE"
-description = "Increases Lantern range"
-
-[sub_resource type="Resource" id="Resource_eavxq"]
-script = ExtResource("2_5ofgj")
-type = 110
-flat = 0.0
-increased = 10.0
-more = 0.0
-
-[sub_resource type="Resource" id="Resource_2ie1k"]
-script = ExtResource("11_3tfrg")
-stats = Array[ExtResource("2_5ofgj")]([SubResource("Resource_eavxq")])
-name = "Radius Percent"
-description = "Increases radius by 10%"
-
-[sub_resource type="Resource" id="Resource_dakjw"]
-script = ExtResource("10_2jejm")
-upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_pshwl"), SubResource("Resource_6nydr"), SubResource("Resource_2ie1k")])
-
-[sub_resource type="Resource" id="Resource_pgp30"]
-script = ExtResource("12_6vaps")
-name = "Tier 2; Upgrade 1"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-
-[sub_resource type="Resource" id="Resource_he64p"]
-script = ExtResource("12_6vaps")
-name = "Tier 2; Upgrade 2"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-
-[sub_resource type="Resource" id="Resource_blm1k"]
-script = ExtResource("12_6vaps")
-name = "Tier 2; Upgrade 3"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-
-[sub_resource type="Resource" id="Resource_bscj2"]
-script = ExtResource("10_2jejm")
-upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_pgp30"), SubResource("Resource_he64p"), SubResource("Resource_blm1k")])
-
-[sub_resource type="Resource" id="Resource_auag7"]
-script = ExtResource("12_6vaps")
-name = "Tier 3; Upgrade 1"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-
-[sub_resource type="Resource" id="Resource_ydvv2"]
-script = ExtResource("12_6vaps")
-name = "Tier 3; Upgrade 2"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-
-[sub_resource type="Resource" id="Resource_0bvt4"]
-script = ExtResource("12_6vaps")
-name = "Tier 3; Upgrade 3"
-description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-
-[sub_resource type="Resource" id="Resource_h3u4x"]
-script = ExtResource("10_2jejm")
-upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_auag7"), SubResource("Resource_ydvv2"), SubResource("Resource_0bvt4")])
-
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 10
 motion_mode = 1
@@ -757,6 +680,7 @@ rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -886,11 +810,6 @@ parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 
 [node name="Weapons" type="Node2D" parent="."]
-
-[node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
-visible = false
-z_as_relative = false
-possible_upgrades = Array[ExtResource("10_2jejm")]([SubResource("Resource_dakjw"), SubResource("Resource_bscj2"), SubResource("Resource_h3u4x")])
 
 [node name="LanternConsecration" parent="Weapons" instance=ExtResource("13_0abte")]
 
