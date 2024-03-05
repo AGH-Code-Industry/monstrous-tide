@@ -10,9 +10,8 @@ func _ready() -> void:
 	# connect signal to function that takes stats and adds them to current stats
 	StatManager.update_player_stats_offensive.connect(add_stats)
 	fill_empty_upgrades()
+	# Read stats from global sources, not yet present in out project
 	
-	
-		
 func fill_empty_upgrades():
 	# set weapon ref, max upgrades amount and upgrade weights
 	upgrades.clear()
