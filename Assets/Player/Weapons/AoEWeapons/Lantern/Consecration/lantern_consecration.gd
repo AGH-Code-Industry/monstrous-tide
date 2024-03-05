@@ -22,7 +22,6 @@ func choose_random_position() -> Vector2:
 
 
 func _on_attack_speed_timer_timeout() -> void:
-	print("trying to spawn random circle")
 	var new_circle = consecration_circle.instantiate()
 	$CircleHolder.add_child(new_circle)
 	new_circle.global_position = choose_random_position()
