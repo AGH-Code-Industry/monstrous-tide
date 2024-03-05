@@ -11,6 +11,7 @@ func _ready() -> void:
 	# connect signal to function that takes stats and adds them to current stats
 	StatManager.update_player_stats_offensive.connect(add_stats)
 	fill_empty_upgrades()
+	# TODO add getting stats from global sources after they are implemented
 	
 	
 		

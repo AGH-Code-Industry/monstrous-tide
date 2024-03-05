@@ -2,12 +2,6 @@ class_name WeaponSwapUpgrade extends WeaponUpgrade
 
 @export var new_weapon : PackedScene
 
-# get all upgrades from actual weapon
-# get all possible upgrades from actual weapon
-# hide current weapon
-# create new weapon
-# apply all upgrades
-
 func apply_upgrade():
 	super.apply_upgrade()
 	
@@ -22,6 +16,5 @@ func apply_upgrade():
 	weapon_ref.is_active = false
 	weapon_ref.remove_weapon()
 	new_weapon_object.set_upgrades_after_swap(applied_upgrades, possible_upgrades)
-	print("deleting old weapon")
 
 	WeaponManager.update_weapons()
