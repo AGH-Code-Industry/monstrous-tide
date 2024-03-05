@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=49 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="10_2jejm"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="11_3tfrg"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd" id="12_6vaps"]
+[ext_resource type="PackedScene" uid="uid://dm1irwy44gd2t" path="res://Assets/Player/Weapons/Bible/bible.tscn" id="13_8iv1o"]
 
 [sub_resource type="Resource" id="Resource_gcdwu"]
 script = ExtResource("2_5ofgj")
@@ -889,6 +890,8 @@ parameters/conditions/is_moving = false
 [node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
 z_as_relative = false
 possible_upgrades = Array[ExtResource("10_2jejm")]([SubResource("Resource_dakjw"), SubResource("Resource_bscj2"), SubResource("Resource_h3u4x")])
+
+[node name="Bible" parent="Weapons" instance=ExtResource("13_8iv1o")]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
