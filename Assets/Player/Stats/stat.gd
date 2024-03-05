@@ -5,6 +5,7 @@ enum Type{
 	DAMAGE = 100,
 	ATTACKSPEED = 105,
 	DAMAGERADIUS = 110,
+	DURATION = 115,
 	
 	#Defensive
 	DODGE = 200,
