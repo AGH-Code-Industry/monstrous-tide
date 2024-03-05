@@ -36,6 +36,8 @@ func instantiate_projectiles():
 		var y = radius * sin(angle)
 		var projectile_to_add = bible_projectile.instantiate()
 		projectile_to_add.position = Vector2(x,y)
+		projectile_to_add.angle = angle
+		projectile_to_add.radius = radius
 		add_child(projectile_to_add)
 		current_projectiles.append(projectile_to_add)
 
