@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=35 format=3 uid="uid://b11rms50550mc"]
 
+[ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
 [ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/Spawner/enemy_spawner.tscn" id="3_qgeh4"]
@@ -30,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/LvlUps.tscn" id="26_ntv7e"]
 [ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="26_sy4rw"]
 [ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="27_nkgxi"]
-[ext_resource type="PackedScene" uid="uid://cf114iew8wlfx" path="res://Assets/Utility/UI/Equipment/equipment.tscn" id="28_xexut"]
+[ext_resource type="PackedScene" uid="uid://b3ak5hh8jtrh8" path="res://Assets/Utility/Managers/weapon_manager.tscn" id="29_sylwc"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
 script = ExtResource("4_f0yyc")
@@ -49,8 +50,10 @@ enemy_num = 1
 enemy_spawn_delay = 5
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_na82v")
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -1
 texture_filter = 2
 texture_repeat = 2
 position = Vector2(115, -27)
@@ -254,11 +257,10 @@ position = Vector2(146, 95)
 offset = Vector2(213.666, 0)
 transform = Transform2D(0.333, 0, 0, 0.333, 213.666, 0)
 
-[node name="Equipment" parent="." instance=ExtResource("28_xexut")]
-offset = Vector2(0, 8)
-transform = Transform2D(1, 0, 0, 1, 0, 8)
+[node name="ExperienceManager" parent="." node_paths=PackedStringArray("WeaponManager") instance=ExtResource("22_c4rh6")]
+WeaponManager = NodePath("../WeaponManager")
 
-[node name="ExperienceManager" parent="." instance=ExtResource("22_c4rh6")]
+[node name="WeaponManager" parent="." instance=ExtResource("29_sylwc")]
 
 [node name="ExperienceCollectPickup" parent="." instance=ExtResource("27_nkgxi")]
 position = Vector2(-26, -9)

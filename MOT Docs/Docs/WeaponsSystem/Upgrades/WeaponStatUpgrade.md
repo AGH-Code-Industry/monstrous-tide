@@ -2,7 +2,7 @@
 extends: WeaponUpgrade
 ---
 This class is used for upgrades that adds [[__Statistics outline__|stats]] to a weapon
-## functions/methods/etc.:
+## methods:
 
 Return Value Type|Name and arguments|Description
 -|-|-

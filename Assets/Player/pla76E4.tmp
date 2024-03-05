@@ -13,16 +13,16 @@
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="11_3tfrg"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd" id="12_6vaps"]
 
-[sub_resource type="Resource" id="Resource_gcdwu"]
+[sub_resource type="Resource" id="Resource_lyosv"]
 script = ExtResource("2_5ofgj")
-type = 300
-flat = 200.0
+type = 3
+flat = 0.0
 increased = 0.0
-more = 0.0
+more = 1.0
 
 [sub_resource type="Resource" id="Resource_acek7"]
 script = ExtResource("3_it506")
-data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_gcdwu")])
+data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_lyosv")])
 
 [sub_resource type="Animation" id="Animation_2f0x6"]
 resource_name = "Idle"
@@ -607,10 +607,10 @@ description = "Lorem Ipsum is simply dummy text of the printing and typesetting 
 
 [sub_resource type="Resource" id="Resource_exu6j"]
 script = ExtResource("2_5ofgj")
-type = 110
-flat = 2.0
+type = 6
+flat = 0.0
 increased = 0.0
-more = 0.0
+more = 1.0
 
 [sub_resource type="Resource" id="Resource_6nydr"]
 script = ExtResource("11_3tfrg")
@@ -620,10 +620,10 @@ description = "Increases Lantern range"
 
 [sub_resource type="Resource" id="Resource_eavxq"]
 script = ExtResource("2_5ofgj")
-type = 110
+type = 7
 flat = 0.0
-increased = 10.0
-more = 0.0
+increased = 0.0
+more = 1.0
 
 [sub_resource type="Resource" id="Resource_2ie1k"]
 script = ExtResource("11_3tfrg")
@@ -674,7 +674,6 @@ script = ExtResource("10_2jejm")
 upgrades = Array[ExtResource("12_6vaps")]([SubResource("Resource_auag7"), SubResource("Resource_ydvv2"), SubResource("Resource_0bvt4")])
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-z_index = 10
 motion_mode = 1
 script = ExtResource("1_jqw0g")
 stat_set = SubResource("Resource_acek7")
@@ -767,7 +766,6 @@ rest = Transform2D(1, 0, 0, 1, 46, -125)
 
 [node name="LeftHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/LeftArm"]
 position = Vector2(14, 73)
-scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(1, 0, 0, 1, 14, 73)
 auto_calculate_length_and_angle = false
 length = 89.6
@@ -875,6 +873,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 root_node = NodePath("../AnimationPlayer")
 libraries = {
 "": SubResource("AnimationLibrary_qa4wg")
@@ -887,7 +886,7 @@ parameters/conditions/is_moving = false
 [node name="Weapons" type="Node2D" parent="."]
 
 [node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
-z_as_relative = false
+z_index = 0
 possible_upgrades = Array[ExtResource("10_2jejm")]([SubResource("Resource_dakjw"), SubResource("Resource_bscj2"), SubResource("Resource_h3u4x")])
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
