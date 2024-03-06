@@ -26,6 +26,7 @@ func update_stats():
 	projectile_number = stat_set.get_stat_value(Stat.Type.DODGE) # DEBUG ONLY
 	
 func start_cycle():
+	print("Current cooldown: %s, Current damage: %s" % [cooldown, damage])
 	instantiate_projectiles()
 	await get_tree().create_timer(lifetime).timeout
 	delete_projectiles()

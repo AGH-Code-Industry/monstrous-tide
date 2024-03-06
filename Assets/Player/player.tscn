@@ -681,6 +681,7 @@ script = ExtResource("1_jqw0g")
 stat_set = SubResource("Resource_acek7")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
+process_mode = 4
 visible = false
 attack_speed = 0.5
 damage = 1
@@ -888,6 +889,7 @@ parameters/conditions/is_moving = false
 [node name="Weapons" type="Node2D" parent="."]
 
 [node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
+process_mode = 4
 z_as_relative = false
 possible_upgrades = Array[ExtResource("10_2jejm")]([SubResource("Resource_dakjw"), SubResource("Resource_bscj2"), SubResource("Resource_h3u4x")])
 
