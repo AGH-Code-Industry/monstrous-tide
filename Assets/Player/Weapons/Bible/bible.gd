@@ -1,14 +1,14 @@
 extends Weapon
 
 @onready var bible_projectile = preload("res://Assets/Player/Weapons/Bible/bible_projectile.tscn")
-@export var radius = 60
-@export var lifetime = 2
+@export var radius : float = 60
+@export var lifetime : float = 2
 
 # Values set by statset
-var projectile_number = 3
-var projectile_size = 1.0
-var damage = 1 
-var cooldown = 3
+var projectile_number : int = 3
+var projectile_size : float = 1.0
+var damage : float = 1 
+var cooldown : float = 3
 
 var current_projectiles = []
 
@@ -26,7 +26,6 @@ func update_stats():
 	projectile_number = stat_set.get_stat_value(Stat.Type.DODGE) # DEBUG ONLY
 	
 func start_cycle():
-	print("Current cooldown: %s, Current damage: %s" % [cooldown, damage])
 	instantiate_projectiles()
 	await get_tree().create_timer(lifetime).timeout
 	delete_projectiles()
@@ -38,10 +37,9 @@ func start_cycle():
 	# after cooldown repeat
 
 func instantiate_projectiles():
-	var angle_increment = 360.0 / projectile_number
-	print("Instantiate bible projectiles")
+	var angle_increment : float = 360.0 / projectile_number
 	for i in range(projectile_number):
-		var angle = deg_to_rad(i * angle_increment)
+		var angle : float = deg_to_rad(i * angle_increment)
 		var projectile_to_add = bible_projectile.instantiate()
 		projectile_to_add.position = Vector2(radius * cos(angle), radius * sin(angle))
 		projectile_to_add.initialization(projectile_size, damage, angle, radius)
@@ -49,7 +47,6 @@ func instantiate_projectiles():
 		current_projectiles.append(projectile_to_add)
 
 func delete_projectiles():
-	print("Delete bible projectiles")
 	for projectile in current_projectiles:
 		projectile.queue_free()
 	current_projectiles.clear()
