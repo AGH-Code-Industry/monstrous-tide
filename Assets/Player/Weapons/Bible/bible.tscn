@@ -1,7 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://dm1irwy44gd2t"]
+[gd_scene load_steps=9 format=3 uid="uid://dm1irwy44gd2t"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/Bible/bible.gd" id="1_7xq8o"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_o3asj"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_xwhob"]
+
+[sub_resource type="Resource" id="Resource_qvo64"]
+script = ExtResource("2_o3asj")
+type = 100
+flat = 2.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_3vbcp"]
+script = ExtResource("2_o3asj")
+type = 105
+flat = 3.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_wrfuw"]
+script = ExtResource("2_o3asj")
+type = 110
+flat = 1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_r1ipi"]
+script = ExtResource("2_o3asj")
+type = 200
+flat = 2.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ftxek"]
+script = ExtResource("3_xwhob")
+data = Array[ExtResource("2_o3asj")]([SubResource("Resource_qvo64"), SubResource("Resource_3vbcp"), SubResource("Resource_wrfuw"), SubResource("Resource_r1ipi")])
 
 [node name="Bible" type="Node2D"]
 script = ExtResource("1_7xq8o")
-radius = 50
+stat_set = SubResource("Resource_ftxek")

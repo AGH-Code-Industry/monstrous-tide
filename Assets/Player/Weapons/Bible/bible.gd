@@ -1,18 +1,29 @@
 extends Weapon
 
 @onready var bible_projectile = preload("res://Assets/Player/Weapons/Bible/bible_projectile.tscn")
-@export var projectile_number = 3
-@export var projectile_size = 1.0
-@export var damage = 1
-@export var radius = 2
+@export var radius = 60
 @export var lifetime = 2
-@export var cooldown = 3
+
+# Values set by statset
+var projectile_number = 3
+var projectile_size = 1.0
+var damage = 1 
+var cooldown = 3
+
 var current_projectiles = []
 
 func _ready():
 	super()
 	
+	update_stats()
 	start_cycle()
+	
+# Assumed that statset returns value to set xD
+func update_stats():
+	damage = stat_set.get_stat_value(Stat.Type.DAMAGE)
+	cooldown = stat_set.get_stat_value(Stat.Type.ATTACKSPEED)
+	projectile_size = stat_set.get_stat_value(Stat.Type.DAMAGERADIUS)
+	projectile_number = stat_set.get_stat_value(Stat.Type.DODGE) # DEBUG ONLY
 	
 func start_cycle():
 	instantiate_projectiles()
@@ -26,18 +37,13 @@ func start_cycle():
 	# after cooldown repeat
 
 func instantiate_projectiles():
-	var player_position = Vector2(0, 0)
 	var angle_increment = 360.0 / projectile_number
-
 	print("Instantiate bible projectiles")
 	for i in range(projectile_number):
 		var angle = deg_to_rad(i * angle_increment)
-		var x = radius * cos(angle)
-		var y = radius * sin(angle)
 		var projectile_to_add = bible_projectile.instantiate()
-		projectile_to_add.position = Vector2(x,y)
-		projectile_to_add.angle = angle
-		projectile_to_add.radius = radius
+		projectile_to_add.position = Vector2(radius * cos(angle), radius * sin(angle))
+		projectile_to_add.initialization(projectile_size, damage, angle, radius)
 		add_child(projectile_to_add)
 		current_projectiles.append(projectile_to_add)
 
