@@ -1,3 +1,7 @@
+---
+tags: stages_maps
+type: biomes, concept
+---
 ___
 
 *In accordance with our Google Drive and Miro, as of 30th Oct 2023.*

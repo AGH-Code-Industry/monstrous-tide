@@ -7,10 +7,6 @@
 		{"id":"bf9795588b87df99","type":"text","text":"## Rarity system","x":2680,"y":491,"width":250,"height":60,"color":"3"},
 		{"id":"94fa98c929418b1f","type":"file","file":"Project Wiki/Items/Rarity and drop-rate system/__Rarity system sketch__.md","x":3164,"y":387,"width":400,"height":269},
 		{"id":"8d297b36342a32c6","type":"file","file":"Project Wiki/Items/Currencies, points, etc/__Currencies ideas__.md","x":3304,"y":-938,"width":400,"height":185},
-		{"id":"d1eeaf0fba2d08c0","type":"file","file":"Project Wiki/3. Items/Weapons/General weapons structure.md","x":3400,"y":-533,"width":440,"height":220,"color":"1"},
-		{"id":"fcbc7afe56df4212","type":"file","file":"Project Wiki/Items/Weapons/Weapon stats.md","x":3400,"y":-277,"width":440,"height":184},
-		{"id":"f73a4f148c4e971c","type":"file","file":"Project Wiki/3. Items/Weapons/Weapons concept list.md","x":3400,"y":-53,"width":440,"height":180,"color":"1"},
-		{"id":"60e3576dee58b4bc","type":"file","file":"Project Wiki/3. Items/Weapons/Weapon progression outline.md","x":4284,"y":-277,"width":400,"height":224,"color":"1"},
 		{"id":"9d61171ec8190117","type":"text","text":"# Stages and Maps","x":2000,"y":-2535,"width":313,"height":60,"color":"2"},
 		{"id":"1d07cbcc92824fe1","type":"file","file":"Project Wiki/5. Stages and Maps/Enemies/Enemies concept list.md","x":2633,"y":-2585,"width":400,"height":205},
 		{"id":"4ec33adb38c291a0","type":"file","file":"Project Wiki/5. Stages and Maps/Biomes/Biomes concept list.md","x":2633,"y":-2331,"width":400,"height":161},
@@ -29,7 +25,10 @@
 		{"id":"145db88303a16197","type":"file","file":"Project Wiki/4. Combat system/Statistics/Damage calculations.md","x":4016,"y":-1960,"width":400,"height":181},
 		{"id":"1a646edcab2419a9","type":"file","file":"Project Wiki/4. Combat system/Statistics/Dodging system.md","x":4016,"y":-1696,"width":400,"height":215},
 		{"id":"93665ed2173746ed","type":"file","file":"Project Wiki/4. Combat system/Statistics/Health fluctuations.md","x":4016,"y":-1419,"width":400,"height":246},
-		{"id":"2a270c9d250d2cf3","type":"file","file":"Project Wiki/1. General/About this vault.md","x":-240,"y":-600,"width":400,"height":180}
+		{"id":"2a270c9d250d2cf3","type":"file","file":"Project Wiki/1. General/About this vault.md","x":-240,"y":-600,"width":400,"height":180},
+		{"id":"d1eeaf0fba2d08c0","type":"file","file":"Project Wiki/3. Items/Weapons/General weapons structure.md","x":3504,"y":-600,"width":440,"height":220,"color":"1"},
+		{"id":"f73a4f148c4e971c","type":"file","file":"Project Wiki/3. Items/Weapons/Weapons concept list.md","x":3504,"y":80,"width":440,"height":180,"color":"1"},
+		{"id":"60e3576dee58b4bc","type":"file","file":"Project Wiki/3. Items/Weapons/Weapon progression outline.md","x":3504,"y":-262,"width":440,"height":224,"color":"1"}
 	],
 	"edges":[
 		{"id":"d92f015fdd289ba7","fromNode":"515c59ac8bba9039","fromSide":"right","toNode":"9d61171ec8190117","toSide":"left"},
@@ -47,20 +46,19 @@
 		{"id":"4e0b6c88ac67d8a0","fromNode":"515c59ac8bba9039","fromSide":"bottom","toNode":"f3ee0c8d5f74c8aa","toSide":"left"},
 		{"id":"994c75cc80178e89","fromNode":"f3ee0c8d5f74c8aa","fromSide":"right","toNode":"16a0f17c6f478e90","toSide":"left","label":"Regarding Gold, EXP etc."},
 		{"id":"98671d3100cf3d65","fromNode":"f3ee0c8d5f74c8aa","fromSide":"right","toNode":"5afba1e1ce08d5b4","toSide":"left"},
-		{"id":"e5a370e0891588b2","fromNode":"5afba1e1ce08d5b4","fromSide":"right","toNode":"d1eeaf0fba2d08c0","toSide":"left","label":"IMPORTANT\nContains outline of everything"},
+		{"id":"e5a370e0891588b2","fromNode":"5afba1e1ce08d5b4","fromSide":"right","toNode":"d1eeaf0fba2d08c0","toSide":"left","label":"contains general outline\n!Requires verification!"},
 		{"id":"54ae4448f29f04f5","fromNode":"9a3c7175cbf1f968","fromSide":"bottom","toNode":"74f77791ce600ce3","toSide":"top"},
 		{"id":"a198dce8803da846","fromNode":"515c59ac8bba9039","fromSide":"top","toNode":"f5b310c2cdabe60e","toSide":"left"},
 		{"id":"9546cb7887985756","fromNode":"f5b310c2cdabe60e","fromSide":"right","toNode":"229afc4500e093da","toSide":"left","label":"Remember,\nit's a sketch"},
 		{"id":"4b6068e249a385f3","fromNode":"16a0f17c6f478e90","fromSide":"right","toNode":"8d297b36342a32c6","toSide":"left"},
 		{"id":"e68fd80754707ba8","fromNode":"f3ee0c8d5f74c8aa","fromSide":"right","toNode":"bf9795588b87df99","toSide":"left","label":"Regarding all the items,\nweapons including."},
 		{"id":"3e123facb4e9627f","fromNode":"bf9795588b87df99","fromSide":"right","toNode":"94fa98c929418b1f","toSide":"left"},
-		{"id":"22574859a51e4c84","fromNode":"5afba1e1ce08d5b4","fromSide":"right","toNode":"fcbc7afe56df4212","toSide":"left"},
-		{"id":"ba501af564ae97f5","fromNode":"5afba1e1ce08d5b4","fromSide":"right","toNode":"f73a4f148c4e971c","toSide":"left","label":"IMPORTANT\nContains first weapon examples"},
-		{"id":"3c446a277d2ee746","fromNode":"fcbc7afe56df4212","fromSide":"right","toNode":"60e3576dee58b4bc","toSide":"left","label":"IMPORTANT\nContains weapon progression\nsuggestions"},
+		{"id":"ba501af564ae97f5","fromNode":"5afba1e1ce08d5b4","fromSide":"right","toNode":"f73a4f148c4e971c","toSide":"left","label":"contains first weapon examples\n"},
 		{"id":"a6140104d4d37b8e","fromNode":"18f280f7e1f931ab","fromSide":"right","toNode":"515c59ac8bba9039","toSide":"left"},
 		{"id":"ae1141508afbca79","fromNode":"18f280f7e1f931ab","fromSide":"left","toNode":"f7b3feffa9b5a998","toSide":"right"},
 		{"id":"ed7757374a0b7089","fromNode":"0401b29b9da2b4c4","fromSide":"top","toNode":"f7b3feffa9b5a998","toSide":"bottom"},
 		{"id":"adc2fdc80720c914","fromNode":"f7b3feffa9b5a998","fromSide":"top","toNode":"2789b3975844441e","toSide":"right"},
-		{"id":"77616f198b264232","fromNode":"9a3c7175cbf1f968","fromSide":"left","toNode":"2a270c9d250d2cf3","toSide":"top"}
+		{"id":"77616f198b264232","fromNode":"9a3c7175cbf1f968","fromSide":"left","toNode":"2a270c9d250d2cf3","toSide":"top"},
+		{"id":"3e75e300d8208d81","fromNode":"5afba1e1ce08d5b4","fromSide":"right","toNode":"60e3576dee58b4bc","toSide":"left","label":"contains upgrades outline"}
 	]
 }

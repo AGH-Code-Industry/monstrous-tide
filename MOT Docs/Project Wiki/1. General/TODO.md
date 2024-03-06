@@ -34,12 +34,6 @@ For everything related to tagging, please visit [[Vault's tagging, properties an
 
 ~~each consisting of separate paths in which player may roll upgrades for the weapon - which is *randomized*.~~
 
-# About this vault 
-
-> Hello, this is Monstrous Tide project's Obsidian vault, this file is a basic introduction to contents of this directory.
-
-*Please, keep this documentation - and everything, actually - in English.*
-
 # About exploring the files
 
 We strongly recommend reading this documentation in reading mode (which you can enable in right top corner clicking on the book icon, which will then switch to pen icon). 

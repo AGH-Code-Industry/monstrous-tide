@@ -1,3 +1,7 @@
+---
+tags: story_lore
+type: outline
+---
 ___
 
 >[!info] Before reading
