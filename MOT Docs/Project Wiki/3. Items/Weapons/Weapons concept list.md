@@ -1,3 +1,9 @@
+---
+tags: items
+type: weapons, draft
+description: "A concept list of weapons to be implemented, changed or trashed."
+---
+
 ___
 
 >Like in the title, there is held a list of all weapons we have, without their tags, rarities and types so far.

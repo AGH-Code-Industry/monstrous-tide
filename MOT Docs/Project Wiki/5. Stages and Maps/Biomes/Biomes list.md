@@ -1,11 +1,20 @@
 ---
-tags: 
+tags: list, stages_maps
+type: biomes
+description: "List of files providing general information about our in-game biomes."
 ---
 
 ___
 
->Biomes listed in this document are either **implemented** or are **accepted and set to be implemented***. Each biome's specification is in *Biomes/Biomes' descriptions* folder - links are provided in the table below:
+# Concept list
 
-```
-list to be implemented with dataview after tagging proper docs
+It's [[Biomes concept list|here]], but those little guys are not yet in below table.
+
+# \[Not yet] Implemented biomes
+*Below list is sorted in an alphabetical order:*
+
+```dataview
+TABLE description AS Description, type AS "Doc type"
+FROM "Project Wiki/5. Stages and Maps/Biomes/Biomes descriptions"
+SORT file.name asc
 ```

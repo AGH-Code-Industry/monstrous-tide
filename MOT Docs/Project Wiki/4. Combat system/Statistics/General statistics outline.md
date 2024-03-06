@@ -1,3 +1,9 @@
+---
+tags: combat
+type: stats
+description: "An outline of every stat occuring among all characters, weapons and enemies in our game (so far)."
+---
+
 ___
 
 >This document is a first outline of statistics system, what they are, what is their job and everything more needed at the moment.

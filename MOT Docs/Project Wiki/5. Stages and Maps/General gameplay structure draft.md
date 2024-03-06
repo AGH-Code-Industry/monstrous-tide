@@ -1,3 +1,9 @@
+---
+tags: stages_maps
+type: game_structure
+description: "An overview of everything related to game structure (with cool Mermaid graphs) - maps, stages, gameplay."
+---
+
 ___
 
 *Based on our Miro, as of 30th Oct 2023*

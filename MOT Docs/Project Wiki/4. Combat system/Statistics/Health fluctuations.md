@@ -1,3 +1,9 @@
+---
+tags: combat
+type: calculations
+description: "A profound explanation how health points should fluctuate in our game, along with according formulae."
+---
+
 ___
 
 >This will regard health [[General statistics outline|stat]] changing mechanics, such as health regeneration, health steal, receiving damage and any other. At this moment, these are rather suggestions.

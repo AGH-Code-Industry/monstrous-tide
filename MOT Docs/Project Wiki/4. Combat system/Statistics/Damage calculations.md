@@ -1,3 +1,9 @@
+---
+tags: combat
+type: calculations
+description: "A profound explanation how damage is calculated in our game."
+---
+
 ___
 
 >This document will describe the process of receiving damage in game. So far it is rather a suggestion of the calculation system.

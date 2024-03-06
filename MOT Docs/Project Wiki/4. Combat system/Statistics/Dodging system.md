@@ -1,3 +1,9 @@
+---
+tags: combat
+type: calculations
+description: "Rules regarding *Dodging* mechanism."
+---
+
 ___
 
 >This document provides insight on dodging system, description of this mechanic and more. As introduced in current [[General statistics outline|stats concept]], this is a suggestion, naturally[^1].

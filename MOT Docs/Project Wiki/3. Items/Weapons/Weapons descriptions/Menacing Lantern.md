@@ -1,3 +1,9 @@
+---
+tags: items
+type: weapons, description
+description: "A description of weapon *Menacing Lantern* and everything related to it."
+---
+
 ___
 
 >This document will outline the most important aspects of weapon in the title - its properties, progression scheme, statistics, principles of working and many more. It is a sketch, as it needs specified information provided by programmers.

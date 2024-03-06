@@ -1,3 +1,9 @@
+---
+tags: characters
+type: outline
+description: A sketch of general structure of in-game characters.
+---
+
 ___
 
 >[!question] I don't know if it's relevant in any way

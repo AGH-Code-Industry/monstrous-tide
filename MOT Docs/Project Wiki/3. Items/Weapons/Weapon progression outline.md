@@ -1,3 +1,9 @@
+---
+tags: items
+type: weapons, general
+description: "General idea behind progression of our weapons and rules that apply to this issue."
+---
+
 ___
 
 >This document briefly sums up the agreed way of upgrading the weapons and their whole life cycle.

@@ -1,3 +1,9 @@
+---
+tags: general
+type: project
+description: A list (most of the time up to date) of project contributors.
+---
+
 ___
 
 *As of 5th Dec 2023:*

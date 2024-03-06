@@ -1,3 +1,9 @@
+---
+tags: general
+type: log
+description: Project progress logs we post on AGH CoIn Discord.
+---
+
 ___
 
 *December 2023*

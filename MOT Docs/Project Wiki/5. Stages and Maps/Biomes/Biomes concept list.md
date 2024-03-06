@@ -1,6 +1,7 @@
 ---
 tags: stages_maps
 type: biomes, concept
+description: "A concept list consisting of ideas and first descriptions of biomes to exist in our in-game maps."
 ---
 ___
 

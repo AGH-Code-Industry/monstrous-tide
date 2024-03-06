@@ -1,3 +1,9 @@
+---
+tags: items
+type: weapons, general
+description: "A general view of what is a weapon in our game, how it should work, etc."
+---
+
 ___
 
 >This document outlines how weapons shall be implemented, what they will contain, how they should progress and everything else needed at the start.

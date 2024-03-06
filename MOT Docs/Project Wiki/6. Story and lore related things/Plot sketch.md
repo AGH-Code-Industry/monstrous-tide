@@ -1,6 +1,7 @@
 ---
 tags: story_lore
 type: outline
+description: A general outline of story and lore idea.
 ---
 ___
 

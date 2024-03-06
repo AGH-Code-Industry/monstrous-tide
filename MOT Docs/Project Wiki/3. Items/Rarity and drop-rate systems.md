@@ -1,3 +1,9 @@
+---
+tags: items
+type: rarity
+description: "A set of rules and general overview of rarity system for our items and upgrades."
+---
+
 ___
 
 # General

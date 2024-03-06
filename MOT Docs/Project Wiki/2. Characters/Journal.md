@@ -1,3 +1,9 @@
+---
+tags: characters
+type: journal
+description: A sketch regarding journal, its structure and other silly things.
+---
+
 ___
 *Name to be discussed and changed.*
 

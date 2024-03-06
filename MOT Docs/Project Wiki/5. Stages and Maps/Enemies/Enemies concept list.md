@@ -1,3 +1,9 @@
+---
+tags: stages_maps
+type: enemies, concept
+description: "A concept list consisting of ideas to implement, change or trash regarding eney units."
+---
+
 ___
 
 >This is a concept set of enemies to include in our game. Naturally, it is subject to change and our graphic team says the last words here.

@@ -1,3 +1,9 @@
+---
+tags: general
+type: project
+description: Links to our tools, workspaces etc. in daily use.
+---
+
 ___
 
 **AGH Code Industry:**
