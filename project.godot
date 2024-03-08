@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Monstrous-tide-game"
-run/main_scene="res://Assets/World/world.tscn"
+run/main_scene="res://Assets/MenuInterfaces/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
