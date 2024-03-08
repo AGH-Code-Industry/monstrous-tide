@@ -1,10 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://drtrmhbyxlfyo"]
+[gd_scene load_steps=2 format=3 uid="uid://cem5q7ke8gtn5"]
 
-[ext_resource type="Script" path="res://Assets/MenuInterfaces/PauseMenu.gd" id="1_dt4ce"]
+[ext_resource type="Script" path="res://Assets/MenuInterfaces/MainMenu.gd" id="1_3qhmq"]
 
-[node name="PauseMenu" type="CanvasLayer"]
-process_mode = 3
-script = ExtResource("1_dt4ce")
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_3qhmq")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -30,20 +29,20 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
-text = "Pause"
+text = "Monstrous Tide"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Resume" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Play" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "Resume"
+text = "Play"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 texture_filter = 1
@@ -62,6 +61,5 @@ size_flags_vertical = 6
 text = "Exit
 "
 
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

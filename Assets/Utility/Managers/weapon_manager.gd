@@ -5,9 +5,13 @@ var weapons : Array[Weapon] = []
 # Used for choosing random weapon as a reward
 var all_possible_weapons : Array[Weapon] = []
 
-@onready var weapons_node = get_tree().get_first_node_in_group("player").get_node("Weapons")
+var weapons_node
 
 func _ready() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if player == null:
+		return
+	weapons_node = get_tree().get_first_node_in_group("player").get_node("Weapons")
 	# Get weapons player started with
 	for node in weapons_node.get_children():
 		if typeof(node) == typeof(Weapon):
