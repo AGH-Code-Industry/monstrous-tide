@@ -38,6 +38,7 @@ project/assembly_name="Monstrous-tide-game"
 [gui]
 
 theme/custom="res://Assets/Resources/Theme.tres"
+theme/custom_font="res://Assets/Fonts/EBGaramond-VariableFont_wght.ttf"
 
 [input]
 
