@@ -81,16 +81,14 @@ point_count = 3
 curve = SubResource("Curve_68jyw")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e8drl"]
+particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 10.43
-particle_flag_disable_z = true
 direction = Vector3(0.5, 0, 0)
 spread = 180.0
-gravity = Vector3(0, 98, 0)
 initial_velocity_min = 50.0
 initial_velocity_max = 50.0
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+gravity = Vector3(0, 98, 0)
 scale_min = 1.5
 scale_max = 2.5
 scale_curve = SubResource("CurveTexture_18x0n")
@@ -151,7 +149,7 @@ process_material = SubResource("ParticleProcessMaterial_e8drl")
 lifetime = 0.3
 explosiveness = 1.0
 
-[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
+[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 [connection signal="update_health" from="HitBox" to="." method="_on_hit_box_update_health"]
 
 [editable path="DamageBox"]
