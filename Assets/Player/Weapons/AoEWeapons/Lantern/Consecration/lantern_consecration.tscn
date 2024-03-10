@@ -1,0 +1,80 @@
+[gd_scene load_steps=16 format=3 uid="uid://bhm83vmdimo1k"]
+
+[ext_resource type="PackedScene" uid="uid://wtgjafbeo284" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/consecration_circle.tscn" id="1_0nj81"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lantern_consecration.gd" id="1_j5tdw"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_uf4se"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_hfvhh"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="5_7o5ss"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="6_e2ka0"]
+
+[sub_resource type="Resource" id="Resource_kix70"]
+script = ExtResource("2_uf4se")
+type = 105
+flat = 0.5
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ttple"]
+script = ExtResource("2_uf4se")
+type = 110
+flat = 2.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_jv137"]
+script = ExtResource("2_uf4se")
+type = 115
+flat = 3.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_atsve"]
+script = ExtResource("2_uf4se")
+type = 100
+flat = 1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_nkv85"]
+script = ExtResource("3_hfvhh")
+data = Array[ExtResource("2_uf4se")]([SubResource("Resource_kix70"), SubResource("Resource_ttple"), SubResource("Resource_jv137"), SubResource("Resource_atsve")])
+
+[sub_resource type="Resource" id="Resource_iffdi"]
+script = ExtResource("2_uf4se")
+type = 110
+flat = 1.0
+increased = 50.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_yycvy"]
+script = ExtResource("6_e2ka0")
+stats = Array[ExtResource("2_uf4se")]([SubResource("Resource_iffdi")])
+name = "Consecration Range"
+description = "Consecration Range"
+
+[sub_resource type="Resource" id="Resource_6e8ql"]
+script = ExtResource("5_7o5ss")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_yycvy")])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ukjts"]
+radius = 205.197
+
+[node name="LanternConsecration" type="Node2D"]
+script = ExtResource("1_j5tdw")
+consecration_circle = ExtResource("1_0nj81")
+stat_set = SubResource("Resource_nkv85")
+possible_upgrades = Array[ExtResource("5_7o5ss")]([SubResource("Resource_6e8ql")])
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_ukjts")
+
+[node name="AttackSpeedTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="CircleHolder" type="Node" parent="."]
+
+[connection signal="timeout" from="AttackSpeedTimer" to="." method="_on_attack_speed_timer_timeout"]

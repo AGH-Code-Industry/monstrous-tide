@@ -2,14 +2,17 @@
 extends: Node2D
 ---
 
-This is base class all weapons will derive from
-## functions/methods/etc.:
+This is base class all weapons will inherit from
+## methods:
 
 Return Value Type|Name and arguments|Description
 -|-|-
-`void`|add_stats(incoming_stats: Array[Stat])|Adds stats to current stat_set
-`?`|get_available_upgrades()|Used to get all the upgrades that can be applied to this weapon with regard to their tier (eg, if you have one tier 4 upgrade you won't be able to get another tier 4 upgrade)
-## fields/variables/etc.:
+`void`|add_stats(incoming_stats: Array\[[[Stat]]\])|Adds stats to current stat_set
+`void`|update_stats()|Gets called at the end of add_stats() function. Every weapon should overload it so it overwrite stats of weapon 
+Array\[[[WeaponUpgrade]]\]|get_available_upgrades()|Used to get all the upgrades that can be applied to this weapon with regard to their tier (eg, if you have one tier 4 upgrade you won't be able to get another tier 4 upgrade)
+`void`|_ready() | All possible_upgrades and upgrades parameters are read from constants file and set here
+
+## fields:
 
 Name|type|Description
 -|-|-

@@ -1,6 +1,7 @@
-[gd_scene load_steps=41 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=35 format=3 uid="uid://b11rms50550mc"]
 
-[ext_resource type="Texture2D" uid="uid://ds0qc5lc33068" path="res://Assets/World/Background.png" id="1_l8utc"]
+[ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
+[ext_resource type="Texture2D" uid="uid://cyk70kc581cr8" path="res://Assets/Tutorial/dirt_full_new.png" id="1_taj5e"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
 [ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/Spawner/enemy_spawner.tscn" id="3_qgeh4"]
 [ext_resource type="PackedScene" uid="uid://bgjjl2mj65qgu" path="res://Assets/Enemies/enemy.tscn" id="3_whrsd"]
@@ -15,17 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://30vfjie78f7k" path="res://Assets/Enemies/kobold_strong.tscn" id="5_gn26j"]
 [ext_resource type="PackedScene" uid="uid://rd2hgmivn7i3" path="res://Assets/World/Environment/Scen/cemetery_lamp.tscn" id="5_x2t4u"]
 [ext_resource type="PackedScene" uid="uid://bacoytneoofs4" path="res://Assets/World/Environment/Scen/tombstone_1.tscn" id="6_n6q55"]
-[ext_resource type="PackedScene" uid="uid://dgwmrl6lbmw7e" path="res://Assets/World/Environment/Scen/bush_1.tscn" id="7_f80ws"]
-[ext_resource type="PackedScene" uid="uid://bvjgwu8scc44m" path="res://Assets/World/Environment/Scen/fenceraven.tscn" id="7_gfx4j"]
-[ext_resource type="PackedScene" uid="uid://bx6ehnql65u7l" path="res://Assets/World/Environment/Scen/gate.tscn" id="7_uvggv"]
 [ext_resource type="PackedScene" uid="uid://d2p1762b268iq" path="res://Assets/World/Environment/Scen/break_tombstone.tscn" id="8_1r5k2"]
-[ext_resource type="PackedScene" uid="uid://dx008vftxftcy" path="res://Assets/World/Environment/Scen/bush_2.tscn" id="8_jxo3s"]
 [ext_resource type="PackedScene" uid="uid://detle2uijbg6f" path="res://Assets/World/Environment/Scen/cande_2.tscn" id="10_wltt3"]
 [ext_resource type="PackedScene" uid="uid://mx7howeeqejb" path="res://Assets/World/Environment/Scen/stone_2f.tscn" id="14_ql30f"]
 [ext_resource type="PackedScene" uid="uid://cj3l1cpah21so" path="res://Assets/World/Environment/Scen/stone_2c.tscn" id="15_s4wxv"]
-[ext_resource type="PackedScene" uid="uid://t15kclcgsht0" path="res://Assets/World/Environment/Scen/tree_1.tscn" id="17_0rcrt"]
 [ext_resource type="PackedScene" uid="uid://cctao6a7cpn7i" path="res://Assets/World/Environment/Scen/stone_2d.tscn" id="17_tff1i"]
-[ext_resource type="PackedScene" uid="uid://cwhtp8uen12rv" path="res://Assets/World/Environment/Scen/tree_2.tscn" id="18_5vbl8"]
 [ext_resource type="PackedScene" uid="uid://c23nv1wariral" path="res://Assets/World/Environment/Scen/stone_2e.tscn" id="18_gh0ig"]
 [ext_resource type="PackedScene" uid="uid://bvawrv4cvkx6q" path="res://Assets/Utility/Managers/experience_manager.tscn" id="22_c4rh6"]
 [ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
@@ -36,8 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/LvlUps.tscn" id="26_ntv7e"]
 [ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="26_sy4rw"]
 [ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="27_nkgxi"]
-[ext_resource type="PackedScene" uid="uid://cf114iew8wlfx" path="res://Assets/Utility/UI/Equipment/equipment.tscn" id="28_xexut"]
-[ext_resource type="PackedScene" uid="uid://okawxyib3ihc" path="res://Assets/World/Environment/Scen/tombstone_5.tscn" id="35_xx8o3"]
+[ext_resource type="PackedScene" uid="uid://b3ak5hh8jtrh8" path="res://Assets/Utility/Managers/weapon_manager.tscn" id="29_sylwc"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
 script = ExtResource("4_f0yyc")
@@ -56,13 +50,15 @@ enemy_num = 1
 enemy_spawn_delay = 5
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_na82v")
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -1
 texture_filter = 2
 texture_repeat = 2
-position = Vector2(-149, 179)
+position = Vector2(115, -27)
 scale = Vector2(1.38095, 1.38095)
-texture = ExtResource("1_l8utc")
+texture = ExtResource("1_taj5e")
 region_enabled = true
 region_rect = Rect2(0, 0, 4000, 4000)
 
@@ -75,71 +71,125 @@ unique_name_in_owner = true
 
 [node name="Environment" type="Node" parent="."]
 
-[node name="Fenceraven" parent="Environment" instance=ExtResource("7_gfx4j")]
-position = Vector2(-593, 245)
-
-[node name="Bush_1" parent="Environment" instance=ExtResource("7_f80ws")]
-position = Vector2(-510, 182)
-
-[node name="Bush_2" parent="Environment" instance=ExtResource("8_jxo3s")]
-position = Vector2(-320, 180)
-
-[node name="Gate" parent="Environment" instance=ExtResource("7_uvggv")]
-position = Vector2(-712, 12)
+[node name="Cemetery_lamp3" parent="Environment" instance=ExtResource("5_x2t4u")]
+position = Vector2(232, 246)
 
 [node name="Tombstone_1" parent="Environment" instance=ExtResource("6_n6q55")]
-position = Vector2(-516, -202)
+position = Vector2(-455, -232)
 
 [node name="Tombstone_2" parent="Environment" instance=ExtResource("4_66oc4")]
-position = Vector2(-376, -180)
+position = Vector2(-165, -257)
 
 [node name="Tombstone_3" parent="Environment" instance=ExtResource("4_fyibc")]
-position = Vector2(-389, -13)
+position = Vector2(-92, -307)
 
 [node name="Tombstone_4" parent="Environment" instance=ExtResource("4_bn4cu")]
-position = Vector2(-552, 23)
-
-[node name="Tombstone_5" parent="Environment" instance=ExtResource("35_xx8o3")]
-position = Vector2(-411, 152)
-
-[node name="Stone_1" parent="Environment" instance=ExtResource("4_444hy")]
-position = Vector2(-1113, -394)
-
-[node name="Stone_2a" parent="Environment" instance=ExtResource("4_e5hdm")]
-position = Vector2(-1172, -152)
-
-[node name="Stone_2b" parent="Environment" instance=ExtResource("4_xoi13")]
-position = Vector2(-1092, -150)
-
-[node name="Stone_2c" parent="Environment" instance=ExtResource("15_s4wxv")]
-position = Vector2(-831, -148)
-
-[node name="Stone_2d" parent="Environment" instance=ExtResource("17_tff1i")]
-position = Vector2(-756, -142)
-
-[node name="Stone_2e" parent="Environment" instance=ExtResource("18_gh0ig")]
-position = Vector2(-698, -136)
-
-[node name="Stone_2f" parent="Environment" instance=ExtResource("14_ql30f")]
-position = Vector2(-613, -139)
-
-[node name="Cande_2" parent="Environment" instance=ExtResource("10_wltt3")]
-position = Vector2(-1023, -149)
-
-[node name="Cemetery_lamp" parent="Environment" instance=ExtResource("5_x2t4u")]
-position = Vector2(-949, -451)
+position = Vector2(-415, -311)
 
 [node name="Break_tombstone" parent="Environment" instance=ExtResource("8_1r5k2")]
-position = Vector2(-950, -140)
+position = Vector2(-325, -372)
+
+[node name="Cemetery_lamp" parent="Environment" instance=ExtResource("5_x2t4u")]
+position = Vector2(-430, -96)
+
+[node name="Cemetery_lamp2" parent="Environment" instance=ExtResource("5_x2t4u")]
+position = Vector2(-183, -96)
+
+[node name="Stone_1" parent="Environment" instance=ExtResource("4_444hy")]
+position = Vector2(163, -102)
+
+[node name="Stone_2a" parent="Environment" instance=ExtResource("4_e5hdm")]
+position = Vector2(-208, 108)
+
+[node name="Cande_2" parent="Environment" instance=ExtResource("10_wltt3")]
+position = Vector2(-482, -202)
 
 [node name="Cande_1" parent="Environment" instance=ExtResource("5_b6ibn")]
-position = Vector2(-1227, -151)
+position = Vector2(-366, -290)
 
-[node name="Tree_2" parent="Environment" instance=ExtResource("18_5vbl8")]
-position = Vector2(-305, -561)
+[node name="Cande_3" parent="Environment" instance=ExtResource("5_b6ibn")]
+position = Vector2(-194, -229)
 
-[node name="Tree_1" parent="Environment" instance=ExtResource("17_0rcrt")]
-position = Vector2(-669, -557)
+[node name="Cande_4" parent="Environment" instance=ExtResource("10_wltt3")]
+position = Vector2(-73, -271)
+
+[node name="Node2D" parent="Environment" instance=ExtResource("14_ql30f")]
+position = Vector2(-293, 152)
+
+[node name="Stone_2c" parent="Environment" instance=ExtResource("15_s4wxv")]
+position = Vector2(462, -120)
+
+[node name="Stone_2b" parent="Environment" instance=ExtResource("4_xoi13")]
+position = Vector2(-191, 159)
+
+[node name="Break_tombstone2" parent="Environment" instance=ExtResource("8_1r5k2")]
+position = Vector2(80, -308)
+
+[node name="Cemetery_lamp4" parent="Environment" instance=ExtResource("5_x2t4u")]
+position = Vector2(376, -205)
+
+[node name="Stone_2d" parent="Environment" instance=ExtResource("17_tff1i")]
+position = Vector2(196, -216)
+
+[node name="Tombstone_5" parent="Environment" instance=ExtResource("4_fyibc")]
+position = Vector2(-348, 106)
+
+[node name="Tombstone_6" parent="Environment" instance=ExtResource("4_bn4cu")]
+position = Vector2(406, 327)
+
+[node name="Tombstone_7" parent="Environment" instance=ExtResource("4_66oc4")]
+position = Vector2(519, 131)
+
+[node name="Tombstone_8" parent="Environment" instance=ExtResource("4_bn4cu")]
+position = Vector2(231, 98)
+
+[node name="Node2D2" parent="Environment" instance=ExtResource("14_ql30f")]
+position = Vector2(-528, 243)
+
+[node name="Stone_2" parent="Environment" instance=ExtResource("4_444hy")]
+position = Vector2(-25, 316)
+
+[node name="Stone_3" parent="Environment" instance=ExtResource("4_444hy")]
+position = Vector2(653, -23)
+
+[node name="Stone_2c2" parent="Environment" instance=ExtResource("15_s4wxv")]
+position = Vector2(-593, 22)
+
+[node name="Stone_2c3" parent="Environment" instance=ExtResource("15_s4wxv")]
+position = Vector2(-268, 208)
+
+[node name="Stone_2a2" parent="Environment" instance=ExtResource("4_e5hdm")]
+position = Vector2(563, 264)
+
+[node name="Break_tombstone3" parent="Environment" instance=ExtResource("8_1r5k2")]
+position = Vector2(-553, -83)
+
+[node name="Stone_2b2" parent="Environment" instance=ExtResource("4_xoi13")]
+position = Vector2(468, 232)
+
+[node name="Stone_2e" parent="Environment" instance=ExtResource("18_gh0ig")]
+position = Vector2(504, -203)
+
+[node name="Stone_2d2" parent="Environment" instance=ExtResource("17_tff1i")]
+position = Vector2(563, 222)
+
+[node name="Node2D3" parent="Environment" instance=ExtResource("14_ql30f")]
+position = Vector2(293, -282)
+
+[node name="Cande_5" parent="Environment" instance=ExtResource("10_wltt3")]
+position = Vector2(506, 170)
+
+[node name="Cande_6" parent="Environment" instance=ExtResource("5_b6ibn")]
+position = Vector2(396, 341)
+
+[node name="Cande_7" parent="Environment" instance=ExtResource("10_wltt3")]
+position = Vector2(-367, 129)
+
+[node name="Cande_8" parent="Environment" instance=ExtResource("5_b6ibn")]
+position = Vector2(222, 117)
+
+[node name="Cande_9" parent="Environment" instance=ExtResource("10_wltt3")]
+position = Vector2(-553, -100)
 
 [node name="ItemsLayer" type="Node" parent="." groups=["items"]]
 
@@ -205,14 +255,13 @@ position = Vector2(146, 95)
 
 [node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
 
-[node name="Equipment" parent="." instance=ExtResource("28_xexut")]
-offset = Vector2(0, 8)
-transform = Transform2D(1, 0, 0, 1, 0, 8)
+[node name="ExperienceManager" parent="." node_paths=PackedStringArray("WeaponManager") instance=ExtResource("22_c4rh6")]
+WeaponManager = NodePath("../WeaponManager")
 
-[node name="ExperienceManager" parent="." instance=ExtResource("22_c4rh6")]
+[node name="WeaponManager" parent="." instance=ExtResource("29_sylwc")]
 
 [node name="ExperienceCollectPickup" parent="." instance=ExtResource("27_nkgxi")]
-position = Vector2(-104, 1)
+position = Vector2(-26, -9)
 
 [node name="MovementSpeedpickup" parent="." instance=ExtResource("25_3o6nv")]
 position = Vector2(-31, 51)
