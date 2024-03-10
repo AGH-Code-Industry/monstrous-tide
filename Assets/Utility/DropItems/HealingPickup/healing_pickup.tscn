@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dp5lugnkwinpb"]
 
 [ext_resource type="Script" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.gd" id="1_38jnv"]
-[ext_resource type="Texture2D" uid="uid://b1vvuibkmi0mt" path="res://Assets/Utility/Texture/Potion_02.png" id="2_na87u"]
+[ext_resource type="Texture2D" uid="uid://b1vvuibkmi0mt" path="res://Assets/Utility/DropItems/Texture/Potion_02.png" id="2_na87u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra4p0"]
 size = Vector2(24, 24)

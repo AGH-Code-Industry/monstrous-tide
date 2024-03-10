@@ -5,7 +5,7 @@
 [node name="Break_tombstone" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.07, 0.07)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_mupkm")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]

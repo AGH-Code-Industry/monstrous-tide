@@ -8,7 +8,7 @@ size = Vector2(885.714, 1428.57)
 [node name="Tombstone_2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_s378b")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]

@@ -5,11 +5,11 @@
 [node name="Tombstone_5" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_0co8j")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
 build_mode = 1
-polygon = PackedVector2Array(-100, 10, -310, 300, -310, 580, 310, 580, 300, 280, 100, 10)
+polygon = PackedVector2Array(-80, -150, -310, 300, -310, 580, 310, 580, 300, 280, 70, -150, 170, -380, 0, -590, -180, -390)

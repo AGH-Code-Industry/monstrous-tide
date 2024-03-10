@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cjgk125f1ct6o" path="res://Assets/World/Environment/Texture/Bush_2.png" id="1_bos06"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aasv6"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2gv6"]
+radius = 16.8329
+height = 67.4417
 
 [node name="Bush_2" type="Node2D"]
 
@@ -13,6 +15,6 @@ texture = ExtResource("1_bos06")
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(0, 230)
+position = Vector2(0, 20)
 scale = Vector2(13.6637, 8.60002)
-shape = SubResource("RectangleShape2D_aasv6")
+shape = SubResource("CapsuleShape2D_s2gv6")

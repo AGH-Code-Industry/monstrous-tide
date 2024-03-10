@@ -5,7 +5,7 @@
 [node name="Tree_1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_8rjae")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
@@ -13,4 +13,4 @@ texture = ExtResource("1_8rjae")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(4, 0)
 build_mode = 1
-polygon = PackedVector2Array(-246, 378, -86, 388, -10, 408, 84, 398, 136, 390, 196, 370, 276, 338, 216, 296, 104, 254, 82, 172, 100, 58, -108, 58, -76, 156, -82, 254, -166, 252, -236, 276, -276, 334)
+polygon = PackedVector2Array(-246, 378, -86, 388, -10, 408, 84, 398, 136, 390, 196, 370, 276, 338, 216, 296, 104, 254, 82, 172, 371, -60, 291, -325, 1, -405, -254, -325, -374, -60, -76, 156, -82, 254, -166, 252, -236, 276, -276, 334)

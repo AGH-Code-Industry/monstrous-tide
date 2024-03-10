@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c36cdmngcpuic"]
 
 [ext_resource type="PackedScene" uid="uid://belgkl4t1s14r" path="res://Assets/Utility/DropItems/Crystals/ExperienceCrystal.tscn" id="1_yyc7f"]
-[ext_resource type="Texture2D" uid="uid://c3xw1x3cwrg7d" path="res://Assets/Utility/Texture/Gem_2.png" id="2_wvm0d"]
+[ext_resource type="Texture2D" uid="uid://c3xw1x3cwrg7d" path="res://Assets/Utility/DropItems/Texture/Gem_2.png" id="2_wvm0d"]
 
 [node name="ExperienceCrystal" instance=ExtResource("1_yyc7f")]
 experience_points = 5
