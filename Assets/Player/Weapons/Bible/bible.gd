@@ -4,26 +4,12 @@ extends Weapon
 @export var radius : float = 60
 @export var lifetime : float = 2
 
-# Values set by statset
-#var projectile_number : int = 3
-#var projectile_size : float = 1.0
-#var damage : float = 1 
-#var cooldown : float = 3
-
 var current_projectiles = []
 
 func _ready():
 	super()
 	
 	start_cycle()
-	
-# Assumed that statset returns value to set xD
-func update_stats():
-	return
-	#damage = stat_set.get_stat_value(Stat.Type.DAMAGE)
-	#cooldown = stat_set.get_stat_value(Stat.Type.ATTACKSPEED)
-	#projectile_size = stat_set.get_stat_value(Stat.Type.DAMAGERADIUS)
-	#projectile_number = stat_set.get_stat_value(Stat.Type.DODGE) # DEBUG ONLY
 	
 func start_cycle():
 	instantiate_projectiles()
