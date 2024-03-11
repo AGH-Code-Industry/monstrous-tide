@@ -2,6 +2,7 @@
 tags: items
 type: weapons, description
 description: "A description of weapon *Menacing Lantern* and everything related to it."
+upgrade: base
 ---
 
 ___
@@ -13,23 +14,15 @@ ___
 >[!tip]- Important notes
 >This weapon follows: introduced [[Damage calculations|damage calculations formulae]], introduced [[Health fluctuations|health changing schemes]], introduced current [[General statistics outline|stat system]] (which *may be* up to change) and other **important** things introduced in this documentation. Please, be wary of them.
 
-*Its first concept is introduced [[Weapons concept list|here]]*.
-
- ***Menacing Lantern*** - one of first weapons player may consider good:
-	- a levitating lantern that follows player's position;
-	- periodically deals medium AOE damage to surrounding opponents;
-	- also, periodically heals player by a set percentage of their max health;
-	- may be picked up from fallen [[Enemies concept list|vampire mages]];
-	- *some lore related description will drop soon*.
 # General
 
 *Menacing Lantern* is one of the weapons player may consider good that is also an "early-game" one.
 
 ### Weapon's tags:
 
-For rules and definitions, see [[Weapon tags]].
+For rules and definitions, see [[Weapon tags and types|this file (tba)]].
 
-*tba*
+```tba```
 # Combat info
 
 ### Initial form:
@@ -39,16 +32,15 @@ The *Lantern* is considered an AOE weapon - it periodically deals AOE damage to 
 - AOE radius: medium[^1];
 - it attacks *every single opponent* in area specified by AOE radius;
 
+[^1]: It depends on what *medium* means in Godot. 
+
 # Weapon's progression
 
 ### Suggested progress line:
 
->[!info]- Rarity systems clarification
->I suggest *two different rarity systems*, which need to be approved or denied by the team. Those include [[Rarity and drop-rate systems]] and [[6-tier rarity system sketch]]. As for now, I will drop two suggestions regarding this weapon's progression.
-
 *Values in range, f.e. 1-10%, mean it is a single, randomly chosen value between 1 and 10%.*
 
-Available upgrades for the *Menacing Lantern* , grouped by rarity systems and their tiers:
+Available upgrades for the *Menacing Lantern* :
 ### 4-tier:
 
 - ***Basic:*** +1-10% *DMG*; +1-15% *ATKSpeed*; +2-8% *HPSteal*; +2-10% *AOE*; +5-15% *MovSpeed*; +2-8% *Dodge*; +5-15% *Pickup*;
@@ -61,29 +53,12 @@ Available upgrades for the *Menacing Lantern* , grouped by rarity systems and th
 		- "Whenever an enemy is defeated with this weapon, player obtains incoming damage immunity for 10 seconds, +50% _HPSteal_ and +50% _Multi_. May only occur every 60 seconds."
 		- "This weapon has 45% chance to heal the player by 5% of their _MaxHP_ every 5 seconds.";
 - ***Mythic:*** *follows rules mentioned [[Rarity and drop-rate systems#Mythic|here]]!*
-	- **Light of Purification** *(tba)*
+	- **[[Sands of Buried]]**
 	- **Blinding Guide** *(tba)*
-	- additional stats are taken from the same pool as the previous ones.
-
-### 6-tier:
-
-- ***Basic:*** +2-10% *ATKSpeed*; +1-15% *Pickup*; +1-15% *MovSpeed*; +2-10% *AOE*; +1-15% *Multi*; +2-10% *DMG*;
-- ***Classic:*** +0.5-9% *Dodge*; +0.2-5% *CritChance*; +2-10% *CritDMG*; +10-25% *DMG*; +8-20% *AOE*; +2-10% *HPSteal*; +8-20% *Multi*;
-- ***Advanced:*** +10-20% *Dodge*; +8-15% *CritChance*; +20-55% *DMG*; +50-75% *ATKSpeed*; +25-65% *AOE*; +25-35% *CritDMG*; 
-- ***Exotic:***
-	- *Stat-related:*+100-150% *DMG*; +15-35% *CritChance*; +45-75% *CritDMG*; +20-45% *HPSteal*; +100-150% *AOE*;
-	- *Mechanics:*
-		- "Whenever an enemy is hit by an attack from this weapon, they are thrown away from the player for a distance of 50% of the weapon's _AOE_ stat. Occurs every 1 second.";
-		- "If this weapon scores a critical hit, player gains: +10% _Pickup_, +10% _HPRegen_ and +10% _MovSpeed_ for 10 seconds. May only occur every 10 seconds."; 
-- ***Legendary:***
-	- "Whenever an enemy is defeated with this weapon, player obtains incoming damage immunity for 10 seconds, +50% _HPSteal_ and +50% _Multi_. May only occur every 60 seconds."
-	- "If this weapon's AoE attack deals damage to at least 10 enemies at once, this weapon gains +25% *CritChance*, +100% *AOE*, +100% *ATKSpeed* and +20% *DMG* bonuses for 5 seconds. May only occur if the current character is above 50% their *MaxHP* and every 15 seconds."
-- ***Mythic:*** *follows rules mentioned [[6-tier rarity system sketch#Mythic|here]]!*
-	- **Light of Purification** *(tba)*
-	- **Blinding Guide** *(tba)*
+	- **[[Consecration]]**
 	- additional stats are taken from the same pool as the previous ones.
 
 
-# Lore
+# *[[Journal]]* entry
 
-*tba*
+*A lantern found in the oldest of dungeons - the only source of light that could help me out of this never-ending maze they locked me inside... Once I picked it up, it immediately began enlightening everything with vibrancy: the stones, the walls and also my thoughts. With this still and yet alive ancestral creation, I have never felt more in-power and confident...*

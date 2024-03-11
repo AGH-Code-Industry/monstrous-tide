@@ -3,11 +3,20 @@
 		{"id":"18f280f7e1f931ab","type":"text","text":"# Start here!\n\nThis is our main guide to everything we have so far. If you have any questions/suggestions/rants, contact documentation team :)\n\n***If you're here for the first time, we encourage you to check out [[About this vault|this file]] firstly.***\n\n*PS:* You can double click the note's title to get moved to it and come back with arrow at the top bar.","x":320,"y":-1800,"width":419,"height":320,"color":"4"},
 		{"id":"39164f158ef2e7bb","type":"file","file":"Project Wiki/Tables of contents.md","x":320,"y":-800,"width":419,"height":240,"color":"3"},
 		{"id":"cc03e71d3b6d4702","type":"text","text":"# How to use canvas?\n___\n\n*Here is a basic guide*:\n\n1. Disable *read-only* mode by clicking on the *lock* at the top of right bar in this window - it should change to a *settings* icon.\n2. To add a *card* (which is a Markdown file seen only by this canvas) right click and select 'Add card' - syntax stays the same.\n3. To link a existing file from this vault right click and select 'Add note from vault' (the same way you can add images).\n4. To connect nodes with arrows find a dot on their frames, click, hold and drag an arrow to some other node.\n\n***At the end of work***, please, lock the canvas to *read-only* mode.","x":-480,"y":-1600,"width":358,"height":620,"color":"3"},
-		{"id":"224ae5deca406ea0","type":"text","text":"# CODE DOCS","x":-496,"y":-367,"width":250,"height":60,"color":"5"},
-		{"id":"38b33eedf2f02da6","type":"text","text":"# PROJECT WIKI DOCS","x":1280,"y":-367,"width":363,"height":50,"color":"6"},
-		{"id":"68814c6e560466fe","type":"text","text":"***TBC***","x":-496,"y":-200,"width":250,"height":60},
-		{"id":"38e07d1e4915a04e","type":"text","text":"***TBC***","x":1337,"y":-230,"width":250,"height":60},
-		{"id":"bdfaea955d0ab1ce","x":1462,"y":-2040,"width":400,"height":400,"color":"1","type":"file","file":"Project Wiki/Music Moodboard.canvas"}
+		{"id":"bdfaea955d0ab1ce","type":"file","file":"Project Wiki/Music Moodboard.canvas","x":1462,"y":-2040,"width":400,"height":400,"color":"1"},
+		{"id":"38b33eedf2f02da6","type":"text","text":"# PROJECT WIKI DOCS","x":1299,"y":73,"width":363,"height":50,"color":"6"},
+		{"id":"224ae5deca406ea0","type":"text","text":"# CODE DOCS","x":-480,"y":73,"width":250,"height":60,"color":"5"},
+		{"id":"68814c6e560466fe","type":"text","text":"***TBC***","x":-480,"y":240,"width":250,"height":60},
+		{"id":"980a54d8201335d2","type":"file","file":"Project Wiki/2. Characters/Characters table of contents.md","x":2640,"y":-583,"width":400,"height":206,"color":"6"},
+		{"id":"3af939c6dfd2f409","type":"file","file":"Project Wiki/1. General/General table of contents.md","x":1862,"y":-743,"width":400,"height":160,"color":"6"},
+		{"id":"fbbfab75aef46090","type":"file","file":"Project Wiki/3. Items/Items table of contents.md","x":3040,"y":-178,"width":400,"height":150,"color":"6"},
+		{"id":"51d291a5ae022aa9","x":3800,"y":-480,"width":400,"height":195,"type":"file","file":"Project Wiki/3. Items/Weapons/Weapons list.md"},
+		{"id":"ea0e71cbcdf512d4","x":3800,"y":-135,"width":400,"height":203,"type":"file","file":"Project Wiki/3. Items/Weapons/Weapons concept list.md"},
+		{"id":"ce44f63ae2e37833","x":2720,"y":240,"width":400,"height":157,"color":"6","type":"file","file":"Project Wiki/4. Combat system/Combat table of contents.md"},
+		{"id":"28ae308595849616","x":2262,"y":640,"width":400,"height":160,"color":"6","type":"file","file":"Project Wiki/5. Stages and Maps/Stages table of contents.md"},
+		{"id":"1fd6e49a23fa743d","x":2920,"y":993,"width":400,"height":233,"type":"file","file":"Project Wiki/5. Stages and Maps/Enemies/Enemies list.md"},
+		{"id":"c992c07f050f221e","x":2920,"y":586,"width":400,"height":247,"type":"file","file":"Project Wiki/5. Stages and Maps/Biomes/Biomes list.md"},
+		{"id":"632c03ce0149cab9","x":1920,"y":993,"width":400,"height":146,"color":"6","type":"file","file":"Project Wiki/6. Story and lore related things/Story table of contents.md"}
 	],
 	"edges":[
 		{"id":"636cdcf3f1d8fca0","fromNode":"18f280f7e1f931ab","fromSide":"bottom","toNode":"39164f158ef2e7bb","toSide":"top"},
@@ -15,7 +24,16 @@
 		{"id":"5b6a80ccc5f8c34d","fromNode":"39164f158ef2e7bb","fromSide":"bottom","toNode":"224ae5deca406ea0","toSide":"top"},
 		{"id":"ed1a3d8148fdb92c","fromNode":"39164f158ef2e7bb","fromSide":"bottom","toNode":"38b33eedf2f02da6","toSide":"top"},
 		{"id":"1b1686232655af78","fromNode":"224ae5deca406ea0","fromSide":"bottom","toNode":"68814c6e560466fe","toSide":"top"},
-		{"id":"e7dd60f0b318549f","fromNode":"38b33eedf2f02da6","fromSide":"bottom","toNode":"38e07d1e4915a04e","toSide":"top"},
-		{"id":"f1a426c6980a17c0","fromNode":"18f280f7e1f931ab","fromSide":"right","toNode":"bdfaea955d0ab1ce","toSide":"left","color":"1","label":"MUSIC MOODBOARD IS HERE!"}
+		{"id":"f1a426c6980a17c0","fromNode":"18f280f7e1f931ab","fromSide":"right","toNode":"bdfaea955d0ab1ce","toSide":"left","color":"1","label":"MUSIC MOODBOARD IS HERE!"},
+		{"id":"a60284f1ca972e58","fromNode":"38b33eedf2f02da6","fromSide":"right","toNode":"3af939c6dfd2f409","toSide":"left","label":"GENERAL VAULT AND PROJECT INFO"},
+		{"id":"80b7c0904af6ebfe","fromNode":"38b33eedf2f02da6","fromSide":"right","toNode":"980a54d8201335d2","toSide":"left","label":"CHARACTERS RELATED"},
+		{"id":"080af497cf28dacf","fromNode":"38b33eedf2f02da6","fromSide":"right","toNode":"fbbfab75aef46090","toSide":"left","label":"ITEMS RELATED"},
+		{"id":"df1eb174cf6b6d6a","fromNode":"fbbfab75aef46090","fromSide":"right","toNode":"51d291a5ae022aa9","toSide":"left"},
+		{"id":"7676c2d2e16abcbe","fromNode":"fbbfab75aef46090","fromSide":"right","toNode":"ea0e71cbcdf512d4","toSide":"left"},
+		{"id":"f673543e7a000a96","fromNode":"38b33eedf2f02da6","fromSide":"right","toNode":"ce44f63ae2e37833","toSide":"left","label":"COMBAT RELATED"},
+		{"id":"3027a4d9ecb8de3f","fromNode":"38b33eedf2f02da6","fromSide":"right","toNode":"28ae308595849616","toSide":"left","label":"STAGES AND MAPS RELATED"},
+		{"id":"e9577cf92e6f0fc7","fromNode":"28ae308595849616","fromSide":"right","toNode":"c992c07f050f221e","toSide":"left"},
+		{"id":"7f9959b17f432078","fromNode":"28ae308595849616","fromSide":"right","toNode":"1fd6e49a23fa743d","toSide":"left"},
+		{"id":"e4153cf0f47413db","fromNode":"38b33eedf2f02da6","fromSide":"right","toNode":"632c03ce0149cab9","toSide":"left","label":"STORY AND LORE RELATED"}
 	]
 }
