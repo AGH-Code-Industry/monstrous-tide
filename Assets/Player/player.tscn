@@ -604,7 +604,6 @@ script = ExtResource("1_jqw0g")
 stat_set = SubResource("Resource_acek7")
 
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
-process_mode = 4
 visible = false
 attack_speed = 0.5
 damage = 1
@@ -682,7 +681,6 @@ rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -815,8 +813,6 @@ parameters/conditions/is_moving = false
 visible = false
 
 [node name="LanternConsecration" parent="Weapons" instance=ExtResource("13_0abte")]
-
-[node name="Bible" parent="Weapons" instance=ExtResource("13_8iv1o")]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
