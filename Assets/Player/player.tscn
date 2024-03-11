@@ -544,11 +544,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_siame"]
-radius = 6.0
-height = 24.0
+radius = 11.0
+height = 54.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yr38n"]
-size = Vector2(18, 28)
+size = Vector2(18, 45)
 
 [sub_resource type="Curve" id="Curve_7yhul"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.722892, 0.821053), -0.689751, -0.689751, 0, 0, Vector2(0.981928, 0.589474), 0.0, 0.0, 0, 0]
@@ -622,7 +622,7 @@ animation = &"Idle"
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 2)
+position = Vector2(0, 17)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_vkkdj")]
@@ -635,7 +635,7 @@ flash_timeout = 0.2
 flash_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(2, 1)
+position = Vector2(0, 16.5)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
@@ -649,6 +649,7 @@ process_material = SubResource("ParticleProcessMaterial_ocaqh")
 lifetime = 0.3
 
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
+visible = false
 
 [node name="Character" type="Node2D" parent="."]
 position = Vector2(1, 8)
@@ -680,6 +681,7 @@ rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -809,6 +811,7 @@ parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 
 [node name="Weapons" type="Node2D" parent="."]
+visible = false
 
 [node name="LanternConsecration" parent="Weapons" instance=ExtResource("13_0abte")]
 
