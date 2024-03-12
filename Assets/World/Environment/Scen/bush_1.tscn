@@ -15,6 +15,7 @@ texture = ExtResource("1_nu2ya")
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+y_sort_enabled = true
 position = Vector2(-10, 130)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("CapsuleShape2D_84s0u")

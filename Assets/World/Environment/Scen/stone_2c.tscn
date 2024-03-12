@@ -7,6 +7,7 @@ radius = 116.667
 height = 500.0
 
 [node name="Stone_2c" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.06, 0.06)

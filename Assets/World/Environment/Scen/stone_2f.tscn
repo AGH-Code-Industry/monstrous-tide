@@ -6,6 +6,7 @@
 size = Vector2(642.857, 157.143)
 
 [node name="Stone_2f" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.07, 0.07)

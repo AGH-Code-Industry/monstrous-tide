@@ -7,6 +7,7 @@ radius = 140.0
 height = 520.0
 
 [node name="Cemetery_lamp" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.05, 0.05)

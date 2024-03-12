@@ -55,7 +55,9 @@ enemy = ExtResource("5_gn26j")
 enemy_num = 1
 enemy_spawn_delay = 5
 
-[node name="World" type="Node2D"]
+[node name="World" type="TileMap"]
+y_sort_enabled = true
+format = 2
 script = ExtResource("1_na82v")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -76,7 +78,8 @@ spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResour
 [node name="Player" parent="." instance=ExtResource("2_j8yv2")]
 unique_name_in_owner = true
 
-[node name="Environment" type="Node" parent="."]
+[node name="Environment" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Tree_3" parent="Environment" instance=ExtResource("8_cc8vh")]
 position = Vector2(-324, -893)
@@ -181,6 +184,7 @@ position = Vector2(-687, -693)
 position = Vector2(783, 614)
 
 [node name="Bush_3" parent="Environment" instance=ExtResource("19_embcj")]
+y_sort_enabled = true
 position = Vector2(-506, -142)
 
 [node name="Bush_1" parent="Environment" instance=ExtResource("19_embcj")]
