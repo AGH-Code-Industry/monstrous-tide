@@ -5,7 +5,7 @@ var weapons : Array[Weapon] = []
 # Used for choosing random weapon as a reward
 var all_possible_weapons : Array[Weapon] = []
 
-@onready var weapons_node = get_tree().get_first_node_in_group("player").get_node("Weapons")
+var weapons_node
 
 func _ready() -> void:
 	update_weapons()

@@ -5,8 +5,6 @@ class_name Weapon extends Node2D
 var upgrades : Array[UpgradeTier] = []
 var is_active : bool = true
 
-@export var poss: Array[WeaponUpgrade]
-
 func _ready() -> void:
 	# connect signal to function that takes stats and adds them to current stats
 	StatManager.update_player_stats_offensive.connect(add_stats)
