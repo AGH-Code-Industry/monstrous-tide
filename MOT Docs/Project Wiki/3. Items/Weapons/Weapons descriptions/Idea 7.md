@@ -14,3 +14,5 @@ description: "A description of weapon *Idea 7* and everything related to it."
 >- projectile który wybucha przy trafieniu i ewentualnie rozbija się na mniejsze które wybuchają?
 >
 >Jeśli chodzi o staty to jak teraz myśle dla niektórych broni (zwłaszcza tych projectile based) przydatny byłby pierce? Czyli przez ile przeciwników może przelecieć (hehe) zanim zniknie. 
+
+# Vampire survivors na blacklist z buta XD
