@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://rd2hgmivn7i3"]
+[gd_scene load_steps=3 format=3 uid="uid://rd2hgmivn7i3"]
 
 [ext_resource type="Texture2D" uid="uid://cne4ljlnk8n1h" path="res://Assets/World/Environment/Texture/Lamp_0.1.png" id="1_ada04"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nfbmg"]
+radius = 140.0
+height = 520.0
 
 [node name="Cemetery_lamp" type="Node2D"]
 
@@ -10,6 +14,7 @@ texture = ExtResource("1_ada04")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
-build_mode = 1
-polygon = PackedVector2Array(-100, 0, -380, 800, 400, 800, 100, 0, 200, -400, 0, -760, -200, -400)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(1.02318e-12, 640)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_nfbmg")

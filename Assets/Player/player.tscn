@@ -545,7 +545,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_siame"]
 radius = 11.0
-height = 54.0
+height = 38.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yr38n"]
 size = Vector2(18, 45)
@@ -622,7 +622,7 @@ animation = &"Idle"
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 17)
+position = Vector2(0, 14)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_vkkdj")]
@@ -635,11 +635,12 @@ flash_timeout = 0.2
 flash_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0, 16.5)
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
-offset_bottom = -18.0
+offset_top = -35.0
+offset_bottom = -27.0
 theme_type_variation = &"HealthBar"
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
@@ -652,7 +653,6 @@ lifetime = 0.3
 visible = false
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(1, 8)
 scale = Vector2(0.4, 0.4)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Character"]

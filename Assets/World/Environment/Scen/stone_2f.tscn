@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://54dw8pktq1fa" path="res://Assets/World/Environment/Texture/Stone_0.2f.png" id="1_fqsen"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv234"]
-size = Vector2(742.857, 285.714)
+size = Vector2(642.857, 157.143)
 
 [node name="Stone_2f" type="Node2D"]
 
@@ -14,5 +14,5 @@ texture = ExtResource("1_fqsen")
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(0, 14.2857)
+position = Vector2(-7.14284, 50)
 shape = SubResource("RectangleShape2D_hv234")

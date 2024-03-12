@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cctao6a7cpn7i"]
+[gd_scene load_steps=3 format=3 uid="uid://cctao6a7cpn7i"]
 
 [ext_resource type="Texture2D" uid="uid://b78m782eyxkv0" path="res://Assets/World/Environment/Texture/Stone_0.2d.png" id="1_21ylb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebh01"]
+radius = 71.4286
+height = 257.143
 
 [node name="Stone_2d" type="Node2D"]
 
@@ -10,5 +14,7 @@ texture = ExtResource("1_21ylb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
-polygon = PackedVector2Array(-157.143, 114.286, 0, 200, 185.714, 114.286, 185.714, -57.1429, 100, -100, -128.571, -85.7143)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(0, 42.8571)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ebh01")

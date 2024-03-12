@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvjgwu8scc44m"]
+[gd_scene load_steps=3 format=3 uid="uid://bvjgwu8scc44m"]
 
 [ext_resource type="Texture2D" uid="uid://dtosae7ipx2ie" path="res://Assets/World/Environment/Texture/fenceravenflat.png" id="1_u5icv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_li7wi"]
+size = Vector2(1180, 1110)
 
 [node name="Fenceraven" type="Node2D"]
 
@@ -10,6 +13,7 @@ texture = ExtResource("1_u5icv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
-build_mode = 1
-polygon = PackedVector2Array(-280, -20, -420, 1000, 800, 1240, 940, 1080, 840, 0, 300, -60, 400, -840, -100, -1240, -380, -1220, -680, -560)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(290, 545)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_li7wi")
