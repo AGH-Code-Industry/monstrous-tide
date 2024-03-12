@@ -16,6 +16,8 @@ func _ready():
 	StatManager.update_player_stats_misc.connect(func(receivedStats): stat_set.add_stat_array(receivedStats))
 
 func _physics_process(_delta):
+	if Input.is_action_just_pressed("esc"):
+		get_tree().quit()
 	movement()
 	
 # FOR DEBUG PURPOSES
@@ -48,8 +50,9 @@ func movement():
 	move_and_slide()
 
 func die():
-	pass
-	#print("Player died")
+	#pass
+	print("Player died")
+	get_parent().game_over()
 	
 
 func _on_hit_box_on_death() -> void:

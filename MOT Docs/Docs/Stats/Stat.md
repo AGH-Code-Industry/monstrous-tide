@@ -10,7 +10,9 @@ ___
 
 Return value's type|Name and arguments|Description
 -|-|-
-`void`|add_value(value: int)|Call this method to increase the value of a stat
+`void`|add_stat(stat: [[Stat]])|Adds other stat with its values to this one
+[[Stat]]|negate_stat()|Negates values of this stat, used for adding temporary buffs
+`float`|get_final_value()|Returns value calculated with %increased and %more, generally this should be used when we want to get stat value
 
 ## Fields:
 
@@ -18,7 +20,9 @@ Field type|Field name|Description
 -|-|-
 `enum`|`Type`|This enum defines all possible stats
 `Type`|`type`|Represents type of stat, like DMG or ARMOR
-`int`|`value`|Actual value of a stat
+`float`|`flat`|Flat value of a stat
+`float`|`increased`|Additive % increase
+`float`|`more`|Multiplicative % increase
 
 ## Links/relations:
 

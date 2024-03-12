@@ -503,7 +503,6 @@ rest = Transform2D(1, 0, 0, 1, -46, -50)
 
 [node name="Chest" type="Bone2D" parent="Skeleton2D/Hips"]
 position = Vector2(-1, -23)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -1, -23)
 
 [node name="Head" type="Bone2D" parent="Skeleton2D/Hips/Chest"]
@@ -515,7 +514,6 @@ bone_angle = -118.501
 
 [node name="LeftArm" type="Bone2D" parent="Skeleton2D/Hips/Chest"]
 position = Vector2(59, -163)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 59, -163)
 
 [node name="LeftHand" type="Bone2D" parent="Skeleton2D/Hips/Chest/LeftArm"]
@@ -527,18 +525,15 @@ bone_angle = 94.317
 
 [node name="RightArm" type="Bone2D" parent="Skeleton2D/Hips/Chest"]
 position = Vector2(-49, -135)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -49, -135)
 
 [node name="RightHand" type="Bone2D" parent="Skeleton2D/Hips/Chest/RightArm"]
 position = Vector2(-8, 128)
 rotation = -0.118845
-scale = Vector2(1, 1)
 rest = Transform2D(0.992946, -0.118566, 0.118566, 0.992946, -8, 128)
 
 [node name="Wepon" type="Bone2D" parent="Skeleton2D/Hips/Chest/RightArm/RightHand"]
 position = Vector2(-24, 80)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -24, 80)
 auto_calculate_length_and_angle = false
 length = 201.607
@@ -550,7 +545,6 @@ rest = Transform2D(1, 0, 0, 1, 43, 34)
 
 [node name="LeftFoot" type="Bone2D" parent="Skeleton2D/Hips/LeftLeg"]
 position = Vector2(16, 131)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 16, 131)
 auto_calculate_length_and_angle = false
 length = 145.669
@@ -558,12 +552,10 @@ bone_angle = 75.949
 
 [node name="RightLeg" type="Bone2D" parent="Skeleton2D/Hips"]
 position = Vector2(-23, 36)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -23, 36)
 
 [node name="RightFoot" type="Bone2D" parent="Skeleton2D/Hips/RightLeg"]
 position = Vector2(-23, 123)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -23, 123)
 auto_calculate_length_and_angle = false
 length = 137.081
@@ -575,5 +567,8 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_knxds")
+}
 tree_root = SubResource("AnimationNodeStateMachine_vruoo")
 anim_player = NodePath("../AnimationPlayer")

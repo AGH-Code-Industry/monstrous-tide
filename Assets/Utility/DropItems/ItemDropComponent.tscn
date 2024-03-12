@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cksmf6qi485b4"]
+[gd_scene load_steps=3 format=3 uid="uid://cksmf6qi485b4"]
 
 [ext_resource type="Script" path="res://Assets/Utility/DropItems/ItemDropComponent.gd" id="1_yylf8"]
+[ext_resource type="PackedScene" uid="uid://p8r21jd54jvi" path="res://Assets/Utility/DropItems/Crystals/CrystalPurple.tscn" id="2_xfu8v"]
 
 [node name="ItemDropComponent" type="Node"]
 script = ExtResource("1_yylf8")
+special_gem = ExtResource("2_xfu8v")

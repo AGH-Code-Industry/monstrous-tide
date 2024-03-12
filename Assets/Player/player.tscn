@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=31 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -6,19 +6,20 @@
 [ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_it506"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
-[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="4_2ktlr"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
-[ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="8_1p3gh"]
+[ext_resource type="PackedScene" uid="uid://bhm83vmdimo1k" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lantern_consecration.tscn" id="13_0abte"]
 
-[sub_resource type="Resource" id="Resource_lyosv"]
+[sub_resource type="Resource" id="Resource_gcdwu"]
 script = ExtResource("2_5ofgj")
-type = 3
-value = 150
+type = 300
+flat = 200.0
+increased = 0.0
+more = 0.0
 
 [sub_resource type="Resource" id="Resource_acek7"]
 script = ExtResource("3_it506")
-data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_lyosv")])
+data = Array[ExtResource("2_5ofgj")]([SubResource("Resource_gcdwu")])
 
 [sub_resource type="Animation" id="Animation_2f0x6"]
 resource_name = "Idle"
@@ -543,11 +544,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_siame"]
-radius = 6.0
-height = 24.0
+radius = 11.0
+height = 54.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yr38n"]
-size = Vector2(18, 28)
+size = Vector2(18, 45)
 
 [sub_resource type="Curve" id="Curve_7yhul"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.722892, 0.821053), -0.689751, -0.689751, 0, 0, Vector2(0.981928, 0.589474), 0.0, 0.0, 0, 0]
@@ -569,9 +570,6 @@ scale_min = 2.0
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_tw5kp")
 color = Color(0.815686, 0, 0, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_743r1"]
-size = Vector2(29, 33)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sl3rf"]
 animation = &"Idle"
@@ -600,6 +598,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-107.468, 18)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 10
 motion_mode = 1
 script = ExtResource("1_jqw0g")
 stat_set = SubResource("Resource_acek7")
@@ -607,6 +606,7 @@ stat_set = SubResource("Resource_acek7")
 [node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
 visible = false
 attack_speed = 0.5
+damage = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -622,21 +622,20 @@ animation = &"Idle"
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 2)
+position = Vector2(0, 17)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_vkkdj")]
 collision_layer = 2
 collision_mask = 4
 show_heal_numbers = true
-regenaration_enabled = true
 flash_on_hit = true
 sprite = NodePath("../AnimatedSprite2D")
 flash_timeout = 0.2
 flash_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(2, 1)
+position = Vector2(0, 16.5)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
@@ -649,17 +648,8 @@ amount = 12
 process_material = SubResource("ParticleProcessMaterial_ocaqh")
 lifetime = 0.3
 
-[node name="DamageBox" parent="." instance=ExtResource("4_2ktlr")]
-visible = false
-collision_layer = 2
-collision_mask = 4
-damage = 3.0
-
-[node name="CollisionShape2D" parent="DamageBox" index="0"]
-position = Vector2(2.5, 0.5)
-shape = SubResource("RectangleShape2D_743r1")
-
 [node name="PickupComponent" parent="." instance=ExtResource("6_jlj47")]
+visible = false
 
 [node name="Character" type="Node2D" parent="."]
 position = Vector2(1, 8)
@@ -702,6 +692,7 @@ rest = Transform2D(1, 0, 0, 1, 46, -125)
 
 [node name="LeftHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/LeftArm"]
 position = Vector2(14, 73)
+scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(1, 0, 0, 1, 14, 73)
 auto_calculate_length_and_angle = false
 length = 89.6
@@ -809,7 +800,6 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-active = false
 root_node = NodePath("../AnimationPlayer")
 libraries = {
 "": SubResource("AnimationLibrary_qa4wg")
@@ -820,11 +810,11 @@ parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 
 [node name="Weapons" type="Node2D" parent="."]
+visible = false
 
-[node name="Lantern" parent="Weapons" instance=ExtResource("8_1p3gh")]
+[node name="LanternConsecration" parent="Weapons" instance=ExtResource("13_0abte")]
 
-[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death" flags=18]
+[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
 [editable path="HitBox"]
-[editable path="DamageBox"]
 [editable path="PickupComponent"]

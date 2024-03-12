@@ -9,7 +9,7 @@ Component responsible for handling [[Player]]'s and [[Enemy|enemies']] [[General
 1. Create new signal
 2. Add the method to call from other scripts that emits given signal 
 3. In script that uses stats subscribe to specified signal, eg. `StatManager.update_player_stats_misc.connect(on_pickupradius_update)`
-4. Call the method from script to trigger signal, eg. `StatManager.emit_player_stats_misc_update([stat_to_add], 5)` here we will add array which consists of only one stat, for 5 seconds (time is an optional parameter, not using it will result in stat being pernament)
+4. Call the method from script to trigger signal, eg. `StatManager.emit_player_stats_misc_update([stat_to_add], 5)` here we will add array which consists of only one stat, for 5 seconds (time is an optional parameter, not using it will result in stat being permanent)
 
 # Signals 
 

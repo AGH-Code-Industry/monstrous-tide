@@ -1,6 +1,7 @@
 ---
 extends: WeaponUpgrade
 ---
+
 This class is used for upgrades that adds [[General statistics outline|stats]] to a weapon
 ## functions/methods/etc.:
 
