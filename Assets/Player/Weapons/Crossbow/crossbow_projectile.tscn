@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://co3ihwn0ty36r"]
+
+[ext_resource type="Script" path="res://Assets/Player/Weapons/Crossbow/crossbow_projectile.gd" id="1_p4tak"]
+[ext_resource type="Texture2D" uid="uid://ci3f7cbrhor8b" path="res://Assets/Tutorial/Items/Weapons/javelin_3_new.png" id="1_xon7f"]
+[ext_resource type="Script" path="res://Assets/Utility/DamageBoxes/damage_box.gd" id="2_ljeod"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcaqi"]
+size = Vector2(4, 34)
+
+[node name="CrossbowProjectile" type="Node2D"]
+script = ExtResource("1_p4tak")
+speed = 200
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -0.785398
+texture = ExtResource("1_xon7f")
+
+[node name="DamageBox" type="Area2D" parent="."]
+rotation = 1.5708
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("2_ljeod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
+shape = SubResource("RectangleShape2D_vcaqi")
+
+[node name="AttackSpeedTimer" type="Timer" parent="DamageBox"]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="area_entered" from="DamageBox" to="DamageBox" method="_on_area_entered"]
+[connection signal="timeout" from="DamageBox/AttackSpeedTimer" to="DamageBox" method="_on_attack_speed_timer_timeout"]
