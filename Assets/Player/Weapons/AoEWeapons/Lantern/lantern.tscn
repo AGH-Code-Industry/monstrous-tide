@@ -1,10 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://5wxdkk0ryim2"]
+[gd_scene load_steps=29 format=3 uid="uid://5wxdkk0ryim2"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_hh3o4"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_f5pyf"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="4_1yf4i"]
+[ext_resource type="PackedScene" uid="uid://bhm83vmdimo1k" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lantern_consecration.tscn" id="5_c4ivg"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="5_o0uyg"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="6_0ln8p"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Ray.gdshader" id="6_enrqv"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_swap_upgrade.gd" id="6_w0783"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/circle.gdshader" id="7_a23nn"]
 
 [sub_resource type="Resource" id="Resource_oa80p"]
@@ -32,6 +36,67 @@ more = 0.0
 script = ExtResource("3_f5pyf")
 data = Array[ExtResource("2_hh3o4")]([SubResource("Resource_oa80p"), SubResource("Resource_eyked"), SubResource("Resource_0h415")])
 
+[sub_resource type="Resource" id="Resource_2jl1y"]
+script = ExtResource("2_hh3o4")
+type = 0
+flat = 1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_i3uqy"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_2jl1y")])
+name = ""
+description = ""
+
+[sub_resource type="Resource" id="Resource_sxtv3"]
+script = ExtResource("2_hh3o4")
+type = 110
+flat = 1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_aq4d5"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_sxtv3")])
+name = ""
+description = ""
+
+[sub_resource type="Resource" id="Resource_rnorw"]
+script = ExtResource("2_hh3o4")
+type = 0
+flat = 1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_r8vqg"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_rnorw")])
+name = ""
+description = ""
+
+[sub_resource type="Resource" id="Resource_vps2n"]
+script = ExtResource("4_1yf4i")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_i3uqy"), SubResource("Resource_aq4d5"), SubResource("Resource_r8vqg")])
+
+[sub_resource type="Resource" id="Resource_w1rsb"]
+script = ExtResource("4_1yf4i")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([])
+
+[sub_resource type="Resource" id="Resource_cb4o4"]
+script = ExtResource("4_1yf4i")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([])
+
+[sub_resource type="Resource" id="Resource_tqli2"]
+script = ExtResource("6_w0783")
+new_weapon = ExtResource("5_c4ivg")
+name = "Consecration"
+description = "test"
+
+[sub_resource type="Resource" id="Resource_rsu28"]
+script = ExtResource("4_1yf4i")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_tqli2")])
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_5pem6"]
 radius = 1.45
 
@@ -51,6 +116,7 @@ shader_parameter/lerp_color = Color(1, 1, 1, 1)
 [node name="Lantern" type="Node2D"]
 script = ExtResource("1_7j11k")
 stat_set = SubResource("Resource_qonso")
+possible_upgrades = Array[ExtResource("4_1yf4i")]([SubResource("Resource_vps2n"), SubResource("Resource_w1rsb"), SubResource("Resource_cb4o4"), SubResource("Resource_rsu28")])
 
 [node name="DamageBox" parent="." instance=ExtResource("6_0ln8p")]
 scale = Vector2(40, 40)

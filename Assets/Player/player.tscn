@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
-[ext_resource type="PackedScene" uid="uid://bhm83vmdimo1k" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lantern_consecration.tscn" id="13_0abte"]
+[ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="9_yuajl"]
 
 [sub_resource type="Resource" id="Resource_gcdwu"]
 script = ExtResource("2_5ofgj")
@@ -693,6 +693,7 @@ rest = Transform2D(1, 0, 0, 1, 46, -125)
 
 [node name="LeftHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/LeftArm"]
 position = Vector2(14, 73)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 14, 73)
 auto_calculate_length_and_angle = false
 length = 89.6
@@ -810,9 +811,8 @@ parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 
 [node name="Weapons" type="Node2D" parent="."]
-visible = false
 
-[node name="LanternConsecration" parent="Weapons" instance=ExtResource("13_0abte")]
+[node name="Lantern" parent="Weapons" instance=ExtResource("9_yuajl")]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
