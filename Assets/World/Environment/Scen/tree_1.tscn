@@ -2,9 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ieped3jakb5u" path="res://Assets/World/Environment/Texture/Tree_1.png" id="1_8rjae"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3s51j"]
-radius = 9.82143
-height = 30.3571
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyprr"]
+size = Vector2(20, 27.6316)
 
 [node name="Tree_1" type="Node2D"]
 
@@ -15,6 +14,6 @@ texture = ExtResource("1_8rjae")
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(5, 150)
+position = Vector2(5, 157.5)
 scale = Vector2(5.6, 11.4)
-shape = SubResource("CapsuleShape2D_3s51j")
+shape = SubResource("RectangleShape2D_lyprr")

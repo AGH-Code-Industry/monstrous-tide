@@ -639,6 +639,7 @@ position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
+light_mask = 0
 offset_top = -35.0
 offset_bottom = -27.0
 theme_type_variation = &"HealthBar"
@@ -682,7 +683,6 @@ rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -815,6 +815,7 @@ parameters/conditions/is_moving = false
 visible = false
 
 [node name="LanternConsecration" parent="Weapons" instance=ExtResource("13_0abte")]
+process_mode = 4
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
