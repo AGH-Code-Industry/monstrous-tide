@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=45 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://rhdo2vj35itf" path="res://Assets/World/Tło1.png" id="2_47c7y"]
@@ -322,11 +322,9 @@ position = Vector2(150, -176)
 [node name="LvlUps" parent="." instance=ExtResource("26_ntv7e")]
 visible = false
 
-<<<<<<< HEAD
 [node name="Equipment" parent="." instance=ExtResource("33_hvbig")]
 offset = Vector2(0, 8)
 transform = Transform2D(1, 0, 0, 1, 0, 8)
-=======
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_if33h")
->>>>>>> master
