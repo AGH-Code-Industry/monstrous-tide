@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bulmfy8sbhlox"
-path="res://.godot/imported/s+g-xp-bar-back.png-cf077772475ed5af0a6e574a0971ad4b.ctex"
+uid="uid://cqbd77n2sp8ks"
+path="res://.godot/imported/rune-xp-bar-fill.png-0c57b7d1a5dd4c30bac0434a902c8a33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-back.png"
-dest_files=["res://.godot/imported/s+g-xp-bar-back.png-cf077772475ed5af0a6e574a0971ad4b.ctex"]
+source_file="res://Assets/Utility/UI/Progressbar/rune-xp-bar-fill.png"
+dest_files=["res://.godot/imported/rune-xp-bar-fill.png-0c57b7d1a5dd4c30bac0434a902c8a33.ctex"]
 
 [params]
 
