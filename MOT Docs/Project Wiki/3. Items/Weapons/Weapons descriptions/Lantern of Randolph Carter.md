@@ -55,10 +55,12 @@ Available upgrades for the *Menacing Lantern* :
 - ***Mythic:*** *follows rules mentioned [[Rarity and drop-rate systems#Mythic|here]]!*
 	- **[[Sands of Buried]]**
 	- **Blinding Guide** *(tba)*
-	- **[[Consecration]]**
+	- **[[Iä, Iä, Cthulhu fhtagn!]]**
 	- additional stats are taken from the same pool as the previous ones.
 
 
 # *[[Journal]]* entry
 
 *A lantern found in the oldest of dungeons - the only source of light that could help me out of this never-ending maze they locked me inside... Once I picked it up, it immediately began enlightening everything with vibrancy: the stones, the walls and also my thoughts. With this still and yet alive ancestral creation, I have never felt more in-power and confident...*
+
+Randolph Carter is a main character in  story "The Dream-Quest of Unknown Kadath" where he spends quite some time underground beside ghouls. So I thought that the name of the lantern should come with the character who spent a lot of time i total darkness.

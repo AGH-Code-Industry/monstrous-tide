@@ -5,7 +5,7 @@ description: "*Sands of Buried* is a legendary upgrade to *Menacing Lantern* wea
 upgrade: legendary
 ---
 ___
->[!attention] This weapon is a legendary upgrade of [[Menacing Lantern]].
+>[!attention] This weapon is a legendary upgrade of [[Lantern of Randolph Carter]].
 
 >[!quote] Original demo text:
 >Legendarny upgrade do latarni: Nasza broń zamienia się w klepsydrę i spowalnia wrogów, którzy zbliżą się do gracza. Myślę, że może być to dosyć przydatne, ponieważ gracz raczej chce unikać wrogów i trzymać dystans. A zaimplementowanie tego może być dosyć proste bo można zrobić taka funkcje liniową co im bliżej gracza znajduje się przeciwnik tym wolniej się porusza.

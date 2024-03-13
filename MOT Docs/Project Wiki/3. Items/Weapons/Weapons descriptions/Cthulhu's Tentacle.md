@@ -68,3 +68,5 @@ Available upgrades for the *Ferocious Tentacle* :
 # *[[Journal]]* entry
 
 *One never forgets the stench, if they once come into contact with this free-thinking limb. Why does it move? Well, there are sure many hypotheses... But should I really care? This is a very affordable flesh-shield and it haven't once upset me. Yet.*
+
+Why Cthulhu's? Because many ilustrations (and original descriptions) mention this god as a giant octopus.
