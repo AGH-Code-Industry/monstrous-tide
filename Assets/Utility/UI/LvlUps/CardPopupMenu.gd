@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var h_box_container = $MarginContainer/HBoxContainer
 @export var cards_to_draw_count = 3
 var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard2.tscn")
+var healing_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpHealingCard.tscn")
 var WeaponManager: Node
 var current_upgrades
 var colors = {
@@ -37,6 +38,13 @@ func create_cards(avoided_upgrades = []):
 				level_up_card_instance.texture = load(colors["yellow"])
 		
 		h_box_container.add_child(level_up_card_instance)
+	
+	if len(current_upgrades) < cards_to_draw_count:
+		var i = 0
+		while i < cards_to_draw_count - len(current_upgrades):
+			var healing_card_instance = healing_card.instantiate()
+			h_box_container.add_child(healing_card_instance)
+			i+=1
 		
 		
 func remove_cards():
