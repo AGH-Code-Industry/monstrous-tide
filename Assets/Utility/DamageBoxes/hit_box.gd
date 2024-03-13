@@ -51,12 +51,12 @@ func take_damage(dmg: Damage) -> void:
 		die()
 	update_health.emit()
 	
-	if(flash_on_hit):
-		sprite.modulate = flash_color
-		bleed_particles.emitting = true
-		await get_tree().create_timer(flash_timeout).timeout
-		bleed_particles.emitting = false
-		sprite.modulate = Color(1,1,1)
+	#if(flash_on_hit):
+		#sprite.modulate = flash_color
+		#bleed_particles.emitting = true
+		#await get_tree().create_timer(flash_timeout).timeout
+		#bleed_particles.emitting = false
+		#sprite.modulate = Color(1,1,1)
 
 func heal(heal_amount : float) -> void:
 	if health >= max_health:

@@ -1,6 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://766nli862agw"]
+[gd_scene load_steps=25 format=3 uid="uid://766nli862agw"]
 
-[ext_resource type="Texture2D" uid="uid://cs104sosr0vdd" path="res://Assets/Enemies/Monster_0.2.png" id="1_m00gp"]
+[ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_2ivv2"]
+[ext_resource type="Texture2D" uid="uid://cs104sosr0vdd" path="res://Assets/Enemies/Monster/Monster_0.2.png" id="1_m00gp"]
+[ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="2_7drop"]
+[ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="3_62wau"]
+[ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="4_5otoj"]
+[ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="5_y1dnl"]
+[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="6_wlvou"]
+[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="7_hdmod"]
+[ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="8_hisc1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hlwre"]
+radius = 106.0
+height = 346.0
 
 [sub_resource type="Animation" id="Animation_byvba"]
 length = 0.001
@@ -460,8 +472,56 @@ states/Walk/node = SubResource("AnimationNodeAnimation_vwprx")
 states/Walk/position = Vector2(324, 101)
 transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_2e1ef")]
 
-[node name="Monster" type="Node2D"]
+[sub_resource type="Resource" id="Resource_coo45"]
+script = ExtResource("4_5otoj")
+item_scene = ExtResource("3_62wau")
+drop_chance = 50.0
+
+[sub_resource type="Resource" id="Resource_fxw01"]
+script = ExtResource("4_5otoj")
+item_scene = ExtResource("5_y1dnl")
+drop_chance = 40.0
+
+[sub_resource type="Resource" id="Resource_i0to0"]
+script = ExtResource("4_5otoj")
+item_scene = ExtResource("6_wlvou")
+drop_chance = 10.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibfqe"]
+size = Vector2(492.5, 751)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07naq"]
+size = Vector2(300, 570)
+
+[sub_resource type="Curve" id="Curve_mfrhn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.722892, 0.821053), -0.689751, -0.689751, 0, 0, Vector2(0.981928, 0.589474), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ep6us"]
+curve = SubResource("Curve_mfrhn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w8jgo"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 10.43
+direction = Vector3(0.5, 0, 0)
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 98, 0)
+scale_min = 1.5
+scale_max = 2.5
+scale_curve = SubResource("CurveTexture_ep6us")
+
+[node name="Monster" type="CharacterBody2D"]
+y_sort_enabled = true
 position = Vector2(1, 16)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_2ivv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-13, -97)
+shape = SubResource("CapsuleShape2D_hlwre")
 
 [node name="Polygons" type="Node2D" parent="."]
 
@@ -533,6 +593,7 @@ bones = ["Hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 internal_vertex_count = 3
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
+visible = false
 position = Vector2(0, -99)
 
 [node name="Hip" type="Bone2D" parent="Skeleton2D"]
@@ -560,6 +621,7 @@ rest = Transform2D(1, 0, 0, 1, -54, -49)
 
 [node name="RightHand" type="Bone2D" parent="Skeleton2D/Hip/Chest/Neck/RightArm"]
 position = Vector2(-49, 106)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -49, 106)
 auto_calculate_length_and_angle = false
 length = 89.379
@@ -581,6 +643,7 @@ bone_angle = 91.074
 
 [node name="LeftArm" type="Bone2D" parent="Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(75, -20)
+scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(1, 0, 0, 1, 75, -20)
 
 [node name="LeftHand" type="Bone2D" parent="Skeleton2D/Hip/Chest/Neck/LeftArm"]
@@ -603,10 +666,12 @@ bone_angle = 69.874
 
 [node name="RightLeg" type="Bone2D" parent="Skeleton2D/Hip/Chest"]
 position = Vector2(-53, 27)
+scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(1, 0, 0, 1, -53, 27)
 
 [node name="RightFoot" type="Bone2D" parent="Skeleton2D/Hip/Chest/RightLeg"]
 position = Vector2(0, 69)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 0, 69)
 auto_calculate_length_and_angle = false
 length = 67.987
@@ -618,6 +683,7 @@ rest = Transform2D(1, 0, 0, 1, 25, 47)
 
 [node name="LeftFoot" type="Bone2D" parent="Skeleton2D/Hip/Chest/LeftLeg"]
 position = Vector2(9, 43)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 9, 43)
 auto_calculate_length_and_angle = false
 length = 54.968
@@ -634,3 +700,42 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_68fqw")
 anim_player = NodePath("../Animation")
+
+[node name="ItemDropComponent" parent="." instance=ExtResource("2_7drop")]
+items_to_drop = Array[ExtResource("4_5otoj")]([SubResource("Resource_coo45"), SubResource("Resource_fxw01"), SubResource("Resource_i0to0")])
+
+[node name="DamageBox" parent="." instance=ExtResource("7_hdmod")]
+collision_layer = 0
+collision_mask = 2
+damage = 2.0
+
+[node name="CollisionShape2D" parent="DamageBox" index="0"]
+position = Vector2(-2.75, -156.5)
+shape = SubResource("RectangleShape2D_ibfqe")
+
+[node name="HitBox" parent="." instance=ExtResource("8_hisc1")]
+collision_layer = 4
+collision_mask = 0
+show_damage_taken_numbers = true
+flash_on_hit = true
+flash_timeout = 0.1
+flash_color = Color(100, 100, 100, 1)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(-6, -151)
+shape = SubResource("RectangleShape2D_07naq")
+
+[node name="HealthBar" parent="HitBox" index="2"]
+visible = false
+
+[node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
+emitting = false
+amount = 12
+process_material = SubResource("ParticleProcessMaterial_w8jgo")
+lifetime = 0.3
+explosiveness = 1.0
+
+[connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
+
+[editable path="DamageBox"]
+[editable path="HitBox"]

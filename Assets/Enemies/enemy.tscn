@@ -77,7 +77,7 @@ size = Vector2(25, 28)
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.722892, 0.821053), -0.689751, -0.689751, 0, 0, Vector2(0.981928, 0.589474), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_tw5kp"]
+[sub_resource type="CurveTexture" id="CurveTexture_5tnrr"]
 curve = SubResource("Curve_cvuod")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rdpba"]
@@ -91,9 +91,10 @@ initial_velocity_max = 50.0
 gravity = Vector3(0, 98, 0)
 scale_min = 1.5
 scale_max = 2.5
-scale_curve = SubResource("CurveTexture_tw5kp")
+scale_curve = SubResource("CurveTexture_5tnrr")
 
 [node name="Enemy" type="CharacterBody2D"]
+y_sort_enabled = true
 texture_filter = 1
 motion_mode = 1
 script = ExtResource("1_iqk56")
