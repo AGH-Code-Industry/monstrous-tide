@@ -6,7 +6,7 @@ upgrade: legendary
 ---
 
 ___
->[!attention] This weapon is a legendary upgrade of [[Menacing Lantern]].
+>[!attention] This weapon is a legendary upgrade of [[Lantern of Randolph Carter]].
 ___
 >This document will outline the most important aspects of weapon in the title - its properties, progression scheme, statistics, principles of working and many more. It is a sketch, as it needs specified information provided by programmers.
 
@@ -33,3 +33,4 @@ They shall be all inherited from the previous form of the *Lantern*.
 
 # *[[Journal]]* entry
 
+It translates as "Cthulhu dreams!" but it was used by Cthulhu preachers during their most dark and profane rituals.

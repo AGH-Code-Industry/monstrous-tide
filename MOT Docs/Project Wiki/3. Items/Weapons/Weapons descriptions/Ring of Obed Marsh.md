@@ -9,3 +9,5 @@ description: "A description of weapon *Idea 5* and everything related to it."
 
 
 # Vampire survivors na blacklist z buta XD
+
+a może być pierścień? Obed Marsh pojawia się w opowiadaniu "Shadow over Innsmouth" i jest opisywany jako ktoś bardzo bogaty (a do tego jest rybą jak jego rodzina xd)
