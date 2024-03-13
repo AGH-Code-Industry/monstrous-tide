@@ -15,7 +15,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	position += direction * speed * delta
+	position += direction.normalized() * speed * delta
 
 
 func _on_destroy_timer_timeout():

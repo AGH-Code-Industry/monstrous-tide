@@ -29,7 +29,7 @@ more = 0.0
 
 [sub_resource type="Resource" id="Resource_r1ipi"]
 script = ExtResource("2_o3asj")
-type = 200
+type = 120
 flat = 2.0
 increased = 0.0
 more = 0.0
@@ -87,7 +87,7 @@ upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upg
 
 [sub_resource type="Resource" id="Resource_24xcw"]
 script = ExtResource("2_o3asj")
-type = 200
+type = 120
 flat = 5.0
 increased = 0.0
 more = 0.0

@@ -69,7 +69,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_qgeh4")]
-visible = false
 position = Vector2(-12, -1)
 spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResource("Resource_f8ksw")])
 
