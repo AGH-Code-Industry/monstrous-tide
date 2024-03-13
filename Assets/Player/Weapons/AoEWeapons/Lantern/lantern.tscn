@@ -185,6 +185,7 @@ possible_upgrades = Array[ExtResource("4_1yf4i")]([SubResource("Resource_vps2n")
 scale = Vector2(40, 40)
 collision_layer = 2
 collision_mask = 4
+attack_speed = 1.5
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
 shape = SubResource("CircleShape2D_5pem6")

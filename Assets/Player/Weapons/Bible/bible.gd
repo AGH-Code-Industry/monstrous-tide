@@ -15,7 +15,7 @@ func start_cycle():
 	instantiate_projectiles()
 	await get_tree().create_timer(lifetime).timeout
 	delete_projectiles()
-	await get_tree().create_timer(stat_set.get_stat_value(Stat.Type.ATTACKSPEED)).timeout
+	await get_tree().create_timer(stat_set.get_stat_value(1/Stat.Type.ATTACKSPEED)).timeout
 	start_cycle()
 	# instantiate projectile number of objects
 	# Wait for lifetime

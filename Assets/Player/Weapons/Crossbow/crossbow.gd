@@ -9,7 +9,7 @@ func _ready():
 	start_cycle()
 	
 func start_cycle():
-	await get_tree().create_timer(stat_set.get_stat_value(Stat.Type.ATTACKSPEED), false).timeout
+	await get_tree().create_timer(1/stat_set.get_stat_value(Stat.Type.ATTACKSPEED), false).timeout
 	instantiate_projectiles()
 	start_cycle()
 

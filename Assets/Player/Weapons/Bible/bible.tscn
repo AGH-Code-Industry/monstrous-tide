@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dm1irwy44gd2t"]
+[gd_scene load_steps=39 format=3 uid="uid://dm1irwy44gd2t"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/Bible/bible.gd" id="1_7xq8o"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_o3asj"]
@@ -16,7 +16,7 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_3vbcp"]
 script = ExtResource("2_o3asj")
 type = 105
-flat = 3.0
+flat = 0.2
 increased = 0.0
 more = 0.0
 
@@ -41,68 +41,177 @@ data = Array[ExtResource("2_o3asj")]([SubResource("Resource_qvo64"), SubResource
 [sub_resource type="Resource" id="Resource_y21v6"]
 script = ExtResource("2_o3asj")
 type = 100
-flat = 4.0
-increased = 0.0
+flat = 0.0
+increased = 15.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_6trut"]
 script = ExtResource("5_447b4")
 stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_y21v6")])
-name = "Bible damage"
-description = "Mglrmglmglmgl! "
+name = "Torrent damage"
+description = "Deal 15% increased Damage"
 
 [sub_resource type="Resource" id="Resource_tym7k"]
 script = ExtResource("2_o3asj")
 type = 110
-flat = 3.0
-increased = 0.0
+flat = 0.0
+increased = 30.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_cmehc"]
 script = ExtResource("5_447b4")
 stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_tym7k")])
-name = "Bible size"
-description = "Mglrmglmglmgl! "
+name = "Torrent size"
+description = "Increase Torrent Size"
+
+[sub_resource type="Resource" id="Resource_m03jr"]
+script = ExtResource("2_o3asj")
+type = 105
+flat = 0.0
+increased = 30.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_tfkcx"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_m03jr")])
+name = "Torrent Attack Speed"
+description = "Spawn Torrents Faster"
 
 [sub_resource type="Resource" id="Resource_ea7mg"]
 script = ExtResource("4_dhhws")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_6trut"), SubResource("Resource_cmehc")])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_6trut"), SubResource("Resource_cmehc"), SubResource("Resource_tfkcx")])
 
 [sub_resource type="Resource" id="Resource_m6ktv"]
 script = ExtResource("2_o3asj")
-type = 105
-flat = -2.0
+type = 120
+flat = 1.0
 increased = 0.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_536ia"]
 script = ExtResource("5_447b4")
 stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_m6ktv")])
-name = "Bible cooldown"
-description = "Mglrmglmglmgl! "
+name = "Torrent Projectiles"
+description = "Spawn More Torrents With Each Attack"
+
+[sub_resource type="Resource" id="Resource_dcgrs"]
+script = ExtResource("2_o3asj")
+type = 0
+flat = 0.0
+increased = 0.0
+more = 25.0
+
+[sub_resource type="Resource" id="Resource_1o17j"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_dcgrs")])
+name = "Torrent Damage"
+description = "Torrent Deals 25% MORE Damage"
+
+[sub_resource type="Resource" id="Resource_c5de8"]
+script = ExtResource("2_o3asj")
+type = 110
+flat = 1.0
+increased = 45.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_cf3o6"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_c5de8")])
+name = "Torrent Size"
+description = "Torrents Are Bigger"
 
 [sub_resource type="Resource" id="Resource_8aib6"]
 script = ExtResource("4_dhhws")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_536ia")])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_536ia"), SubResource("Resource_1o17j"), SubResource("Resource_cf3o6")])
 
 [sub_resource type="Resource" id="Resource_24xcw"]
 script = ExtResource("2_o3asj")
 type = 120
-flat = 5.0
+flat = 2.0
 increased = 0.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_h4igs"]
 script = ExtResource("5_447b4")
 stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_24xcw")])
-name = "Bible Multi"
-description = "Mglrmglmglmgl! "
+name = "Torrent Projectiles"
+description = "Torrent Has 2 Additional Projectiles"
+
+[sub_resource type="Resource" id="Resource_64y6i"]
+script = ExtResource("2_o3asj")
+type = 110
+flat = 1.0
+increased = 0.0
+more = 40.0
+
+[sub_resource type="Resource" id="Resource_rpgkh"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_64y6i")])
+name = "Torrent Size"
+description = "Torrent Is Bigger"
+
+[sub_resource type="Resource" id="Resource_jyvjm"]
+script = ExtResource("2_o3asj")
+type = 0
+flat = 1.0
+increased = 0.0
+more = 20.0
+
+[sub_resource type="Resource" id="Resource_7ch4j"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_jyvjm")])
+name = "Torrent Damage"
+description = "Torrents Deals Massive Damage"
 
 [sub_resource type="Resource" id="Resource_u8f1h"]
 script = ExtResource("4_dhhws")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_h4igs")])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_h4igs"), SubResource("Resource_rpgkh"), SubResource("Resource_7ch4j")])
+
+[sub_resource type="Resource" id="Resource_sypvg"]
+script = ExtResource("2_o3asj")
+type = 0
+flat = 2.0
+increased = 20.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_l1lmm"]
+script = ExtResource("2_o3asj")
+type = 120
+flat = -1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_28t1p"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_sypvg"), SubResource("Resource_l1lmm")])
+name = "Torrent Damage"
+description = "Torrent Deals Much More Damage But Has Fewer Projectiles"
+
+[sub_resource type="Resource" id="Resource_vlnlf"]
+script = ExtResource("2_o3asj")
+type = 120
+flat = 3.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_crggn"]
+script = ExtResource("2_o3asj")
+type = 0
+flat = 0.0
+increased = 0.0
+more = -35.0
+
+[sub_resource type="Resource" id="Resource_541mj"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_vlnlf"), SubResource("Resource_crggn")])
+name = "Torrent Projectiles"
+description = "Torrent Has 3 More Projectiles But Deals 35% Less Damage"
+
+[sub_resource type="Resource" id="Resource_m81tk"]
+script = ExtResource("4_dhhws")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_28t1p"), SubResource("Resource_541mj")])
 
 [node name="Bible" type="Node2D"]
 script = ExtResource("1_7xq8o")
 stat_set = SubResource("Resource_ftxek")
-possible_upgrades = Array[ExtResource("4_dhhws")]([SubResource("Resource_ea7mg"), SubResource("Resource_8aib6"), SubResource("Resource_u8f1h")])
+possible_upgrades = Array[ExtResource("4_dhhws")]([SubResource("Resource_ea7mg"), SubResource("Resource_8aib6"), SubResource("Resource_u8f1h"), SubResource("Resource_m81tk")])

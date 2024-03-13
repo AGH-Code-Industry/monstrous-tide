@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://jwiqqffsoun4"]
+[gd_scene load_steps=42 format=3 uid="uid://jwiqqffsoun4"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/Crossbow/crossbow.gd" id="1_ju743"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_nfjgl"]
@@ -16,7 +16,7 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_ikjy3"]
 script = ExtResource("2_nfjgl")
 type = 105
-flat = 2.0
+flat = 0.4
 increased = 0.0
 more = 0.0
 
@@ -48,41 +48,93 @@ data = Array[ExtResource("2_nfjgl")]([SubResource("Resource_i3afy"), SubResource
 [sub_resource type="Resource" id="Resource_jnxk4"]
 script = ExtResource("2_nfjgl")
 type = 120
-flat = 0.0
-increased = 3.0
+flat = 1.0
+increased = 0.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_wv4vt"]
 script = ExtResource("5_y7jys")
 stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_jnxk4")])
 name = "Crossbow multishot"
-description = "☆*: ｡ o≧▽≦)o ｡:*☆"
+description = "Shoot More Projectiles"
+
+[sub_resource type="Resource" id="Resource_iab7w"]
+script = ExtResource("2_nfjgl")
+type = 0
+flat = 0.0
+increased = 10.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_n5b1d"]
+script = ExtResource("5_y7jys")
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_iab7w")])
+name = "Crossbow Damage"
+description = "Deal 10% increased damage"
+
+[sub_resource type="Resource" id="Resource_odiry"]
+script = ExtResource("2_nfjgl")
+type = 105
+flat = 0.0
+increased = 10.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_186yb"]
+script = ExtResource("5_y7jys")
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_odiry")])
+name = "Crossbow Attack Speed"
+description = "Increase Attack Speed by 10%"
 
 [sub_resource type="Resource" id="Resource_lyc4e"]
 script = ExtResource("4_2hjdo")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_wv4vt")])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_wv4vt"), SubResource("Resource_n5b1d"), SubResource("Resource_186yb")])
 
-[sub_resource type="Resource" id="Resource_tslwn"]
+[sub_resource type="Resource" id="Resource_mv4w3"]
 script = ExtResource("2_nfjgl")
-type = 110
-flat = 2.0
+type = 0
+flat = 0.0
+increased = 25.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_34xmx"]
+script = ExtResource("5_y7jys")
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_mv4w3")])
+name = "Crossbow Damage"
+description = "Increase Damage by 25%"
+
+[sub_resource type="Resource" id="Resource_uwof6"]
+script = ExtResource("2_nfjgl")
+type = 0
+flat = 0.0
+increased = 0.0
+more = 15.0
+
+[sub_resource type="Resource" id="Resource_ibsu0"]
+script = ExtResource("5_y7jys")
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_uwof6")])
+name = "Crossbow Damage"
+description = "Deal 15% MORE Damage"
+
+[sub_resource type="Resource" id="Resource_cd6x3"]
+script = ExtResource("2_nfjgl")
+type = 120
+flat = 1.0
 increased = 0.0
 more = 0.0
 
-[sub_resource type="Resource" id="Resource_j47ws"]
+[sub_resource type="Resource" id="Resource_2ph15"]
 script = ExtResource("5_y7jys")
-stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_tslwn")])
-name = "WeaponSize"
-description = " •̀ ω •́ )✧"
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_cd6x3")])
+name = "Crossbow Multishop"
+description = "Shoot More Projectiles"
 
 [sub_resource type="Resource" id="Resource_yncrv"]
 script = ExtResource("4_2hjdo")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_j47ws")])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_34xmx"), SubResource("Resource_ibsu0"), SubResource("Resource_2ph15")])
 
 [sub_resource type="Resource" id="Resource_q3sjo"]
 script = ExtResource("2_nfjgl")
 type = 125
-flat = 3.0
+flat = 1.0
 increased = 0.0
 more = 0.0
 
@@ -90,11 +142,88 @@ more = 0.0
 script = ExtResource("5_y7jys")
 stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_q3sjo")])
 name = "CrossbowPierce"
-description = "✿◠‿◠)"
+description = "Pierce 1 More Target"
+
+[sub_resource type="Resource" id="Resource_14nos"]
+script = ExtResource("2_nfjgl")
+type = 0
+flat = 0.0
+increased = 50.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_w5bxh"]
+script = ExtResource("5_y7jys")
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_14nos")])
+name = "Crossbow Damage"
+description = "Deal 50% Increased Damage"
+
+[sub_resource type="Resource" id="Resource_g0276"]
+script = ExtResource("2_nfjgl")
+type = 105
+flat = 0.0
+increased = 45.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_wonso"]
+script = ExtResource("5_y7jys")
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_g0276")])
+name = "Crossbow Attack Speed"
+description = "Attack 45% Faster"
 
 [sub_resource type="Resource" id="Resource_sgsyo"]
 script = ExtResource("4_2hjdo")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_pdks4")])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_pdks4"), SubResource("Resource_w5bxh"), SubResource("Resource_wonso")])
+
+[sub_resource type="Resource" id="Resource_wdp5p"]
+script = ExtResource("2_nfjgl")
+type = 120
+flat = 2.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ko0d0"]
+script = ExtResource("2_nfjgl")
+type = 0
+flat = 1.0
+increased = 0.0
+more = -30.0
+
+[sub_resource type="Resource" id="Resource_kmhq7"]
+script = ExtResource("5_y7jys")
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_wdp5p"), SubResource("Resource_ko0d0")])
+name = "Multishop"
+description = "Shoot 2 more projectiles but deal 30% less damage"
+
+[sub_resource type="Resource" id="Resource_p6s7d"]
+script = ExtResource("2_nfjgl")
+type = 0
+flat = 0.0
+increased = 0.0
+more = 50.0
+
+[sub_resource type="Resource" id="Resource_6bxm0"]
+script = ExtResource("2_nfjgl")
+type = 120
+flat = -1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_kwntk"]
+script = ExtResource("2_nfjgl")
+type = 105
+flat = 0.0
+increased = -40.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_nunic"]
+script = ExtResource("5_y7jys")
+stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_p6s7d"), SubResource("Resource_6bxm0"), SubResource("Resource_kwntk")])
+name = "Deal 50% More Damage But Shoot Fewer Projectiles and Slower"
+description = ""
+
+[sub_resource type="Resource" id="Resource_ll5cn"]
+script = ExtResource("4_2hjdo")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_kmhq7"), SubResource("Resource_nunic")])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_483in"]
 radius = 425.857
@@ -102,7 +231,7 @@ radius = 425.857
 [node name="Crossbow" type="Node2D"]
 script = ExtResource("1_ju743")
 stat_set = SubResource("Resource_o7hlu")
-possible_upgrades = Array[ExtResource("4_2hjdo")]([SubResource("Resource_lyc4e"), SubResource("Resource_yncrv"), SubResource("Resource_sgsyo")])
+possible_upgrades = Array[ExtResource("4_2hjdo")]([SubResource("Resource_lyc4e"), SubResource("Resource_yncrv"), SubResource("Resource_sgsyo"), SubResource("Resource_ll5cn")])
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 0
