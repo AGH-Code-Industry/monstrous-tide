@@ -52,8 +52,6 @@ func create_cards(avoided_upgrades = []):
 func remove_cards():
 	for card in h_box_container.get_children():
 		card.queue_free()
-	#if len(WeaponManager.get_all_upgrades()) - len(current_upgrades) <= 0:
-		#%RerollButton.disabled = true
 	visible = false
 
 
@@ -61,8 +59,6 @@ func level_up(levels_to_lvlup: int):
 	if len(h_box_container.get_children()) > 0:
 		await GameEvents.upgrade_selected
 	for i in levels_to_lvlup:
-		#if len(WeaponManager.get_all_upgrades()) == 0:
-			#return
 		get_tree().paused = true
 		create_cards()
 		await GameEvents.upgrade_selected
