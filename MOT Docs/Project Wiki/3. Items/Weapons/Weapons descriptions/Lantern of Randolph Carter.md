@@ -1,10 +1,10 @@
 ---
 tags: items
 type: weapons, description
-description: "A description of weapon *Menacing Lantern* and everything related to it."
+description: "A description of weapon *Lantern of Randolph Carter* and everything related to it."
 upgrade: base
 ---
-
+*Formerly known as Menacing Lantern.*
 ___
 
 >This document will outline the most important aspects of weapon in the title - its properties, progression scheme, statistics, principles of working and many more. It is a sketch, as it needs specified information provided by programmers.
@@ -16,7 +16,9 @@ ___
 
 # General
 
-*Menacing Lantern* is one of the weapons player may consider good that is also an "early-game" one.
+*Lantern of Randolph Carter* is one of the weapons player may consider good that is also an "early-game" one.
+
+Randolph Carter is a main character in  story "The Dream-Quest of Unknown Kadath" where he spends quite some time underground beside ghouls. So I thought that the name of the lantern should come with the character who spent a lot of time in total darkness.
 
 ### Weapon's tags:
 
@@ -40,7 +42,7 @@ The *Lantern* is considered an AOE weapon - it periodically deals AOE damage to 
 
 *Values in range, f.e. 1-10%, mean it is a single, randomly chosen value between 1 and 10%.*
 
-Available upgrades for the *Menacing Lantern* :
+Available upgrades for the *Lantern of Randolph Carter* :
 ### 4-tier:
 
 - ***Basic:*** +1-10% *DMG*; +1-15% *ATKSpeed*; +2-8% *HPSteal*; +2-10% *AOE*; +5-15% *MovSpeed*; +2-8% *Dodge*; +5-15% *Pickup*;
@@ -63,4 +65,3 @@ Available upgrades for the *Menacing Lantern* :
 
 *A lantern found in the oldest of dungeons - the only source of light that could help me out of this never-ending maze they locked me inside... Once I picked it up, it immediately began enlightening everything with vibrancy: the stones, the walls and also my thoughts. With this still and yet alive ancestral creation, I have never felt more in-power and confident...*
 
-Randolph Carter is a main character in  story "The Dream-Quest of Unknown Kadath" where he spends quite some time underground beside ghouls. So I thought that the name of the lantern should come with the character who spent a lot of time i total darkness.
