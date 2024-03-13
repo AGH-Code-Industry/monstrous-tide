@@ -8,20 +8,18 @@ var all_possible_weapons : Array[Weapon] = []
 var weapons_node
 
 func _ready() -> void:
-	var player = get_tree().get_first_node_in_group("player")
-	if player == null:
-		return
-	weapons_node = get_tree().get_first_node_in_group("player").get_node("Weapons")
-	# Get weapons player started with
-	for node in weapons_node.get_children():
-		if typeof(node) == typeof(Weapon):
-			weapons.append(node)
+	if get_tree().current_scene.name == "World":
+		weapons_node = get_tree().get_first_node_in_group("player").get_node("Weapons")
+		update_weapons()
+	
 
 
 func get_all_upgrades():
+	update_weapons()
 	var all_upgrades = []
 	for weapon in weapons:
-		all_upgrades.append_array(weapon.get_available_upgrades())
+		if weapon != null:
+			all_upgrades.append_array(weapon.get_available_upgrades())
 	return all_upgrades
 
 # returns specified amount of upgrades chosen randomly 
@@ -52,3 +50,10 @@ func get_randomly_chosen_upgrades(amount: int, avoided_upgrades = []):
 				offset += upgrade.weight
 				
 	return drawn_upgrades
+	
+func update_weapons():
+	weapons.clear()
+	for node in get_tree().get_first_node_in_group("player").get_node("Weapons").get_children():
+		if typeof(node) == typeof(Weapon):
+			if node.is_active:
+				weapons.append(node)
