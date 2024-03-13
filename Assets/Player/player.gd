@@ -50,8 +50,9 @@ func movement():
 	move_and_slide()
 
 func die():
-	pass
-	#print("Player died")
+	#pass
+	print("Player died")
+	get_parent().game_over()
 	
 
 func _on_hit_box_on_death() -> void:

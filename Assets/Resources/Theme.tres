@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=30 format=3 uid="uid://co2p0ie6sxnsf"]
+[gd_resource type="Theme" load_steps=27 format=3 uid="uid://co2p0ie6sxnsf"]
 
 [ext_resource type="Texture2D" uid="uid://d1cn130aiejis" path="res://Assets/Utility/UI/Healthbar/hp-bar-golden-frame-back.png" id="1_cryu0"]
 [ext_resource type="Texture2D" uid="uid://b6rm3id5l64nw" path="res://Assets/MenuInterfaces/mot_buuton.png" id="1_jws7j"]
@@ -1298,7 +1298,6 @@ Button/constants/h_separation = 2
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
-Button/fonts/font = SubResource("FontFile_xm4fv")
 Button/styles/disabled = SubResource("StyleBoxFlat_ybvj1")
 Button/styles/focus = SubResource("StyleBoxFlat_s1pfa")
 Button/styles/hover = SubResource("StyleBoxTexture_geu31")
