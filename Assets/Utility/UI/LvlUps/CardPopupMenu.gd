@@ -39,11 +39,10 @@ func create_cards(avoided_upgrades = []):
 			
 				h_box_container.add_child(level_up_card_instance)
 			elif upgrade is Dictionary:
-				print("WEAPON")
 				var level_up_card_instance = weapon_card.instantiate()
 				level_up_card_instance.get_node("%ItemName").text = str(upgrade["name"])
 				level_up_card_instance.get_node("%ItemDescription").text = str(upgrade["description"])
-				level_up_card_instance.weapon = upgrade.scene
+				level_up_card_instance.weapon = upgrade
 				h_box_container.add_child(level_up_card_instance)
 				
 		if len(current_upgrades) < cards_to_draw_count:

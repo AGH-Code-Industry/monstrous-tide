@@ -28,8 +28,9 @@ func disable_cards():
 
 	
 func select_card():
-	#print(weapon)
-	get_tree().get_first_node_in_group("player").get_node("Weapons").add_child(load(weapon).instantiate())
+	get_tree().get_first_node_in_group("player").get_node("Weapons").add_child(load(weapon["scene"]).instantiate())
+	get_parent().get_parent().get_parent().get_parent().get_parent().get_node("WeaponManager").avoid_weapons.append(weapon)
+	#get_parent().get_parent().get_node("/root/WeaponManager").all_upgrades.erase(weapon)
 	disable_cards()
 	play_out_animation()
 	await animation_player.animation_finished

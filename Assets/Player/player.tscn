@@ -1,9 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=30 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_5ofgj"]
-[ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_it506"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
@@ -603,11 +602,6 @@ motion_mode = 1
 script = ExtResource("1_jqw0g")
 stat_set = SubResource("Resource_acek7")
 
-[node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
-visible = false
-attack_speed = 0.5
-damage = 1
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_qa4wg")
@@ -693,7 +687,6 @@ rest = Transform2D(1, 0, 0, 1, 46, -125)
 
 [node name="LeftHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/LeftArm"]
 position = Vector2(14, 73)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 14, 73)
 auto_calculate_length_and_angle = false
 length = 89.6
