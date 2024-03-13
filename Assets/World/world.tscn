@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=37 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://rhdo2vj35itf" path="res://Assets/World/Tło1.png" id="2_47c7y"]
@@ -35,9 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="26_sy4rw"]
 [ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="27_nkgxi"]
 [ext_resource type="PackedScene" uid="uid://b3ak5hh8jtrh8" path="res://Assets/Utility/Managers/weapon_manager.tscn" id="29_sylwc"]
-[ext_resource type="PackedScene" uid="uid://w814cm5dm64j" path="res://Assets/Enemies/Gravedigger/grevedigger.tscn" id="36_whmmr"]
-[ext_resource type="PackedScene" uid="uid://766nli862agw" path="res://Assets/Enemies/Monster/monster.tscn" id="37_qjd7w"]
-[ext_resource type="PackedScene" uid="uid://c4cnllq6weecr" path="res://Assets/Enemies/Wolf/wolf.tscn" id="38_7j81s"]
+[ext_resource type="PackedScene" uid="uid://w814cm5dm64j" path="res://Assets/Enemies/Gravedigger/grevedigger.tscn" id="36_5b78n"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_na82v")
@@ -53,6 +51,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_qgeh4")]
+process_mode = 4
 visible = false
 position = Vector2(-12, -1)
 spawns = Array[Resource("res://Assets/Utility/Spawner/spawn_info.gd")]([])
@@ -276,11 +275,5 @@ position = Vector2(150, -176)
 [node name="LvlUps" parent="." instance=ExtResource("26_ntv7e")]
 visible = false
 
-[node name="Grevedigger" parent="." instance=ExtResource("36_whmmr")]
-position = Vector2(387, 63)
-
-[node name="Monster" parent="." instance=ExtResource("37_qjd7w")]
-position = Vector2(-301, 276)
-
-[node name="Wolf" parent="." instance=ExtResource("38_7j81s")]
-position = Vector2(154, 355)
+[node name="Grevedigger" parent="." instance=ExtResource("36_5b78n")]
+position = Vector2(-265, 198)
