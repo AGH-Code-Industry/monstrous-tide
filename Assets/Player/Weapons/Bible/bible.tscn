@@ -1,0 +1,108 @@
+[gd_scene load_steps=22 format=3 uid="uid://dm1irwy44gd2t"]
+
+[ext_resource type="Script" path="res://Assets/Player/Weapons/Bible/bible.gd" id="1_7xq8o"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_o3asj"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_xwhob"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="4_dhhws"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="5_447b4"]
+
+[sub_resource type="Resource" id="Resource_qvo64"]
+script = ExtResource("2_o3asj")
+type = 100
+flat = 2.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_3vbcp"]
+script = ExtResource("2_o3asj")
+type = 105
+flat = 3.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_wrfuw"]
+script = ExtResource("2_o3asj")
+type = 110
+flat = 1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_r1ipi"]
+script = ExtResource("2_o3asj")
+type = 200
+flat = 2.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ftxek"]
+script = ExtResource("3_xwhob")
+data = Array[ExtResource("2_o3asj")]([SubResource("Resource_qvo64"), SubResource("Resource_3vbcp"), SubResource("Resource_wrfuw"), SubResource("Resource_r1ipi")])
+
+[sub_resource type="Resource" id="Resource_y21v6"]
+script = ExtResource("2_o3asj")
+type = 100
+flat = 4.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_6trut"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_y21v6")])
+name = "Bible damage"
+description = "Mglrmglmglmgl! "
+
+[sub_resource type="Resource" id="Resource_tym7k"]
+script = ExtResource("2_o3asj")
+type = 110
+flat = 3.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_cmehc"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_tym7k")])
+name = "Bible size"
+description = "Mglrmglmglmgl! "
+
+[sub_resource type="Resource" id="Resource_ea7mg"]
+script = ExtResource("4_dhhws")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_6trut"), SubResource("Resource_cmehc")])
+
+[sub_resource type="Resource" id="Resource_m6ktv"]
+script = ExtResource("2_o3asj")
+type = 105
+flat = -2.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_536ia"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_m6ktv")])
+name = "Bible cooldown"
+description = "Mglrmglmglmgl! "
+
+[sub_resource type="Resource" id="Resource_8aib6"]
+script = ExtResource("4_dhhws")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_536ia")])
+
+[sub_resource type="Resource" id="Resource_24xcw"]
+script = ExtResource("2_o3asj")
+type = 200
+flat = 5.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_h4igs"]
+script = ExtResource("5_447b4")
+stats = Array[ExtResource("2_o3asj")]([SubResource("Resource_24xcw")])
+name = "Bible Multi"
+description = "Mglrmglmglmgl! "
+
+[sub_resource type="Resource" id="Resource_u8f1h"]
+script = ExtResource("4_dhhws")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_h4igs")])
+
+[node name="Bible" type="Node2D"]
+script = ExtResource("1_7xq8o")
+stat_set = SubResource("Resource_ftxek")
+possible_upgrades = Array[ExtResource("4_dhhws")]([SubResource("Resource_ea7mg"), SubResource("Resource_8aib6"), SubResource("Resource_u8f1h")])
