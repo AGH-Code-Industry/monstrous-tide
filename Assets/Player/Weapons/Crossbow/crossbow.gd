@@ -9,7 +9,7 @@ func _ready():
 	start_cycle()
 	
 func start_cycle():
-	await get_tree().create_timer(stat_set.get_stat_value(Stat.Type.ATTACKSPEED)).timeout
+	await get_tree().create_timer(stat_set.get_stat_value(Stat.Type.ATTACKSPEED), false).timeout
 	instantiate_projectiles()
 	start_cycle()
 
@@ -25,7 +25,7 @@ func instantiate_projectiles():
 			stat_set.get_stat_value(Stat.Type.DURATION) # PLACEHOLDER (ᗒᗣᗕ)
 			)
 		get_tree().get_root().add_child(projectile_to_spawn)
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.3, false).timeout
 		
 
 func choose_closest_enemy_position() -> Vector2:
