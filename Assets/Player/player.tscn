@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
-[ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="9_yuajl"]
+[ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="9_d10fm"]
 
 [sub_resource type="Resource" id="Resource_gcdwu"]
 script = ExtResource("2_5ofgj")
@@ -545,7 +545,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_siame"]
 radius = 11.0
-height = 54.0
+height = 38.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yr38n"]
 size = Vector2(18, 45)
@@ -598,7 +598,8 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-107.468, 18)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-z_index = 10
+z_index = 1
+y_sort_enabled = true
 motion_mode = 1
 script = ExtResource("1_jqw0g")
 stat_set = SubResource("Resource_acek7")
@@ -622,7 +623,7 @@ animation = &"Idle"
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 17)
+position = Vector2(0, 14)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_vkkdj")]
@@ -635,11 +636,13 @@ flash_timeout = 0.2
 flash_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0, 16.5)
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
-offset_bottom = -18.0
+light_mask = 0
+offset_top = -35.0
+offset_bottom = -27.0
 theme_type_variation = &"HealthBar"
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
@@ -652,7 +655,7 @@ lifetime = 0.3
 visible = false
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(1, 8)
+y_sort_enabled = true
 scale = Vector2(0.4, 0.4)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Character"]
@@ -681,7 +684,7 @@ rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
-scale = Vector2(0.999999, 0.999999)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -812,7 +815,8 @@ parameters/conditions/is_moving = false
 
 [node name="Weapons" type="Node2D" parent="."]
 
-[node name="Lantern" parent="Weapons" instance=ExtResource("9_yuajl")]
+[node name="Lantern" parent="Weapons" instance=ExtResource("9_d10fm")]
+z_index = -1
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 

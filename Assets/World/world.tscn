@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=44 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://rhdo2vj35itf" path="res://Assets/World/Tło1.png" id="2_47c7y"]
@@ -55,7 +55,33 @@ enemy = ExtResource("5_gn26j")
 enemy_num = 1
 enemy_spawn_delay = 5
 
-[node name="World" type="Node2D"]
+[sub_resource type="Gradient" id="Gradient_yiyxv"]
+offsets = PackedFloat32Array(0.0746269, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cmup2"]
+gradient = SubResource("Gradient_yiyxv")
+fill = 1
+fill_from = Vector2(0.535354, 0.515152)
+fill_to = Vector2(0.762626, 0.510101)
+
+[sub_resource type="Environment" id="Environment_if33h"]
+background_mode = 3
+glow_enabled = true
+glow_levels/1 = 0.2
+glow_levels/3 = 0.5
+glow_levels/4 = 0.5
+glow_levels/5 = 0.5
+glow_normalized = true
+glow_intensity = 3.0
+glow_blend_mode = 0
+glow_hdr_threshold = 0.15
+glow_hdr_scale = 1.0
+glow_map = SubResource("GradientTexture2D_cmup2")
+
+[node name="World" type="TileMap"]
+y_sort_enabled = true
+format = 2
 script = ExtResource("1_na82v")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -69,14 +95,14 @@ region_enabled = true
 region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_qgeh4")]
-visible = false
 position = Vector2(-12, -1)
 spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResource("Resource_f8ksw")])
 
 [node name="Player" parent="." instance=ExtResource("2_j8yv2")]
 unique_name_in_owner = true
 
-[node name="Environment" type="Node" parent="."]
+[node name="Environment" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Tree_3" parent="Environment" instance=ExtResource("8_cc8vh")]
 position = Vector2(-324, -893)
@@ -181,6 +207,7 @@ position = Vector2(-687, -693)
 position = Vector2(783, 614)
 
 [node name="Bush_3" parent="Environment" instance=ExtResource("19_embcj")]
+y_sort_enabled = true
 position = Vector2(-506, -142)
 
 [node name="Bush_1" parent="Environment" instance=ExtResource("19_embcj")]
@@ -291,3 +318,6 @@ position = Vector2(150, -176)
 
 [node name="LvlUps" parent="." instance=ExtResource("26_ntv7e")]
 visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_if33h")
