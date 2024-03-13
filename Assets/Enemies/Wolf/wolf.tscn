@@ -463,7 +463,7 @@ item_scene = ExtResource("6_nx1aq")
 drop_chance = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eu8ov"]
-size = Vector2(500.25, 555)
+size = Vector2(440, 470)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5vab"]
 size = Vector2(318, 350)
@@ -590,7 +590,6 @@ bone_angle = -200.506
 
 [node name="RightFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-96, 103)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -96, 103)
 
 [node name="RightPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/RightFLeg"]
@@ -616,6 +615,7 @@ bone_angle = 112.405
 
 [node name="Tail" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(82, 40)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 82, 40)
 auto_calculate_length_and_angle = false
 length = 141.282
@@ -623,7 +623,6 @@ bone_angle = 81.935
 
 [node name="LeftBLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(42, 97)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]
@@ -671,7 +670,8 @@ collision_mask = 2
 damage = 2.0
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
-position = Vector2(-55, -67)
+position = Vector2(-72, -52)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_eu8ov")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_n1yw3")]
