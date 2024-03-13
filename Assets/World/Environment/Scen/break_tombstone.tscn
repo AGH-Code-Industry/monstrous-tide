@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b0mhoyqovky07" path="res://Assets/World/Environment/Texture/Tombstone_0.4.2.png" id="1_mupkm"]
 
 [node name="Break_tombstone" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.04, 0.04)
@@ -11,4 +12,5 @@ texture = ExtResource("1_mupkm")
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
-polygon = PackedVector2Array(-666.667, 133.333, -311.111, 222.222, -128.571, 228.571, 22.2222, 266.667, 733.333, -88.8889, 511.111, -244.444, 14.2857, -71.4286, -333.333, -155.556, -711.111, -44.4444)
+position = Vector2(0, -25)
+polygon = PackedVector2Array(-650, 100, -325, 175, -100, 150, 75, 225, 650, -50, 500, -150, 0, 50, -325, -50, -625, 0)
