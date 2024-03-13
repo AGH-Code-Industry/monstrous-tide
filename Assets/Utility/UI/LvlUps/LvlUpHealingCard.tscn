@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://l3xnfuacfnpp"]
 
-[ext_resource type="Texture2D" uid="uid://baum022abj3br" path="res://Assets/Utility/UI/LvlUps/Textures/card_yellow.png" id="1_bjw3u"]
+[ext_resource type="Texture2D" uid="uid://kxeqb10isvth" path="res://Assets/Utility/UI/LvlUps/Textures/healing_card.png" id="1_guuvg"]
 [ext_resource type="Texture2D" uid="uid://b1vvuibkmi0mt" path="res://Assets/Utility/DropItems/Texture/Potion_02.png" id="2_5squv"]
 [ext_resource type="Script" path="res://Assets/Utility/UI/LvlUps/LvlUpHealingCard.gd" id="2_dx55w"]
 
@@ -117,7 +117,7 @@ custom_minimum_size = Vector2(170, 260)
 offset_right = 174.273
 offset_bottom = 260.0
 pivot_offset = Vector2(85, 130)
-texture = ExtResource("1_bjw3u")
+texture = ExtResource("1_guuvg")
 expand_mode = 3
 script = ExtResource("2_dx55w")
 

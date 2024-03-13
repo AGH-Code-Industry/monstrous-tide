@@ -34,12 +34,10 @@ func get_all_upgrades():
 func get_randomly_chosen_upgrades(amount: int, avoided_upgrades = []):
 	# Geting upgrades from each weapon
 	var all_upgrades = get_all_upgrades() + all_possible_weapons
-	#print(avoid_weapons)
 	avoided_upgrades += avoid_weapons
 	for avoid_upgrade in avoided_upgrades:
 		if avoid_upgrade in all_upgrades:
 			all_upgrades.erase(avoid_upgrade)
-	print(all_upgrades)
 	# Checking if array of upgrades is empty	
 	if all_upgrades.size() == 0:
 		return	
