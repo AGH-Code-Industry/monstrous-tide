@@ -28,5 +28,6 @@ shape = SubResource("RectangleShape2D_vcaqi")
 wait_time = 0.2
 one_shot = true
 
+[connection signal="area_entered" from="DamageBox" to="." method="_on_damage_box_area_entered"]
 [connection signal="area_entered" from="DamageBox" to="DamageBox" method="_on_area_entered"]
 [connection signal="timeout" from="DamageBox/AttackSpeedTimer" to="DamageBox" method="_on_attack_speed_timer_timeout"]
