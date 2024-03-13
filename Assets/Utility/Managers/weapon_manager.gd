@@ -51,4 +51,5 @@ func get_randomly_chosen_upgrades(amount: int, avoided_upgrades = []):
 			else:
 				offset += upgrade.weight
 				
+	print(drawn_upgrades)
 	return drawn_upgrades
