@@ -26,8 +26,10 @@ func disable_cards():
 
 	
 func select_card():
+	SoundManager.play_card_pickup_sound()
 	upgrade.apply_upgrade()
 	disable_cards()
+	
 	play_out_animation()
 	await animation_player.animation_finished
 	GameEvents.emit_upgrade_selected()

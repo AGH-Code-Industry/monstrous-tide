@@ -27,6 +27,7 @@ func disable_cards():
 
 	
 func select_card():
+	SoundManager.play_card_pickup_sound()
 	get_tree().get_first_node_in_group("player").get_node("HitBox").heal(healing_amount)
 	disable_cards()
 	play_out_animation()
