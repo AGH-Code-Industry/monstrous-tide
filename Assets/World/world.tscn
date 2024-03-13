@@ -1,9 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=42 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://rhdo2vj35itf" path="res://Assets/World/Tło1.png" id="2_47c7y"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
-[ext_resource type="PackedScene" path="res://Assets/World/Environment/Scen/bush_2.tscn" id="3_lpidb"]
+[ext_resource type="PackedScene" uid="uid://dx008vftxftcy" path="res://Assets/World/Environment/Scen/bush_2.tscn" id="3_lpidb"]
 [ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/Spawner/enemy_spawner.tscn" id="3_qgeh4"]
 [ext_resource type="PackedScene" uid="uid://bgjjl2mj65qgu" path="res://Assets/Enemies/enemy.tscn" id="3_whrsd"]
 [ext_resource type="PackedScene" uid="uid://dgi8tixu3jo14" path="res://Assets/World/Environment/Scen/tombstone_2.tscn" id="4_66oc4"]
@@ -18,16 +18,16 @@
 [ext_resource type="PackedScene" uid="uid://rd2hgmivn7i3" path="res://Assets/World/Environment/Scen/cemetery_lamp.tscn" id="5_x2t4u"]
 [ext_resource type="PackedScene" uid="uid://bacoytneoofs4" path="res://Assets/World/Environment/Scen/tombstone_1.tscn" id="6_n6q55"]
 [ext_resource type="PackedScene" uid="uid://d2p1762b268iq" path="res://Assets/World/Environment/Scen/break_tombstone.tscn" id="8_1r5k2"]
-[ext_resource type="PackedScene" path="res://Assets/World/Environment/Scen/tree_2.tscn" id="8_cc8vh"]
-[ext_resource type="PackedScene" path="res://Assets/World/Environment/Scen/tree_1.tscn" id="8_hcbyy"]
-[ext_resource type="PackedScene" path="res://Assets/World/Environment/Scen/tombstone_5.tscn" id="10_itf3j"]
-[ext_resource type="PackedScene" path="res://Assets/World/Environment/Scen/fenceraven.tscn" id="10_kldk0"]
+[ext_resource type="PackedScene" uid="uid://cwhtp8uen12rv" path="res://Assets/World/Environment/Scen/tree_2.tscn" id="8_cc8vh"]
+[ext_resource type="PackedScene" uid="uid://t15kclcgsht0" path="res://Assets/World/Environment/Scen/tree_1.tscn" id="8_hcbyy"]
+[ext_resource type="PackedScene" uid="uid://okawxyib3ihc" path="res://Assets/World/Environment/Scen/tombstone_5.tscn" id="10_itf3j"]
+[ext_resource type="PackedScene" uid="uid://bvjgwu8scc44m" path="res://Assets/World/Environment/Scen/fenceraven.tscn" id="10_kldk0"]
 [ext_resource type="PackedScene" uid="uid://detle2uijbg6f" path="res://Assets/World/Environment/Scen/cande_2.tscn" id="10_wltt3"]
 [ext_resource type="PackedScene" uid="uid://mx7howeeqejb" path="res://Assets/World/Environment/Scen/stone_2f.tscn" id="14_ql30f"]
 [ext_resource type="PackedScene" uid="uid://cj3l1cpah21so" path="res://Assets/World/Environment/Scen/stone_2c.tscn" id="15_s4wxv"]
 [ext_resource type="PackedScene" uid="uid://cctao6a7cpn7i" path="res://Assets/World/Environment/Scen/stone_2d.tscn" id="17_tff1i"]
 [ext_resource type="PackedScene" uid="uid://c23nv1wariral" path="res://Assets/World/Environment/Scen/stone_2e.tscn" id="18_gh0ig"]
-[ext_resource type="PackedScene" path="res://Assets/World/Environment/Scen/bush_1.tscn" id="19_embcj"]
+[ext_resource type="PackedScene" uid="uid://dgwmrl6lbmw7e" path="res://Assets/World/Environment/Scen/bush_1.tscn" id="19_embcj"]
 [ext_resource type="PackedScene" uid="uid://bvawrv4cvkx6q" path="res://Assets/Utility/Managers/experience_manager.tscn" id="22_c4rh6"]
 [ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
 [ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="24_al4of"]
@@ -70,7 +70,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_qgeh4")]
-visible = false
 position = Vector2(-12, -1)
 spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResource("Resource_f8ksw")])
 
