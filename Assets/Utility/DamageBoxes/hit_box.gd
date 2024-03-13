@@ -33,6 +33,7 @@ func _ready():
 	set_regeneretion_rate(regenaration_rate)
 	if regeneration_enabled:
 		tick_timer.start()
+	update_health.emit()
 	
 
 func take_damage(dmg: Damage) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=46 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://rhdo2vj35itf" path="res://Assets/World/Tło1.png" id="2_47c7y"]
