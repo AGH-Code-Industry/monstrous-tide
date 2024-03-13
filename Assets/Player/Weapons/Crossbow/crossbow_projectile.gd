@@ -4,11 +4,12 @@ extends Node2D
 var direction
 var pierce_amount = 1
 
-func initialization(dmg, size, dir):
+func initialization(dmg, size, dir, prc):
 	$DamageBox.damage = dmg
 	self.scale = Vector2(size, size)
 	direction = dir - global_position
 	rotation = direction.angle()
+	pierce_amount = prc
 
 func _physics_process(delta):
 	position += direction.normalized() * speed * delta

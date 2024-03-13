@@ -9,36 +9,29 @@ func _ready():
 	start_cycle()
 	
 func start_cycle():
-	#await get_tree().create_timer(stat_set.get_stat_value(Stat.Type.ATTACKSPEED)).timeout
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(stat_set.get_stat_value(Stat.Type.ATTACKSPEED)).timeout
 	instantiate_projectiles()
 	start_cycle()
 
 func instantiate_projectiles():
-	#for i in range(stat_set.get_stat_value(Stat.Type.DODGE)):
-	for i in range(2):
+	for i in range(stat_set.get_stat_value(Stat.Type.DODGE)):  #PLACEHOLDER (sowwy)
 		var target = choose_closest_enemy_position()
 		var projectile_to_spawn = crossbow_projectile.instantiate()
 		projectile_to_spawn.global_position = global_position
-		#projectile_to_spawn.initialization(
-			#stat_set.get_stat_value(Stat.Type.DAMAGE),
-			#stat_set.get_stat_value(Stat.Type.DAMAGERADIUS),
-			#target
-			#)
 		projectile_to_spawn.initialization(
-			10,
-			1,
-			target
+			stat_set.get_stat_value(Stat.Type.DAMAGE),
+			stat_set.get_stat_value(Stat.Type.DAMAGERADIUS),
+			target,
+			stat_set.get_stat_value(Stat.Type.DURATION) # PLACEHOLDER (ᗒᗣᗕ)
 			)
 		get_tree().get_root().add_child(projectile_to_spawn)
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.3).timeout
 		
 
 func choose_closest_enemy_position() -> Vector2:
 	var enemies_in_range: Array[Area2D] = $DetectionArea.get_overlapping_areas()
 	if enemies_in_range.size() == 0:
 		# No enemies in range, return a random position within DetectionArea
-		print("no oponents")
 		return Vector2(randf_range(global_position.x - 100, global_position.x + 100), randf_range(global_position.y - 100, global_position.y + 100))
 	
 	# Initialize variables to store closest enemy and its distance
