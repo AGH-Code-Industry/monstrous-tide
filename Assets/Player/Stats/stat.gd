@@ -6,6 +6,8 @@ enum Type{
 	ATTACKSPEED = 105,
 	DAMAGERADIUS = 110,
 	DURATION = 115,
+	MULTISHOT = 120,
+	PIERCE = 125,
 	
 	#Defensive
 	DODGE = 200,

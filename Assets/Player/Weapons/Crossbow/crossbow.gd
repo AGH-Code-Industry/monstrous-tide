@@ -14,7 +14,7 @@ func start_cycle():
 	start_cycle()
 
 func instantiate_projectiles():
-	for i in range(stat_set.get_stat_value(Stat.Type.DODGE)):  #PLACEHOLDER (sowwy)
+	for i in range(stat_set.get_stat_value(Stat.Type.MULTISHOT)):
 		var target = choose_closest_enemy_position()
 		var projectile_to_spawn = crossbow_projectile.instantiate()
 		projectile_to_spawn.global_position = global_position
@@ -22,7 +22,7 @@ func instantiate_projectiles():
 			stat_set.get_stat_value(Stat.Type.DAMAGE),
 			stat_set.get_stat_value(Stat.Type.DAMAGERADIUS),
 			target,
-			stat_set.get_stat_value(Stat.Type.DURATION) # PLACEHOLDER (ᗒᗣᗕ)
+			stat_set.get_stat_value(Stat.Type.PIERCE)
 			)
 		get_tree().get_root().add_child(projectile_to_spawn)
 		await get_tree().create_timer(0.3, false).timeout
