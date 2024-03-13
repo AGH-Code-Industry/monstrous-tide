@@ -95,6 +95,8 @@ scale_curve = SubResource("CurveTexture_tw5kp")
 
 [node name="Enemy" type="CharacterBody2D"]
 texture_filter = 1
+collision_layer = 256
+collision_mask = 256
 motion_mode = 1
 script = ExtResource("1_iqk56")
 
@@ -146,6 +148,8 @@ amount = 12
 process_material = SubResource("ParticleProcessMaterial_rdpba")
 lifetime = 0.3
 explosiveness = 1.0
+
+[node name="IMPORTANT collisions are set only on layer 9, change after gamesHall" type="Node" parent="."]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 [connection signal="update_health" from="HitBox" to="." method="_on_hit_box_update_health"]

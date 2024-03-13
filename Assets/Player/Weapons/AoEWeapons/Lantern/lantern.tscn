@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://5wxdkk0ryim2"]
+[gd_scene load_steps=33 format=3 uid="uid://5wxdkk0ryim2"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_hh3o4"]
@@ -114,6 +114,33 @@ shader_parameter/speed = 0.4
 shader_parameter/main_color = Color(0.890196, 0.87451, 0.466667, 1)
 shader_parameter/lerp_color = Color(1, 1, 1, 1)
 
+[sub_resource type="Animation" id="Animation_fkp50"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.568627)]
+}
+
 [sub_resource type="Animation" id="Animation_038fw"]
 resource_name = "Spin"
 length = 80.0
@@ -141,33 +168,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0.568627), Color(1, 1, 1, 0.705882), Color(1, 1, 1, 0.568627)]
-}
-
-[sub_resource type="Animation" id="Animation_fkp50"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0.568627)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_33ve7"]
