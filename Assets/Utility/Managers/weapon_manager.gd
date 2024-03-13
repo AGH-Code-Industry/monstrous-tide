@@ -3,7 +3,15 @@ extends Node
 var weapons : Array[Weapon] = []
 
 # Used for choosing random weapon as a reward
-var all_possible_weapons : Array[Weapon] = []
+@onready var all_possible_weapons = [
+	{
+		"weight": 1,
+		"name": "Bible",
+		"description": "Bible weapon",
+		"scene": "res://Assets/Player/Weapons/Bible/bible.tscn"
+	},
+]
+var avoid_weapons: Array
 
 var weapons_node
 
@@ -25,7 +33,8 @@ func get_all_upgrades():
 # returns specified amount of upgrades chosen randomly 
 func get_randomly_chosen_upgrades(amount: int, avoided_upgrades = []):
 	# Geting upgrades from each weapon
-	var all_upgrades = get_all_upgrades()
+	var all_upgrades = get_all_upgrades() + all_possible_weapons
+	avoided_upgrades += avoid_weapons
 	for avoid_upgrade in avoided_upgrades:
 		if avoid_upgrade in all_upgrades:
 			all_upgrades.erase(avoid_upgrade)
