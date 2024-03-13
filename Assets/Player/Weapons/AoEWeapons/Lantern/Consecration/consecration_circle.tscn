@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://wtgjafbeo284"]
+[gd_scene load_steps=12 format=3 uid="uid://wtgjafbeo284"]
 
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="1_56j5e"]
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/consecration_circle.gd" id="1_iekd5"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Ray.gdshader" id="2_je840"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/circle.gdshader" id="3_cfgaj"]
+[ext_resource type="Texture2D" uid="uid://bxynkhk7buxll" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lanterneffectconsecrationdone.png" id="5_1a4kf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5pem6"]
 radius = 1.45
@@ -21,6 +22,67 @@ shader_parameter/speed = 0.4
 shader_parameter/main_color = Color(0.890196, 0.87451, 0.466667, 1)
 shader_parameter/lerp_color = Color(1, 1, 1, 1)
 
+[sub_resource type="Animation" id="Animation_1b4ne"]
+resource_name = "Spin"
+length = 80.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40, 80),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.14159, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 40, 80),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.588235), Color(1, 1, 1, 0.705882), Color(1, 1, 1, 0.588235)]
+}
+
+[sub_resource type="Animation" id="Animation_snfpj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.588235)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_goi0o"]
+_data = {
+"RESET": SubResource("Animation_snfpj"),
+"Spin": SubResource("Animation_1b4ne")
+}
+
 [node name="ConsecrationCircle" type="Node2D"]
 script = ExtResource("1_iekd5")
 
@@ -33,6 +95,7 @@ collision_mask = 4
 shape = SubResource("CircleShape2D_5pem6")
 
 [node name="VFX" type="Control" parent="."]
+visible = false
 z_index = 2
 layout_mode = 3
 anchors_preset = 0
@@ -65,6 +128,17 @@ offset_right = 2.05
 offset_bottom = 2.05
 
 [node name="Duration" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_1a4kf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_goi0o")
+}
+autoplay = "Spin"
 
 [connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]
 
