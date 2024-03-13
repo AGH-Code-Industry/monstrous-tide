@@ -23,6 +23,6 @@ func _physics_process(_delta):
 
 func _on_hit_box_on_death() -> void:
 	# Loot and xp drop functions should be added here
-	#print("Enemy died")
+	SoundManager.play_enemy_death_sound()
 	queue_free()
 

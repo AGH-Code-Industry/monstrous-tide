@@ -24,6 +24,7 @@ extends Area2D
 
 signal update_health
 signal regeneration_update ## Emitted when value of `regeneration_enabled` is changed via `toggle_regenaration()` or when `regenaration_rate` is changed
+signal damage_taken
 
 signal on_death()
 
@@ -50,6 +51,7 @@ func take_damage(dmg: Damage) -> void:
 	if health <= 0:
 		die()
 	update_health.emit()
+	damage_taken.emit()
 	
 	if(flash_on_hit):
 		sprite.modulate = flash_color

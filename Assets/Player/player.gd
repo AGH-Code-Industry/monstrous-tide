@@ -59,3 +59,7 @@ func _on_hit_box_on_death() -> void:
 	die()
 	
 
+
+
+func _on_hit_box_damage_taken() -> void:
+	SoundManager.play_player_hit_sound()

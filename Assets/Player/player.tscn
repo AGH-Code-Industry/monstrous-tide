@@ -816,6 +816,7 @@ parameters/conditions/is_moving = false
 [node name="Lantern" parent="Weapons" instance=ExtResource("9_d10fm")]
 z_index = -1
 
+[connection signal="damage_taken" from="HitBox" to="." method="_on_hit_box_damage_taken"]
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
 [editable path="HitBox"]
