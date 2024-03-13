@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://l3xnfuacfnpp"]
+[gd_scene load_steps=9 format=3 uid="uid://d22niof5iafo6"]
 
-[ext_resource type="Texture2D" uid="uid://kxeqb10isvth" path="res://Assets/Utility/UI/LvlUps/Textures/healing_card.png" id="1_guuvg"]
-[ext_resource type="Texture2D" uid="uid://b1vvuibkmi0mt" path="res://Assets/Utility/DropItems/Texture/Potion_02.png" id="2_5squv"]
-[ext_resource type="Script" path="res://Assets/Utility/UI/LvlUps/LvlUpHealingCard.gd" id="2_dx55w"]
+[ext_resource type="Texture2D" uid="uid://1hoyqbmi8yjn" path="res://Assets/Utility/UI/LvlUps/Textures/card_purple.png" id="1_8xwwf"]
+[ext_resource type="Texture2D" uid="uid://b71h2hnpsd2lg" path="res://Assets/Player/Weapons/Tornado/Tornado_0.1.png" id="2_8bt21"]
+[ext_resource type="Script" path="res://Assets/Utility/UI/LvlUps/LvlUpWeaponCard.gd" id="2_msfrx"]
 
 [sub_resource type="Animation" id="Animation_q04jn"]
 length = 0.001
@@ -112,14 +112,14 @@ _data = {
 "out": SubResource("Animation_2jhur")
 }
 
-[node name="HealingCard" type="TextureRect" groups=["upgrade_card"]]
+[node name="WeaponCard" type="TextureRect" groups=["upgrade_card"]]
 custom_minimum_size = Vector2(170, 260)
 offset_right = 174.273
 offset_bottom = 260.0
 pivot_offset = Vector2(85, 130)
-texture = ExtResource("1_guuvg")
+texture = ExtResource("1_8xwwf")
 expand_mode = 3
-script = ExtResource("2_dx55w")
+script = ExtResource("2_msfrx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -142,7 +142,7 @@ offset_left = 31.0
 offset_top = 26.0
 offset_right = 141.0
 offset_bottom = 136.0
-texture = ExtResource("2_5squv")
+texture = ExtResource("2_8bt21")
 expand_mode = 1
 
 [node name="ItemName" type="Label" parent="."]

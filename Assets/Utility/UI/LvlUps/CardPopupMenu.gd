@@ -4,6 +4,7 @@ extends CanvasLayer
 @export var cards_to_draw_count = 3
 var level_up_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpCard2.tscn")
 var healing_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpHealingCard.tscn")
+var weapon_card = preload("res://Assets/Utility/UI/LvlUps/LvlUpWeaponCard.tscn")
 var WeaponManager: Node
 var current_upgrades
 var colors = {
@@ -20,22 +21,30 @@ func create_cards(avoided_upgrades = []):
 	current_upgrades = WeaponManager.get_randomly_chosen_upgrades(cards_to_draw_count, avoided_upgrades)
 	if current_upgrades != null:
 		for upgrade in current_upgrades:
-			var level_up_card_instance = level_up_card.instantiate()
-			level_up_card_instance.upgrade = upgrade
-			level_up_card_instance.get_node("%ItemName").text = str(upgrade.name)
-			level_up_card_instance.get_node("%ItemDescription").text = str(upgrade.description)
+			if upgrade is Resource:
+				var level_up_card_instance = level_up_card.instantiate()
+				level_up_card_instance.upgrade = upgrade
+				level_up_card_instance.get_node("%ItemName").text = str(upgrade.name)
+				level_up_card_instance.get_node("%ItemDescription").text = str(upgrade.description)
 
-			match upgrade.upgrade_tier:
-				0:
-					level_up_card_instance.texture = load(colors["green"])
-				1:
-					level_up_card_instance.texture = load(colors["blue"])
-				2:
-					level_up_card_instance.texture = load(colors["purple"])
-				3:
-					level_up_card_instance.texture = load(colors["yellow"])
+				match upgrade.upgrade_tier:
+					0:
+						level_up_card_instance.texture = load(colors["green"])
+					1:
+						level_up_card_instance.texture = load(colors["blue"])
+					2:
+						level_up_card_instance.texture = load(colors["purple"])
+					3:
+						level_up_card_instance.texture = load(colors["yellow"])
 			
-			h_box_container.add_child(level_up_card_instance)
+				h_box_container.add_child(level_up_card_instance)
+			elif upgrade is Dictionary:
+				var level_up_card_instance = weapon_card.instantiate()
+				level_up_card_instance.get_node("%ItemName").text = str(upgrade["name"])
+				level_up_card_instance.get_node("%ItemDescription").text = str(upgrade["description"])
+				level_up_card_instance.weapon = upgrade
+				h_box_container.add_child(level_up_card_instance)
+				
 		if len(current_upgrades) < cards_to_draw_count:
 			var i = 0
 			while i < cards_to_draw_count - len(current_upgrades):
