@@ -486,7 +486,7 @@ drop_chance = 29.0
 [sub_resource type="Resource" id="Resource_i0to0"]
 script = ExtResource("5_drbcx")
 item_scene = ExtResource("7_2umuv")
-drop_chance = 1.0
+drop_chance = 4.0
 
 [sub_resource type="Resource" id="Resource_bidv3"]
 script = ExtResource("5_drbcx")
@@ -635,6 +635,7 @@ rest = Transform2D(1, 0, 0, 1, -54, -49)
 
 [node name="RightHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/RightArm"]
 position = Vector2(-49, 106)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -49, 106)
 auto_calculate_length_and_angle = false
 length = 89.379
@@ -672,7 +673,6 @@ bone_angle = 87.996
 
 [node name="Finger2" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm/LeftHand"]
 position = Vector2(45, 56)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 45, 59)
 auto_calculate_length_and_angle = false
 length = 33.265
@@ -693,7 +693,6 @@ bone_angle = 94.167
 
 [node name="LeftLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest"]
 position = Vector2(25, 47)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 25, 47)
 
 [node name="LeftFoot" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/LeftLeg"]
