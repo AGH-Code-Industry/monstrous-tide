@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=30 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
 [ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="9_d10fm"]
-[ext_resource type="PackedScene" uid="uid://jwiqqffsoun4" path="res://Assets/Player/Weapons/Crossbow/crossbow.tscn" id="9_r4vmr"]
 
 [sub_resource type="Resource" id="Resource_gcdwu"]
 script = ExtResource("2_5ofgj")
@@ -679,7 +678,6 @@ rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128
@@ -812,8 +810,6 @@ parameters/conditions/is_moving = false
 
 [node name="Lantern" parent="Weapons" instance=ExtResource("9_d10fm")]
 z_index = -1
-
-[node name="Crossbow" parent="Weapons" instance=ExtResource("9_r4vmr")]
 
 [connection signal="damage_taken" from="HitBox" to="." method="_on_hit_box_damage_taken"]
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]

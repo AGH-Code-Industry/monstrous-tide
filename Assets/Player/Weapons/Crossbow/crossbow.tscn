@@ -81,7 +81,7 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_186yb"]
 script = ExtResource("5_y7jys")
 stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_odiry")])
-name = "Crossbow Attack Speed"
+name = "Crossbow Speed"
 description = "Increase Attack Speed by 10%"
 
 [sub_resource type="Resource" id="Resource_lyc4e"]
@@ -124,7 +124,7 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_2ph15"]
 script = ExtResource("5_y7jys")
 stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_cd6x3")])
-name = "Crossbow Multishop"
+name = "Crossbow Multishot"
 description = "Shoot More Projectiles"
 
 [sub_resource type="Resource" id="Resource_yncrv"]
@@ -141,7 +141,7 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_pdks4"]
 script = ExtResource("5_y7jys")
 stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_q3sjo")])
-name = "CrossbowPierce"
+name = "Crossbow Pierce"
 description = "Pierce 1 More Target"
 
 [sub_resource type="Resource" id="Resource_14nos"]
@@ -167,7 +167,7 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_wonso"]
 script = ExtResource("5_y7jys")
 stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_g0276")])
-name = "Crossbow Attack Speed"
+name = "Crossbow Speed"
 description = "Attack 45% Faster"
 
 [sub_resource type="Resource" id="Resource_sgsyo"]
@@ -191,7 +191,7 @@ more = -30.0
 [sub_resource type="Resource" id="Resource_kmhq7"]
 script = ExtResource("5_y7jys")
 stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_wdp5p"), SubResource("Resource_ko0d0")])
-name = "Multishop"
+name = "Crossbow Multishot"
 description = "Shoot 2 more projectiles but deal 30% less damage"
 
 [sub_resource type="Resource" id="Resource_p6s7d"]
@@ -218,8 +218,8 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_nunic"]
 script = ExtResource("5_y7jys")
 stats = Array[ExtResource("2_nfjgl")]([SubResource("Resource_p6s7d"), SubResource("Resource_6bxm0"), SubResource("Resource_kwntk")])
-name = "Deal 50% More Damage But Shoot Fewer Projectiles and Slower"
-description = ""
+name = "Crossbow Damage"
+description = "Deal 50% More Damage But Shoot Fewer Projectiles and Slower"
 
 [sub_resource type="Resource" id="Resource_ll5cn"]
 script = ExtResource("4_2hjdo")
