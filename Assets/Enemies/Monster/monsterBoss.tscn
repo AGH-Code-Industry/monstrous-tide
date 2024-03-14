@@ -612,6 +612,7 @@ rest = Transform2D(1, 0, 0, 1, -19, -94)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(4, -65)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 4, -65)
 auto_calculate_length_and_angle = false
 length = 162.759
