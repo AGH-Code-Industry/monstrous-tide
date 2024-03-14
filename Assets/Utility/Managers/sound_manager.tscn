@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Assets/Utility/Managers/sound_manager.gd" id="1_tcbc7"]
 [ext_resource type="AudioStream" uid="uid://opgpxwqc2ck7" path="res://Assets/Audio/SFX/taking_item.wav" id="2_hs0ut"]
-[ext_resource type="AudioStream" uid="uid://ccxknafu2qn78" path="res://Assets/Audio/Music/Monstrous tide.wav" id="3_vt16h"]
+[ext_resource type="AudioStream" uid="uid://burogte2bxksp" path="res://Assets/Audio/Music/Monstrous_tide.wav" id="3_l2eam"]
 [ext_resource type="AudioStream" uid="uid://cqe6o2e2xlqtq" path="res://Assets/Audio/SFX/game_over_soundv2.wav" id="4_o5r2u"]
 [ext_resource type="AudioStream" uid="uid://doah2h811vdvv" path="res://Assets/Audio/SFX/death_soundv2.wav" id="5_vq1st"]
 [ext_resource type="AudioStream" uid="uid://ditl6drtpwfw4" path="res://Assets/Audio/SFX/player_hit.mp3" id="6_4in8s"]
@@ -10,19 +10,19 @@
 [node name="SoundManager" type="Node2D"]
 script = ExtResource("1_tcbc7")
 
-[node name="CardPickupSound" type="AudioStreamPlayer2D" parent="."]
+[node name="CardPickupSound" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("2_hs0ut")
 volume_db = -20.0
 bus = &"SFX"
 
-[node name="Soundtrack" type="AudioStreamPlayer2D" parent="."]
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
 process_mode = 3
-stream = ExtResource("3_vt16h")
+stream = ExtResource("3_l2eam")
 volume_db = -20.0
 bus = &"Music"
 
-[node name="GameOverSound" type="AudioStreamPlayer2D" parent="."]
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("4_o5r2u")
 volume_db = -20.0
