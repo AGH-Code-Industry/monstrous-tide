@@ -440,7 +440,7 @@ drop_chance = 1.0
 [sub_resource type="Resource" id="Resource_6blir"]
 script = ExtResource("4_mj5nx")
 item_scene = ExtResource("8_woxl7")
-drop_chance = 1.0
+drop_chance = 5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ldfsi"]
 size = Vector2(300, 660)
