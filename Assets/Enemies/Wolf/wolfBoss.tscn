@@ -573,6 +573,7 @@ rest = Transform2D(1, 0, 0, 1, -1, -107)
 
 [node name="Neck" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(-36, -15)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -36, -15)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
@@ -597,6 +598,7 @@ bone_angle = -243.038
 
 [node name="LeftFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-39, 91)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -39, 91)
 
 [node name="LeftFPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/LeftFLeg"]
@@ -621,6 +623,7 @@ rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]
 position = Vector2(21, 76)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 21, 76)
 auto_calculate_length_and_angle = false
 length = 63.656
@@ -657,6 +660,7 @@ items_to_drop = Array[ExtResource("5_dvsmq")]([SubResource("Resource_coo45"), Su
 
 [node name="DamageBox" parent="." instance=ExtResource("8_t7hoq")]
 position = Vector2(62, 117)
+scale = Vector2(1.1, 1.1)
 collision_layer = 0
 collision_mask = 2
 damage = 2.0

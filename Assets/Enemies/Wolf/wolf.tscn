@@ -590,7 +590,6 @@ rest = Transform2D(1, 0, 0, 1, -36, -15)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-83, -68)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -83, -68)
 auto_calculate_length_and_angle = false
 length = 85.298
@@ -603,7 +602,6 @@ rest = Transform2D(1, 0, 0, 1, -96, 103)
 
 [node name="RightPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/RightFLeg"]
 position = Vector2(-1, 84)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -1, 83)
 auto_calculate_length_and_angle = false
 length = 59.28
@@ -611,12 +609,10 @@ bone_angle = -243.038
 
 [node name="LeftFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-39, 91)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -39, 91)
 
 [node name="LeftFPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/LeftFLeg"]
 position = Vector2(-13, 99)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -13, 99)
 auto_calculate_length_and_angle = false
 length = 72.114
@@ -637,7 +633,6 @@ rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]
 position = Vector2(21, 76)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 21, 76)
 auto_calculate_length_and_angle = false
 length = 63.656
@@ -674,6 +669,7 @@ items_to_drop = Array[ExtResource("4_q44wx")]([SubResource("Resource_coo45"), Su
 
 [node name="DamageBox" parent="." instance=ExtResource("7_1jgko")]
 position = Vector2(62, 117)
+scale = Vector2(1.1, 1.1)
 collision_layer = 0
 collision_mask = 2
 damage = 2.0

@@ -658,6 +658,7 @@ items_to_drop = Array[ExtResource("5_mm3ib")]([SubResource("Resource_coo45"), Su
 
 [node name="DamageBox" parent="." instance=ExtResource("8_c2fk8")]
 position = Vector2(46, 120)
+scale = Vector2(1.1, 1.1)
 collision_layer = 0
 collision_mask = 2
 damage = 2.0

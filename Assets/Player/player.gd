@@ -21,10 +21,10 @@ func _physics_process(_delta):
 	movement()
 	
 # FOR DEBUG PURPOSES
-func _process(_delta):
-	if Input.is_action_just_pressed("DEBUG_manual_heal"): 
-		$HitBox.heal(DEBUG_heal_value)
-		print("Manual heal (+" + str(DEBUG_heal_value) + "), current health " + str($HitBox.health) + " / " + str($HitBox.max_health))
+#func _process(_delta):
+	#if Input.is_action_just_pressed("DEBUG_manual_heal"): 
+	#	$HitBox.heal(DEBUG_heal_value)
+	#	print("Manual heal (+" + str(DEBUG_heal_value) + "), current health " + str($HitBox.health) + " / " + str($HitBox.max_health))
 
 func movement():
 	var x_mov = Input.get_action_strength("right") - Input.get_action_strength("left")
