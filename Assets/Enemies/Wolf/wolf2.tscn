@@ -1,15 +1,15 @@
-[gd_scene load_steps=27 format=3 uid="uid://c4cnllq6weecr"]
+[gd_scene load_steps=27 format=3 uid="uid://bqmaiuxnifnl5"]
 
-[ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_u8p71"]
-[ext_resource type="Texture2D" uid="uid://b6hhsc7musbjv" path="res://Assets/Enemies/Wolf/Wolf_0.2.png" id="1_yrl7b"]
-[ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="2_gibaw"]
-[ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="3_8ef2q"]
-[ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="4_q44wx"]
-[ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="5_owka1"]
-[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="6_nx1aq"]
-[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="7_1jgko"]
-[ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="8_n1yw3"]
-[ext_resource type="PackedScene" uid="uid://ctx7i4wkn20wl" path="res://Assets/Utility/DropItems/MovementSpeedPickup/MovementSpeedPickup.tscn" id="8_uvbt7"]
+[ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_e0j4t"]
+[ext_resource type="Texture2D" uid="uid://b6hhsc7musbjv" path="res://Assets/Enemies/Wolf/Wolf_0.2.png" id="2_xgr86"]
+[ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="3_7cdwo"]
+[ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="4_evveh"]
+[ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="5_66yqg"]
+[ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="6_xi7q8"]
+[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="7_275c5"]
+[ext_resource type="PackedScene" uid="uid://ctx7i4wkn20wl" path="res://Assets/Utility/DropItems/MovementSpeedPickup/MovementSpeedPickup.tscn" id="8_is4ek"]
+[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="8_mwsoe"]
+[ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="9_j7sqe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rc2x3"]
 radius = 107.0
@@ -449,23 +449,23 @@ states/walk/position = Vector2(366, 92)
 transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_u3hrc")]
 
 [sub_resource type="Resource" id="Resource_coo45"]
-script = ExtResource("4_q44wx")
-item_scene = ExtResource("3_8ef2q")
-drop_chance = 60.0
+script = ExtResource("5_66yqg")
+item_scene = ExtResource("4_evveh")
+drop_chance = 70.0
 
 [sub_resource type="Resource" id="Resource_fxw01"]
-script = ExtResource("4_q44wx")
-item_scene = ExtResource("5_owka1")
+script = ExtResource("5_66yqg")
+item_scene = ExtResource("6_xi7q8")
 drop_chance = 28.0
 
 [sub_resource type="Resource" id="Resource_i0to0"]
-script = ExtResource("4_q44wx")
-item_scene = ExtResource("6_nx1aq")
+script = ExtResource("5_66yqg")
+item_scene = ExtResource("7_275c5")
 drop_chance = 1.0
 
-[sub_resource type="Resource" id="Resource_wajao"]
-script = ExtResource("4_q44wx")
-item_scene = ExtResource("8_uvbt7")
+[sub_resource type="Resource" id="Resource_r11el"]
+script = ExtResource("5_66yqg")
+item_scene = ExtResource("8_is4ek")
 drop_chance = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eu8ov"]
@@ -497,7 +497,7 @@ scale_curve = SubResource("CurveTexture_tw5kp")
 [node name="Wolf" type="CharacterBody2D"]
 y_sort_enabled = true
 scale = Vector2(0.1, 0.1)
-script = ExtResource("1_u8p71")
+script = ExtResource("1_e0j4t")
 movement_speed = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -512,7 +512,7 @@ position = Vector2(0, 50)
 [node name="LeftBackPaw" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(96, 123)
 offset = Vector2(-436, -74)
-texture = ExtResource("1_yrl7b")
+texture = ExtResource("2_xgr86")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(392, 32, 392, 48, 400, 64, 416, 88, 432, 104, 432, 128, 424, 152, 400, 152, 400, 184, 464, 184, 464, 168, 464, 152, 464, 128, 464, 112, 472, 104, 456, 80, 456, 56, 464, 16, 456, 8, 440, 24, 424, 40, 408, 24, 448, 96, 456, 104, 448, 112, 432, 64, 440, 160)
 uv = PackedVector2Array(392, 32, 392, 48, 400, 64, 416, 88, 432, 104, 432, 128, 424, 152, 400, 152, 400, 184, 464, 184, 464, 168, 464, 152, 464, 128, 464, 112, 472, 104, 456, 80, 456, 56, 464, 16, 456, 8, 440, 24, 424, 40, 408, 24, 448, 96, 456, 104, 448, 112, 432, 64, 440, 160)
@@ -523,7 +523,7 @@ internal_vertex_count = 5
 [node name="RightBackPaw" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(26, 124)
 offset = Vector2(-358, -95)
-texture = ExtResource("1_yrl7b")
+texture = ExtResource("2_xgr86")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(392, 40, 392, 64, 384, 72, 384, 96, 400, 112, 400, 120, 384, 152, 376, 176, 368, 184, 320, 184, 312, 168, 320, 152, 344, 152, 360, 136, 360, 120, 336, 88, 328, 72, 328, 40, 344, 40, 368, 40, 384, 32, 376, 112, 384, 120, 376, 128, 360, 160, 360, 80)
 uv = PackedVector2Array(392, 40, 392, 64, 384, 72, 384, 96, 400, 112, 400, 120, 384, 152, 376, 176, 368, 184, 320, 184, 312, 168, 320, 152, 344, 152, 360, 136, 360, 120, 336, 88, 328, 72, 328, 40, 344, 40, 368, 40, 384, 32, 376, 112, 384, 120, 376, 128, 360, 160, 360, 80)
@@ -534,7 +534,7 @@ internal_vertex_count = 5
 [node name="Chest" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(71, 14)
 offset = Vector2(-109, -399)
-texture = ExtResource("1_yrl7b")
+texture = ExtResource("2_xgr86")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(88, 344, 64, 360, 64, 384, 16, 408, 0, 424, 24, 464, 40, 472, 64, 464, 88, 464, 120, 496, 136, 488, 144, 472, 144, 504, 152, 544, 168, 576, 184, 600, 192, 576, 200, 544, 200, 504, 208, 488, 192, 464, 192, 432, 200, 416, 184, 392, 192, 384, 184, 360, 192, 344, 176, 320, 152, 296, 120, 296, 112, 312, 104, 320, 88, 328, 152, 456, 168, 432, 176, 488, 176, 536, 48, 432, 104, 432, 120, 376)
 uv = PackedVector2Array(88, 344, 64, 360, 64, 384, 16, 408, 0, 424, 24, 464, 40, 472, 64, 464, 88, 464, 120, 496, 136, 488, 144, 472, 144, 504, 152, 544, 168, 576, 184, 600, 192, 576, 200, 544, 200, 504, 208, 488, 192, 464, 192, 432, 200, 416, 184, 392, 192, 384, 184, 360, 192, 344, 176, 320, 152, 296, 120, 296, 112, 312, 104, 320, 88, 328, 152, 456, 168, 432, 176, 488, 176, 536, 48, 432, 104, 432, 120, 376)
@@ -545,7 +545,7 @@ internal_vertex_count = 7
 [node name="RightFrontPaw" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(-102, 139)
 offset = Vector2(-234, -329)
-texture = ExtResource("1_yrl7b")
+texture = ExtResource("2_xgr86")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(192, 384, 192, 408, 216, 416, 232, 416, 248, 408, 256, 392, 264, 368, 272, 352, 272, 336, 272, 304, 280, 280, 272, 272, 256, 272, 248, 256, 224, 256, 216, 272, 224, 288, 232, 320, 232, 336, 232, 344, 232, 352, 232, 368, 216, 376, 248, 328, 256, 344, 248, 352, 232, 392, 248, 296)
 uv = PackedVector2Array(192, 384, 192, 408, 216, 416, 232, 416, 248, 408, 256, 392, 264, 368, 272, 352, 272, 336, 272, 304, 280, 280, 272, 272, 256, 272, 248, 256, 224, 256, 216, 272, 224, 288, 232, 320, 232, 336, 232, 344, 232, 352, 232, 368, 216, 376, 248, 328, 256, 344, 248, 352, 232, 392, 248, 296)
@@ -556,7 +556,7 @@ internal_vertex_count = 5
 [node name="LeftFrontPaw" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(-48, 126)
 offset = Vector2(-296, -363)
-texture = ExtResource("1_yrl7b")
+texture = ExtResource("2_xgr86")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(304, 480, 248, 480, 240, 464, 248, 448, 264, 448, 272, 432, 280, 416, 280, 352, 272, 328, 288, 312, 304, 272, 312, 256, 320, 256, 328, 272, 336, 296, 344, 312, 352, 320, 344, 336, 328, 368, 320, 400, 320, 432, 312, 440, 312, 464, 304, 376, 296, 392, 304, 408, 312, 336, 288, 456)
 uv = PackedVector2Array(304, 480, 248, 480, 240, 464, 248, 448, 264, 448, 272, 432, 280, 416, 280, 352, 272, 328, 288, 312, 304, 272, 312, 256, 320, 256, 328, 272, 336, 296, 344, 312, 352, 320, 344, 336, 328, 368, 320, 400, 320, 432, 312, 440, 312, 464, 304, 376, 296, 392, 304, 408, 312, 336, 288, 456)
@@ -567,7 +567,7 @@ internal_vertex_count = 5
 [node name="Head" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(-57, -62)
 offset = Vector2(-154, -133)
-texture = ExtResource("1_yrl7b")
+texture = ExtResource("2_xgr86")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(24, 104, 16, 80, 32, 64, 24, 16, 32, 0, 40, 0, 64, 16, 104, 16, 120, 8, 136, 8, 152, 0, 160, 0, 168, 32, 192, 40, 192, 56, 216, 64, 264, 64, 288, 80, 312, 88, 328, 104, 344, 120, 352, 128, 320, 136, 296, 160, 272, 176, 280, 184, 280, 192, 256, 216, 240, 232, 200, 232, 176, 280, 160, 288, 144, 296, 136, 296, 120, 280, 96, 280, 80, 264, 64, 248, 64, 232, 56, 232, 56, 192, 32, 192, 32, 176, 24, 160, 24, 144, 16, 144, 8, 128, 16, 112, 96, 88, 128, 120, 152, 136, 184, 160, 208, 192, 72, 48, 56, 136)
 uv = PackedVector2Array(24, 104, 16, 80, 32, 64, 24, 16, 32, 0, 40, 0, 64, 16, 104, 16, 120, 8, 136, 8, 152, 0, 160, 0, 168, 32, 192, 40, 192, 56, 216, 64, 264, 64, 288, 80, 312, 88, 328, 104, 344, 120, 352, 128, 320, 136, 296, 160, 272, 176, 280, 184, 280, 192, 256, 216, 240, 232, 200, 232, 176, 280, 160, 288, 144, 296, 136, 296, 120, 280, 96, 280, 80, 264, 64, 248, 64, 232, 56, 232, 56, 192, 32, 192, 32, 176, 24, 160, 24, 144, 16, 144, 8, 128, 16, 112, 96, 88, 128, 120, 152, 136, 184, 160, 208, 192, 72, 48, 56, 136)
@@ -590,7 +590,6 @@ rest = Transform2D(1, 0, 0, 1, -36, -15)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-83, -68)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -83, -68)
 auto_calculate_length_and_angle = false
 length = 85.298
@@ -603,7 +602,6 @@ rest = Transform2D(1, 0, 0, 1, -96, 103)
 
 [node name="RightPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/RightFLeg"]
 position = Vector2(-1, 84)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -1, 83)
 auto_calculate_length_and_angle = false
 length = 59.28
@@ -611,12 +609,10 @@ bone_angle = -243.038
 
 [node name="LeftFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-39, 91)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -39, 91)
 
 [node name="LeftFPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/LeftFLeg"]
 position = Vector2(-13, 99)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -13, 99)
 auto_calculate_length_and_angle = false
 length = 72.114
@@ -624,7 +620,6 @@ bone_angle = 112.405
 
 [node name="Tail" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(82, 40)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 82, 40)
 auto_calculate_length_and_angle = false
 length = 141.282
@@ -632,12 +627,10 @@ bone_angle = 81.935
 
 [node name="LeftBLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(42, 97)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]
 position = Vector2(21, 76)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 21, 76)
 auto_calculate_length_and_angle = false
 length = 63.656
@@ -669,10 +662,10 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_gby1l")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="ItemDropComponent" parent="." instance=ExtResource("2_gibaw")]
-items_to_drop = Array[ExtResource("4_q44wx")]([SubResource("Resource_coo45"), SubResource("Resource_fxw01"), SubResource("Resource_i0to0"), SubResource("Resource_wajao")])
+[node name="ItemDropComponent" parent="." instance=ExtResource("3_7cdwo")]
+items_to_drop = Array[ExtResource("5_66yqg")]([SubResource("Resource_coo45"), SubResource("Resource_fxw01"), SubResource("Resource_i0to0"), SubResource("Resource_r11el")])
 
-[node name="DamageBox" parent="." instance=ExtResource("7_1jgko")]
+[node name="DamageBox" parent="." instance=ExtResource("8_mwsoe")]
 position = Vector2(62, 117)
 collision_layer = 0
 collision_mask = 2
@@ -682,11 +675,11 @@ damage = 2.0
 position = Vector2(-66.9999, -52)
 shape = SubResource("RectangleShape2D_eu8ov")
 
-[node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_n1yw3")]
+[node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("9_j7sqe")]
 position = Vector2(62, 117)
 collision_layer = 4
 collision_mask = 0
-max_health = 18.0
+max_health = 45.0
 health = 1.0
 show_damage_taken_numbers = true
 flash_on_hit = true

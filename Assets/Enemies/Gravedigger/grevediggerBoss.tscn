@@ -1,15 +1,13 @@
-[gd_scene load_steps=27 format=3 uid="uid://w814cm5dm64j"]
+[gd_scene load_steps=23 format=3 uid="uid://cordbebw8k1ym"]
 
-[ext_resource type="Texture2D" uid="uid://dpukrrij2gbn8" path="res://Assets/Enemies/Gravedigger/Gravedigger_0.2.png" id="1_8s8kk"]
-[ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_vrucl"]
-[ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="2_uot4b"]
-[ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="3_dfqqv"]
-[ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="4_mj5nx"]
-[ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="5_e1b55"]
-[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="6_47vbi"]
-[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="7_26axo"]
-[ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="8_ghfyr"]
-[ext_resource type="PackedScene" uid="uid://dp5lugnkwinpb" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.tscn" id="8_woxl7"]
+[ext_resource type="Script" path="res://Assets/Enemies/enemy.gd" id="1_arry2"]
+[ext_resource type="Texture2D" uid="uid://dpukrrij2gbn8" path="res://Assets/Enemies/Gravedigger/Gravedigger_0.2.png" id="2_ij8xt"]
+[ext_resource type="PackedScene" uid="uid://cksmf6qi485b4" path="res://Assets/Utility/DropItems/ItemDropComponent.tscn" id="3_gpcpd"]
+[ext_resource type="PackedScene" uid="uid://dign3j2sdr85j" path="res://Assets/Utility/DropItems/Crystals/CrystalRed.tscn" id="4_xcj6t"]
+[ext_resource type="Script" path="res://Assets/Resources/drop_item.gd" id="5_ue32x"]
+[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="7_kb1yw"]
+[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="8_nart8"]
+[ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="9_7irmn"]
 
 [sub_resource type="Animation" id="Animation_rtmwj"]
 length = 0.001
@@ -423,24 +421,14 @@ transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(40, -8)
 
 [sub_resource type="Resource" id="Resource_coo45"]
-script = ExtResource("4_mj5nx")
-item_scene = ExtResource("3_dfqqv")
-drop_chance = 70.0
-
-[sub_resource type="Resource" id="Resource_fxw01"]
-script = ExtResource("4_mj5nx")
-item_scene = ExtResource("5_e1b55")
-drop_chance = 28.0
+script = ExtResource("5_ue32x")
+item_scene = ExtResource("4_xcj6t")
+drop_chance = 80.0
 
 [sub_resource type="Resource" id="Resource_i0to0"]
-script = ExtResource("4_mj5nx")
-item_scene = ExtResource("6_47vbi")
-drop_chance = 1.0
-
-[sub_resource type="Resource" id="Resource_6blir"]
-script = ExtResource("4_mj5nx")
-item_scene = ExtResource("8_woxl7")
-drop_chance = 1.0
+script = ExtResource("5_ue32x")
+item_scene = ExtResource("7_kb1yw")
+drop_chance = 20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ldfsi"]
 size = Vector2(300, 660)
@@ -475,7 +463,7 @@ height = 474.0
 [node name="Grevedigger" type="CharacterBody2D"]
 y_sort_enabled = true
 scale = Vector2(0.1, 0.1)
-script = ExtResource("1_vrucl")
+script = ExtResource("1_arry2")
 movement_speed = 40.0
 
 [node name="Visuals" type="Node2D" parent="."]
@@ -486,7 +474,7 @@ position = Vector2(40, 80)
 
 [node name="RightArm" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(-328, -224)
-texture = ExtResource("1_8s8kk")
+texture = ExtResource("2_ij8xt")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(224, 0, 216, 48, 208, 56, 216, 64, 216, 80, 200, 112, 200, 136, 200, 152, 200, 168, 184, 208, 176, 216, 176, 248, 184, 256, 200, 256, 208, 272, 232, 248, 232, 232, 224, 208, 224, 192, 240, 168, 240, 144, 248, 128, 248, 112, 240, 88, 240, 64, 240, 32, 240, 8, 232, 80, 224, 96, 224, 112, 224, 152, 200, 208, 232, 40)
 uv = PackedVector2Array(224, 0, 216, 48, 208, 56, 216, 64, 216, 80, 200, 112, 200, 136, 200, 152, 200, 168, 184, 208, 176, 216, 176, 248, 184, 256, 200, 256, 208, 272, 232, 248, 232, 232, 224, 208, 224, 192, 240, 168, 240, 144, 248, 128, 248, 112, 240, 88, 240, 64, 240, 32, 240, 8, 232, 80, 224, 96, 224, 112, 224, 152, 200, 208, 232, 40)
@@ -498,7 +486,7 @@ internal_vertex_count = 6
 position = Vector2(-176, 112)
 rotation = 0.00105547
 offset = Vector2(-72, -552)
-texture = ExtResource("1_8s8kk")
+texture = ExtResource("2_ij8xt")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(128, 456, 104, 440, 56, 560, 40, 552, 32, 552, 24, 568, 24, 584, 24, 608, 16, 632, 24, 632, 40, 616, 24, 664, 32, 672, 64, 632, 72, 640, 96, 608, 112, 584, 112, 576, 88, 568, 88, 552, 64, 568, 40, 592, 72, 608)
 uv = PackedVector2Array(128, 456, 104, 440, 56, 560, 40, 552, 32, 552, 24, 568, 24, 584, 24, 608, 16, 632, 24, 632, 40, 616, 24, 664, 32, 672, 64, 632, 72, 640, 96, 608, 112, 584, 112, 576, 88, 568, 88, 552, 64, 568, 40, 592, 72, 608)
@@ -509,7 +497,7 @@ internal_vertex_count = 3
 [node name="LeftLeg" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(36, 96)
 offset = Vector2(-374, -409)
-texture = ExtResource("1_8s8kk")
+texture = ExtResource("2_ij8xt")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(280, 280, 304, 288, 360, 288, 376, 280, 384, 312, 384, 328, 400, 344, 400, 360, 424, 384, 416, 392, 400, 384, 384, 376, 376, 392, 384, 416, 400, 432, 408, 456, 392, 464, 392, 512, 392, 528, 408, 568, 416, 584, 376, 600, 344, 608, 336, 600, 336, 584, 352, 568, 352, 552, 360, 528, 360, 520, 352, 488, 344, 480, 336, 472, 328, 464, 320, 456, 328, 448, 312, 432, 312, 416, 320, 408, 320, 392, 312, 360, 304, 336, 288, 312, 360, 432, 352, 416, 352, 400, 368, 464, 376, 552, 344, 344)
 uv = PackedVector2Array(280, 280, 304, 288, 360, 288, 376, 280, 384, 312, 384, 328, 400, 344, 400, 360, 424, 384, 416, 392, 400, 384, 384, 376, 376, 392, 384, 416, 400, 432, 408, 456, 392, 464, 392, 512, 392, 528, 408, 568, 416, 584, 376, 600, 344, 608, 336, 600, 336, 584, 352, 568, 352, 552, 360, 528, 360, 520, 352, 488, 344, 480, 336, 472, 328, 464, 320, 456, 328, 448, 312, 432, 312, 416, 320, 408, 320, 392, 312, 360, 304, 336, 288, 312, 360, 432, 352, 416, 352, 400, 368, 464, 376, 552, 344, 344)
@@ -520,7 +508,7 @@ internal_vertex_count = 6
 [node name="Chest" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(-32, -120)
 offset = Vector2(-85, -308)
-texture = ExtResource("1_8s8kk")
+texture = ExtResource("2_ij8xt")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(136, 240, 136, 280, 136, 304, 144, 320, 160, 352, 160, 384, 160, 408, 128, 416, 80, 416, 40, 416, 16, 416, 8, 408, 16, 384, 16, 360, 24, 336, 24, 320, 16, 304, 16, 272, 16, 232, 16, 216, 32, 208, 56, 208, 72, 192, 88, 184, 104, 168, 128, 152, 152, 152, 168, 176, 160, 192, 144, 208, 72, 272, 80, 288, 72, 312, 80, 368, 88, 224)
 uv = PackedVector2Array(136, 240, 136, 280, 136, 304, 144, 320, 160, 352, 160, 384, 160, 408, 128, 416, 80, 416, 40, 416, 16, 416, 8, 408, 16, 384, 16, 360, 24, 336, 24, 320, 16, 304, 16, 272, 16, 232, 16, 216, 32, 208, 56, 208, 72, 192, 88, 184, 104, 168, 128, 152, 152, 152, 168, 176, 160, 192, 144, 208, 72, 272, 80, 288, 72, 312, 80, 368, 88, 224)
@@ -531,7 +519,7 @@ internal_vertex_count = 5
 [node name="LeftArm" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(45, -149)
 offset = Vector2(-302, -107)
-texture = ExtResource("1_8s8kk")
+texture = ExtResource("2_ij8xt")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(272, 32, 296, 0, 312, 8, 328, 32, 328, 56, 336, 96, 360, 120, 352, 144, 352, 160, 336, 160, 336, 192, 328, 216, 328, 256, 328, 280, 288, 280, 264, 272, 264, 256, 264, 240, 280, 224, 296, 208, 296, 168, 280, 168, 272, 152, 264, 128, 264, 88, 264, 40, 304, 96, 312, 112, 312, 128, 296, 48, 312, 208, 296, 248)
 uv = PackedVector2Array(272, 32, 296, 0, 312, 8, 328, 32, 328, 56, 336, 96, 360, 120, 352, 144, 352, 160, 336, 160, 336, 192, 328, 216, 328, 256, 328, 280, 288, 280, 264, 272, 264, 256, 264, 240, 280, 224, 296, 208, 296, 168, 280, 168, 272, 152, 264, 128, 264, 88, 264, 40, 304, 96, 312, 112, 312, 128, 296, 48, 312, 208, 296, 248)
@@ -542,7 +530,7 @@ internal_vertex_count = 6
 [node name="RightLeg" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(-77, 94)
 offset = Vector2(-220, -400)
-texture = ExtResource("1_8s8kk")
+texture = ExtResource("2_ij8xt")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(192, 584, 168, 584, 144, 568, 144, 552, 144, 544, 168, 544, 184, 536, 184, 520, 184, 504, 192, 504, 200, 488, 200, 464, 184, 456, 184, 440, 176, 424, 176, 400, 184, 392, 184, 368, 192, 344, 200, 320, 200, 288, 208, 280, 248, 280, 256, 304, 264, 320, 264, 336, 256, 344, 256, 360, 248, 368, 248, 384, 248, 400, 248, 416, 256, 440, 264, 448, 248, 464, 248, 496, 248, 520, 248, 552, 248, 560, 208, 576, 200, 552, 224, 504, 208, 400, 216, 416, 216, 432, 224, 344)
 uv = PackedVector2Array(192, 584, 168, 584, 144, 568, 144, 552, 144, 544, 168, 544, 184, 536, 184, 520, 184, 504, 192, 504, 200, 488, 200, 464, 184, 456, 184, 440, 176, 424, 176, 400, 184, 392, 184, 368, 192, 344, 200, 320, 200, 288, 208, 280, 248, 280, 256, 304, 264, 320, 264, 336, 256, 344, 256, 360, 248, 368, 248, 384, 248, 400, 248, 416, 256, 440, 264, 448, 248, 464, 248, 496, 248, 520, 248, 552, 248, 560, 208, 576, 200, 552, 224, 504, 208, 400, 216, 416, 216, 432, 224, 344)
@@ -553,7 +541,7 @@ internal_vertex_count = 6
 [node name="Head" type="Polygon2D" parent="Visuals/Polygons"]
 position = Vector2(-63, -285)
 offset = Vector2(-83, -81)
-texture = ExtResource("1_8s8kk")
+texture = ExtResource("2_ij8xt")
 skeleton = NodePath("../../Skeleton2D")
 polygon = PackedVector2Array(0, 64, 32, 8, 64, 0, 96, 0, 120, 56, 144, 72, 168, 96, 176, 104, 152, 112, 120, 144, 96, 168, 88, 176, 64, 168, 48, 168, 32, 136, 24, 112, 8, 104, 104, 120, 80, 96, 56, 56)
 uv = PackedVector2Array(0, 64, 32, 8, 64, 0, 96, 0, 120, 56, 144, 72, 168, 96, 176, 104, 152, 112, 120, 144, 96, 168, 88, 176, 64, 168, 48, 168, 32, 136, 24, 112, 8, 104, 104, 120, 80, 96, 56, 56)
@@ -588,7 +576,6 @@ rest = Transform2D(1, 0, 0, 1, 59, -163)
 
 [node name="LeftHand" type="Bone2D" parent="Visuals/Skeleton2D/Hips/Chest/LeftArm"]
 position = Vector2(43, 107)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 43, 107)
 auto_calculate_length_and_angle = false
 length = 115.278
@@ -620,7 +607,6 @@ rest = Transform2D(1, 0, 0, 1, 43, 34)
 
 [node name="LeftFoot" type="Bone2D" parent="Visuals/Skeleton2D/Hips/LeftLeg"]
 position = Vector2(16, 131)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 16, 131)
 auto_calculate_length_and_angle = false
 length = 145.669
@@ -653,11 +639,11 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_vruoo")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_uot4b")]
+[node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("3_gpcpd")]
 hit_box_component = NodePath("../HitBox")
-items_to_drop = Array[ExtResource("4_mj5nx")]([SubResource("Resource_coo45"), SubResource("Resource_fxw01"), SubResource("Resource_i0to0"), SubResource("Resource_6blir")])
+items_to_drop = Array[ExtResource("5_ue32x")]([SubResource("Resource_coo45"), SubResource("Resource_i0to0")])
 
-[node name="DamageBox" parent="." instance=ExtResource("7_26axo")]
+[node name="DamageBox" parent="." instance=ExtResource("8_nart8")]
 position = Vector2(46, 120)
 collision_layer = 0
 collision_mask = 2
@@ -667,11 +653,11 @@ damage = 2.0
 position = Vector2(-56, 10)
 shape = SubResource("RectangleShape2D_ldfsi")
 
-[node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_ghfyr")]
+[node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("9_7irmn")]
 position = Vector2(46, 120)
 collision_layer = 4
 collision_mask = 0
-max_health = 25.0
+max_health = 180.0
 show_damage_taken_numbers = true
 flash_on_hit = true
 sprite = NodePath("../Visuals")
@@ -681,9 +667,6 @@ flash_color = Color(4, 4, 4, 1)
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(-55.5, 15)
 shape = SubResource("RectangleShape2D_1jiyu")
-
-[node name="HealthBar" parent="HitBox" index="2"]
-visible = false
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
 scale = Vector2(7.99999, 15.2)

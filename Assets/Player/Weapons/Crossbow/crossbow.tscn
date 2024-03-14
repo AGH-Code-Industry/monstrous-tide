@@ -9,7 +9,7 @@
 [sub_resource type="Resource" id="Resource_i3afy"]
 script = ExtResource("2_nfjgl")
 type = 100
-flat = 1.0
+flat = 6.0
 increased = 0.0
 more = 0.0
 
@@ -212,7 +212,7 @@ more = 0.0
 script = ExtResource("2_nfjgl")
 type = 105
 flat = 0.0
-increased = -40.0
+increased = -20.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_nunic"]

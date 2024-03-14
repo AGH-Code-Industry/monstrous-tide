@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://5wxdkk0ryim2"]
+[gd_scene load_steps=42 format=3 uid="uid://5wxdkk0ryim2"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_hh3o4"]
@@ -15,14 +15,14 @@
 [sub_resource type="Resource" id="Resource_oa80p"]
 script = ExtResource("2_hh3o4")
 type = 100
-flat = 2.0
+flat = 5.0
 increased = 0.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_eyked"]
 script = ExtResource("2_hh3o4")
 type = 110
-flat = 2.0
+flat = 1.5
 increased = 0.0
 more = 0.0
 
@@ -37,66 +37,125 @@ more = 0.0
 script = ExtResource("3_f5pyf")
 data = Array[ExtResource("2_hh3o4")]([SubResource("Resource_oa80p"), SubResource("Resource_eyked"), SubResource("Resource_0h415")])
 
-[sub_resource type="Resource" id="Resource_2jl1y"]
+[sub_resource type="Resource" id="Resource_7w0on"]
 script = ExtResource("2_hh3o4")
 type = 0
-flat = 1.0
-increased = 0.0
+flat = 0.0
+increased = 15.0
 more = 0.0
 
-[sub_resource type="Resource" id="Resource_i3uqy"]
+[sub_resource type="Resource" id="Resource_mur2x"]
 script = ExtResource("5_o0uyg")
-stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_2jl1y")])
-name = ""
-description = ""
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_7w0on")])
+name = "Lantern Damage"
+description = "Lantern Deals 15% Increased Damage"
 
-[sub_resource type="Resource" id="Resource_sxtv3"]
+[sub_resource type="Resource" id="Resource_pw6wa"]
 script = ExtResource("2_hh3o4")
 type = 110
-flat = 1.0
-increased = 0.0
+flat = 0.0
+increased = 12.0
 more = 0.0
 
-[sub_resource type="Resource" id="Resource_aq4d5"]
+[sub_resource type="Resource" id="Resource_ycjpn"]
 script = ExtResource("5_o0uyg")
-stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_sxtv3")])
-name = ""
-description = ""
-
-[sub_resource type="Resource" id="Resource_rnorw"]
-script = ExtResource("2_hh3o4")
-type = 0
-flat = 1.0
-increased = 0.0
-more = 0.0
-
-[sub_resource type="Resource" id="Resource_r8vqg"]
-script = ExtResource("5_o0uyg")
-stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_rnorw")])
-name = ""
-description = ""
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_pw6wa")])
+name = "Lantern Range"
+description = "Lantern Has 20% Increased Range"
 
 [sub_resource type="Resource" id="Resource_vps2n"]
 script = ExtResource("4_1yf4i")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_i3uqy"), SubResource("Resource_aq4d5"), SubResource("Resource_r8vqg")])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_mur2x"), SubResource("Resource_ycjpn")])
+
+[sub_resource type="Resource" id="Resource_802al"]
+script = ExtResource("2_hh3o4")
+type = 0
+flat = 0.0
+increased = 35.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ayv6k"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_802al")])
+name = "Landtern Damage"
+description = "Lantern Deals 35% Increased Damage"
+
+[sub_resource type="Resource" id="Resource_8ceod"]
+script = ExtResource("2_hh3o4")
+type = 110
+flat = 0.0
+increased = 22.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_psr3k"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_8ceod")])
+name = "Lantern Range"
+description = "Lantern Has 35% Increased Range"
 
 [sub_resource type="Resource" id="Resource_w1rsb"]
 script = ExtResource("4_1yf4i")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_ayv6k"), SubResource("Resource_psr3k")])
+
+[sub_resource type="Resource" id="Resource_48m50"]
+script = ExtResource("2_hh3o4")
+type = 0
+flat = 0.0
+increased = 45.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ok1mi"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_48m50")])
+name = "Lantern Damage"
+description = "Lantern Deals 45% Increased Damage"
+
+[sub_resource type="Resource" id="Resource_o5sph"]
+script = ExtResource("2_hh3o4")
+type = 110
+flat = 0.0
+increased = 35.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_v41mu"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_o5sph")])
+name = "Lantern Range"
+description = "Lantern Has 35% Increased Range"
 
 [sub_resource type="Resource" id="Resource_cb4o4"]
 script = ExtResource("4_1yf4i")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_ok1mi"), SubResource("Resource_v41mu")])
 
 [sub_resource type="Resource" id="Resource_tqli2"]
 script = ExtResource("6_w0783")
 new_weapon = ExtResource("5_c4ivg")
 name = "Consecration"
-description = "test"
+description = "Lantern Now Becomes Consecrated"
+
+[sub_resource type="Resource" id="Resource_t2tki"]
+script = ExtResource("2_hh3o4")
+type = 0
+flat = 0.0
+increased = 0.0
+more = 25.0
+
+[sub_resource type="Resource" id="Resource_ga7jl"]
+script = ExtResource("2_hh3o4")
+type = 110
+flat = 0.0
+increased = 25.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_tq88b"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_t2tki"), SubResource("Resource_ga7jl")])
+name = "Better Lantern"
+description = "Lantern Now deasl 25% MORE Damage and Has 25% Increased Range"
 
 [sub_resource type="Resource" id="Resource_rsu28"]
 script = ExtResource("4_1yf4i")
-upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_tqli2")])
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_tqli2"), SubResource("Resource_tq88b")])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5pem6"]
 radius = 1.45
