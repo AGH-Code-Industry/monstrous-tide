@@ -586,6 +586,7 @@ bone_angle = -200.506
 
 [node name="RightFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-96, 103)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -96, 103)
 
 [node name="RightPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/RightFLeg"]
@@ -656,7 +657,8 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_gby1l")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="ItemDropComponent" parent="." instance=ExtResource("3_d7f6x")]
+[node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("3_d7f6x")]
+hit_box_component = NodePath("../HitBox")
 items_to_drop = Array[ExtResource("5_dvsmq")]([SubResource("Resource_coo45"), SubResource("Resource_i0to0")])
 
 [node name="DamageBox" parent="." instance=ExtResource("8_t7hoq")]

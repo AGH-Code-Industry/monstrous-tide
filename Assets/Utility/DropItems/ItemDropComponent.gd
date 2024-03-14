@@ -16,13 +16,14 @@ func _ready():
 
 
 func on_death_drop_crystal():
-	if current_items_count < item_count_limit:
-		create_item(pick_random_item())
-	else:
-		if last_item == null:
-			create_special_gem(pick_random_item())
-		else:
-			update_special_gem(pick_random_item())
+	create_item(pick_random_item())
+	#if current_items_count < item_count_limit:
+	#	create_item(pick_random_item())
+	#else:
+	#	if last_item == null:
+	#		create_special_gem(pick_random_item())
+	#	else:
+	#		update_special_gem(pick_random_item())
 	
 
 func pick_random_item():

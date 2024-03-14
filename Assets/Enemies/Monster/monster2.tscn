@@ -617,6 +617,7 @@ rest = Transform2D(1, 0, 0, 1, -19, -94)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(4, -65)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 4, -65)
 auto_calculate_length_and_angle = false
 length = 162.759
@@ -624,10 +625,12 @@ bone_angle = -79.012
 
 [node name="RightArm" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(-54, -49)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -54, -49)
 
 [node name="RightHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/RightArm"]
 position = Vector2(-49, 106)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -49, 106)
 auto_calculate_length_and_angle = false
 length = 89.379
@@ -654,6 +657,7 @@ rest = Transform2D(1, 0, 0, 1, 75, -20)
 
 [node name="LeftHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm"]
 position = Vector2(9, 82)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 9, 82)
 
 [node name="Finger1" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm/LeftHand"]
@@ -665,6 +669,7 @@ bone_angle = 87.996
 
 [node name="Finger2" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm/LeftHand"]
 position = Vector2(45, 56)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 45, 59)
 auto_calculate_length_and_angle = false
 length = 33.265
@@ -690,6 +695,7 @@ rest = Transform2D(1, 0, 0, 1, 25, 47)
 
 [node name="LeftFoot" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/LeftLeg"]
 position = Vector2(9, 43)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 9, 43)
 auto_calculate_length_and_angle = false
 length = 54.968
@@ -709,7 +715,8 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_68fqw")
 anim_player = NodePath("../Animation")
 
-[node name="ItemDropComponent" parent="." instance=ExtResource("3_dut38")]
+[node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("3_dut38")]
+hit_box_component = NodePath("../HitBox")
 items_to_drop = Array[ExtResource("5_drbcx")]([SubResource("Resource_coo45"), SubResource("Resource_fxw01"), SubResource("Resource_i0to0")])
 
 [node name="DamageBox" parent="." instance=ExtResource("8_lfuk3")]

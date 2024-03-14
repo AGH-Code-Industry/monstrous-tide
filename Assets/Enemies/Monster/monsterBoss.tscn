@@ -625,6 +625,7 @@ rest = Transform2D(1, 0, 0, 1, -54, -49)
 
 [node name="RightHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/RightArm"]
 position = Vector2(-49, 106)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -49, 106)
 auto_calculate_length_and_angle = false
 length = 89.379
@@ -663,6 +664,7 @@ bone_angle = 87.996
 
 [node name="Finger2" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm/LeftHand"]
 position = Vector2(45, 56)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 45, 59)
 auto_calculate_length_and_angle = false
 length = 33.265
@@ -706,7 +708,8 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_68fqw")
 anim_player = NodePath("../Animation")
 
-[node name="ItemDropComponent" parent="." instance=ExtResource("3_hcox7")]
+[node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("3_hcox7")]
+hit_box_component = NodePath("../HitBox")
 items_to_drop = Array[ExtResource("5_qeq8b")]([SubResource("Resource_coo45"), SubResource("Resource_i0to0")])
 
 [node name="DamageBox" parent="." instance=ExtResource("8_qjy7j")]

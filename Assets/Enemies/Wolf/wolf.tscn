@@ -666,7 +666,8 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_gby1l")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="ItemDropComponent" parent="." instance=ExtResource("2_gibaw")]
+[node name="ItemDropComponent" parent="." node_paths=PackedStringArray("hit_box_component") instance=ExtResource("2_gibaw")]
+hit_box_component = NodePath("../HitBox")
 items_to_drop = Array[ExtResource("4_q44wx")]([SubResource("Resource_coo45"), SubResource("Resource_fxw01"), SubResource("Resource_i0to0"), SubResource("Resource_wajao")])
 
 [node name="DamageBox" parent="." instance=ExtResource("7_1jgko")]
