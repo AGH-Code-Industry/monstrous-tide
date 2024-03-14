@@ -16,8 +16,8 @@ func _ready():
 	StatManager.update_player_stats_misc.connect(func(receivedStats): stat_set.add_stat_array(receivedStats))
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("esc"):
-		get_tree().quit()
+	#if Input.is_action_just_pressed("esc"):
+		#get_tree().quit()
 	movement()
 	
 # FOR DEBUG PURPOSES
