@@ -597,7 +597,6 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-107.468, 18)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-z_index = 1
 y_sort_enabled = true
 motion_mode = 1
 script = ExtResource("1_jqw0g")
@@ -678,6 +677,7 @@ rest = Transform2D(1, 0, 0, 1, -68, -138)
 
 [node name="RightHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/RightArm"]
 position = Vector2(-18, 75)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 75)
 auto_calculate_length_and_angle = false
 length = 85.128

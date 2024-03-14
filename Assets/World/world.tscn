@@ -89,7 +89,7 @@ format = 2
 script = ExtResource("1_na82v")
 
 [node name="Background" type="Sprite2D" parent="."]
-z_index = -1
+z_index = -2
 texture_filter = 2
 texture_repeat = 2
 position = Vector2(1, 2)
