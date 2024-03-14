@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=59 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://rhdo2vj35itf" path="res://Assets/World/Tło1.png" id="2_47c7y"]
@@ -39,7 +39,6 @@
 [ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/LvlUps.tscn" id="26_ntv7e"]
 [ext_resource type="PackedScene" uid="uid://b3ak5hh8jtrh8" path="res://Assets/Utility/Managers/weapon_manager.tscn" id="29_sylwc"]
 [ext_resource type="PackedScene" uid="uid://cf114iew8wlfx" path="res://Assets/Utility/UI/Equipment/equipment.tscn" id="33_hvbig"]
-[ext_resource type="PackedScene" uid="uid://dp5lugnkwinpb" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.tscn" id="40_8wlcn"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
 script = ExtResource("4_f0yyc")
@@ -411,6 +410,3 @@ rotation = 1.5708
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Broundries/StaticBody2D4"]
 position = Vector2(60.25, 46)
 shape = SubResource("RectangleShape2D_grr1f")
-
-[node name="HealingPickup" parent="." instance=ExtResource("40_8wlcn")]
-position = Vector2(-152, -10)
