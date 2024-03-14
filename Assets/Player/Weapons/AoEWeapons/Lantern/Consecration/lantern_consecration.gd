@@ -6,7 +6,7 @@ class_name LanternConsecration extends Lantern
 # todo
 # make spawned circles and new circles to spawn react to received stats
 func update_stats():
-	attack_speed_timer.wait_time = 1/stat_set.get_stat_value(Stat.Type.ATTACKSPEED)
+	attack_speed_timer.wait_time = 4 #1/stat_set.get_stat_value(Stat.Type.ATTACKSPEED)
 	for child in $CircleHolder.get_children():
 		child.update_stats(stat_set)
 

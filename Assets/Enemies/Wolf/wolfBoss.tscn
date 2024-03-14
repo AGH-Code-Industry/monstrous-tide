@@ -631,6 +631,7 @@ bone_angle = 100.253
 
 [node name="RightBLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(-18, 74)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 74)
 
 [node name="RightBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/RightBLeg"]
