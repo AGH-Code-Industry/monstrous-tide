@@ -452,7 +452,7 @@ transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition
 [sub_resource type="Resource" id="Resource_coo45"]
 script = ExtResource("5_66yqg")
 item_scene = ExtResource("4_evveh")
-drop_chance = 70.0
+drop_chance = 50.0
 
 [sub_resource type="Resource" id="Resource_fxw01"]
 script = ExtResource("5_66yqg")
@@ -595,6 +595,7 @@ rest = Transform2D(1, 0, 0, 1, -36, -15)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-83, -68)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -83, -68)
 auto_calculate_length_and_angle = false
 length = 85.298
@@ -602,12 +603,10 @@ bone_angle = -200.506
 
 [node name="RightFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-96, 103)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -96, 103)
 
 [node name="RightPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/RightFLeg"]
 position = Vector2(-1, 84)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -1, 83)
 auto_calculate_length_and_angle = false
 length = 59.28
@@ -615,6 +614,7 @@ bone_angle = -243.038
 
 [node name="LeftFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-39, 91)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -39, 91)
 
 [node name="LeftFPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/LeftFLeg"]
@@ -638,7 +638,6 @@ rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]
 position = Vector2(21, 76)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 21, 76)
 auto_calculate_length_and_angle = false
 length = 63.656
