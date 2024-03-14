@@ -624,6 +624,7 @@ rest = Transform2D(1, 0, 0, 1, -19, -94)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(4, -65)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 4, -65)
 auto_calculate_length_and_angle = false
 length = 162.759
@@ -725,6 +726,7 @@ items_to_drop = Array[ExtResource("5_drbcx")]([SubResource("Resource_coo45"), Su
 
 [node name="DamageBox" parent="." instance=ExtResource("8_lfuk3")]
 position = Vector2(3, 207)
+scale = Vector2(0.96, 0.96)
 collision_layer = 0
 collision_mask = 2
 damage = 2.0

@@ -96,7 +96,7 @@ description = "Spawn More Torrents With Each Attack"
 
 [sub_resource type="Resource" id="Resource_dcgrs"]
 script = ExtResource("2_o3asj")
-type = 0
+type = 100
 flat = 0.0
 increased = 0.0
 more = 25.0
@@ -152,7 +152,7 @@ description = "Torrent Is Bigger"
 
 [sub_resource type="Resource" id="Resource_jyvjm"]
 script = ExtResource("2_o3asj")
-type = 0
+type = 100
 flat = 1.0
 increased = 0.0
 more = 20.0
@@ -169,7 +169,7 @@ upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upg
 
 [sub_resource type="Resource" id="Resource_sypvg"]
 script = ExtResource("2_o3asj")
-type = 0
+type = 100
 flat = 2.0
 increased = 20.0
 more = 0.0

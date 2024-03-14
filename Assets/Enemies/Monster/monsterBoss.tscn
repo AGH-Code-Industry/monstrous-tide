@@ -607,12 +607,10 @@ rest = Transform2D(1, 0, 0, 1, 1, -5)
 
 [node name="Neck" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest"]
 position = Vector2(-19, -94)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -19, -94)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(4, -65)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 4, -65)
 auto_calculate_length_and_angle = false
 length = 162.759
@@ -620,12 +618,10 @@ bone_angle = -79.012
 
 [node name="RightArm" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(-54, -49)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -54, -49)
 
 [node name="RightHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/RightArm"]
 position = Vector2(-49, 106)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -49, 106)
 auto_calculate_length_and_angle = false
 length = 89.379
@@ -652,7 +648,6 @@ rest = Transform2D(1, 0, 0, 1, 75, -20)
 
 [node name="LeftHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm"]
 position = Vector2(9, 82)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 9, 82)
 
 [node name="Finger1" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm/LeftHand"]
@@ -689,6 +684,7 @@ rest = Transform2D(1, 0, 0, 1, 25, 47)
 
 [node name="LeftFoot" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/LeftLeg"]
 position = Vector2(9, 43)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 9, 43)
 auto_calculate_length_and_angle = false
 length = 54.968

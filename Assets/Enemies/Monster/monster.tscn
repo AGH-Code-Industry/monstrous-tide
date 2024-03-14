@@ -476,7 +476,7 @@ transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition
 [sub_resource type="Resource" id="Resource_coo45"]
 script = ExtResource("4_5otoj")
 item_scene = ExtResource("3_62wau")
-drop_chance = 70.0
+drop_chance = 50.0
 
 [sub_resource type="Resource" id="Resource_fxw01"]
 script = ExtResource("4_5otoj")
@@ -630,6 +630,7 @@ bone_angle = -79.012
 
 [node name="RightArm" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(-54, -49)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -54, -49)
 
 [node name="RightHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/RightArm"]
@@ -696,6 +697,7 @@ rest = Transform2D(1, 0, 0, 1, 25, 47)
 
 [node name="LeftFoot" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/LeftLeg"]
 position = Vector2(9, 43)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 9, 43)
 auto_calculate_length_and_angle = false
 length = 54.968
@@ -721,6 +723,7 @@ items_to_drop = Array[ExtResource("4_5otoj")]([SubResource("Resource_coo45"), Su
 
 [node name="DamageBox" parent="." instance=ExtResource("7_hdmod")]
 position = Vector2(3, 207)
+scale = Vector2(0.97, 0.97)
 collision_layer = 0
 collision_mask = 2
 damage = 2.0

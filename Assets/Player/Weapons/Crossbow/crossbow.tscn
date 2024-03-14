@@ -60,7 +60,7 @@ description = "Shoot More Projectiles"
 
 [sub_resource type="Resource" id="Resource_iab7w"]
 script = ExtResource("2_nfjgl")
-type = 0
+type = 100
 flat = 0.0
 increased = 10.0
 more = 0.0
@@ -90,7 +90,7 @@ upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upg
 
 [sub_resource type="Resource" id="Resource_mv4w3"]
 script = ExtResource("2_nfjgl")
-type = 0
+type = 100
 flat = 0.0
 increased = 25.0
 more = 0.0
@@ -103,7 +103,7 @@ description = "Increase Damage by 25%"
 
 [sub_resource type="Resource" id="Resource_uwof6"]
 script = ExtResource("2_nfjgl")
-type = 0
+type = 100
 flat = 0.0
 increased = 0.0
 more = 15.0
@@ -146,7 +146,7 @@ description = "Pierce 1 More Target"
 
 [sub_resource type="Resource" id="Resource_14nos"]
 script = ExtResource("2_nfjgl")
-type = 0
+type = 100
 flat = 0.0
 increased = 50.0
 more = 0.0
