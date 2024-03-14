@@ -7,7 +7,7 @@
 [sub_resource type="Resource" id="Resource_w6quh"]
 script = ExtResource("2_0rmmo")
 type = 305
-flat = 10.0
+flat = 70.0
 increased = 0.0
 more = 0.0
 
