@@ -462,7 +462,7 @@ height = 474.0
 
 [node name="Grevedigger" type="CharacterBody2D"]
 y_sort_enabled = true
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.15, 0.15)
 script = ExtResource("1_arry2")
 movement_speed = 40.0
 

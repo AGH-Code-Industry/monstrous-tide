@@ -484,7 +484,7 @@ scale_curve = SubResource("CurveTexture_tw5kp")
 
 [node name="Wolf" type="CharacterBody2D"]
 y_sort_enabled = true
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.15, 0.15)
 script = ExtResource("1_5t16d")
 movement_speed = 40.0
 
@@ -600,6 +600,7 @@ rest = Transform2D(1, 0, 0, 1, -39, 91)
 
 [node name="LeftFPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/LeftFLeg"]
 position = Vector2(-13, 99)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -13, 99)
 auto_calculate_length_and_angle = false
 length = 72.114
@@ -615,7 +616,6 @@ bone_angle = 81.935
 
 [node name="LeftBLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(42, 97)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]

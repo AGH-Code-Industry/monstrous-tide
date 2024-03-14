@@ -13,7 +13,7 @@ script = ExtResource("1_1r20i")
 shape = SubResource("CircleShape2D_cd87r")
 
 [node name="DisableTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.1
 one_shot = true
 
 [node name="HealthBar" parent="." instance=ExtResource("2_lbru2")]
