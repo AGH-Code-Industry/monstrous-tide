@@ -488,7 +488,7 @@ item_scene = ExtResource("6_wlvou")
 drop_chance = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibfqe"]
-size = Vector2(360, 600)
+size = Vector2(320, 550.001)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_07naq"]
 size = Vector2(280, 500)
@@ -726,8 +726,8 @@ collision_mask = 2
 damage = 2.0
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
-position = Vector2(-2.99999, -127)
-scale = Vector2(0.999999, 0.999999)
+position = Vector2(-3, -122)
+scale = Vector2(0.999998, 0.999998)
 shape = SubResource("RectangleShape2D_ibfqe")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_hisc1")]
