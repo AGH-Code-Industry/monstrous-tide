@@ -470,8 +470,10 @@ height = 474.0
 y_sort_enabled = true
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_vrucl")
+movement_speed = 40.0
 
 [node name="Visuals" type="Node2D" parent="."]
+position = Vector2(0, 80)
 
 [node name="Polygons" type="Node2D" parent="Visuals"]
 position = Vector2(40, 80)
@@ -650,29 +652,27 @@ hit_box_component = NodePath("../HitBox")
 items_to_drop = Array[ExtResource("4_mj5nx")]([SubResource("Resource_coo45"), SubResource("Resource_fxw01"), SubResource("Resource_i0to0")])
 
 [node name="DamageBox" parent="." instance=ExtResource("7_26axo")]
-position = Vector2(46, 40)
+position = Vector2(46, 120)
 collision_layer = 0
 collision_mask = 2
 damage = 2.0
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
 position = Vector2(-46, 10.0001)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ldfsi")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_ghfyr")]
-position = Vector2(46, 40)
+position = Vector2(46, 120)
 collision_layer = 4
 collision_mask = 0
 show_damage_taken_numbers = true
 flash_on_hit = true
 sprite = NodePath("../Visuals")
 flash_timeout = 0.1
-flash_color = Color(100, 100, 100, 1)
+flash_color = Color(4, 4, 4, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(-50.5, 5.00002)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1jiyu")
 
 [node name="HealthBar" parent="HitBox" index="2"]
@@ -687,7 +687,7 @@ lifetime = 0.3
 explosiveness = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10, 60)
+position = Vector2(10, 140)
 shape = SubResource("CapsuleShape2D_gdmqh")
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]

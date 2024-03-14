@@ -1,22 +1,23 @@
-[gd_scene load_steps=46 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=48 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://rhdo2vj35itf" path="res://Assets/World/Tło1.png" id="2_47c7y"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
 [ext_resource type="PackedScene" uid="uid://dx008vftxftcy" path="res://Assets/World/Environment/Scen/bush_2.tscn" id="3_lpidb"]
 [ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/Spawner/enemy_spawner.tscn" id="3_qgeh4"]
-[ext_resource type="PackedScene" uid="uid://bgjjl2mj65qgu" path="res://Assets/Enemies/enemy.tscn" id="3_whrsd"]
 [ext_resource type="PackedScene" uid="uid://dgi8tixu3jo14" path="res://Assets/World/Environment/Scen/tombstone_2.tscn" id="4_66oc4"]
 [ext_resource type="PackedScene" uid="uid://1hcm6uvyackx" path="res://Assets/World/Environment/Scen/stone_1.tscn" id="4_444hy"]
 [ext_resource type="PackedScene" uid="uid://bti18gm7nw843" path="res://Assets/World/Environment/Scen/tombstone_4.tscn" id="4_bn4cu"]
 [ext_resource type="PackedScene" uid="uid://dole8ou3cg3o3" path="res://Assets/World/Environment/Scen/stone_2a.tscn" id="4_e5hdm"]
 [ext_resource type="Script" path="res://Assets/Utility/Spawner/spawn_info.gd" id="4_f0yyc"]
 [ext_resource type="PackedScene" uid="uid://rpflrxathvxw" path="res://Assets/World/Environment/Scen/tombstone_3.tscn" id="4_fyibc"]
+[ext_resource type="PackedScene" uid="uid://w814cm5dm64j" path="res://Assets/Enemies/Gravedigger/grevedigger.tscn" id="4_om5r4"]
 [ext_resource type="PackedScene" uid="uid://ye07oo1heosg" path="res://Assets/World/Environment/Scen/stone_2b.tscn" id="4_xoi13"]
 [ext_resource type="PackedScene" uid="uid://dodlfy1mahper" path="res://Assets/World/Environment/Scen/cande_1.tscn" id="5_b6ibn"]
-[ext_resource type="PackedScene" uid="uid://30vfjie78f7k" path="res://Assets/Enemies/kobold_strong.tscn" id="5_gn26j"]
 [ext_resource type="PackedScene" uid="uid://rd2hgmivn7i3" path="res://Assets/World/Environment/Scen/cemetery_lamp.tscn" id="5_x2t4u"]
+[ext_resource type="PackedScene" uid="uid://c4cnllq6weecr" path="res://Assets/Enemies/Wolf/wolf.tscn" id="6_grcmb"]
 [ext_resource type="PackedScene" uid="uid://bacoytneoofs4" path="res://Assets/World/Environment/Scen/tombstone_1.tscn" id="6_n6q55"]
+[ext_resource type="PackedScene" uid="uid://766nli862agw" path="res://Assets/Enemies/Monster/monster.tscn" id="7_6vtda"]
 [ext_resource type="PackedScene" uid="uid://d2p1762b268iq" path="res://Assets/World/Environment/Scen/break_tombstone.tscn" id="8_1r5k2"]
 [ext_resource type="PackedScene" uid="uid://cwhtp8uen12rv" path="res://Assets/World/Environment/Scen/tree_2.tscn" id="8_cc8vh"]
 [ext_resource type="PackedScene" uid="uid://t15kclcgsht0" path="res://Assets/World/Environment/Scen/tree_1.tscn" id="8_hcbyy"]
@@ -43,18 +44,26 @@
 [sub_resource type="Resource" id="Resource_hicv7"]
 script = ExtResource("4_f0yyc")
 time_start = 0
-time_end = 60
-enemy = ExtResource("3_whrsd")
-enemy_num = 1
-enemy_spawn_delay = 1
+time_end = 30
+enemy = ExtResource("4_om5r4")
+enemy_num = 2
+enemy_spawn_delay = 2
 
 [sub_resource type="Resource" id="Resource_f8ksw"]
 script = ExtResource("4_f0yyc")
-time_start = 5
+time_start = 15
 time_end = 120
-enemy = ExtResource("5_gn26j")
+enemy = ExtResource("6_grcmb")
 enemy_num = 1
 enemy_spawn_delay = 5
+
+[sub_resource type="Resource" id="Resource_muify"]
+script = ExtResource("4_f0yyc")
+time_start = 30
+time_end = 120
+enemy = ExtResource("7_6vtda")
+enemy_num = 5
+enemy_spawn_delay = 2
 
 [sub_resource type="Gradient" id="Gradient_yiyxv"]
 offsets = PackedFloat32Array(0.0746269, 1)
@@ -99,8 +108,9 @@ region_enabled = true
 region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_qgeh4")]
+y_sort_enabled = true
 position = Vector2(-12, -1)
-spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResource("Resource_f8ksw")])
+spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResource("Resource_f8ksw"), SubResource("Resource_muify")])
 
 [node name="Player" parent="." instance=ExtResource("2_j8yv2")]
 unique_name_in_owner = true

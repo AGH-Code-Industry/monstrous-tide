@@ -518,12 +518,14 @@ y_sort_enabled = true
 position = Vector2(1, 16)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_2ivv2")
+movement_speed = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-10, 30)
+position = Vector2(-10, 110)
 shape = SubResource("CapsuleShape2D_hlwre")
 
 [node name="Visuals" type="Node2D" parent="."]
+position = Vector2(0, 80)
 
 [node name="Polygons" type="Node2D" parent="Visuals"]
 position = Vector2(-10, 160)
@@ -624,6 +626,7 @@ bone_angle = -79.012
 
 [node name="RightArm" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(-54, -49)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -54, -49)
 
 [node name="RightHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/RightArm"]
@@ -717,7 +720,7 @@ anim_player = NodePath("../Animation")
 items_to_drop = Array[ExtResource("4_5otoj")]([SubResource("Resource_coo45"), SubResource("Resource_fxw01"), SubResource("Resource_i0to0")])
 
 [node name="DamageBox" parent="." instance=ExtResource("7_hdmod")]
-position = Vector2(3, 127)
+position = Vector2(3, 207)
 collision_layer = 0
 collision_mask = 2
 damage = 2.0
@@ -728,18 +731,17 @@ scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_ibfqe")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_hisc1")]
-position = Vector2(3, 127)
+position = Vector2(3, 207)
 collision_layer = 4
 collision_mask = 0
 show_damage_taken_numbers = true
 flash_on_hit = true
 sprite = NodePath("../Visuals")
 flash_timeout = 0.1
-flash_color = Color(100, 100, 100, 1)
+flash_color = Color(4, 4, 4, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(-3.00001, -127)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_07naq")
 
 [node name="HealthBar" parent="HitBox" index="2"]

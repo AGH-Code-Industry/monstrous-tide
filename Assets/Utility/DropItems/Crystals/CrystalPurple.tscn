@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bm2timd73600p" path="res://Assets/Tutorial/Items/Gems/Gem_purple.png" id="2_x022d"]
 
 [node name="ExperienceCrystal" instance=ExtResource("1_f56ew")]
+z_index = -1
 script = ExtResource("2_0h0yq")
 
 [node name="Sprite2D" parent="." index="0"]
