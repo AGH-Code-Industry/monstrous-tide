@@ -15,7 +15,7 @@ upgrade: base
 
 # General
 
-*Cthulhu's Tentacle* is one of the weapons player gets when in "fishy" biomes - early game, easy mechanics.
+*Cthulhu's Tentacle* is one of the weapons player gets when in "fishy" biomes - early game, easy mechanics. It looks like a disgusting, octopus-like? tentacle, does single-target mid damage.
 
 Why Cthulhu's? Because many illustrations (and original descriptions) mention this god as a giant octopus.
 
@@ -63,8 +63,8 @@ Available upgrades for the *Cthulhu's Tentacle* :
 		- "If an enemy was hit 3 or more times with this weapon, the next time the are hit they are instantly defeated."
 		- "Whenever the player Dodges, they recover 15% of their own *HP* - occurs every 10 seconds."
 - ***Mythic:*** *follows rules mentioned [[Rarity and drop-rate systems#Mythic|here]]!*
-	- **Blue Fin** *(tba)*
-	- **Whales Graveyard's Survivor** *(tba)*
+	- **[[Blue Fin]]**
+	- **[[Whales Graveyard's Survivor]]**
 	- additional stats are taken from the same pool as the previous ones.
 
 

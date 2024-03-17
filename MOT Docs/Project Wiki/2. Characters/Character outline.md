@@ -34,7 +34,7 @@ The inventory is divided into *Equipped* and *Unequipped* parts. The first one c
 
 ### Equipped items
 
-*Equipped* part is limited: it may only contain *maximum of 5 weapons and 5 other, combat related items* at any given time. These items may be changed by the player anytime[^3] through items menu and in any way player desires. Note that *not every item is equipabble*.
+*Equipped* part is limited: it may only contain *maximum of 5 weapons and 5 other, combat related items*[^4] at any given time. These items may be changed by the player anytime[^3] through items menu and in any way player desires. Note that *not every item is equipabble*.
 
 ### Unequipped items
 
@@ -43,3 +43,4 @@ The inventory is divided into *Equipped* and *Unequipped* parts. The first one c
 [^1]: What about the enemies? Especially considering code perspective.
 [^2]: On our Miro board there is a mention of some kind of "*shield-providing cloak*" - do we really consider it? And if so, how?
 [^3]: Maybe excluding some specific mechanics, that prevent the player from changing weapons for a certain time/stage?
+[^4]: If there are any, beside weapons.
