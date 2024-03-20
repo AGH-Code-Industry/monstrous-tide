@@ -8,5 +8,5 @@ func collect():
 	queue_free()
 
 
-func _process(delta):
+func _process(_delta):
 	$Label.text = str(experience_points)
