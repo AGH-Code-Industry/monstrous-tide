@@ -1,3 +1,5 @@
+# ===== Godot ========
+
 # Godot 4+ specific ignores
 .godot/
 
@@ -13,6 +15,12 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+
+# ===== Obsidian =====
+
+# temporary exclude
+MOT Docs/Project Wiki/__General__/Tutorials
 
 # to exclude .obsidian folder
 

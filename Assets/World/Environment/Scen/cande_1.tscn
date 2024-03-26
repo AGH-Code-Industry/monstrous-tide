@@ -3,10 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://dq1yrvn3yhcsj" path="res://Assets/World/Environment/Texture/Candle_0.2.png" id="1_arigw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y1fpj"]
-radius = 266.667
-height = 800.0
+radius = 200.0
+height = 400.0
 
 [node name="Cande_1" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.025, 0.025)
@@ -15,5 +16,5 @@ texture = ExtResource("1_arigw")
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(0, 66.6665)
+position = Vector2(0, 240)
 shape = SubResource("CapsuleShape2D_y1fpj")

@@ -3,16 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://dp7kec00pn62w" path="res://Assets/World/Environment/Texture/Tombstone_0.2.png" id="1_s378b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rih6y"]
-size = Vector2(885.714, 1428.57)
+size = Vector2(725, 300)
 
 [node name="Tombstone_2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.035, 0.035)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_s378b")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(14.2857, 142.857)
+position = Vector2(12.5, 650)
 shape = SubResource("RectangleShape2D_rih6y")

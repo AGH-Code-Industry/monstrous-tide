@@ -4,5 +4,6 @@ extends DropItemClass
 
 	
 func collect():
+	ItemDropComponent.current_items_count -= 1
 	GameEvents.emit_experience_collected(experience_points)
 	queue_free()

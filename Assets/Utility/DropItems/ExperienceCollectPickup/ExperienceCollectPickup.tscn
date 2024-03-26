@@ -1,13 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnul08gmjwq6"]
+[gd_scene load_steps=6 format=3 uid="uid://dnul08gmjwq6"]
 
 [ext_resource type="Script" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.gd" id="1_whkln"]
 [ext_resource type="Texture2D" uid="uid://jyyu4dsqmktp" path="res://Assets/Tutorial/Items/Upgrades/urand_mage.png" id="2_1dxfj"]
+[ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_sq1i2"]
+
+[sub_resource type="Resource" id="Resource_ssjjm"]
+script = ExtResource("2_sq1i2")
+type = 305
+flat = 10000.0
+increased = 1000.0
+more = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p12ko"]
 radius = 12.0
 
 [node name="ExperienceCollectPickup" type="Node2D"]
 script = ExtResource("1_whkln")
+stat_to_add = SubResource("Resource_ssjjm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_1dxfj")

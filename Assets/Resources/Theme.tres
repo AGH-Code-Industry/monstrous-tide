@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=21 format=3 uid="uid://co2p0ie6sxnsf"]
+[gd_resource type="Theme" load_steps=27 format=3 uid="uid://co2p0ie6sxnsf"]
 
 [ext_resource type="Texture2D" uid="uid://d1cn130aiejis" path="res://Assets/Utility/UI/Healthbar/hp-bar-golden-frame-back.png" id="1_cryu0"]
+[ext_resource type="Texture2D" uid="uid://b6rm3id5l64nw" path="res://Assets/MenuInterfaces/mot_buuton.png" id="1_jws7j"]
 [ext_resource type="Texture2D" uid="uid://0fg5jy6em8v" path="res://Assets/Utility/UI/LvlUps/Textures/label-frame.png" id="1_k4thb"]
 [ext_resource type="Texture2D" uid="uid://bohp5co365dr" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-uncommon-frame.png" id="2_2mrqu"]
 [ext_resource type="Texture2D" uid="uid://dcjta7dpxborn" path="res://Assets/Utility/UI/Healthbar/hp-bar-golden-frame-fill.png" id="2_jvprh"]
@@ -8,8 +9,69 @@
 [ext_resource type="Texture2D" uid="uid://du6ax6dfsf5dt" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-legendary-frame.png" id="4_75fqq"]
 [ext_resource type="Texture2D" uid="uid://dsnxfey0omxg3" path="res://Assets/Utility/UI/Equipment/EQSlot.png" id="4_lflb8"]
 [ext_resource type="Texture2D" uid="uid://bnic1icsl1vfk" path="res://Assets/Utility/UI/LvlUps/Textures/Lvl-up-rare-frame.png" id="5_n4bdy"]
-[ext_resource type="Texture2D" uid="uid://bulmfy8sbhlox" path="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-back.png" id="8_mfe0o"]
-[ext_resource type="Texture2D" uid="uid://byxf6q3t3snpw" path="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-fill.png" id="9_dj352"]
+[ext_resource type="Texture2D" uid="uid://bfpydge4soy6x" path="res://Assets/Utility/UI/Progressbar/rune-xp-bar-back.png" id="9_t7yxh"]
+[ext_resource type="Texture2D" uid="uid://cqbd77n2sp8ks" path="res://Assets/Utility/UI/Progressbar/rune-xp-bar-fill.png" id="10_26gf5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybvj1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1pfa"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_geu31"]
+texture = ExtResource("1_jws7j")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vmhj4"]
+texture = ExtResource("1_jws7j")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mb61b"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htdvx"]
 texture = ExtResource("1_cryu0")
@@ -34,10 +96,10 @@ texture_margin_bottom = 3.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opo2h"]
 texture = ExtResource("4_lflb8")
-texture_margin_left = 1.0
-texture_margin_top = 1.0
-texture_margin_right = 1.0
-texture_margin_bottom = 1.0
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xqvga"]
 texture = ExtResource("3_bfsr8")
@@ -68,22 +130,42 @@ texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhtbs"]
-texture = ExtResource("8_mfe0o")
-texture_margin_left = 2.0
+texture = ExtResource("9_t7yxh")
+texture_margin_left = 46.0
 texture_margin_top = 4.0
-texture_margin_right = 2.0
-texture_margin_bottom = 3.0
+texture_margin_right = 46.0
+texture_margin_bottom = 7.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vk4yw"]
-texture = ExtResource("9_dj352")
-texture_margin_left = 2.0
-texture_margin_top = 3.0
-texture_margin_right = 2.0
-texture_margin_bottom = 3.0
+texture = ExtResource("10_26gf5")
+texture_margin_left = 46.0
+texture_margin_top = 4.0
+texture_margin_right = 46.0
+texture_margin_bottom = 5.0
 
 [resource]
-GridContainer/constants/h_separation = 2
-GridContainer/constants/v_separation = 2
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 2
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/styles/disabled = SubResource("StyleBoxFlat_ybvj1")
+Button/styles/focus = SubResource("StyleBoxFlat_s1pfa")
+Button/styles/hover = SubResource("StyleBoxTexture_geu31")
+Button/styles/normal = SubResource("StyleBoxTexture_vmhj4")
+Button/styles/pressed = SubResource("StyleBoxFlat_mb61b")
 HealthBar/base_type = &"ProgressBar"
 HealthBar/styles/background = SubResource("StyleBoxTexture_htdvx")
 HealthBar/styles/fill = SubResource("StyleBoxTexture_a7d1e")

@@ -1,16 +1,29 @@
 # monstrous-tide
 
-Hello, this is Montrous Tide game project by ZTP of AGH Code Industry! Happy to see you :)
+Hello, this is "Montrous Tide" game project by Zespół Totalnej Porażki of AGH Code Industry!
 
-## Our repository
+# About project
 
 We work with [Godot](https://godotengine.org/) - a powerful, free and cross-platform game engine - to create something special: 
-A single-player game inspired by *Vampire Survivors* and Victorian London with some Lovecraft-like creatures wandering there... Who knows what happens (or will happen?) if you step too far?
+A multiplatform single-player game inspired by *Vampire Survivors* and Victorian London with some Lovecraft-like creatures wandering there... Who knows what happens (or will happen?) if you step too far?
 
-## Our progress
+# Our progress
 
-We are at the very beginning of our journey, first assets, scripts and concepts are just being brought to the world...
+We have been working over this project for a few months now. What we have done is:
+- our first graphics, animations, functional units and other assets, which made ***our first demo!***;
+- concepts introducing new weapons, units, biomes and some music;
+- some cool, clean *GDScript* code to run;
+- Markdown documentation vault, powered by [Obsidian](https://obsidian.md/).
 
-## Do you want to download the repo?
+# Running this thing
 
-While opening our GDScripts is a straightforward thing, our documentation doesn't show you its whole power on Github - to get the most of Markdown and community plugins, we use [Obsidian](https://obsidian.md/), a light-weight powerhouse of Markdown. All you need to do is download Obsidian, click "Open vault" and select "MOT Docs".
+We do not yet have a stable release of our game, but if you want to see the project from backstage, you may:
+1. Download our repo files;
+2. Open the project with the newest **Godot** release - we try to use the latest stable one;
+3. Open the *MOT Docs* folder as a vault in Obsidian, trust community plug-ins we use and enable *reading mode* - start with *Main Canvas* file!
+
+# About the future
+
+We hope to deliver our best in nearest future - so far we focus on polishing everything we have to provide the best we can for our presentation on [AGH GamesHall 2024](https://fb.me/e/6HcmINDxF)!
+
+Stay tuned and be sure to see us at this event!
