@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Projectile" load_steps=3 format=3 uid="uid://dj2xebrp5al6o"]
+
+[ext_resource type="Script" path="res://Assets/Utility/Weapons/projectile.gd" id="1_0pdf2"]
+[ext_resource type="PackedScene" uid="uid://dh17b8rnm1yoa" path="res://Assets/Player/Weapons/IceSpear/ice_spear_projectile.tscn" id="1_twp0d"]
+
+[resource]
+script = ExtResource("1_0pdf2")
+damage = 5.0
+attack_speed = 2
+speed = 100
+projectiles_per_attack = 1
+scene = ExtResource("1_twp0d")

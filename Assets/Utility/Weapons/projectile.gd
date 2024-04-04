@@ -5,7 +5,7 @@ extends Resource
 ## Damage per projectile
 @export var damage : float
 
-## The amount of times a projectile fires per second (1s / {attack_speed})
+## The amount of times a projectile fires per second (1s / [param attack_speed])
 @export var attack_speed : int
 
 ## Projectile's speed

@@ -5,6 +5,11 @@
 
 [node name="IceSpear" type="Node2D"]
 script = ExtResource("1_fs2jy")
+attack_speed = null
+damage = null
+projectile_speed = null
+projectile_pierce_amount = null
+knockback = null
 
 [node name="ProjectileSpawner" parent="." instance=ExtResource("2_u5fkj")]
 
