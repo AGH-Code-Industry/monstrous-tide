@@ -10,14 +10,14 @@
 [sub_resource type="Resource" id="Resource_kix70"]
 script = ExtResource("2_uf4se")
 type = 105
-flat = 0.5
+flat = 2.0
 increased = 0.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_ttple"]
 script = ExtResource("2_uf4se")
 type = 110
-flat = 2.0
+flat = 1.2
 increased = 0.0
 more = 0.0
 
@@ -31,7 +31,7 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_atsve"]
 script = ExtResource("2_uf4se")
 type = 100
-flat = 1.0
+flat = 3.0
 increased = 0.0
 more = 0.0
 

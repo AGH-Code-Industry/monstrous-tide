@@ -10,6 +10,12 @@ var weapons : Array[Weapon] = []
 		"description": "Bible weapon",
 		"scene": "res://Assets/Player/Weapons/Bible/bible.tscn"
 	},
+	{
+		"weight" :1,
+		"name": "crossbow",
+		"description": "Handy Crossbow",
+		"scene": "res://Assets/Player/Weapons/Crossbow/crossbow.tscn"
+	},
 ]
 var avoid_weapons: Array
 

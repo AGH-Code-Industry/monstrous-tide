@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c3xw1x3cwrg7d" path="res://Assets/Utility/DropItems/Texture/Gem_2.png" id="2_wvm0d"]
 
 [node name="ExperienceCrystal" instance=ExtResource("1_yyc7f")]
+z_index = -1
 experience_points = 5
 
 [node name="Sprite2D" parent="." index="0"]

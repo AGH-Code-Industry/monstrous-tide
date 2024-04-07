@@ -597,7 +597,6 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-107.468, 18)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-z_index = 1
 y_sort_enabled = true
 motion_mode = 1
 script = ExtResource("1_jqw0g")
@@ -621,8 +620,11 @@ position = Vector2(0, 14)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_vkkdj")]
+scale = Vector2(1.2, 1.2)
 collision_layer = 2
 collision_mask = 4
+max_health = 80.0
+health = 80.0
 show_heal_numbers = true
 flash_on_hit = true
 sprite = NodePath("../AnimatedSprite2D")
@@ -810,6 +812,7 @@ parameters/conditions/is_moving = false
 [node name="Lantern" parent="Weapons" instance=ExtResource("9_d10fm")]
 z_index = -1
 
+[connection signal="damage_taken" from="HitBox" to="." method="_on_hit_box_damage_taken"]
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
 [editable path="HitBox"]

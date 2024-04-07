@@ -5,12 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://bm2timd73600p" path="res://Assets/Tutorial/Items/Gems/Gem_purple.png" id="2_x022d"]
 
 [node name="ExperienceCrystal" instance=ExtResource("1_f56ew")]
+z_index = -1
 script = ExtResource("2_0h0yq")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_x022d")
 
 [node name="Label" type="Label" parent="." index="2"]
+visible = false
 offset_left = -20.0
 offset_top = -12.0
 offset_right = 20.0

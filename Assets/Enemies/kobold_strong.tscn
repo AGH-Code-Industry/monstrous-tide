@@ -128,6 +128,7 @@ shape = SubResource("RectangleShape2D_08bso")
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("4_oxwy8")]
 collision_layer = 4
 collision_mask = 0
+max_health = 20.0
 health = 20.0
 show_damage_taken_numbers = true
 flash_on_hit = true
