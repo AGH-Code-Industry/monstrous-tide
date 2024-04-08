@@ -1,28 +1,34 @@
-[gd_scene load_steps=41 format=3 uid="uid://b11rms50550mc"]
+[gd_scene load_steps=60 format=3 uid="uid://b11rms50550mc"]
 
 [ext_resource type="Script" path="res://Assets/World/world.gd" id="1_na82v"]
 [ext_resource type="Texture2D" uid="uid://rhdo2vj35itf" path="res://Assets/World/Tło1.png" id="2_47c7y"]
 [ext_resource type="PackedScene" uid="uid://iupuujdctspl" path="res://Assets/Player/player.tscn" id="2_j8yv2"]
 [ext_resource type="PackedScene" uid="uid://dx008vftxftcy" path="res://Assets/World/Environment/Scen/bush_2.tscn" id="3_lpidb"]
 [ext_resource type="PackedScene" uid="uid://b2a5f3brc0phv" path="res://Assets/Utility/Spawner/enemy_spawner.tscn" id="3_qgeh4"]
-[ext_resource type="PackedScene" uid="uid://bgjjl2mj65qgu" path="res://Assets/Enemies/enemy.tscn" id="3_whrsd"]
 [ext_resource type="PackedScene" uid="uid://dgi8tixu3jo14" path="res://Assets/World/Environment/Scen/tombstone_2.tscn" id="4_66oc4"]
 [ext_resource type="PackedScene" uid="uid://1hcm6uvyackx" path="res://Assets/World/Environment/Scen/stone_1.tscn" id="4_444hy"]
 [ext_resource type="PackedScene" uid="uid://bti18gm7nw843" path="res://Assets/World/Environment/Scen/tombstone_4.tscn" id="4_bn4cu"]
 [ext_resource type="PackedScene" uid="uid://dole8ou3cg3o3" path="res://Assets/World/Environment/Scen/stone_2a.tscn" id="4_e5hdm"]
 [ext_resource type="Script" path="res://Assets/Utility/Spawner/spawn_info.gd" id="4_f0yyc"]
 [ext_resource type="PackedScene" uid="uid://rpflrxathvxw" path="res://Assets/World/Environment/Scen/tombstone_3.tscn" id="4_fyibc"]
+[ext_resource type="PackedScene" uid="uid://w814cm5dm64j" path="res://Assets/Enemies/Gravedigger/grevedigger.tscn" id="4_om5r4"]
 [ext_resource type="PackedScene" uid="uid://ye07oo1heosg" path="res://Assets/World/Environment/Scen/stone_2b.tscn" id="4_xoi13"]
 [ext_resource type="PackedScene" uid="uid://dodlfy1mahper" path="res://Assets/World/Environment/Scen/cande_1.tscn" id="5_b6ibn"]
-[ext_resource type="PackedScene" uid="uid://30vfjie78f7k" path="res://Assets/Enemies/kobold_strong.tscn" id="5_gn26j"]
 [ext_resource type="PackedScene" uid="uid://rd2hgmivn7i3" path="res://Assets/World/Environment/Scen/cemetery_lamp.tscn" id="5_x2t4u"]
+[ext_resource type="PackedScene" uid="uid://c4cnllq6weecr" path="res://Assets/Enemies/Wolf/wolf.tscn" id="6_grcmb"]
 [ext_resource type="PackedScene" uid="uid://bacoytneoofs4" path="res://Assets/World/Environment/Scen/tombstone_1.tscn" id="6_n6q55"]
+[ext_resource type="PackedScene" uid="uid://766nli862agw" path="res://Assets/Enemies/Monster/monster.tscn" id="7_6vtda"]
 [ext_resource type="PackedScene" uid="uid://d2p1762b268iq" path="res://Assets/World/Environment/Scen/break_tombstone.tscn" id="8_1r5k2"]
+[ext_resource type="PackedScene" uid="uid://dsgddm58yuwp6" path="res://Assets/Enemies/Gravedigger/grevediggerBossWeaker.tscn" id="8_3nynn"]
 [ext_resource type="PackedScene" uid="uid://cwhtp8uen12rv" path="res://Assets/World/Environment/Scen/tree_2.tscn" id="8_cc8vh"]
 [ext_resource type="PackedScene" uid="uid://t15kclcgsht0" path="res://Assets/World/Environment/Scen/tree_1.tscn" id="8_hcbyy"]
+[ext_resource type="PackedScene" uid="uid://btvx57fkrtjwe" path="res://Assets/Enemies/Monster/monster2.tscn" id="9_8web2"]
 [ext_resource type="PackedScene" uid="uid://okawxyib3ihc" path="res://Assets/World/Environment/Scen/tombstone_5.tscn" id="10_itf3j"]
 [ext_resource type="PackedScene" uid="uid://bvjgwu8scc44m" path="res://Assets/World/Environment/Scen/fenceraven.tscn" id="10_kldk0"]
+[ext_resource type="PackedScene" uid="uid://bqmaiuxnifnl5" path="res://Assets/Enemies/Wolf/wolf2.tscn" id="10_oqv5r"]
 [ext_resource type="PackedScene" uid="uid://detle2uijbg6f" path="res://Assets/World/Environment/Scen/cande_2.tscn" id="10_wltt3"]
+[ext_resource type="PackedScene" uid="uid://bolbcu342lc2n" path="res://Assets/Enemies/Gravedigger/grevedigger2.tscn" id="11_qheim"]
+[ext_resource type="PackedScene" uid="uid://dm8cfrm516ta4" path="res://Assets/Enemies/Wolf/wolfBoss.tscn" id="12_683hl"]
 [ext_resource type="PackedScene" uid="uid://mx7howeeqejb" path="res://Assets/World/Environment/Scen/stone_2f.tscn" id="14_ql30f"]
 [ext_resource type="PackedScene" uid="uid://cj3l1cpah21so" path="res://Assets/World/Environment/Scen/stone_2c.tscn" id="15_s4wxv"]
 [ext_resource type="PackedScene" uid="uid://cctao6a7cpn7i" path="res://Assets/World/Environment/Scen/stone_2d.tscn" id="17_tff1i"]
@@ -30,56 +36,189 @@
 [ext_resource type="PackedScene" uid="uid://dgwmrl6lbmw7e" path="res://Assets/World/Environment/Scen/bush_1.tscn" id="19_embcj"]
 [ext_resource type="PackedScene" uid="uid://bvawrv4cvkx6q" path="res://Assets/Utility/Managers/experience_manager.tscn" id="22_c4rh6"]
 [ext_resource type="PackedScene" uid="uid://b12g08nqirib2" path="res://Assets/Utility/UI/Progressbar/progress_bar.tscn" id="23_gh6bk"]
-[ext_resource type="PackedScene" uid="uid://c36cdmngcpuic" path="res://Assets/Utility/DropItems/Crystals/CrystalGreen.tscn" id="24_al4of"]
-[ext_resource type="PackedScene" uid="uid://ctx7i4wkn20wl" path="res://Assets/Utility/DropItems/MovementSpeedPickup/MovementSpeedPickup.tscn" id="25_3o6nv"]
-[ext_resource type="PackedScene" uid="uid://dign3j2sdr85j" path="res://Assets/Utility/DropItems/Crystals/CrystalRed.tscn" id="25_te5lv"]
-[ext_resource type="PackedScene" uid="uid://dp5lugnkwinpb" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.tscn" id="26_mvhq3"]
 [ext_resource type="PackedScene" uid="uid://jbk4o4vuchg8" path="res://Assets/Utility/UI/LvlUps/LvlUps.tscn" id="26_ntv7e"]
-[ext_resource type="PackedScene" uid="uid://c2jh6xop6hwoj" path="res://Assets/Utility/DropItems/Crystals/CrystalBlue.tscn" id="26_sy4rw"]
-[ext_resource type="PackedScene" uid="uid://dnul08gmjwq6" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.tscn" id="27_nkgxi"]
 [ext_resource type="PackedScene" uid="uid://b3ak5hh8jtrh8" path="res://Assets/Utility/Managers/weapon_manager.tscn" id="29_sylwc"]
+[ext_resource type="PackedScene" uid="uid://cf114iew8wlfx" path="res://Assets/Utility/UI/Equipment/equipment.tscn" id="33_hvbig"]
+[ext_resource type="PackedScene" uid="uid://dp5lugnkwinpb" path="res://Assets/Utility/DropItems/HealingPickup/healing_pickup.tscn" id="40_7kffe"]
 
 [sub_resource type="Resource" id="Resource_hicv7"]
 script = ExtResource("4_f0yyc")
 time_start = 0
-time_end = 60
-enemy = ExtResource("3_whrsd")
-enemy_num = 1
-enemy_spawn_delay = 1
+time_end = 30
+enemy = ExtResource("4_om5r4")
+enemy_num = 2
+enemy_spawn_delay = 2
 
 [sub_resource type="Resource" id="Resource_f8ksw"]
 script = ExtResource("4_f0yyc")
-time_start = 5
+time_start = 15
 time_end = 120
-enemy = ExtResource("5_gn26j")
+enemy = ExtResource("6_grcmb")
 enemy_num = 1
 enemy_spawn_delay = 5
 
-[node name="World" type="Node2D"]
+[sub_resource type="Resource" id="Resource_muify"]
+script = ExtResource("4_f0yyc")
+time_start = 30
+time_end = 120
+enemy = ExtResource("7_6vtda")
+enemy_num = 3
+enemy_spawn_delay = 2
+
+[sub_resource type="Resource" id="Resource_ro2hn"]
+script = ExtResource("4_f0yyc")
+time_start = 90
+time_end = 250
+enemy = ExtResource("6_grcmb")
+enemy_num = 1
+enemy_spawn_delay = 4
+
+[sub_resource type="Resource" id="Resource_ygcqa"]
+script = ExtResource("4_f0yyc")
+time_start = 120
+time_end = 400
+enemy = ExtResource("7_6vtda")
+enemy_num = 3
+enemy_spawn_delay = 7
+
+[sub_resource type="Resource" id="Resource_2ymcd"]
+script = ExtResource("4_f0yyc")
+time_start = 150
+time_end = 160
+enemy = ExtResource("8_3nynn")
+enemy_num = 1
+enemy_spawn_delay = 10
+
+[sub_resource type="Resource" id="Resource_k473o"]
+script = ExtResource("4_f0yyc")
+time_start = 180
+time_end = 400
+enemy = ExtResource("9_8web2")
+enemy_num = 2
+enemy_spawn_delay = 5
+
+[sub_resource type="Resource" id="Resource_ryplg"]
+script = ExtResource("4_f0yyc")
+time_start = 300
+time_end = 310
+enemy = ExtResource("10_oqv5r")
+enemy_num = 20
+enemy_spawn_delay = 10
+
+[sub_resource type="Resource" id="Resource_1c2qj"]
+script = ExtResource("4_f0yyc")
+time_start = 340
+time_end = 450
+enemy = ExtResource("11_qheim")
+enemy_num = 2
+enemy_spawn_delay = 7
+
+[sub_resource type="Resource" id="Resource_isfk0"]
+script = ExtResource("4_f0yyc")
+time_start = 450
+time_end = 550
+enemy = ExtResource("11_qheim")
+enemy_num = 3
+enemy_spawn_delay = 8
+
+[sub_resource type="Resource" id="Resource_8vqg5"]
+script = ExtResource("4_f0yyc")
+time_start = 320
+time_end = 520
+enemy = ExtResource("10_oqv5r")
+enemy_num = 3
+enemy_spawn_delay = 10
+
+[sub_resource type="Resource" id="Resource_ostq8"]
+script = ExtResource("4_f0yyc")
+time_start = 520
+time_end = 530
+enemy = ExtResource("12_683hl")
+enemy_num = 1
+enemy_spawn_delay = 10
+
+[sub_resource type="Resource" id="Resource_g7grr"]
+script = ExtResource("4_f0yyc")
+time_start = 540
+time_end = 750
+enemy = ExtResource("9_8web2")
+enemy_num = 10
+enemy_spawn_delay = 8
+
+[sub_resource type="Resource" id="Resource_avo5m"]
+script = ExtResource("4_f0yyc")
+time_start = 550
+time_end = 750
+enemy = ExtResource("11_qheim")
+enemy_num = 10
+enemy_spawn_delay = 8
+
+[sub_resource type="Resource" id="Resource_5hyhx"]
+script = ExtResource("4_f0yyc")
+time_start = 560
+time_end = 750
+enemy = ExtResource("10_oqv5r")
+enemy_num = 10
+enemy_spawn_delay = 9
+
+[sub_resource type="Gradient" id="Gradient_yiyxv"]
+offsets = PackedFloat32Array(0.0746269, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cmup2"]
+gradient = SubResource("Gradient_yiyxv")
+fill = 1
+fill_from = Vector2(0.535354, 0.515152)
+fill_to = Vector2(0.762626, 0.510101)
+
+[sub_resource type="Environment" id="Environment_if33h"]
+background_mode = 3
+glow_enabled = true
+glow_levels/1 = 0.2
+glow_levels/3 = 0.5
+glow_levels/4 = 0.5
+glow_levels/5 = 0.5
+glow_normalized = true
+glow_intensity = 3.0
+glow_blend_mode = 0
+glow_hdr_threshold = 0.15
+glow_hdr_scale = 1.0
+glow_map = SubResource("GradientTexture2D_cmup2")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grr1f"]
+size = Vector2(357.5, 5986)
+
+[node name="World" type="TileMap"]
+y_sort_enabled = true
+format = 2
 script = ExtResource("1_na82v")
 
 [node name="Background" type="Sprite2D" parent="."]
-z_index = -1
+z_index = -2
 texture_filter = 2
 texture_repeat = 2
 position = Vector2(1, 2)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_47c7y")
 region_enabled = true
 region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_qgeh4")]
-visible = false
+y_sort_enabled = true
 position = Vector2(-12, -1)
-spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResource("Resource_f8ksw")])
+spawns = Array[ExtResource("4_f0yyc")]([SubResource("Resource_hicv7"), SubResource("Resource_f8ksw"), SubResource("Resource_muify"), SubResource("Resource_ro2hn"), SubResource("Resource_ygcqa"), SubResource("Resource_2ymcd"), SubResource("Resource_k473o"), SubResource("Resource_ryplg"), SubResource("Resource_1c2qj"), SubResource("Resource_isfk0"), SubResource("Resource_8vqg5"), SubResource("Resource_ostq8"), SubResource("Resource_g7grr"), SubResource("Resource_avo5m"), SubResource("Resource_5hyhx")])
 
 [node name="Player" parent="." instance=ExtResource("2_j8yv2")]
 unique_name_in_owner = true
 
-[node name="Environment" type="Node" parent="."]
+[node name="Environment" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Tree_3" parent="Environment" instance=ExtResource("8_cc8vh")]
-position = Vector2(-324, -893)
+position = Vector2(-812, -1558)
+
+[node name="Tree_7" parent="Environment" instance=ExtResource("8_cc8vh")]
+position = Vector2(1384, -2286)
 
 [node name="Tree_5" parent="Environment" instance=ExtResource("8_hcbyy")]
 position = Vector2(214, 752)
@@ -87,86 +226,101 @@ position = Vector2(214, 752)
 [node name="Tree_6" parent="Environment" instance=ExtResource("8_cc8vh")]
 position = Vector2(803, -16)
 
+[node name="Tree_9" parent="Environment" instance=ExtResource("8_cc8vh")]
+position = Vector2(439, 1880)
+
 [node name="Tree_4" parent="Environment" instance=ExtResource("8_hcbyy")]
-position = Vector2(-826, 532)
+position = Vector2(-1830, 636)
+
+[node name="Tree_8" parent="Environment" instance=ExtResource("8_hcbyy")]
+position = Vector2(-1078, 1872)
 
 [node name="Tree_2" parent="Environment" instance=ExtResource("8_cc8vh")]
-position = Vector2(-680, -447)
+position = Vector2(-1124, -627)
 
 [node name="Tree_1" parent="Environment" instance=ExtResource("8_hcbyy")]
 position = Vector2(117, -557)
 
+[node name="Tree_11" parent="Environment" instance=ExtResource("8_hcbyy")]
+position = Vector2(2077, 1731)
+
+[node name="Tree_10" parent="Environment" instance=ExtResource("8_hcbyy")]
+position = Vector2(-1683, -1949)
+
 [node name="Tombstone_4" parent="Environment" instance=ExtResource("4_bn4cu")]
-position = Vector2(559, 203)
+position = Vector2(1471, 346)
+
+[node name="Tombstone_11" parent="Environment" instance=ExtResource("4_bn4cu")]
+position = Vector2(1011, 1419)
 
 [node name="Tombstone_8" parent="Environment" instance=ExtResource("4_bn4cu")]
-position = Vector2(-258, -633)
+position = Vector2(-308, -1210)
 
 [node name="Tombstone_7" parent="Environment" instance=ExtResource("4_fyibc")]
-position = Vector2(-869, -312)
+position = Vector2(-1863, -750)
 
 [node name="Tombstone_6" parent="Environment" instance=ExtResource("6_n6q55")]
-position = Vector2(635, 675)
+position = Vector2(-523, 1295)
 
 [node name="Tombstone_5" parent="Environment" instance=ExtResource("10_itf3j")]
-position = Vector2(-96, 159)
+position = Vector2(-1429, 639)
 
 [node name="Tombstone_9" parent="Environment" instance=ExtResource("4_66oc4")]
-position = Vector2(-573, 452)
+position = Vector2(-2320, 1435)
 
 [node name="Tombstone_2" parent="Environment" instance=ExtResource("4_66oc4")]
-position = Vector2(556, -174)
+position = Vector2(1467, -461)
 
 [node name="Tombstone_10" parent="Environment" instance=ExtResource("4_bn4cu")]
-position = Vector2(757, -925)
+position = Vector2(649, -1845)
 
 [node name="Tombstone_3" parent="Environment" instance=ExtResource("4_fyibc")]
-position = Vector2(502, -617)
+position = Vector2(2280, -2494)
 
 [node name="Tombstone_1" parent="Environment" instance=ExtResource("6_n6q55")]
-position = Vector2(-420, -334)
+position = Vector2(2000, 2239)
 
 [node name="Stone_2f" parent="Environment" instance=ExtResource("14_ql30f")]
-position = Vector2(946, 707)
+position = Vector2(1386, 851)
 
 [node name="Stone_2d" parent="Environment" instance=ExtResource("17_tff1i")]
-position = Vector2(-566, 576)
+position = Vector2(-1266, 1025)
 
 [node name="Stone_2e" parent="Environment" instance=ExtResource("18_gh0ig")]
-position = Vector2(-942, 181)
+position = Vector2(-2181, -389)
 
 [node name="Break_tombstone" parent="Environment" instance=ExtResource("8_1r5k2")]
-position = Vector2(489, -416)
+position = Vector2(1086, -1152)
 
 [node name="Stone_2a2" parent="Environment" instance=ExtResource("4_e5hdm")]
-position = Vector2(-128, -454)
+position = Vector2(-2270, -1527)
 
 [node name="Stone_2c" parent="Environment" instance=ExtResource("15_s4wxv")]
-position = Vector2(104, -295)
+position = Vector2(378, -1539)
 
 [node name="Stone_2b" parent="Environment" instance=ExtResource("4_xoi13")]
-position = Vector2(617, 327)
+position = Vector2(2027, 646)
 
 [node name="Stone_2a" parent="Environment" instance=ExtResource("4_e5hdm")]
-position = Vector2(130, 143)
+position = Vector2(-1186, 1499)
 
 [node name="Stone_2b2" parent="Environment" instance=ExtResource("4_xoi13")]
-position = Vector2(311, -637)
+position = Vector2(1753, -852)
 
 [node name="Stone_1" parent="Environment" instance=ExtResource("4_444hy")]
-position = Vector2(-749, -115)
+position = Vector2(-1682, -273)
 
 [node name="Stone_2" parent="Environment" instance=ExtResource("4_444hy")]
-position = Vector2(216, -893)
+position = Vector2(578, -1329)
 
 [node name="Cemetery_lamp3" parent="Environment" instance=ExtResource("5_x2t4u")]
-position = Vector2(-418, 517)
+position = Vector2(-1770, 1603)
 
 [node name="Cemetery_lamp2" parent="Environment" instance=ExtResource("5_x2t4u")]
-position = Vector2(429, 331)
+position = Vector2(1470, 1530)
 
 [node name="Cemetery_lamp" parent="Environment" instance=ExtResource("5_x2t4u")]
-position = Vector2(338, -203)
+position = Vector2(1820, -1397)
 
 [node name="Fenceraven" parent="Environment" instance=ExtResource("10_kldk0")]
 position = Vector2(241, -336)
@@ -181,6 +335,7 @@ position = Vector2(-687, -693)
 position = Vector2(783, 614)
 
 [node name="Bush_3" parent="Environment" instance=ExtResource("19_embcj")]
+y_sort_enabled = true
 position = Vector2(-506, -142)
 
 [node name="Bush_1" parent="Environment" instance=ExtResource("19_embcj")]
@@ -206,88 +361,56 @@ position = Vector2(581, -142)
 
 [node name="ItemsLayer" type="Node" parent="." groups=["items"]]
 
-[node name="ExperienceCollectPickup" parent="ItemsLayer" instance=ExtResource("27_nkgxi")]
-visible = false
-position = Vector2(-84, 37)
-
-[node name="MovementSpeedpickup" parent="ItemsLayer" instance=ExtResource("25_3o6nv")]
-position = Vector2(-57, 95)
-
-[node name="ExperienceCrystal" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(6, -74)
-
-[node name="ExperienceCrystal2" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(42, -73)
-
-[node name="ExperienceCrystal3" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(81, -71)
-
-[node name="ExperienceCrystal4" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(-30, -74)
-
-[node name="ExperienceCrystal5" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(-64, -75)
-
-[node name="ExperienceCrystal6" parent="ItemsLayer" instance=ExtResource("24_al4of")]
-position = Vector2(-99, -75)
-
-[node name="ExperienceCrystal7" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(84, 99)
-
-[node name="ExperienceCrystal14" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(48, 123)
-
-[node name="ExperienceCrystal15" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(-6, 137)
-
-[node name="ExperienceCrystal16" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(-52, 133)
-
-[node name="ExperienceCrystal17" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(-107, 116)
-
-[node name="ExperienceCrystal18" parent="ItemsLayer" instance=ExtResource("25_te5lv")]
-position = Vector2(-149, 91)
-
-[node name="ExperienceCrystal8" parent="ItemsLayer" instance=ExtResource("26_sy4rw")]
-position = Vector2(140, -47)
-
-[node name="ExperienceCrystal9" parent="ItemsLayer" instance=ExtResource("26_sy4rw")]
-position = Vector2(163, -22)
-
-[node name="ExperienceCrystal10" parent="ItemsLayer" instance=ExtResource("26_sy4rw")]
-position = Vector2(179, 21)
-
-[node name="ExperienceCrystal11" parent="ItemsLayer" instance=ExtResource("26_sy4rw")]
-position = Vector2(172, 57)
-
-[node name="ExperienceCrystal12" parent="ItemsLayer" instance=ExtResource("26_sy4rw")]
-position = Vector2(172, 57)
-
-[node name="ExperienceCrystal13" parent="ItemsLayer" instance=ExtResource("26_sy4rw")]
-position = Vector2(146, 95)
-
-[node name="progress_bar" parent="." instance=ExtResource("23_gh6bk")]
+[node name="ExperienceBar" parent="." instance=ExtResource("23_gh6bk")]
+offset = Vector2(213.666, 0)
+transform = Transform2D(0.333, 0, 0, 0.333, 213.666, 0)
 
 [node name="ExperienceManager" parent="." node_paths=PackedStringArray("WeaponManager") instance=ExtResource("22_c4rh6")]
 WeaponManager = NodePath("../WeaponManager")
 
 [node name="WeaponManager" parent="." instance=ExtResource("29_sylwc")]
 
-[node name="ExperienceCollectPickup" parent="." instance=ExtResource("27_nkgxi")]
-position = Vector2(-26, -9)
-
-[node name="MovementSpeedpickup" parent="." instance=ExtResource("25_3o6nv")]
-position = Vector2(-31, 51)
-
-[node name="HealingPickup" parent="." instance=ExtResource("26_mvhq3")]
-position = Vector2(-150, -178)
-
-[node name="HealingPickup2" parent="." instance=ExtResource("26_mvhq3")]
-position = Vector2(-20, -176)
-
-[node name="HealingPickup3" parent="." instance=ExtResource("26_mvhq3")]
-position = Vector2(150, -176)
-
 [node name="LvlUps" parent="." instance=ExtResource("26_ntv7e")]
 visible = false
+
+[node name="Equipment" parent="." instance=ExtResource("33_hvbig")]
+offset = Vector2(0, 8)
+transform = Transform2D(1, 0, 0, 1, 0, 8)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_if33h")
+
+[node name="Broundries" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Broundries"]
+position = Vector2(-2972, -44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Broundries/StaticBody2D"]
+position = Vector2(151.25, 46)
+shape = SubResource("RectangleShape2D_grr1f")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Broundries"]
+position = Vector2(2837, -44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Broundries/StaticBody2D2"]
+position = Vector2(60.25, 46)
+shape = SubResource("RectangleShape2D_grr1f")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Broundries"]
+position = Vector2(0, -3002)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Broundries/StaticBody2D3"]
+position = Vector2(60.25, 46)
+shape = SubResource("RectangleShape2D_grr1f")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Broundries"]
+position = Vector2(0, 2882)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Broundries/StaticBody2D4"]
+position = Vector2(60.25, 46)
+shape = SubResource("RectangleShape2D_grr1f")
+
+[node name="HealingPickup" parent="." instance=ExtResource("40_7kffe")]
+position = Vector2(-396, 144)

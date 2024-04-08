@@ -77,7 +77,7 @@ size = Vector2(25, 28)
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.722892, 0.821053), -0.689751, -0.689751, 0, 0, Vector2(0.981928, 0.589474), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_tw5kp"]
+[sub_resource type="CurveTexture" id="CurveTexture_5tnrr"]
 curve = SubResource("Curve_cvuod")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rdpba"]
@@ -91,10 +91,13 @@ initial_velocity_max = 50.0
 gravity = Vector3(0, 98, 0)
 scale_min = 1.5
 scale_max = 2.5
-scale_curve = SubResource("CurveTexture_tw5kp")
+scale_curve = SubResource("CurveTexture_5tnrr")
 
 [node name="Enemy" type="CharacterBody2D"]
+y_sort_enabled = true
 texture_filter = 1
+collision_layer = 256
+collision_mask = 256
 motion_mode = 1
 script = ExtResource("1_iqk56")
 
@@ -119,6 +122,7 @@ libraries = {
 collision_layer = 0
 collision_mask = 2
 damage = 2.0
+attack_speed = 1.0
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
 position = Vector2(2, 2.5)
@@ -137,6 +141,9 @@ flash_color = Color(100, 100, 100, 1)
 position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
 
+[node name="DisableTimer" parent="HitBox" index="1"]
+wait_time = 0.1
+
 [node name="HealthBar" parent="HitBox" index="2"]
 visible = false
 
@@ -146,6 +153,8 @@ amount = 12
 process_material = SubResource("ParticleProcessMaterial_rdpba")
 lifetime = 0.3
 explosiveness = 1.0
+
+[node name="IMPORTANT collisions are set only on layer 9, change after gamesHall" type="Node" parent="."]
 
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 [connection signal="update_health" from="HitBox" to="." method="_on_hit_box_update_health"]

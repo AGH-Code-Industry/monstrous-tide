@@ -1,14 +1,13 @@
-[gd_scene load_steps=31 format=3 uid="uid://iupuujdctspl"]
+[gd_scene load_steps=30 format=3 uid="uid://iupuujdctspl"]
 
 [ext_resource type="Texture2D" uid="uid://cex545epxrg2m" path="res://Assets/Tutorial/Player/player_sprite.png" id="1_d1gif"]
 [ext_resource type="Script" path="res://Assets/Player/player.gd" id="1_jqw0g"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_5ofgj"]
-[ext_resource type="PackedScene" uid="uid://c2xi3w8srrklv" path="res://Assets/Player/Weapons/Tornado/tornado.tscn" id="2_8m7hr"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_it506"]
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
-[ext_resource type="PackedScene" uid="uid://bhm83vmdimo1k" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lantern_consecration.tscn" id="13_0abte"]
+[ext_resource type="PackedScene" uid="uid://5wxdkk0ryim2" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.tscn" id="9_d10fm"]
 
 [sub_resource type="Resource" id="Resource_gcdwu"]
 script = ExtResource("2_5ofgj")
@@ -545,7 +544,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_siame"]
 radius = 11.0
-height = 54.0
+height = 38.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yr38n"]
 size = Vector2(18, 45)
@@ -598,15 +597,10 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-107.468, 18)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-z_index = 10
+y_sort_enabled = true
 motion_mode = 1
 script = ExtResource("1_jqw0g")
 stat_set = SubResource("Resource_acek7")
-
-[node name="Tornado" parent="." instance=ExtResource("2_8m7hr")]
-visible = false
-attack_speed = 0.5
-damage = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -622,12 +616,15 @@ animation = &"Idle"
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 17)
+position = Vector2(0, 14)
 shape = SubResource("CapsuleShape2D_siame")
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_vkkdj")]
+scale = Vector2(1.2, 1.2)
 collision_layer = 2
 collision_mask = 4
+max_health = 80.0
+health = 80.0
 show_heal_numbers = true
 flash_on_hit = true
 sprite = NodePath("../AnimatedSprite2D")
@@ -635,11 +632,13 @@ flash_timeout = 0.2
 flash_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0, 16.5)
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_yr38n")
 
 [node name="HealthBar" parent="HitBox" index="2"]
-offset_bottom = -18.0
+light_mask = 0
+offset_top = -35.0
+offset_bottom = -27.0
 theme_type_variation = &"HealthBar"
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
@@ -652,7 +651,7 @@ lifetime = 0.3
 visible = false
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(1, 8)
+y_sort_enabled = true
 scale = Vector2(0.4, 0.4)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="Character"]
@@ -692,7 +691,6 @@ rest = Transform2D(1, 0, 0, 1, 46, -125)
 
 [node name="LeftHand" type="Bone2D" parent="Character/Skeleton2D/Hip/Chest/LeftArm"]
 position = Vector2(14, 73)
-scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(1, 0, 0, 1, 14, 73)
 auto_calculate_length_and_angle = false
 length = 89.6
@@ -810,10 +808,11 @@ parameters/conditions/idle = false
 parameters/conditions/is_moving = false
 
 [node name="Weapons" type="Node2D" parent="."]
-visible = false
 
-[node name="LanternConsecration" parent="Weapons" instance=ExtResource("13_0abte")]
+[node name="Lantern" parent="Weapons" instance=ExtResource("9_d10fm")]
+z_index = -1
 
+[connection signal="damage_taken" from="HitBox" to="." method="_on_hit_box_damage_taken"]
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
 
 [editable path="HitBox"]

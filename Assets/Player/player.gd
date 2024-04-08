@@ -16,15 +16,15 @@ func _ready():
 	StatManager.update_player_stats_misc.connect(func(receivedStats): stat_set.add_stat_array(receivedStats))
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("esc"):
-		get_tree().quit()
+	#if Input.is_action_just_pressed("esc"):
+		#get_tree().quit()
 	movement()
 	
 # FOR DEBUG PURPOSES
-func _process(_delta):
-	if Input.is_action_just_pressed("DEBUG_manual_heal"): 
-		$HitBox.heal(DEBUG_heal_value)
-		print("Manual heal (+" + str(DEBUG_heal_value) + "), current health " + str($HitBox.health) + " / " + str($HitBox.max_health))
+#func _process(_delta):
+	#if Input.is_action_just_pressed("DEBUG_manual_heal"): 
+	#	$HitBox.heal(DEBUG_heal_value)
+	#	print("Manual heal (+" + str(DEBUG_heal_value) + "), current health " + str($HitBox.health) + " / " + str($HitBox.max_health))
 
 func movement():
 	var x_mov = Input.get_action_strength("right") - Input.get_action_strength("left")
@@ -59,3 +59,7 @@ func _on_hit_box_on_death() -> void:
 	die()
 	
 
+
+
+func _on_hit_box_damage_taken() -> void:
+	SoundManager.play_player_hit_sound()

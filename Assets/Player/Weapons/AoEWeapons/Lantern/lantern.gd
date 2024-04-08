@@ -2,6 +2,7 @@ class_name Lantern extends AoEWeapon
 
 # components
 @onready var DamageBox = $DamageBox
+@onready var VFX = $Sprite2D
 
 func _ready() -> void:
 	super()

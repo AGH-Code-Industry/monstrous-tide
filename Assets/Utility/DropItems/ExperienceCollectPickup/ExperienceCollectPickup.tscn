@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnul08gmjwq6"]
 
 [ext_resource type="Script" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ExperienceCollectPickup.gd" id="1_whkln"]
-[ext_resource type="Texture2D" uid="uid://jyyu4dsqmktp" path="res://Assets/Tutorial/Items/Upgrades/urand_mage.png" id="2_1dxfj"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_sq1i2"]
+[ext_resource type="Texture2D" uid="uid://brgx7aq17e103" path="res://Assets/Utility/DropItems/ExperienceCollectPickup/ringdone.png" id="3_2k8hi"]
 
 [sub_resource type="Resource" id="Resource_ssjjm"]
 script = ExtResource("2_sq1i2")
@@ -15,16 +15,17 @@ more = 0.0
 radius = 12.0
 
 [node name="ExperienceCollectPickup" type="Node2D"]
+z_index = -1
 script = ExtResource("1_whkln")
 stat_to_add = SubResource("Resource_ssjjm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_1dxfj")
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("3_2k8hi")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_p12ko")

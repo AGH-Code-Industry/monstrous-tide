@@ -7,7 +7,9 @@
 size = Vector2(24, 24)
 
 [node name="HealingPickup" type="Node2D"]
+z_index = -1
 script = ExtResource("1_38jnv")
+healing_amount = 6.0
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 24

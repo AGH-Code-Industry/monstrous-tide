@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://t15kclcgsht0"]
+[gd_scene load_steps=3 format=3 uid="uid://t15kclcgsht0"]
 
 [ext_resource type="Texture2D" uid="uid://ieped3jakb5u" path="res://Assets/World/Environment/Texture/Tree_1.png" id="1_8rjae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyprr"]
+size = Vector2(20, 27.6316)
 
 [node name="Tree_1" type="Node2D"]
 
@@ -10,7 +13,7 @@ texture = ExtResource("1_8rjae")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(4, 0)
-build_mode = 1
-polygon = PackedVector2Array(-246, 378, -86, 388, -10, 408, 84, 398, 136, 390, 196, 370, 276, 338, 216, 296, 104, 254, 82, 172, 371, -60, 291, -325, 1, -405, -254, -325, -374, -60, -76, 156, -82, 254, -166, 252, -236, 276, -276, 334)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(5, 157.5)
+scale = Vector2(5.6, 11.4)
+shape = SubResource("RectangleShape2D_lyprr")

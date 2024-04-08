@@ -1,23 +1,28 @@
-[gd_scene load_steps=14 format=3 uid="uid://5wxdkk0ryim2"]
+[gd_scene load_steps=42 format=3 uid="uid://5wxdkk0ryim2"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lantern.gd" id="1_7j11k"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_hh3o4"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="3_f5pyf"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="4_1yf4i"]
+[ext_resource type="PackedScene" uid="uid://bhm83vmdimo1k" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Consecration/lantern_consecration.tscn" id="5_c4ivg"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="5_o0uyg"]
 [ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="6_0ln8p"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/Ray.gdshader" id="6_enrqv"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_swap_upgrade.gd" id="6_w0783"]
 [ext_resource type="Shader" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/circle.gdshader" id="7_a23nn"]
+[ext_resource type="Texture2D" uid="uid://b0kjq21n3fom6" path="res://Assets/Player/Weapons/AoEWeapons/Lantern/lanterneffectdone.png" id="7_upngf"]
 
 [sub_resource type="Resource" id="Resource_oa80p"]
 script = ExtResource("2_hh3o4")
 type = 100
-flat = 2.0
+flat = 5.0
 increased = 0.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_eyked"]
 script = ExtResource("2_hh3o4")
 type = 110
-flat = 2.0
+flat = 1.5
 increased = 0.0
 more = 0.0
 
@@ -31,6 +36,126 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_qonso"]
 script = ExtResource("3_f5pyf")
 data = Array[ExtResource("2_hh3o4")]([SubResource("Resource_oa80p"), SubResource("Resource_eyked"), SubResource("Resource_0h415")])
+
+[sub_resource type="Resource" id="Resource_7w0on"]
+script = ExtResource("2_hh3o4")
+type = 100
+flat = 0.0
+increased = 15.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_mur2x"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_7w0on")])
+name = "Lantern Damage"
+description = "Lantern Deals 15% Increased Damage"
+
+[sub_resource type="Resource" id="Resource_pw6wa"]
+script = ExtResource("2_hh3o4")
+type = 110
+flat = 0.0
+increased = 12.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ycjpn"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_pw6wa")])
+name = "Lantern Range"
+description = "Lantern Has 20% Increased Range"
+
+[sub_resource type="Resource" id="Resource_vps2n"]
+script = ExtResource("4_1yf4i")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_mur2x"), SubResource("Resource_ycjpn")])
+
+[sub_resource type="Resource" id="Resource_802al"]
+script = ExtResource("2_hh3o4")
+type = 100
+flat = 0.0
+increased = 35.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ayv6k"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_802al")])
+name = "Landtern Damage"
+description = "Lantern Deals 35% Increased Damage"
+
+[sub_resource type="Resource" id="Resource_8ceod"]
+script = ExtResource("2_hh3o4")
+type = 110
+flat = 0.0
+increased = 22.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_psr3k"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_8ceod")])
+name = "Lantern Range"
+description = "Lantern Has 35% Increased Range"
+
+[sub_resource type="Resource" id="Resource_w1rsb"]
+script = ExtResource("4_1yf4i")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_ayv6k"), SubResource("Resource_psr3k")])
+
+[sub_resource type="Resource" id="Resource_48m50"]
+script = ExtResource("2_hh3o4")
+type = 100
+flat = 0.0
+increased = 45.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_ok1mi"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_48m50")])
+name = "Lantern Damage"
+description = "Lantern Deals 45% Increased Damage"
+
+[sub_resource type="Resource" id="Resource_o5sph"]
+script = ExtResource("2_hh3o4")
+type = 110
+flat = 0.0
+increased = 35.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_v41mu"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_o5sph")])
+name = "Lantern Range"
+description = "Lantern Has 35% Increased Range"
+
+[sub_resource type="Resource" id="Resource_cb4o4"]
+script = ExtResource("4_1yf4i")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_ok1mi"), SubResource("Resource_v41mu")])
+
+[sub_resource type="Resource" id="Resource_tqli2"]
+script = ExtResource("6_w0783")
+new_weapon = ExtResource("5_c4ivg")
+name = "Consecration"
+description = "Lantern Now Becomes Consecrated"
+
+[sub_resource type="Resource" id="Resource_t2tki"]
+script = ExtResource("2_hh3o4")
+type = 100
+flat = 0.0
+increased = 0.0
+more = 25.0
+
+[sub_resource type="Resource" id="Resource_ga7jl"]
+script = ExtResource("2_hh3o4")
+type = 110
+flat = 0.0
+increased = 25.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_tq88b"]
+script = ExtResource("5_o0uyg")
+stats = Array[ExtResource("2_hh3o4")]([SubResource("Resource_t2tki"), SubResource("Resource_ga7jl")])
+name = "Better Lantern"
+description = "Lantern Now deasl 25% MORE Damage and Has 25% Increased Range"
+
+[sub_resource type="Resource" id="Resource_rsu28"]
+script = ExtResource("4_1yf4i")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_tqli2"), SubResource("Resource_tq88b")])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5pem6"]
 radius = 1.45
@@ -48,19 +173,84 @@ shader_parameter/speed = 0.4
 shader_parameter/main_color = Color(0.890196, 0.87451, 0.466667, 1)
 shader_parameter/lerp_color = Color(1, 1, 1, 1)
 
+[sub_resource type="Animation" id="Animation_fkp50"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.568627)]
+}
+
+[sub_resource type="Animation" id="Animation_038fw"]
+resource_name = "Spin"
+length = 80.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40, 80),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.14159, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 40, 80),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.568627), Color(1, 1, 1, 0.705882), Color(1, 1, 1, 0.568627)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_33ve7"]
+_data = {
+"RESET": SubResource("Animation_fkp50"),
+"Spin": SubResource("Animation_038fw")
+}
+
 [node name="Lantern" type="Node2D"]
 script = ExtResource("1_7j11k")
 stat_set = SubResource("Resource_qonso")
+possible_upgrades = Array[ExtResource("4_1yf4i")]([SubResource("Resource_vps2n"), SubResource("Resource_w1rsb"), SubResource("Resource_cb4o4"), SubResource("Resource_rsu28")])
 
 [node name="DamageBox" parent="." instance=ExtResource("6_0ln8p")]
 scale = Vector2(40, 40)
 collision_layer = 2
 collision_mask = 4
+attack_speed = 1.5
 
 [node name="CollisionShape2D" parent="DamageBox" index="0"]
 shape = SubResource("CircleShape2D_5pem6")
 
 [node name="VFX" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -68,6 +258,7 @@ offset_bottom = 40.0
 scale = Vector2(30, 30)
 
 [node name="Rays" type="ColorRect" parent="VFX"]
+visible = false
 material = SubResource("ShaderMaterial_pjx2e")
 layout_mode = 0
 offset_left = -2.95
@@ -76,6 +267,7 @@ offset_right = 3.05
 offset_bottom = 3.05
 
 [node name="Circle" type="ColorRect" parent="VFX"]
+visible = false
 material = SubResource("ShaderMaterial_7afyk")
 layout_mode = 0
 offset_left = -2.8
@@ -84,11 +276,23 @@ offset_right = 3.2
 offset_bottom = 3.3
 
 [node name="Circle2" type="ColorRect" parent="VFX"]
+visible = false
 material = SubResource("ShaderMaterial_7afyk")
 layout_mode = 0
 offset_left = -1.95
 offset_top = -1.95
 offset_right = 2.05
 offset_bottom = 2.05
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.568627)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("7_upngf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_33ve7")
+}
+autoplay = "Spin"
 
 [editable path="DamageBox"]

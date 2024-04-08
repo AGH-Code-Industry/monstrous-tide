@@ -6,7 +6,7 @@ class_name ItemDropComponent
 @export var special_gem: PackedScene
 
 static var current_items_count = 0
-static var item_count_limit = 5
+static var item_count_limit = 350
 static var last_item
 
 func _ready():

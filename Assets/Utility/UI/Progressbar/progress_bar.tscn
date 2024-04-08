@@ -1,14 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://b12g08nqirib2"]
 
 [ext_resource type="Script" path="res://Assets/Utility/UI/Progressbar/progress_bar.gd" id="1_op6f3"]
-[ext_resource type="Texture2D" uid="uid://bulmfy8sbhlox" path="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-back.png" id="2_g88h2"]
-[ext_resource type="Texture2D" uid="uid://byxf6q3t3snpw" path="res://Assets/Utility/UI/Progressbar/s+g-xp-bar-fill.png" id="3_o0lia"]
+[ext_resource type="Texture2D" uid="uid://bfpydge4soy6x" path="res://Assets/Utility/UI/Progressbar/rune-xp-bar-back.png" id="2_lnjrr"]
+[ext_resource type="Texture2D" uid="uid://cqbd77n2sp8ks" path="res://Assets/Utility/UI/Progressbar/rune-xp-bar-fill.png" id="3_ula1a"]
 
-[node name="progress_bar" type="CanvasLayer"]
+[node name="ExperienceBar" type="CanvasLayer"]
 layer = 0
+offset = Vector2(220, 0)
+scale = Vector2(0.333, 0.333)
+transform = Transform2D(0.333, 0, 0, 0.333, 220, 0)
 script = ExtResource("1_op6f3")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_direction = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -23,9 +27,10 @@ theme_override_constants/margin_bottom = 0
 layout_mode = 2
 
 [node name="ExperienceBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
+clip_contents = true
 layout_mode = 2
-texture_under = ExtResource("2_g88h2")
-texture_progress = ExtResource("3_o0lia")
+texture_under = ExtResource("2_lnjrr")
+texture_progress = ExtResource("3_ula1a")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -34,5 +39,6 @@ theme_override_constants/margin_right = 5
 [node name="LevelInfo" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 25
 text = "LEVEL: 1"
 horizontal_alignment = 1

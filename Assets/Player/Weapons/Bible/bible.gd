@@ -15,7 +15,7 @@ func start_cycle():
 	instantiate_projectiles()
 	await get_tree().create_timer(lifetime).timeout
 	delete_projectiles()
-	await get_tree().create_timer(stat_set.get_stat_value(Stat.Type.ATTACKSPEED)).timeout
+	await get_tree().create_timer(1 / stat_set.get_stat_value(Stat.Type.ATTACKSPEED)).timeout
 	start_cycle()
 	# instantiate projectile number of objects
 	# Wait for lifetime
@@ -23,8 +23,8 @@ func start_cycle():
 	# after cooldown repeat
 
 func instantiate_projectiles():
-	var angle_increment : float = 360.0 / stat_set.get_stat_value(Stat.Type.DODGE)
-	for i in range(stat_set.get_stat_value(Stat.Type.DODGE)):
+	var angle_increment : float = 360.0 / stat_set.get_stat_value(Stat.Type.MULTISHOT)
+	for i in range(stat_set.get_stat_value(Stat.Type.MULTISHOT)):
 		var angle : float = deg_to_rad(i * angle_increment)
 		var projectile_to_add = bible_projectile.instantiate()
 		projectile_to_add.position = Vector2(radius * cos(angle), radius * sin(angle))
