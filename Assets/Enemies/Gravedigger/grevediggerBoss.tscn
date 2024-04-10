@@ -576,6 +576,7 @@ rest = Transform2D(1, 0, 0, 1, 59, -163)
 
 [node name="LeftHand" type="Bone2D" parent="Visuals/Skeleton2D/Hips/Chest/LeftArm"]
 position = Vector2(43, 107)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 43, 107)
 auto_calculate_length_and_angle = false
 length = 115.278
@@ -607,6 +608,7 @@ rest = Transform2D(1, 0, 0, 1, 43, 34)
 
 [node name="LeftFoot" type="Bone2D" parent="Visuals/Skeleton2D/Hips/LeftLeg"]
 position = Vector2(16, 131)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 16, 131)
 auto_calculate_length_and_angle = false
 length = 145.669
@@ -659,6 +661,7 @@ position = Vector2(46, 120)
 collision_layer = 4
 collision_mask = 0
 max_health = 180.0
+health = 180.0
 show_damage_taken_numbers = true
 flash_on_hit = true
 sprite = NodePath("../Visuals")
@@ -668,6 +671,13 @@ flash_color = Color(4, 4, 4, 1)
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(-55.5, 15)
 shape = SubResource("RectangleShape2D_1jiyu")
+
+[node name="HealthBar" parent="HitBox" index="2"]
+offset_left = -106.0
+offset_top = -366.667
+offset_right = -60.0
+offset_bottom = -358.667
+scale = Vector2(4.46666, 3.66665)
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
 scale = Vector2(7.99999, 15.2)

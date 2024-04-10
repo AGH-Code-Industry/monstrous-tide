@@ -585,12 +585,10 @@ rest = Transform2D(1, 0, 0, 1, -1, -107)
 
 [node name="Neck" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(-36, -15)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -36, -15)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-83, -68)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -83, -68)
 auto_calculate_length_and_angle = false
 length = 85.298
@@ -598,7 +596,6 @@ bone_angle = -200.506
 
 [node name="RightFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-96, 103)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -96, 103)
 
 [node name="RightPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/RightFLeg"]
@@ -611,6 +608,7 @@ bone_angle = -243.038
 
 [node name="LeftFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-39, 91)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -39, 91)
 
 [node name="LeftFPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/LeftFLeg"]
@@ -623,7 +621,6 @@ bone_angle = 112.405
 
 [node name="Tail" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(82, 40)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 82, 40)
 auto_calculate_length_and_angle = false
 length = 141.282
@@ -636,7 +633,6 @@ rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]
 position = Vector2(21, 76)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 21, 76)
 auto_calculate_length_and_angle = false
 length = 63.656

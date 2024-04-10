@@ -607,6 +607,7 @@ rest = Transform2D(1, 0, 0, 1, 1, -5)
 
 [node name="Neck" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest"]
 position = Vector2(-19, -94)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -19, -94)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
@@ -618,10 +619,12 @@ bone_angle = -79.012
 
 [node name="RightArm" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(-54, -49)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -54, -49)
 
 [node name="RightHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/RightArm"]
 position = Vector2(-49, 106)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -49, 106)
 auto_calculate_length_and_angle = false
 length = 89.379
@@ -659,7 +662,6 @@ bone_angle = 87.996
 
 [node name="Finger2" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm/LeftHand"]
 position = Vector2(45, 56)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 45, 59)
 auto_calculate_length_and_angle = false
 length = 33.265
@@ -680,11 +682,11 @@ bone_angle = 94.167
 
 [node name="LeftLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest"]
 position = Vector2(25, 47)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 25, 47)
 
 [node name="LeftFoot" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/LeftLeg"]
 position = Vector2(9, 43)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 9, 43)
 auto_calculate_length_and_angle = false
 length = 54.968
@@ -724,6 +726,7 @@ position = Vector2(3, 207)
 collision_layer = 4
 collision_mask = 0
 max_health = 190.0
+health = 190.0
 show_damage_taken_numbers = true
 flash_on_hit = true
 sprite = NodePath("../Visuals")
@@ -733,6 +736,13 @@ flash_color = Color(4, 4, 4, 1)
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(-3.00001, -127)
 shape = SubResource("RectangleShape2D_07naq")
+
+[node name="HealthBar" parent="HitBox" index="2"]
+offset_left = -49.6667
+offset_top = -427.0
+offset_right = -3.66666
+offset_bottom = -419.0
+scale = Vector2(4.84952, -3.26962)
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
 position = Vector2(-3, -127)

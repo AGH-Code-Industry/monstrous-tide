@@ -577,6 +577,7 @@ rest = Transform2D(1, 0, 0, 1, -36, -15)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-83, -68)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -83, -68)
 auto_calculate_length_and_angle = false
 length = 85.298
@@ -584,10 +585,12 @@ bone_angle = -200.506
 
 [node name="RightFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-96, 103)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -96, 103)
 
 [node name="RightPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/RightFLeg"]
 position = Vector2(-1, 84)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -1, 83)
 auto_calculate_length_and_angle = false
 length = 59.28
@@ -595,10 +598,12 @@ bone_angle = -243.038
 
 [node name="LeftFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-39, 91)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -39, 91)
 
 [node name="LeftFPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/LeftFLeg"]
 position = Vector2(-13, 99)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -13, 99)
 auto_calculate_length_and_angle = false
 length = 72.114
@@ -606,6 +611,7 @@ bone_angle = 112.405
 
 [node name="Tail" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(82, 40)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 82, 40)
 auto_calculate_length_and_angle = false
 length = 141.282
@@ -613,6 +619,7 @@ bone_angle = 81.935
 
 [node name="LeftBLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(42, 97)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]
@@ -624,6 +631,7 @@ bone_angle = 100.253
 
 [node name="RightBLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(-18, 74)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 74)
 
 [node name="RightBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/RightBLeg"]
@@ -668,7 +676,7 @@ position = Vector2(62, 117)
 collision_layer = 4
 collision_mask = 0
 max_health = 160.0
-health = 45.0
+health = 160.0
 show_damage_taken_numbers = true
 flash_on_hit = true
 sprite = NodePath("../Visuals")
@@ -678,6 +686,13 @@ flash_color = Color(4, 4, 4, 1)
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(-56, -55)
 shape = SubResource("RectangleShape2D_y5vab")
+
+[node name="HealthBar" parent="HitBox" index="2"]
+offset_left = -122.0
+offset_top = -297.0
+offset_right = -76.0
+offset_bottom = -289.0
+scale = Vector2(7.50219, 5.95827)
 
 [node name="BleedParticles" type="GPUParticles2D" parent="HitBox"]
 position = Vector2(-62, -67)
