@@ -19,6 +19,7 @@ ___
 It is a legendary upgrade to the *Tentacle*, which changes weapon's appearance into big blue fin, which rapidly spins around the player and hits enemies hard ~~as fuck~~.
 
 The concept is this weapon is a cut-off limb of a [[Enemies concept list|fish-like boss enemy]], when it comes to lore.
+About the name: Deep-Ones are ocean-dwelling creatures from (yes, it's one of my fav) "The Shadow over Innsmouth".
 
 ### Weapon's tags:
 
