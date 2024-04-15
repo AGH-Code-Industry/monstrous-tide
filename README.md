@@ -2,6 +2,8 @@
 
 Hello, this is "Montrous Tide" game project by Zespół Totalnej Porażki of AGH Code Industry!
 
+You can find playable version here: https://alavon.itch.io/monstrous-tide
+
 # About project
 
 We work with [Godot](https://godotengine.org/) - a powerful, free and cross-platform game engine - to create something special: 
