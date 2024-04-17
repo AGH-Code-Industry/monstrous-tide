@@ -56,9 +56,7 @@ func die():
 	
 
 func _on_hit_box_on_death() -> void:
-	die()
-	
-
+	die()	
 
 
 func _on_hit_box_damage_taken() -> void:

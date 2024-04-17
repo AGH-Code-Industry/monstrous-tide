@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjnf2m3to7go5"]
+
+[ext_resource type="Script" path="res://Assets/Player/Weapons/Whip/whip_projectile.gd" id="1_p027l"]
+
+[sub_resource type="Curve" id="Curve_3jw0t"]
+_data = [Vector2(0.0240964, 1), 0.0, 0.0, 0, 0, Vector2(0.666667, 0.495784), -1.16972, -1.16972, 0, 0, Vector2(0.895582, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="WhipProjectile" type="Node2D"]
+script = ExtResource("1_p027l")
+
+[node name="Line2D" type="Line2D" parent="."]
+width_curve = SubResource("Curve_3jw0t")
+default_color = Color(0.670588, 0.105882, 0.984314, 1)
