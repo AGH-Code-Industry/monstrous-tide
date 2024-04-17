@@ -1,6 +1,6 @@
 extends Weapon
 
-@onready var whip_projectile = preload("res://Assets/Player/Weapons/Whip/whip_projectile.tscn")
+@onready var tentacle_projectile = preload("res://Assets/Player/Weapons/Tentacle/tentacle_projectile.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +16,7 @@ func instantiate_projectiles():
 	var targets = choose_closest_enemy_position(stat_set.get_stat_value(Stat.Type.MULTISHOT))
 	if targets == null: return
 	for target in targets:
-		var projectile_to_spawn = whip_projectile.instantiate()
+		var projectile_to_spawn = tentacle_projectile.instantiate()
 		projectile_to_spawn.global_position = global_position
 		projectile_to_spawn.initialization(
 			target,

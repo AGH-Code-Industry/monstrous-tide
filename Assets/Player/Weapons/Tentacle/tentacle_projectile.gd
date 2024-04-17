@@ -5,20 +5,20 @@ extends Node2D
 # References
 var line : Line2D
 var target_position : Vector2
-var whip_ref : Node2D
+var tentacle_ref : Node2D
 var target_ref : Node2D
 
 # Misc
 var head : Vector2 = Vector2(0,0)
 var is_returning : bool = false
 
-func initialization(target, whip, damage):
+func initialization(target, tentacle, damage):
 	# references
 	target_position = target.global_position - position
 	target_ref = target
 	line = $Line2D
-	whip_ref = whip
-	line.global_position = whip.global_position
+	tentacle_ref = tentacle
+	line.global_position = tentacle.global_position
 	line.add_point(head)
 	# stats
 	$DamageBox.damage = damage
@@ -26,7 +26,7 @@ func initialization(target, whip, damage):
 
 
 func _physics_process(delta):
-	var player_position = whip_ref.global_position - position
+	var player_position = tentacle_ref.global_position - position
 	line.set_point_position(0, player_position)
 	if !is_returning:
 		head = head.move_toward(target_position, speed)
