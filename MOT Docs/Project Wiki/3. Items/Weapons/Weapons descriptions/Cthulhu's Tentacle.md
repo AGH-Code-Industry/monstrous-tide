@@ -63,7 +63,7 @@ Available upgrades for the *Cthulhu's Tentacle* :
 		- "If an enemy was hit 3 or more times with this weapon, the next time the are hit they are instantly defeated."
 		- "Whenever the player Dodges, they recover 15% of their own *HP* - occurs every 10 seconds."
 - ***Mythic:*** *follows rules mentioned [[Rarity and drop-rate systems#Mythic|here]]!*
-	- **[[Blue Fin]]**
+	- **[[Fin of the Deep-One]]**
 	- **[[Whales Graveyard's Survivor]]**
 	- additional stats are taken from the same pool as the previous ones.
 

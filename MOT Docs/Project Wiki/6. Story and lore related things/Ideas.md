@@ -1,4 +1,4 @@
 - a card: "Bloodletting" (or anything that links to healing as it was very popular medical procedure for literally anything in Victorian England)
 - a gravestone of Richard Pickman (this man appears in few stories of Lovecraft and is descripted as the mad man who found a way to transform himself into a ghoul)
--  tapes/recordings/letters of Henry Akeley (one of two main characters from story "The Whisperer in Darkness" who agreed to be abducted by Older Gods shaped crayfish-like from Pluto planet. Henry and narrator had corrensponded many times, sent the recordings of these creatures as the narror tried to keep Henry safe but he  h a d    c  h o s e n  to be transformed/abducted by those gods) 
+-  tapes/recordings/letters of Henry Akeley (one of two main characters from story "The Whisperer in Darkness" who agreed to be abducted by Older Gods shaped crayfish-like from Pluto planet. Henry and narrator had corrensponded many times, sent the recordings of these creatures as the narrator tried to keep Henry safe but he  h a d    c  h o s e n  to be transformed/abducted by those gods) 
 - 
