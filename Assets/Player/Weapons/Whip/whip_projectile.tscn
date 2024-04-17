@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjnf2m3to7go5"]
+[gd_scene load_steps=4 format=3 uid="uid://cjnf2m3to7go5"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/Whip/whip_projectile.gd" id="1_p027l"]
+[ext_resource type="PackedScene" uid="uid://nrvwm1v463l" path="res://Assets/Utility/DamageBoxes/damage_box.tscn" id="2_bmrxc"]
 
 [sub_resource type="Curve" id="Curve_3jw0t"]
-_data = [Vector2(0.0240964, 1), 0.0, 0.0, 0, 0, Vector2(0.971888, 0.741653), -1.16972, -1.16972, 0, 0, Vector2(1, 0.00794899), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.0401606, 0.967116), 0.0, 0.0, 0, 0, Vector2(0.803213, 1), -1.16972, -1.16972, 0, 0, Vector2(1, 0.693086), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [node name="WhipProjectile" type="Node2D"]
@@ -12,6 +13,10 @@ script = ExtResource("1_p027l")
 [node name="Line2D" type="Line2D" parent="."]
 z_index = -1
 points = PackedVector2Array(0, 0)
-width = 5.0
+width = 4.0
 width_curve = SubResource("Curve_3jw0t")
 default_color = Color(0.3, 0.05, 0.5, 1)
+end_cap_mode = 2
+
+[node name="DamageBox" parent="." instance=ExtResource("2_bmrxc")]
+position = Vector2(392.81, 251.767)

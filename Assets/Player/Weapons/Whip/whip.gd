@@ -43,4 +43,4 @@ func choose_closest_enemy_position():
 			closest_distance = distance
 	
 	# Return the position of the closest enemy
-	return closest_enemy.global_position
+	return closest_enemy
