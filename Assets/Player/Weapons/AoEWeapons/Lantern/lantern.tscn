@@ -239,6 +239,7 @@ _data = {
 script = ExtResource("1_7j11k")
 stat_set = SubResource("Resource_qonso")
 possible_upgrades = Array[ExtResource("4_1yf4i")]([SubResource("Resource_vps2n"), SubResource("Resource_w1rsb"), SubResource("Resource_cb4o4"), SubResource("Resource_rsu28")])
+weapon_name = "Lantern"
 
 [node name="DamageBox" parent="." instance=ExtResource("6_0ln8p")]
 scale = Vector2(40, 40)

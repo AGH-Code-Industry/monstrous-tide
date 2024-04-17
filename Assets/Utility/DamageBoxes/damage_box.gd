@@ -11,10 +11,14 @@ extends Area2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var timer: Timer = $AttackSpeedTimer
 
+var weapon_name: String
+
 func deal_damage(area: Area2D) -> void:
 	# All the calculations for %increased damage etc happens here
 	var dmg: Damage = Damage.new()
 	dmg.damage = damage
+	if weapon_name:
+		dmg.weapon_name = weapon_name
 	
 	area.take_damage(dmg)
 	start_attack_cooldown()

@@ -12,3 +12,6 @@ func update_stats():
 	self.scale = Vector2(stat_set.get_stat_value(Stat.Type.DAMAGERADIUS), stat_set.get_stat_value(Stat.Type.DAMAGERADIUS))
 	DamageBox.damage = stat_set.get_stat_value(Stat.Type.DAMAGE)
 	DamageBox.attack_speed = stat_set.get_stat_value(Stat.Type.ATTACKSPEED)
+
+func set_weapon_info() -> void:
+	DamageBox.weapon_name = weapon_name

@@ -216,3 +216,4 @@ script = ExtResource("1_7xq8o")
 radius = 100.0
 stat_set = SubResource("Resource_ftxek")
 possible_upgrades = Array[ExtResource("4_dhhws")]([SubResource("Resource_ea7mg"), SubResource("Resource_8aib6"), SubResource("Resource_u8f1h"), SubResource("Resource_m81tk")])
+weapon_name = "Bible"

@@ -64,6 +64,7 @@ script = ExtResource("1_j5tdw")
 consecration_circle = ExtResource("1_0nj81")
 stat_set = SubResource("Resource_nkv85")
 possible_upgrades = Array[ExtResource("5_7o5ss")]([SubResource("Resource_6e8ql")])
+weapon_name = "Consecrated Lantern"
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 0

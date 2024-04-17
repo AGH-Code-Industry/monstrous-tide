@@ -2,6 +2,7 @@ class_name Weapon extends Node2D
 
 @export var stat_set : StatSet
 @export var possible_upgrades : Array[UpgradeTier] = []
+@export var weapon_name: String
 var upgrades : Array[UpgradeTier] = []
 var is_active : bool = true
 
@@ -9,6 +10,7 @@ func _ready() -> void:
 	# connect signal to function that takes stats and adds them to current stats
 	StatManager.update_player_stats_offensive.connect(add_stats)
 	fill_empty_upgrades()
+	set_weapon_info()
 	# TODO add getting stats from global sources after they are implemented
 	
 func fill_empty_upgrades():
@@ -76,3 +78,6 @@ func set_upgrades_after_swap(applied : Array[UpgradeTier], possible: Array[Upgra
 
 func remove_weapon() -> void:
 	queue_free()
+	
+func set_weapon_info() -> void:
+	pass

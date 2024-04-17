@@ -29,3 +29,6 @@ func start_animation():
 	var new_scale = stat_set.get_stat_value(Stat.Type.DAMAGERADIUS)
 	var my_tween = create_tween()
 	my_tween.tween_property(self, "scale", Vector2(new_scale, new_scale),0.4)
+
+func set_weapon_name(weapon_name: String):
+	DamageBox.weapon_name = weapon_name

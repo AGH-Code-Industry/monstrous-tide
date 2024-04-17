@@ -22,7 +22,8 @@ func instantiate_projectiles():
 			stat_set.get_stat_value(Stat.Type.DAMAGE),
 			stat_set.get_stat_value(Stat.Type.DAMAGERADIUS),
 			target,
-			stat_set.get_stat_value(Stat.Type.PIERCE)
+			stat_set.get_stat_value(Stat.Type.PIERCE),
+			weapon_name
 			)
 		get_tree().get_root().add_child(projectile_to_spawn)
 		await get_tree().create_timer(0.3, false).timeout

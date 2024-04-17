@@ -141,9 +141,6 @@ flash_color = Color(100, 100, 100, 1)
 position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_8njqq")
 
-[node name="DisableTimer" parent="HitBox" index="1"]
-wait_time = 0.1
-
 [node name="HealthBar" parent="HitBox" index="2"]
 visible = false
 

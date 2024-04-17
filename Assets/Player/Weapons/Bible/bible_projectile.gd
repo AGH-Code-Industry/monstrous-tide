@@ -13,8 +13,9 @@ func _process(delta):
 	# Set the position of the object
 	position = Vector2(radius * cos(angle), radius * sin(angle))
 
-func initialization(size, damage, angle, radius):
+func initialization(size, damage, angle, radius, weapon_name):
 	self.scale = Vector2(size, size)
 	$DamageBox.damage = damage
 	self.angle = angle
 	self.radius = radius
+	$DamageBox.weapon_name = weapon_name

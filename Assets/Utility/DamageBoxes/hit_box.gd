@@ -41,6 +41,8 @@ func take_damage(dmg: Damage) -> void:
 	var calculated_damage = dmg.damage
 
 	health -= calculated_damage
+	if dmg.weapon_name:
+		DamageLogger.log_damage(dmg.weapon_name, calculated_damage)
 
 	if(show_damage_taken_numbers):
 		var text_type = FloatingTextSpawner.text_types.CRITICAL if dmg.is_critical_hit else FloatingTextSpawner.text_types.DAMAGE

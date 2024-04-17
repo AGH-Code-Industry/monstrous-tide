@@ -232,6 +232,7 @@ radius = 425.857
 script = ExtResource("1_ju743")
 stat_set = SubResource("Resource_o7hlu")
 possible_upgrades = Array[ExtResource("4_2hjdo")]([SubResource("Resource_lyc4e"), SubResource("Resource_yncrv"), SubResource("Resource_sgsyo"), SubResource("Resource_ll5cn")])
+weapon_name = "Crossbow"
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 0

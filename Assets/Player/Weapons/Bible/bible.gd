@@ -32,7 +32,8 @@ func instantiate_projectiles():
 			stat_set.get_stat_value(Stat.Type.DAMAGERADIUS),
 			stat_set.get_stat_value(Stat.Type.DAMAGE),
 			angle,
-			radius)
+			radius,
+			weapon_name)
 		add_child(projectile_to_add)
 		current_projectiles.append(projectile_to_add)
 

@@ -1,4 +1,4 @@
-class_name LanternConsecration extends Lantern
+class_name LanternConsecration extends AoEWeapon
 
 @onready var attack_speed_timer = $AttackSpeedTimer
 @export var consecration_circle: PackedScene
@@ -26,4 +26,4 @@ func _on_attack_speed_timer_timeout() -> void:
 	$CircleHolder.add_child(new_circle)
 	new_circle.global_position = choose_random_position()
 	new_circle.pass_stats(stat_set)
-	
+	new_circle.set_weapon_name(weapon_name)

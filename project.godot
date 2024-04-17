@@ -21,12 +21,12 @@ GameEvents="*res://Assets/World/game_events.tscn"
 StatManager="*res://Assets/Utility/Managers/stat_manager.gd"
 WeaponManager="*res://Assets/Utility/Managers/weapon_manager.tscn"
 SoundManager="*res://Assets/Utility/Managers/sound_manager.tscn"
+DamageLogger="*res://Assets/Utility/Logging/damage_logger.tscn"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/size/resizable=false
 window/size/window_width_override=1280
 window/size/window_height_override=720
