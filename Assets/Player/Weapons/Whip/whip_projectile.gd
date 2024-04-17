@@ -12,14 +12,17 @@ var target_ref : Node2D
 var head : Vector2 = Vector2(0,0)
 var is_returning : bool = false
 
-func initialization(target, whip):
+func initialization(target, whip, damage):
+	# references
 	target_position = target.global_position - position
 	target_ref = target
 	line = $Line2D
 	whip_ref = whip
 	line.global_position = whip.global_position
-	line.set_point_position(0, Vector2(0,0))
 	line.add_point(head)
+	# stats
+	$DamageBox.damage = damage
+	
 
 
 func _physics_process(delta):
