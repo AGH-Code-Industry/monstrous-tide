@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var visuals = $Visuals
 var starting_scale : float
 
+
 func _ready():
 	starting_scale = visuals.scale.x
 
