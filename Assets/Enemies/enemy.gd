@@ -6,14 +6,16 @@ extends CharacterBody2D
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var visuals = $Visuals
 var starting_scale : float
-
+var can_move: bool = true
 
 func _ready():
 	starting_scale = visuals.scale.x
 
 func _physics_process(_delta):
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * movement_speed
+	
+	if can_move:
+		velocity = direction * movement_speed
 	move_and_slide()
 
 	if direction.x > 0.1:

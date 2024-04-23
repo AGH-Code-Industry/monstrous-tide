@@ -87,8 +87,12 @@ func apply_knockback(knocback):
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
 		var direction = -get_parent().global_position.direction_to(player.global_position)
+		get_parent().can_move = false
 		get_parent().velocity = direction * knocback
-		get_parent().move_and_slide()
+		var tween = get_tree().create_tween()
+		tween.tween_property(get_parent(), "velocity", Vector2.ZERO, knocback/200)
+		await tween.finished
+		get_parent().can_move = true
 	
 func _on_disable_timer_timeout() -> void:
 	collision.call_deferred("set", "disabled", false)

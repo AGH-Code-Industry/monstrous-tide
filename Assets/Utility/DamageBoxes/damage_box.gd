@@ -8,7 +8,7 @@ extends Area2D
 # Number of attacks per second
 @export var attack_speed: float = 2
 # knocback strength
-@export var knocback: float = 0
+@export_range(0, 300) var knocback: float = 0
 
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var timer: Timer = $AttackSpeedTimer
