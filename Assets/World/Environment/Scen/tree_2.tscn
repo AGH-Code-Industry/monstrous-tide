@@ -1,19 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwhtp8uen12rv"]
 
-[ext_resource type="Texture2D" uid="uid://dkkhtt6j20gg8" path="res://Assets/World/Environment/Texture/Tree_2.png" id="1_fy7fm"]
+[ext_resource type="Texture2D" uid="uid://biyltof0kpqyi" path="res://Assets/World/Environment/Texture/Tree_2.png" id="1_fy7fm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1rxxk"]
-radius = 50.0
+radius = 60.0
 height = 260.0
 
 [node name="Tree_2" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_fy7fm")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(0, 185)
+position = Vector2(0, 130)
 shape = SubResource("CapsuleShape2D_1rxxk")

@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://1hcm6uvyackx"]
 
-[ext_resource type="Texture2D" uid="uid://dsi74wawadkxm" path="res://Assets/World/Environment/Texture/Stone_0.1.png" id="1_p82xi"]
+[ext_resource type="Texture2D" uid="uid://cbqchofudouvm" path="res://Assets/World/Environment/Texture/Stone_0.1.png" id="1_p82xi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v4gqt"]
 radius = 5.0
-height = 65.0
+height = 43.25
 
 [node name="Stone_1" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
-scale = Vector2(0.08, 0.08)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_p82xi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
@@ -19,6 +19,6 @@ position = Vector2(-55, 0)
 scale = Vector2(20, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(3.375, 7.5)
+position = Vector2(2.75, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_v4gqt")
