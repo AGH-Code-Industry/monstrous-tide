@@ -41,10 +41,11 @@ func take_damage(dmg: Damage) -> void:
 	var calculated_damage = dmg.damage
 
 	health -= calculated_damage
-	
-	# knockback
-	if dmg.knocback:
-		apply_knockback(dmg.knocback)
+	if "can_be_knockedbacked" in get_parent():
+		if get_parent().can_be_knockedbacked:
+			# knockback
+			if dmg.knocback:
+				apply_knockback(dmg.knocback, dmg.knocback_direction)
 	
 	if(show_damage_taken_numbers):
 		var text_type = FloatingTextSpawner.text_types.CRITICAL if dmg.is_critical_hit else FloatingTextSpawner.text_types.DAMAGE
@@ -83,16 +84,13 @@ func heal(heal_amount : float) -> void:
 func die() -> void:
 	on_death.emit()
 	
-func apply_knockback(knocback):
-	var player = get_tree().get_first_node_in_group("player")
-	if player:
-		var direction = -get_parent().global_position.direction_to(player.global_position)
-		get_parent().can_move = false
-		get_parent().velocity = direction * knocback
-		var tween = get_tree().create_tween()
-		tween.tween_property(get_parent(), "velocity", Vector2.ZERO, knocback/200)
-		await tween.finished
-		get_parent().can_move = true
+func apply_knockback(knocback, direction):
+	get_parent().can_move = false
+	get_parent().velocity = direction * knocback
+	var tween = get_tree().create_tween()
+	tween.tween_property(get_parent(), "velocity", Vector2.ZERO, knocback/200)
+	await tween.finished
+	get_parent().can_move = true
 	
 func _on_disable_timer_timeout() -> void:
 	collision.call_deferred("set", "disabled", false)

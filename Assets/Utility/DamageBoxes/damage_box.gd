@@ -8,7 +8,7 @@ extends Area2D
 # Number of attacks per second
 @export var attack_speed: float = 2
 # knocback strength
-@export_range(0, 300) var knocback: float = 0
+var knocback: float = 0
 
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var timer: Timer = $AttackSpeedTimer
@@ -18,6 +18,7 @@ func deal_damage(area: Area2D) -> void:
 	var dmg: Damage = Damage.new()
 	dmg.damage = damage
 	dmg.knocback = knocback
+	dmg.knocback_direction = global_position.direction_to(area.global_position)
 	area.take_damage(dmg)
 	start_attack_cooldown()
 

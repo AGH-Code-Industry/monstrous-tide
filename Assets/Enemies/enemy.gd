@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var visuals = $Visuals
 var starting_scale : float
 var can_move: bool = true
+@export var can_be_knockedbacked: bool = true
 
 func _ready():
 	starting_scale = visuals.scale.x
