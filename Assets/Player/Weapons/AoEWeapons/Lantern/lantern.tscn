@@ -36,7 +36,7 @@ more = 0.0
 [sub_resource type="Resource" id="Resource_twlp8"]
 script = ExtResource("2_hh3o4")
 type = 130
-flat = 100.0
+flat = 0.0
 increased = 0.0
 more = 0.0
 
