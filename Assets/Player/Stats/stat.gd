@@ -8,6 +8,7 @@ enum Type{
 	DURATION = 115,
 	MULTISHOT = 120,
 	PIERCE = 125,
+	KNOCKBACK = 130,
 	
 	#Defensive
 	DODGE = 200,

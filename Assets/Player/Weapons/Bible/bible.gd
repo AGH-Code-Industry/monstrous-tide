@@ -31,6 +31,7 @@ func instantiate_projectiles():
 		projectile_to_add.initialization(
 			stat_set.get_stat_value(Stat.Type.DAMAGERADIUS),
 			stat_set.get_stat_value(Stat.Type.DAMAGE),
+			stat_set.get_stat_value(Stat.Type.KNOCKBACK),
 			angle,
 			radius)
 		add_child(projectile_to_add)

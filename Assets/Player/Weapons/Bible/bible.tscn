@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dm1irwy44gd2t"]
+[gd_scene load_steps=40 format=3 uid="uid://dm1irwy44gd2t"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/Bible/bible.gd" id="1_7xq8o"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="2_o3asj"]
@@ -34,9 +34,16 @@ flat = 2.0
 increased = 0.0
 more = 0.0
 
+[sub_resource type="Resource" id="Resource_telk0"]
+script = ExtResource("2_o3asj")
+type = 130
+flat = 100.0
+increased = 0.0
+more = 0.0
+
 [sub_resource type="Resource" id="Resource_ftxek"]
 script = ExtResource("3_xwhob")
-data = Array[ExtResource("2_o3asj")]([SubResource("Resource_qvo64"), SubResource("Resource_3vbcp"), SubResource("Resource_wrfuw"), SubResource("Resource_r1ipi")])
+data = Array[ExtResource("2_o3asj")]([SubResource("Resource_qvo64"), SubResource("Resource_3vbcp"), SubResource("Resource_wrfuw"), SubResource("Resource_r1ipi"), SubResource("Resource_telk0")])
 
 [sub_resource type="Resource" id="Resource_y21v6"]
 script = ExtResource("2_o3asj")
