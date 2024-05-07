@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://nucem10wqp6v"]
+[gd_scene load_steps=2 format=3 uid="uid://nucem10wqp6v"]
+
+[ext_resource type="PackedScene" uid="uid://ce6v5280iqdu2" path="res://Assets/MenuInterfaces/OptionsMenu/AudioSlider.tscn" id="1_o0qi7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -51,8 +53,36 @@ layout_mode = 2
 text = "SAMPLE TEXT"
 
 [node name="Audio" type="TabBar" parent="OptionsTabContainer"]
-visible = false
 layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsTabContainer/Audio"]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 200.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="OptionsTabContainer/Audio/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsTabContainer/Audio/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 40
+
+[node name="AudioSlider" parent="OptionsTabContainer/Audio/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_o0qi7")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AudioSlider2" parent="OptionsTabContainer/Audio/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_o0qi7")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="AudioSlider3" parent="OptionsTabContainer/Audio/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_o0qi7")]
+layout_mode = 2
+bus_name = "SFX"
 
 [node name="Controls" type="TabBar" parent="OptionsTabContainer"]
 visible = false
