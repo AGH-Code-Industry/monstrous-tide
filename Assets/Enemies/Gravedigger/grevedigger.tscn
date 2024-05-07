@@ -588,6 +588,7 @@ rest = Transform2D(1, 0, 0, 1, 59, -163)
 
 [node name="LeftHand" type="Bone2D" parent="Visuals/Skeleton2D/Hips/Chest/LeftArm"]
 position = Vector2(43, 107)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 43, 107)
 auto_calculate_length_and_angle = false
 length = 115.278
@@ -606,7 +607,7 @@ rest = Transform2D(0.992946, -0.118566, 0.118566, 0.992946, -8, 128)
 
 [node name="Wepon" type="Bone2D" parent="Visuals/Skeleton2D/Hips/Chest/RightArm/RightHand"]
 position = Vector2(-24, 80)
-scale = Vector2(0.999999, 0.999999)
+scale = Vector2(0.999998, 0.999998)
 rest = Transform2D(1, 0, 0, 1, -24, 80)
 auto_calculate_length_and_angle = false
 length = 201.607
@@ -619,6 +620,7 @@ rest = Transform2D(1, 0, 0, 1, 43, 34)
 
 [node name="LeftFoot" type="Bone2D" parent="Visuals/Skeleton2D/Hips/LeftLeg"]
 position = Vector2(16, 131)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 16, 131)
 auto_calculate_length_and_angle = false
 length = 145.669
