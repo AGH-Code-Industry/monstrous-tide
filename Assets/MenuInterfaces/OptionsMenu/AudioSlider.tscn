@@ -13,6 +13,7 @@ script = ExtResource("1_ivipv")
 bus_name = "Master"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
 theme_override_constants/separation = 10
 
 [node name="SettingName" type="Label" parent="HBoxContainer"]

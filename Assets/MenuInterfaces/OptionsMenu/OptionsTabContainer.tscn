@@ -53,6 +53,7 @@ layout_mode = 2
 text = "SAMPLE TEXT"
 
 [node name="Audio" type="TabBar" parent="OptionsTabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="OptionsTabContainer/Audio"]
