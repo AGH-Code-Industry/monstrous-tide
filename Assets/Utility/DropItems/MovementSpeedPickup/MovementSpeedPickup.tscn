@@ -20,7 +20,7 @@ script = ExtResource("1_lfsny")
 stat_to_add = SubResource("Resource_ks6b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_71ud5")
 
 [node name="Area2D" type="Area2D" parent="."]

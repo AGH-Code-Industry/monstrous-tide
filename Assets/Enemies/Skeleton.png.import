@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boxdymcwuuovi"
-path="res://.godot/imported/Gate.png-d163ad16416e6367f96b2a2f282cd287.ctex"
+uid="uid://7bds8tymoxme"
+path="res://.godot/imported/Skeleton.png-e9f96051504095ca1ecdda67c590e7ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/World/Environment/Texture/Gate.png"
-dest_files=["res://.godot/imported/Gate.png-d163ad16416e6367f96b2a2f282cd287.ctex"]
+source_file="res://Assets/Enemies/Skeleton.png"
+dest_files=["res://.godot/imported/Skeleton.png-e9f96051504095ca1ecdda67c590e7ed.ctex"]
 
 [params]
 

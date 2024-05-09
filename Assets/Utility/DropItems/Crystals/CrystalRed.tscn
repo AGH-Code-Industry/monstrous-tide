@@ -8,5 +8,5 @@ z_index = -1
 experience_points = 100
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(0.04, 0.04)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_bxftn")

@@ -1,18 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://bacoytneoofs4"]
 
-[ext_resource type="Texture2D" uid="uid://ei542g15lgjs" path="res://Assets/World/Environment/Texture/Tombstone_0.1.png" id="1_02ucj"]
+[ext_resource type="Texture2D" uid="uid://cf6u5en7o0qpt" path="res://Assets/World/Environment/Texture/Tombstone_0.1.png" id="1_02ucj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5arh"]
-size = Vector2(585, 250)
+size = Vector2(452.5, 250)
 
 [node name="Tombstone_1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.04, 0.04)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_02ucj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(0, 650)
+position = Vector2(0, 280)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a5arh")
