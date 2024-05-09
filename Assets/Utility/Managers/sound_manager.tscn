@@ -19,7 +19,7 @@ bus = &"SFX"
 [node name="Soundtrack" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("3_l2eam")
-volume_db = -20.0
+volume_db = -5.0
 bus = &"Music"
 
 [node name="GameOverSound" type="AudioStreamPlayer" parent="."]
