@@ -1,25 +1,46 @@
 extends Weapon
 
+var should_spark = false
 
-func interpolate(length, duration = 0.1):
-	var tween_offset = get_tree().create_tween()
-	var tween_rect_h = get_tree().create_tween()
- 
-	tween_offset.tween_property($Sprite2D, "offset",Vector2(0,length/2.0), duration)
-	tween_rect_h.tween_property($Sprite2D, "region_rect", Rect2(16,0,95,length), duration)
+func _process(delta):
+	if should_spark:
+		var closest_enemy = get_closest_enemy()
+		if closest_enemy:
+			$Line2D.points[1] = to_local(closest_enemy.global_position)
+	else:
+		$Line2D.points[1] = Vector2.ZERO
+	
+
+func interpolate(destination, duration = 0.1):
+	$Line2D.points[1] = to_local(destination)
+	print($Line2D.points[1])
+	
 	
 func spark_to_enemy(enemy):
 	if !enemy:
 		return
-	var distance = global_position.distance_to(enemy.global_position)
-	look_at(enemy.global_position)
-	interpolate(distance, 0.01)
-	await get_tree().create_timer(0.3).timeout
-	interpolate(0, 0.1)
+	#interpolate(enemy.global_position, 0.2)
+
+func sort_closest(a, b):
+	return a.global_position.distance_to(self.global_position) < b.global_position.distance_to(self.global_position)
 
 func get_closest_enemy():
-	var closest_enemy = get_tree().get_first_node_in_group("enemy")
-	return closest_enemy
-
+	var enemies = get_tree().get_nodes_in_group("enemy")
+	if !enemies:
+		return null
+	enemies.sort_custom(sort_closest)
+	return enemies.front()
+	
 func _on_cuntdown_timer_timeout():
+	$CuntdownTimer.stop()
+	should_spark = true
+	print(should_spark)
 	spark_to_enemy(get_closest_enemy())
+	$LiveTimer.start()
+
+
+func _on_live_timer_timeout():
+	$LiveTimer.stop()
+	should_spark = false
+	print(should_spark)
+	$CuntdownTimer.start()

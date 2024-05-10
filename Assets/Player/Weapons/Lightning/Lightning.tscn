@@ -1,20 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://np8cusxf2wxd"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/Lightning/Lightning.gd" id="1_mvtds"]
-[ext_resource type="Texture2D" uid="uid://cpay5ld1cx75u" path="res://Assets/Player/Weapons/Lightning/lightning.png" id="2_f7blf"]
+[ext_resource type="Texture2D" uid="uid://dkpwv56t00g1b" path="res://Assets/Player/Weapons/Lightning/lightning2.png" id="3_375x4"]
 
 [node name="Lightning" type="Node2D"]
 script = ExtResource("1_mvtds")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_repeat = 2
-rotation = -1.5708
-scale = Vector2(0.2, 1)
-texture = ExtResource("2_f7blf")
-region_enabled = true
-region_rect = Rect2(16, 0, 95, 0)
-
 [node name="CuntdownTimer" type="Timer" parent="."]
 autostart = true
 
+[node name="LiveTimer" type="Timer" parent="."]
+wait_time = 0.3
+
+[node name="Line2D" type="Line2D" parent="."]
+texture_repeat = 2
+points = PackedVector2Array(0, 0, 0, 0)
+texture = ExtResource("3_375x4")
+texture_mode = 1
+
 [connection signal="timeout" from="CuntdownTimer" to="." method="_on_cuntdown_timer_timeout"]
+[connection signal="timeout" from="LiveTimer" to="." method="_on_live_timer_timeout"]
