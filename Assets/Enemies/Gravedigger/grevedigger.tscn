@@ -472,7 +472,7 @@ scale_curve = SubResource("CurveTexture_7alv2")
 radius = 101.0
 height = 474.0
 
-[node name="Grevedigger" type="CharacterBody2D"]
+[node name="Grevedigger" type="CharacterBody2D" groups=["enemy"]]
 y_sort_enabled = true
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_vrucl")
@@ -588,7 +588,6 @@ rest = Transform2D(1, 0, 0, 1, 59, -163)
 
 [node name="LeftHand" type="Bone2D" parent="Visuals/Skeleton2D/Hips/Chest/LeftArm"]
 position = Vector2(43, 107)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 43, 107)
 auto_calculate_length_and_angle = false
 length = 115.278

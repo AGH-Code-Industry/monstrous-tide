@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://baj5k0y7p3ndk" path="res://Assets/Utility/DamageBoxes/hit_box.tscn" id="3_vkkdj"]
 [ext_resource type="PackedScene" uid="uid://cg6gnjj6opuhq" path="res://Assets/Utility/DropItems/PickUp/pickup_component.tscn" id="6_jlj47"]
 [ext_resource type="Texture2D" uid="uid://bwtqajh7agh7l" path="res://Assets/Player/Main__Char_0.3(1).png" id="7_jwu1d"]
-[ext_resource type="PackedScene" uid="uid://dm1irwy44gd2t" path="res://Assets/Player/Weapons/Bible/bible.tscn" id="9_jik4i"]
+[ext_resource type="PackedScene" uid="uid://np8cusxf2wxd" path="res://Assets/Player/Weapons/Lightning/Lightning.tscn" id="8_ymn8n"]
 
 [sub_resource type="Resource" id="Resource_gcdwu"]
 script = ExtResource("2_5ofgj")
@@ -811,7 +811,7 @@ parameters/conditions/is_moving = false
 
 [node name="Weapons" type="Node2D" parent="."]
 
-[node name="Bible" parent="Weapons" instance=ExtResource("9_jik4i")]
+[node name="Lightning" parent="Weapons" instance=ExtResource("8_ymn8n")]
 
 [connection signal="damage_taken" from="HitBox" to="." method="_on_hit_box_damage_taken"]
 [connection signal="on_death" from="HitBox" to="." method="_on_hit_box_on_death"]
