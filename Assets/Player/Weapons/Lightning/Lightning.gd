@@ -1,9 +1,11 @@
 extends Line2D
 
+var enemies_chain = []
 var start_character
 var end_character
 
 func _ready():
+	#print(enemies_chain)
 	end_character = get_closest_enemy()
 
 func _process(delta):
@@ -16,8 +18,9 @@ func get_closest_enemy():
 	if !enemies:
 		return null
 	if start_character in enemies:
-		#print("test")
 		enemies.erase(start_character)
+	for character in enemies_chain:
+		enemies.erase(character)
 	enemies.sort_custom(sort_closest)
 	return enemies.front()
 	

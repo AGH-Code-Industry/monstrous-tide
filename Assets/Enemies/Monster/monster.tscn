@@ -659,7 +659,7 @@ bone_angle = 91.074
 
 [node name="LeftArm" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck"]
 position = Vector2(75, -20)
-scale = Vector2(0.999998, 0.999998)
+scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(1, 0, 0, 1, 75, -20)
 
 [node name="LeftHand" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Chest/Neck/LeftArm"]
