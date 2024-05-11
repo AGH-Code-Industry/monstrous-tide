@@ -494,7 +494,7 @@ scale_min = 1.5
 scale_max = 2.5
 scale_curve = SubResource("CurveTexture_tw5kp")
 
-[node name="Wolf" type="CharacterBody2D"]
+[node name="Wolf" type="CharacterBody2D" groups=["enemy"]]
 y_sort_enabled = true
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_u8p71")
@@ -585,7 +585,6 @@ rest = Transform2D(1, 0, 0, 1, -1, -107)
 
 [node name="Neck" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(-36, -15)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -36, -15)
 
 [node name="Head" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
@@ -598,12 +597,10 @@ bone_angle = -200.506
 
 [node name="RightFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-96, 103)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -96, 103)
 
 [node name="RightPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/RightFLeg"]
 position = Vector2(-1, 84)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -1, 83)
 auto_calculate_length_and_angle = false
 length = 59.28
@@ -611,11 +608,11 @@ bone_angle = -243.038
 
 [node name="LeftFLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck"]
 position = Vector2(-39, 91)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -39, 91)
 
 [node name="LeftFPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/Neck/LeftFLeg"]
 position = Vector2(-13, 99)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -13, 99)
 auto_calculate_length_and_angle = false
 length = 72.114
@@ -623,7 +620,6 @@ bone_angle = 112.405
 
 [node name="Tail" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(82, 40)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 82, 40)
 auto_calculate_length_and_angle = false
 length = 141.282
@@ -636,7 +632,6 @@ rest = Transform2D(1, 0, 0, 1, 42, 97)
 
 [node name="LeftBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/LeftBLeg"]
 position = Vector2(21, 76)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 21, 76)
 auto_calculate_length_and_angle = false
 length = 63.656
@@ -644,7 +639,6 @@ bone_angle = 100.253
 
 [node name="RightBLeg" type="Bone2D" parent="Visuals/Skeleton2D/Hip"]
 position = Vector2(-18, 74)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -18, 74)
 
 [node name="RightBPaw" type="Bone2D" parent="Visuals/Skeleton2D/Hip/RightBLeg"]

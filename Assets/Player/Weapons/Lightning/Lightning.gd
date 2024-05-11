@@ -1,46 +1,34 @@
-extends Weapon
+extends Line2D
 
-var should_spark = false
+var start_character
+var end_character
+
+func _ready():
+	end_character = get_closest_enemy()
 
 func _process(delta):
-	if should_spark:
-		var closest_enemy = get_closest_enemy()
-		if closest_enemy:
-			$Line2D.points[1] = to_local(closest_enemy.global_position)
-	else:
-		$Line2D.points[1] = Vector2.ZERO
-	
-
-func interpolate(destination, duration = 0.1):
-	$Line2D.points[1] = to_local(destination)
-	print($Line2D.points[1])
-	
-	
-func spark_to_enemy(enemy):
-	if !enemy:
-		return
-	#interpolate(enemy.global_position, 0.2)
-
-func sort_closest(a, b):
-	return a.global_position.distance_to(self.global_position) < b.global_position.distance_to(self.global_position)
+	if is_instance_valid(start_character) and is_instance_valid(end_character):
+		points[0] = to_local(start_character.global_position)
+		points[1] = to_local(end_character.global_position)
 
 func get_closest_enemy():
 	var enemies = get_tree().get_nodes_in_group("enemy")
 	if !enemies:
 		return null
+	if start_character in enemies:
+		#print("test")
+		enemies.erase(start_character)
 	enemies.sort_custom(sort_closest)
 	return enemies.front()
 	
-func _on_cuntdown_timer_timeout():
-	$CuntdownTimer.stop()
-	should_spark = true
-	print(should_spark)
-	spark_to_enemy(get_closest_enemy())
-	$LiveTimer.start()
+func sort_closest(a, b):
+	return a.global_position.distance_to(start_character.global_position) < b.global_position.distance_to(start_character.global_position)
 
 
-func _on_live_timer_timeout():
-	$LiveTimer.stop()
-	should_spark = false
-	print(should_spark)
-	$CuntdownTimer.start()
+func _on_life_timer_timeout():
+	if start_character:
+		var damage = Damage.new()
+		damage.damage = 3
+		if start_character != get_tree().get_first_node_in_group("player"):
+			start_character.get_node("HitBox").take_damage(damage)
+	queue_free()
