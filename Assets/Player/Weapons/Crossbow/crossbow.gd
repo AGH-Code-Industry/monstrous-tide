@@ -5,7 +5,7 @@ extends Weapon
 
 func _ready():
 	super()
-	
+
 	start_cycle()
 	
 func start_cycle():
