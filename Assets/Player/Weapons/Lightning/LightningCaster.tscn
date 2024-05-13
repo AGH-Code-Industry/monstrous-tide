@@ -1,25 +1,65 @@
-[gd_scene load_steps=7 format=3 uid="uid://np8cusxf2wxd"]
+[gd_scene load_steps=15 format=3 uid="uid://np8cusxf2wxd"]
 
 [ext_resource type="Script" path="res://Assets/Player/Weapons/Lightning/LightningCaster.gd" id="1_c6tdu"]
 [ext_resource type="PackedScene" uid="uid://bywvc2bjoush0" path="res://Assets/Player/Weapons/Lightning/Lightning.tscn" id="2_wqv68"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat.gd" id="3_iwra8"]
 [ext_resource type="Script" path="res://Assets/Player/Stats/stat_set.gd" id="4_3n4sm"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/upgrade_tier.gd" id="5_b40ga"]
+[ext_resource type="Script" path="res://Assets/Player/Weapons/WeaponUpgrades/weapon_stat_upgrade.gd" id="6_5cds6"]
 
 [sub_resource type="Resource" id="Resource_bmn0b"]
 script = ExtResource("3_iwra8")
-type = 0
-flat = 4.0
+type = 100
+flat = 10.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_p7jc1"]
+script = ExtResource("3_iwra8")
+type = 120
+flat = 2.0
 increased = 0.0
 more = 0.0
 
 [sub_resource type="Resource" id="Resource_o7aul"]
 script = ExtResource("4_3n4sm")
-data = Array[ExtResource("3_iwra8")]([SubResource("Resource_bmn0b")])
+data = Array[ExtResource("3_iwra8")]([SubResource("Resource_bmn0b"), SubResource("Resource_p7jc1")])
+
+[sub_resource type="Resource" id="Resource_1x53c"]
+script = ExtResource("3_iwra8")
+type = 0
+flat = 7.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_6lft2"]
+script = ExtResource("6_5cds6")
+stats = Array[ExtResource("3_iwra8")]([SubResource("Resource_1x53c")])
+name = "Lightning"
+description = "damage"
+
+[sub_resource type="Resource" id="Resource_jhwfs"]
+script = ExtResource("3_iwra8")
+type = 120
+flat = 1.0
+increased = 0.0
+more = 0.0
+
+[sub_resource type="Resource" id="Resource_vq7ny"]
+script = ExtResource("6_5cds6")
+stats = Array[ExtResource("3_iwra8")]([SubResource("Resource_jhwfs")])
+name = "Lighting"
+description = "multishot"
+
+[sub_resource type="Resource" id="Resource_rxqkq"]
+script = ExtResource("5_b40ga")
+upgrades = Array[Resource("res://Assets/Player/Weapons/WeaponUpgrades/weapon_upgrade.gd")]([SubResource("Resource_6lft2"), SubResource("Resource_vq7ny")])
 
 [node name="LightningCaster" type="Node2D"]
 script = ExtResource("1_c6tdu")
 lightning_scene = ExtResource("2_wqv68")
 stat_set = SubResource("Resource_o7aul")
+possible_upgrades = Array[ExtResource("5_b40ga")]([SubResource("Resource_rxqkq")])
 
 [node name="CuntdownTimer" type="Timer" parent="."]
 autostart = true
