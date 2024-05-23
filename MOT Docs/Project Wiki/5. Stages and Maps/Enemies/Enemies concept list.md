@@ -22,80 +22,34 @@ ___
 
 # "Fish-based" - name to be covered by lore
 
+I have some idea for this enemies group lore, to be further covered (any suggestions are welcome ofc).
+
 | **Species** | **Type/Name** | **Overall description** |
 | :---: | :---: | :---: |
-|  | | |
-# Vampires
+| First Era Ocean Beings | Betta splendens | - fast, annoying, one hit enemy |\
+| | | - low DMG, but really, *really* f__ing fast |\
+| | | - high Dodge stat, like every second hit may be Dodged by this little being |
+| ^^ | Xiphias Gladius | - leader of many groups of *Bettas* |\
+| | | - fast moving and really hard hitting, a tonne of DMG (but slow ATKSpeed) |\
+| | | - looks like miecznik, literally has a sword on their face (maybe fights with their face lol) |\
+| | | - if low HP, scrifices 25% of alive *Bettas* nearby and recovers 35% their own HP |
 
-First, expected to be the most important ones, up to further changes. Described as follows:
+# Lizard-like shit - name to be covered by lore
 
-| **Vampire Blood** | **Type/Name** | **Overall description** |
+Names are absolutely dull atm, need to come up with ideas for them @Ania.
+
+| **Race** | **Type/Name** | **Overall description** |
 | :---: | :---: | :--- |
-| First-born Vampires | | | 
-| ^^ | Sur Am | - considered a boss? |\
-| | | - can sabotage weaponry (f.e. slow the weapons in a certain area) |\
-| | | - able to use magic and summon Old Vampire Mages |\
-| | | - fast movement and fast attack speed, relatively high damage |\
-| | | - f_ckton of HP |
-| Higher Vampires | | |
-| ^^ | Old Mage | - able to use magic, multiple AOE attacks, high HP, high damage, high attack speed |\
-| | | - able to teleport in medium AOE |\
-| | | - fast HP regeneration |\
-| | | - able to summon hordes of Vampires, including Horde Leaders and Brutes |
-| ^^ | Mage | - able to use magic, AOE attacks, medium HP and armour, high damage |\
-| | | - single target and AOE attacks, high speed |\
-| | | - regenerate their own and most of their Mage Initiates HP |\
-| | | - guides a few Mage Initiates |
-| ^^ | Mage Initiate | - able to use magic, single or AOE (choose one) target attacks, low HP and armour, medium damage |\
-| | | - seen in groups of 3-5, usually under Mage's guidance |\
-| | | - can regenerate their own and their few nearest allies' HP |
-| ^^ | Assasins | - intelligent, very fast, sparsely attacks, but almost one shot |\
-| | | - damage based on player's maximum HP (f.e. one attack deals damage equal to 20% player's HP) |\
-| | | - can hide and teleport in a little AOE |\
-| | | - rarely seen |
-| Lower Vampires | | |
-| ^^ | Horde Leader | - has healing abilities |\
-| | | - high armour, high HP, attacks fast and with relatively high damage |\
-| | | - has ability to call more vampires, brutes and scouts |\
-| | | - usually avoids direct fight |
-| ^^ | Brute | - tanky, high armour, slow movement and attack speed |\
-| | | - high damage per one attack, big AOE |\
-| | | - can regenerate its HP? |\
-| | | - a few in a horde of vampires |
-| ^^ | Scout | - high speed of moving and attacks, low damage, high armour |\
-| | | - usually wanders alone |\
-| | | - if player doesn't manage to kill this unit, it comes back with more hordes |
-| ^^ | Basic Warrior | - low stats, less than a one shot at higher levels |\
-| | | - not slow, not fast, but also not effective in fight |\
-| | | - usually fights in groups |\
-| | | - made for taking up space, tbh |
+| Pre-human Lizards | | |
+| ^^ | Basic lizard warrior | - fast as f_ck |\
+| | | - deals relatively low DMG, but slows down the player |\
+| | | - when defeated, there is 50% chance of them to resurrect (max. once) |
+| ^^ | Lizard warrior's group leader | - slower, but more HP |\
+| | | - a little more DMG dealing, a little more ARM |\
+| | | - if not defeated soon enough, calls another waves of basic warriors |
+| ^^ | Lizard Necromant | - works a little like leader |\
+| | | - when a lizard warrior is defeated (in a certain radius ofc), there is 100% chance for them to be resurrected *once* and then 50% to be res. another one time |\
+| | | - is more tanky and faster, deals the same amt of DMG as leader |\
+| | | - has cooler graphical design, like much cooler |
 
-# Golems
 
-I'd say this should be a special-type enemy pool, but yeah, just an idea:
-
-| **Golem Line** | **Type/Name** | **Overall description** |
-| :---: | :---: | :--- |
-| Common Golems | | |
-| ^^ | Soil Golem | - made of soil, slow, low HP |\
-| | | - upon attacking the player slows him down for a second? |\
-| | | - low damage output |
-| ^^ | Stone Golem | - made of stone, slow, low HP, but high armour |\
-| | | - medium damage output |\
-| | | - as common as Soil Golems, just a bit different |\
-| | | - they and Soil Golems stick together |
-| Magic Golems | | |
-| ^^ | Water Golems | - Stone Golems able to control water |\
-| | | - slow down characters |\
-| | | - deal medium, but great AOE damage |\
-| | | - like to wander with Ice Golems |
-| ^^ | Ice Golems | - Stone Golems able to control cold |\
-| | | - rarer than Water Golems, but usually seen with them |\
-| | | - easier to kill, but slow down debuff is stronger |\
-| | | - normal AOE attacks, medium damage output |
-| Ancient Golems | | |
-| ^^ | Bart of Zerika | - shoots explosive projectiles with big AOE and big damage output |\
-| | | - rather slow, but very high HP and armour |\
-| | | - has back made of steel ores, can summon Soil and Stone Golems |\
-| | | - likely to guard some treasure or dungeon entry |\
-| | | - a little [The Witcher 3 reference](https://wiedzmin.fandom.com/wiki/Bart) |

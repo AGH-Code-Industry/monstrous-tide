@@ -1,9 +1,10 @@
 ---
 tags: items
 type: weapons, description
-description: "*Ferocious Tentacle* is an octopus-limb-inspired weapon which shoots lighter enemies away."
+description: "*Cthulhu's Tentacle* is an octopus-limb-inspired weapon which shoots lighter enemies away."
 upgrade: base
 ---
+*Formerly known as Ferocious Tentacle.*
 
 >This document will outline the most important aspects of weapon in the title - its properties, progression scheme, statistics, principles of working and many more. It is a sketch, as it needs specified information provided by programmers.
 
@@ -14,11 +15,13 @@ upgrade: base
 
 # General
 
-*Ferocious Tentacle* is one of the weapons player plyer gets when in "fishy" biomes - early game, easy mechanics
+*Cthulhu's Tentacle* is one of the weapons player gets when in "fishy" biomes - early game, easy mechanics. It looks like a disgusting, octopus-like? tentacle, does single-target mid damage.
+
+Why Cthulhu's? Because many illustrations (and original descriptions) mention this god as a giant octopus.
 
 ### Draft
 
-**_Ferocious Tentacle_** - this will be a basic weapon, dropping from _fish-like_ [enemies](app://obsidian.md/Enemies%20concept%20list) and described as follows:
+**_Cthulhu's Tentacle_** - this will be a basic weapon, dropping from _fish-like_ [enemies](app://obsidian.md/Enemies%20concept%20list) and described as follows:
     - looks like a disgusting tentacle, dark-coloured, rotting?
     - does single target damage and throws away enemies in a little distance, where specific direction is random;
     - does mid damage, but good for a start-game item;
@@ -48,7 +51,7 @@ Single target weapon:
 
 *Values in range, f.e. 1-10%, mean it is a single, randomly chosen value between 1 and 10%.*
 
-Available upgrades for the *Ferocious Tentacle* :
+Available upgrades for the *Cthulhu's Tentacle* :
 
 - ***Basic:*** +8-20% *DMG*; +2-8% *HPSteal*; +2-8% *AOE*; +2-8% *Dodge*; +5-15% *Pickup*; +5-10% *CritDMG*; 
 - ***Advanced:*** +15-30% *Dodge*; +15-25% *AOE*; +8-20% *CritChance*; +25-60% *CritDMG*; +35-65% *DMG*;  +15-25% *HPSteal*; +15-35% *Dodge*
@@ -60,11 +63,12 @@ Available upgrades for the *Ferocious Tentacle* :
 		- "If an enemy was hit 3 or more times with this weapon, the next time the are hit they are instantly defeated."
 		- "Whenever the player Dodges, they recover 15% of their own *HP* - occurs every 10 seconds."
 - ***Mythic:*** *follows rules mentioned [[Rarity and drop-rate systems#Mythic|here]]!*
-	- **Blue Fin** *(tba)*
-	- **Whales Graveyard's Survivor** *(tba)*
+	- **[[Fin of the Deep-One]]**
+	- **[[Whales Graveyard's Survivor]]**
 	- additional stats are taken from the same pool as the previous ones.
 
 
 # *[[Journal]]* entry
 
 *One never forgets the stench, if they once come into contact with this free-thinking limb. Why does it move? Well, there are sure many hypotheses... But should I really care? This is a very affordable flesh-shield and it haven't once upset me. Yet.*
+
