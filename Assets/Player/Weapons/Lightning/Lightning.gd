@@ -1,19 +1,9 @@
 extends Line2D
-class_name Lightning
-
-const my_scene: PackedScene = preload("res://Assets/Player/Weapons/Lightning/Lightning.tscn")
 
 var enemies_chain = []
 var start_character
 var end_character
-var damage_amount
-
-static func new_lightning(damage_amount: int, start_character: Object, enemies_chain: Array) -> Lightning:
-	var lightning_instance = my_scene.instantiate()
-	lightning_instance.damage_amount = damage_amount
-	lightning_instance.start_character = start_character
-	lightning_instance.enemies_chain = enemies_chain
-	return lightning_instance
+var damage_amount = 3
 
 func _ready():
 	end_character = get_random_enemy()
@@ -64,9 +54,9 @@ func sort_closest(a, b):
 
 
 func _on_life_timer_timeout():
-	if end_character:
+	if start_character:
 		var damage = Damage.new()
 		damage.damage = damage_amount
-		if end_character != get_tree().get_first_node_in_group("player") and is_instance_valid(end_character):
-			end_character.get_node("HitBox").take_damage(damage)
+		if start_character != get_tree().get_first_node_in_group("player") and is_instance_valid(start_character):
+			start_character.get_node("HitBox").take_damage(damage)
 	queue_free()
