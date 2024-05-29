@@ -1,6 +1,7 @@
 class_name Stat extends Resource
 
 enum Type{
+	UNDEFINED = 0,
 	#Offensive
 	DAMAGE = 100,
 	ATTACKSPEED = 105,
