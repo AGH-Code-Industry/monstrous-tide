@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwu3w4ix6u6i3"]
+[gd_scene load_steps=3 format=3 uid="uid://bwu3w4ix6u6i3"]
 
 [ext_resource type="Script" path="res://Assets/MenuInterfaces/GameOverMenu.gd" id="1_veatk"]
+[ext_resource type="PackedScene" uid="uid://bc0lddtpbdanr" path="res://Assets/MenuInterfaces/MenuComponents/DamageStatsDisplayer/damage_stats_displayer.tscn" id="2_a0eqo"]
 
 [node name="GameOverMenu" type="CanvasLayer"]
 script = ExtResource("1_veatk")
@@ -18,6 +19,9 @@ layout_mode = 2
 [node name="ColorRect" type="ColorRect" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 color = Color(0.654902, 0.0117647, 0, 0.235294)
+
+[node name="DamageStatsDisplayer" parent="MarginContainer/PanelContainer" instance=ExtResource("2_a0eqo")]
+layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
