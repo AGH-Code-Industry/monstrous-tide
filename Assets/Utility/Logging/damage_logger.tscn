@@ -6,3 +6,6 @@
 script = ExtResource("1_hw4bl")
 
 [node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
